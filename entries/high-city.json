@@ -59,6 +59,26 @@
     {
       "kind": "card",
       "path": "repos/akalynth-site/assets/akalynth/visuals/cards/01-high-city-dawn.card-800x1000.webp"
+    },
+    {
+      "kind": "banner",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/banners/01-high-city-dawn.banner-1600x700.webp"
+    },
+    {
+      "kind": "hero",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/hero/01-high-city-dawn.hero-cover-1920x1080.webp"
+    },
+    {
+      "kind": "og",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/og/01-high-city-dawn.og-1200x630.webp"
+    },
+    {
+      "kind": "thumb",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/thumbs/01-high-city-dawn.thumb-480x720.webp"
+    },
+    {
+      "kind": "wallpaper",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/wallpapers/01-high-city-dawn.wallpaper-1080x1920.webp"
     }
   ],
   "packets": [
@@ -77,7 +97,8 @@
     {
       "kind": "asset",
       "ref": "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/prompts/AKALYNTH_FIRST_PLAYABLE_SLICE_POSTER_V1.prompt.md",
-      "status": "open"
+      "status": "accepted",
+      "note": "reused existing akalynth-site webp assets"
     }
   ],
   "evidence": [

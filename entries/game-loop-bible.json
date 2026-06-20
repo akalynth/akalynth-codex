@@ -58,7 +58,8 @@
     {
       "kind": "asset",
       "ref": "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/prompts/AKALYNTH_GAME_LOOP_BIBLE_POSTER_V1.prompt.md",
-      "status": "open"
+      "status": "blocked",
+      "note": "no matching site asset; requires image generation (OPENAI_API_KEY not set)"
     }
   ],
   "evidence": [

@@ -58,7 +58,8 @@
     {
       "kind": "asset",
       "ref": "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/prompts/image_briefs",
-      "status": "open"
+      "status": "blocked",
+      "note": "no matching site asset; requires image generation (OPENAI_API_KEY not set)"
     }
   ],
   "evidence": [
