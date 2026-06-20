@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-05T23:41:31Z",
-  "updated": "2026-06-13T00:00:00Z",
+  "updated": "2026-06-20T00:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -71,12 +71,12 @@
     {
       "rel": "contains",
       "target": "heartforge-trial-chamber",
-      "note": "dungeon (unreleased — builder-only)"
+      "note": "dungeon (unreleased \u2014 builder-only)"
     },
     {
       "rel": "guards",
       "target": "oathless-forge",
-      "note": "boss (unreleased — builder-only)"
+      "note": "boss (unreleased \u2014 builder-only)"
     }
   ],
   "assets": [
@@ -105,14 +105,15 @@
     {
       "kind": "website_update",
       "ref": "codex/design/forgehold.md",
-      "status": "in_review",
+      "status": "accepted",
       "assignee": "codex-build-delegation"
     },
     {
       "kind": "prototype_data",
       "ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/prompts/CLAUDE_CODE_AKALYNTH_FORGEHOLD_ROUTE_PROTOTYPE_DATA.prompt.md",
-      "status": "in_review",
-      "assignee": "codex-build-delegation"
+      "status": "blocked",
+      "assignee": "codex-build-delegation",
+      "note": "source drop directory absent from repo; prompt file not checked in"
     },
     {
       "kind": "asset",

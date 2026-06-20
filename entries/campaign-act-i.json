@@ -2,11 +2,11 @@
   "schema_version": "codex-entry/v1",
   "id": "campaign-act-i",
   "type": "quest",
-  "title": "Act I — The Four Proofs",
+  "title": "Act I \u2014 The Four Proofs",
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-06T03:30:00Z",
-  "updated": "2026-06-13T00:00:00Z",
+  "updated": "2026-06-20T00:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -14,7 +14,7 @@
     "agent": true,
     "public": false
   },
-  "summary": "Act I campaign spine — The Four Proofs — binding the four playable slices into one coherent act (Archive/Material/Dream/Field proofs).",
+  "summary": "Act I campaign spine \u2014 The Four Proofs \u2014 binding the four playable slices into one coherent act (Archive/Material/Dream/Field proofs).",
   "lineage": {
     "origin": "AKALYNTH_CAMPAIGN_ACT_I_V1",
     "accepted": true,
@@ -22,7 +22,7 @@
     "last_accepted_change": "AKALYNTH_CAMPAIGN_ACT_I_V1 (campaign spine, origin paths, chapter flow, major choices, final convergence, release gates)"
   },
   "world": {
-    "description": "The Act I campaign spine. Does not add a new playable slice; it connects the four existing slices into one Act via The Four Proofs: High City / First Archive (Archive Proof — Truth), Forgehold Route / Ember Road (Material Proof — Power), Moonspire / Dream Gate (Dream Proof — Possibility), Cinderwatch / Ashline Frontier (Field Proof — Survival).",
+    "description": "The Act I campaign spine. Does not add a new playable slice; it connects the four existing slices into one Act via The Four Proofs: High City / First Archive (Archive Proof \u2014 Truth), Forgehold Route / Ember Road (Material Proof \u2014 Power), Moonspire / Dream Gate (Dream Proof \u2014 Possibility), Cinderwatch / Ashline Frontier (Field Proof \u2014 Survival).",
     "design_refs": [
       "codex/design/campaign-act-i.md",
       "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/docs/AKALYNTH_CAMPAIGN_ACT_I_V1.md",
@@ -63,14 +63,15 @@
     {
       "kind": "website_update",
       "ref": "codex/design/campaign-act-i.md",
-      "status": "in_review",
+      "status": "accepted",
       "assignee": "codex-build-delegation"
     },
     {
       "kind": "prototype_data",
       "ref": "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/prompts/CLAUDE_CODE_AKALYNTH_CAMPAIGN_ACT_I_PROTOTYPE_DATA.prompt.md",
-      "status": "in_review",
-      "assignee": "codex-build-delegation"
+      "status": "blocked",
+      "assignee": "codex-build-delegation",
+      "note": "source drop directory absent from repo; prompt file not checked in"
     },
     {
       "kind": "asset",

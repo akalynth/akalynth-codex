@@ -1,0 +1,58 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "rookguard",
+  "type": "place",
+  "title": "Rookguard",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-20T00:00:00Z",
+  "updated": "2026-06-20T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "Threshold keep where every journey begins — the Rookguard Codex Path and gate to High City.",
+  "lineage": {
+    "origin": "AKALYNTH_ROOKGUARD_CITY_EXPANSION_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-20T00:00:00Z",
+    "last_accepted_change": "Rookguard Codex Path live on beta (move, chat, Tem, training slime, vocation, gate receipts)"
+  },
+  "world": {
+    "description": "The threshold keep at the edge of High City. Newcomers prove movement, chat, Tem, combat training, and Heroes Codex vocation before the gate opens to Azura.",
+    "design_refs": [
+      "repos/akalynth/docs/ROOKGUARD_FIRST_30_MINUTES_V1.md",
+      "repos/akalynth/docs/ROOKGUARD_CITY_EXPANSION_V1.md",
+      "repos/akalynth/packages/shared/maps/rookguard.json"
+    ],
+    "implementation": {
+      "stage": "live",
+      "slice": "rookguard_city_codex_path_v1"
+    }
+  },
+  "related": [
+    { "rel": "connects_to", "target": "high-city" },
+    { "rel": "references", "target": "heroes-codex" }
+  ],
+  "assets": [
+    {
+      "kind": "wallpaper",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/wallpapers/rookguard-gate.wallpaper-1920x1080.webp"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "Rookguard",
+    "category": "World Foundation",
+    "summary": "Threshold keep — where the Codex Path begins.",
+    "body": "Rookguard is the bounded onboarding keep: move rune, chat signal, Tem challenge, training slime, Heroes Codex vocation, and the gate to High City. Every step is receipt-backed; vocation is identity proof, not power.",
+    "assets": [],
+    "related": ["high-city", "heroes-codex", "forgehold"],
+    "source_ref": "rookguard"
+  },
+  "tags": ["city", "onboarding", "codex-path"]
+}

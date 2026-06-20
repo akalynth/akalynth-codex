@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-12T00:00:00Z",
-  "updated": "2026-06-13T00:00:00Z",
+  "updated": "2026-06-20T00:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -14,7 +14,7 @@
     "agent": true,
     "public": true
   },
-  "summary": "Crown of Convergence — capital of Akalynth and birthplace of the Great Accord; home object of the First Playable vertical slice.",
+  "summary": "Crown of Convergence \u2014 capital of Akalynth and birthplace of the Great Accord; home object of the First Playable vertical slice.",
   "lineage": {
     "origin": "AKALYNTH_CITIES_SUMMARY_V1",
     "accepted": true,
@@ -22,7 +22,7 @@
     "last_accepted_change": "AKALYNTH_FIRST_PLAYABLE_SLICE_V1 (first 1-3h vertical slice: Origins, Factions, High City Outskirts, First Archive Lower Vault dungeon, Unindexed Truth boss, Witness Moth Bloom)"
   },
   "world": {
-    "description": "Crown of Convergence — capital of Akalynth and birthplace of the Great Accord. Civic domain: Order. Anchors the First Playable Slice: origin openings, the First Archive Lower Vault dungeon, and the Unindexed Truth confrontation.",
+    "description": "Crown of Convergence \u2014 capital of Akalynth and birthplace of the Great Accord. Civic domain: Order. Anchors the First Playable Slice: origin openings, the First Archive Lower Vault dungeon, and the Unindexed Truth confrontation.",
     "design_refs": [
       "codex/design/high-city.md",
       "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/docs/AKALYNTH_FIRST_PLAYABLE_SLICE_V1.md",
@@ -65,14 +65,15 @@
     {
       "kind": "website_update",
       "ref": "codex/design/high-city.md",
-      "status": "in_review",
+      "status": "accepted",
       "assignee": "codex-build-delegation"
     },
     {
       "kind": "prototype_data",
       "ref": "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/prompts/CLAUDE_CODE_AKALYNTH_PLAYABLE_SLICE_PROTOTYPE_DATA.prompt.md",
-      "status": "in_review",
-      "assignee": "codex-build-delegation"
+      "status": "blocked",
+      "assignee": "codex-build-delegation",
+      "note": "source drop directory absent from repo; prompt file not checked in"
     },
     {
       "kind": "asset",
@@ -101,7 +102,7 @@
     "reviewed_by": "guardian@vaultmesh.org",
     "title": "High City",
     "category": "Cities",
-    "summary": "Crown of Convergence — capital of Akalynth and birthplace of the Great Accord.",
+    "summary": "Crown of Convergence \u2014 capital of Akalynth and birthplace of the Great Accord.",
     "body": "High City rises atop converging ley currents as the political, cultural, and intellectual heart of Akalynth. Known for the Trinity Nexus, the Great Archive Vaults, the Sky Spires, the Accord Chambers, and the Conclave Citadel.",
     "assets": [
       "assets/akalynth/visuals/cards/01-high-city-dawn.card-800x1000.webp"

@@ -1,0 +1,54 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "origins-codex",
+  "type": "lore",
+  "title": "Origins Codex",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-20T00:00:00Z",
+  "updated": "2026-06-20T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "Volume I — six origins, six starting cities, six first choices.",
+  "lineage": {
+    "origin": "AKALYNTH_GAMEPLAY_LANE_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-20T00:00:00Z",
+    "last_accepted_change": "Origins Codex published with gameplay-lane ship (Flamekeeper, Archivist, Wayfarer, and allied origin openings)"
+  },
+  "world": {
+    "description": "Who you are when you enter Akalynth: six origin stories tied to start cities, factions, and recommended professions from the Gameplay Lane.",
+    "design_refs": [
+      "codex/design/gameplay-lane.md",
+      "codex/entries/gameplay-lane.json"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_GAMEPLAY_LANE_V1"
+    }
+  },
+  "related": [
+    { "rel": "references", "target": "heroes-codex" },
+    { "rel": "references", "target": "factions-codex" },
+    { "rel": "references", "target": "high-city" },
+    { "rel": "references", "target": "forgehold" }
+  ],
+  "assets": [],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "Origins Codex",
+    "category": "Civilization Codices",
+    "summary": "Volume I — Before the First Binding.",
+    "body": "Six origins define how you enter Akalynth: where you start, which faction notices you first, and which profession path feels natural. Rookguard vocations are the tutorial mark; Origins Codex is the long road — Flamekeeper at Forgehold, Archivist at High City, and the rest of the lane.",
+    "assets": [],
+    "related": ["heroes-codex", "factions-codex", "rookguard", "forgehold"],
+    "source_ref": "origins-codex"
+  },
+  "tags": ["codex", "origins", "gameplay-lane"]
+}

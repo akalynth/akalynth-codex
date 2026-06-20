@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-05T20:36:24Z",
-  "updated": "2026-06-13T00:00:00Z",
+  "updated": "2026-06-20T00:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -14,7 +14,7 @@
     "agent": true,
     "public": false
   },
-  "summary": "The systems layer — turns the Game Loop Bible into implementable mechanics: progression, combat, economy, crafting, reputation/authority, social organizations, death/failure, and world state.",
+  "summary": "The systems layer \u2014 turns the Game Loop Bible into implementable mechanics: progression, combat, economy, crafting, reputation/authority, social organizations, death/failure, and world state.",
   "lineage": {
     "origin": "AKALYNTH_SYSTEMS_BIBLE_V1",
     "accepted": true,
@@ -53,7 +53,7 @@
     {
       "kind": "website_update",
       "ref": "codex/design/systems-bible.md",
-      "status": "in_review",
+      "status": "accepted",
       "assignee": "codex-build-delegation"
     },
     {

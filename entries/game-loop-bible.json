@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-05T20:28:13Z",
-  "updated": "2026-06-13T00:00:00Z",
+  "updated": "2026-06-20T00:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -14,7 +14,7 @@
     "agent": true,
     "public": false
   },
-  "summary": "The gameplay-loop layer: what the player does minute-to-minute, per session, and across hour 1 / 10 / 50 / 200 / year 3 — plus the systems matrix tying it together.",
+  "summary": "The gameplay-loop layer: what the player does minute-to-minute, per session, and across hour 1 / 10 / 50 / 200 / year 3 \u2014 plus the systems matrix tying it together.",
   "lineage": {
     "origin": "AKALYNTH_GAME_LOOP_BIBLE_V1",
     "accepted": true,
@@ -52,7 +52,7 @@
     {
       "kind": "website_update",
       "ref": "codex/design/game-loop-bible.md",
-      "status": "in_review",
+      "status": "accepted",
       "assignee": "codex-build-delegation"
     },
     {

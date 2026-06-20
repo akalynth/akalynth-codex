@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-12T00:00:00Z",
-  "updated": "2026-06-13T00:00:00Z",
+  "updated": "2026-06-20T00:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -14,7 +14,7 @@
     "agent": true,
     "public": true
   },
-  "summary": "Frontier of Ash — a harsh stronghold at the edge of the Emberwilds; home object of the Cinderwatch Frontier playable slice.",
+  "summary": "Frontier of Ash \u2014 a harsh stronghold at the edge of the Emberwilds; home object of the Cinderwatch Frontier playable slice.",
   "lineage": {
     "origin": "AKALYNTH_CITIES_SUMMARY_V1",
     "accepted": true,
@@ -22,7 +22,7 @@
     "last_accepted_change": "AKALYNTH_CINDERWATCH_FRONTIER_SLICE_V1 (playable slice: Ashwarden frontier gameplay, patrol contracts, creature tracking, caravan escort, Glassfang Matriarch boss)"
   },
   "world": {
-    "description": "Frontier of Ash — a harsh stronghold at the edge of the Emberwilds. Civic domain: Survival. Anchors the Cinderwatch Frontier slice: patrol contracts, creature tracking, caravan/refugee escort, fortification, and the Glassfang Brood threat.",
+    "description": "Frontier of Ash \u2014 a harsh stronghold at the edge of the Emberwilds. Civic domain: Survival. Anchors the Cinderwatch Frontier slice: patrol contracts, creature tracking, caravan/refugee escort, fortification, and the Glassfang Brood threat.",
     "design_refs": [
       "codex/design/cindervale.md",
       "repos/akalynth/drop/AKALYNTH_CINDERWATCH_FRONTIER_SLICE_V1/docs/AKALYNTH_CINDERWATCH_FRONTIER_SLICE_V1.md",
@@ -57,14 +57,15 @@
     {
       "kind": "website_update",
       "ref": "codex/design/cindervale.md",
-      "status": "in_review",
+      "status": "accepted",
       "assignee": "codex-build-delegation"
     },
     {
       "kind": "prototype_data",
       "ref": "repos/akalynth/drop/AKALYNTH_CINDERWATCH_FRONTIER_SLICE_V1/prompts/CLAUDE_CODE_AKALYNTH_CINDERWATCH_FRONTIER_PROTOTYPE_DATA.prompt.md",
-      "status": "in_review",
-      "assignee": "codex-build-delegation"
+      "status": "blocked",
+      "assignee": "codex-build-delegation",
+      "note": "source drop directory absent from repo; prompt file not checked in"
     },
     {
       "kind": "asset",
@@ -93,7 +94,7 @@
     "reviewed_by": "guardian@vaultmesh.org",
     "title": "Cindervale",
     "category": "Cities",
-    "summary": "Frontier of Ash — a harsh stronghold at the edge of the Emberwilds.",
+    "summary": "Frontier of Ash \u2014 a harsh stronghold at the edge of the Emberwilds.",
     "body": "Cindervale protects trade routes and stands against volcanic threats. Known for the Watch Bastions, the Frontier Markets, the Ashwardens, the Expedition Guilds, and the Ember Gates.",
     "assets": [
       "assets/akalynth/visuals/cards/09-cinderwatch-frontier.card-800x1000.webp"

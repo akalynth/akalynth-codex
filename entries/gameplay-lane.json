@@ -2,11 +2,11 @@
   "schema_version": "codex-entry/v1",
   "id": "gameplay-lane",
   "type": "system",
-  "title": "Gameplay Lane — Origins, Professions, Equipment, Map, Campaign, Raids",
+  "title": "Gameplay Lane \u2014 Origins, Professions, Equipment, Map, Campaign, Raids",
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-05T21:37:00Z",
-  "updated": "2026-06-13T00:00:00Z",
+  "updated": "2026-06-20T00:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -52,7 +52,7 @@
     {
       "kind": "website_update",
       "ref": "codex/design/gameplay-lane.md",
-      "status": "in_review",
+      "status": "accepted",
       "assignee": "codex-build-delegation"
     },
     {
