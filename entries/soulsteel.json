@@ -1,0 +1,60 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "soulsteel",
+  "type": "material",
+  "title": "Soulsteel",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "The signature alloy of Forgehold.",
+  "lineage": {
+    "origin": "AKALYNTH_SOULSTEEL_STABILIZATION_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH_SOULSTEEL_STABILIZATION_V1"
+  },
+  "world": {
+    "description": "A material forged and stabilized at the Heartforge of Forgehold; the core of the Forgehold crafting systems."
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "forgehold"
+    },
+    {
+      "rel": "references",
+      "target": "flamebound"
+    },
+    {
+      "rel": "references",
+      "target": "heartforge"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "Soulsteel",
+    "category": "Materials",
+    "summary": "The signature alloy of Forgehold.",
+    "body": "A material forged and stabilized at the Heartforge of Forgehold; the core of the Forgehold crafting systems.",
+    "assets": [],
+    "related": [
+      "forgehold",
+      "flamebound",
+      "heartforge"
+    ],
+    "source_ref": "soulsteel"
+  },
+  "tags": [
+    "emberwilds",
+    "material"
+  ]
+}

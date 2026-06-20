@@ -1,0 +1,50 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "veridium-port",
+  "type": "place",
+  "title": "Veridium Port",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "Gateway of the Western Sea — the largest harbor in Akalynth.",
+  "lineage": {
+    "origin": "AKALYNTH_CITIES_SUMMARY_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH_CITIES_SUMMARY_V1"
+  },
+  "world": {
+    "description": "Gateway of the Western Sea — the largest harbor in Akalynth. Civic domain: Prosperity."
+  },
+  "related": [
+    {
+      "rel": "connects_to",
+      "target": "high-city"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "Veridium Port",
+    "category": "Cities",
+    "summary": "Gateway of the Western Sea — the largest harbor in Akalynth.",
+    "body": "Veridium Port connects the great civilizations through trade, exploration, and information. Known for the Grand Harbor, the Merchant Guilds, the Sea Archives, the Explorer Houses, and the Crystal Lighthouse.",
+    "assets": [],
+    "related": [
+      "high-city"
+    ],
+    "source_ref": "veridium-port"
+  },
+  "tags": [
+    "city",
+    "prosperity"
+  ]
+}

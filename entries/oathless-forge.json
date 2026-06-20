@@ -1,0 +1,50 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "oathless-forge",
+  "type": "boss",
+  "title": "The Oathless Forge",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "draft",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "The Oathless Forge — builder-only (unreleased).",
+  "lineage": {
+    "origin": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1"
+  },
+  "world": {
+    "description": "The boss encounter at the heart of the Heartforge Trial Chamber. Mechanics designed; unreleased.",
+    "design_refs": [
+      "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/docs/AKALYNTH_OATHLESS_FORGE_BOSS_V1.md"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1"
+    }
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "heartforge-trial-chamber"
+    },
+    {
+      "rel": "references",
+      "target": "forgehold"
+    }
+  ],
+  "public_projection": null,
+  "tags": [
+    "unreleased",
+    "forgehold-slice",
+    "boss"
+  ]
+}

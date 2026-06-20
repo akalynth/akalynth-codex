@@ -1,0 +1,58 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "witness-moth",
+  "type": "creature",
+  "title": "The Witness Moth",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "Keeper of Seen Truths · Recorder of All That Is",
+  "lineage": {
+    "origin": "codex.html creature codex",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "codex.html creature codex"
+  },
+  "world": {
+    "description": "Keeper of Seen Truths · Recorder of All That Is · Threat: High."
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "high-city"
+    }
+  ],
+  "assets": [
+    {
+      "kind": "plate",
+      "path": "repos/akalynth-site/assets/codex/witness-moth.png"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "The Witness Moth",
+    "category": "Creatures",
+    "summary": "Keeper of Seen Truths · Recorder of All That Is · Threat: High",
+    "body": "A luminous moth said to record everything it witnesses — memory, evidence, and omen made flesh.",
+    "assets": [
+      "assets/codex/witness-moth.png"
+    ],
+    "related": [
+      "high-city"
+    ],
+    "source_ref": "witness-moth"
+  },
+  "tags": [
+    "creature",
+    "threat-high"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "campaign-act-i",
+  "type": "quest",
+  "title": "Act I — The Four Proofs",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-06T03:30:00Z",
+  "updated": "2026-06-13T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "Act I campaign spine — The Four Proofs — binding the four playable slices into one coherent act (Archive/Material/Dream/Field proofs).",
+  "lineage": {
+    "origin": "AKALYNTH_CAMPAIGN_ACT_I_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-06T03:47:00Z",
+    "last_accepted_change": "AKALYNTH_CAMPAIGN_ACT_I_V1 (campaign spine, origin paths, chapter flow, major choices, final convergence, release gates)"
+  },
+  "world": {
+    "description": "The Act I campaign spine. Does not add a new playable slice; it connects the four existing slices into one Act via The Four Proofs: High City / First Archive (Archive Proof — Truth), Forgehold Route / Ember Road (Material Proof — Power), Moonspire / Dream Gate (Dream Proof — Possibility), Cinderwatch / Ashline Frontier (Field Proof — Survival).",
+    "design_refs": [
+      "codex/design/campaign-act-i.md",
+      "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/docs/AKALYNTH_CAMPAIGN_ACT_I_V1.md",
+      "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/docs/AKALYNTH_THE_FOUR_PROOFS_CAMPAIGN_SPINE_V1.md",
+      "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/docs/AKALYNTH_ACT_I_CHAPTER_FLOW_V1.md",
+      "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/docs/AKALYNTH_ACT_I_MAJOR_CHOICES_V1.md",
+      "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/docs/AKALYNTH_ACT_I_RELEASE_GATES_V1.md"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_CAMPAIGN_ACT_I_V1",
+      "registry": "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/registry/akalynthCampaignActIRegistry.ts"
+    }
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "high-city",
+      "note": "Archive Proof (Truth)"
+    },
+    {
+      "rel": "references",
+      "target": "forgehold",
+      "note": "Material Proof (Power)"
+    },
+    {
+      "rel": "references",
+      "target": "moonspire",
+      "note": "Dream Proof (Possibility)"
+    },
+    {
+      "rel": "references",
+      "target": "cindervale",
+      "note": "Field Proof (Survival)"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "website_update",
+      "ref": "codex/design/campaign-act-i.md",
+      "status": "in_review",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "prototype_data",
+      "ref": "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/prompts/CLAUDE_CODE_AKALYNTH_CAMPAIGN_ACT_I_PROTOTYPE_DATA.prompt.md",
+      "status": "in_review",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "asset",
+      "ref": "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/prompts/AKALYNTH_CAMPAIGN_ACT_I_POSTER_V1.prompt.md",
+      "status": "open"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/MANIFEST.md",
+      "sha256": "4e8a3ea95b516b26eaf97952baafd873c4d2a3c3b97920e18c44c212d1b38c19"
+    },
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/MANIFEST.csv",
+      "sha256": "6e9b23b2b91dac234fcf1d9b6cc1bd0843b47ef7199a50b24c2c42234a67d9d0"
+    },
+    {
+      "kind": "checksum",
+      "ref": "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/CHECKSUMS_SHA256.txt"
+    }
+  ],
+  "public_projection": null,
+  "tags": [
+    "campaign",
+    "act-i",
+    "four-proofs",
+    "spine"
+  ]
+}

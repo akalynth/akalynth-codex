@@ -1,0 +1,51 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "memory-serpent",
+  "type": "creature",
+  "title": "The Memory Serpent",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "Guardian of Forgotten Truths · Warden of the Deep Mind",
+  "lineage": {
+    "origin": "codex.html creature codex",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "codex.html creature codex"
+  },
+  "world": {
+    "description": "Guardian of Forgotten Truths · Warden of the Deep Mind · Threat: Extreme."
+  },
+  "related": [],
+  "assets": [
+    {
+      "kind": "plate",
+      "path": "repos/akalynth-site/assets/codex/memory-serpent.png"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "The Memory Serpent",
+    "category": "Creatures",
+    "summary": "Guardian of Forgotten Truths · Warden of the Deep Mind · Threat: Extreme",
+    "body": "A serpent that guards forgotten truths in the deep mind — warden of what the world tried to forget.",
+    "assets": [
+      "assets/codex/memory-serpent.png"
+    ],
+    "related": [],
+    "source_ref": "memory-serpent"
+  },
+  "tags": [
+    "creature",
+    "threat-extreme"
+  ]
+}

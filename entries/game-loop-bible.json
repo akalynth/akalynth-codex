@@ -1,0 +1,87 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "game-loop-bible",
+  "type": "system",
+  "title": "Game Loop Bible",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-05T20:28:13Z",
+  "updated": "2026-06-13T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "The gameplay-loop layer: what the player does minute-to-minute, per session, and across hour 1 / 10 / 50 / 200 / year 3 — plus the systems matrix tying it together.",
+  "lineage": {
+    "origin": "AKALYNTH_GAME_LOOP_BIBLE_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-05T20:28:13Z",
+    "last_accepted_change": "AKALYNTH_GAME_LOOP_BIBLE_V1 (core loops, activity catalog, player time horizons, retention design, systems matrix)"
+  },
+  "world": {
+    "description": "The first gameplay-loop layer for Akalynth. Defines what the player does minute-to-minute, in a session, and at hour 1, 10, 50, 200, and year 3; and how Origins, Professions, Factions, Dungeons, Artifacts, Cities, and World Events connect into core loops, an activity catalog, and a retention design.",
+    "design_refs": [
+      "codex/design/game-loop-bible.md",
+      "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/docs/AKALYNTH_GAME_LOOP_BIBLE_V1.md",
+      "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/docs/AKALYNTH_CORE_LOOPS_V1.md",
+      "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/docs/AKALYNTH_ACTIVITY_CATALOG_V1.md",
+      "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/docs/AKALYNTH_PLAYER_TIME_HORIZONS_V1.md",
+      "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/docs/AKALYNTH_RETENTION_DESIGN_V1.md",
+      "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/docs/AKALYNTH_SYSTEMS_MATRIX_V1.md"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_GAME_LOOP_BIBLE_V1",
+      "registry": "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/registry/akalynthGameLoopRegistry.ts"
+    }
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "systems-bible"
+    },
+    {
+      "rel": "references",
+      "target": "world-events-engine"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "website_update",
+      "ref": "codex/design/game-loop-bible.md",
+      "status": "in_review",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "asset",
+      "ref": "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/prompts/AKALYNTH_GAME_LOOP_BIBLE_POSTER_V1.prompt.md",
+      "status": "open"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/MANIFEST.md",
+      "sha256": "54ad85f424bcd068e8bff1b786fb0f17a0787aff4c53b0702d9aefdf521ce6bd"
+    },
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/MANIFEST.csv",
+      "sha256": "2277477ed5c331a1efd5cde2bf33f37008d1b66a464ab398b65a3e52816c15a0"
+    },
+    {
+      "kind": "checksum",
+      "ref": "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/CHECKSUMS_SHA256.txt"
+    }
+  ],
+  "public_projection": null,
+  "tags": [
+    "system",
+    "game-loop",
+    "retention",
+    "bible"
+  ]
+}

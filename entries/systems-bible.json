@@ -1,0 +1,89 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "systems-bible",
+  "type": "system",
+  "title": "Systems Bible",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-05T20:36:24Z",
+  "updated": "2026-06-13T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "The systems layer — turns the Game Loop Bible into implementable mechanics: progression, combat, economy, crafting, reputation/authority, social organizations, death/failure, and world state.",
+  "lineage": {
+    "origin": "AKALYNTH_SYSTEMS_BIBLE_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-05T20:36:24Z",
+    "last_accepted_change": "AKALYNTH_SYSTEMS_BIBLE_V1 (combat, progression, economy/crafting, reputation/authority, social orgs, death/failure, world state)"
+  },
+  "world": {
+    "description": "The systems layer for Akalynth. Turns the Game Loop Bible into implementable mechanics: progression, combat, economy and crafting, reputation and authority, social organizations, death and failure states, and world state and events, with a systems decision matrix.",
+    "design_refs": [
+      "codex/design/systems-bible.md",
+      "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/docs/AKALYNTH_SYSTEMS_BIBLE_V1.md",
+      "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/docs/AKALYNTH_COMBAT_SYSTEM_V1.md",
+      "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/docs/AKALYNTH_PROGRESSION_SYSTEM_V1.md",
+      "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/docs/AKALYNTH_ECONOMY_AND_CRAFTING_SYSTEM_V1.md",
+      "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/docs/AKALYNTH_REPUTATION_AND_AUTHORITY_SYSTEM_V1.md",
+      "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/docs/AKALYNTH_WORLD_STATE_AND_EVENTS_SYSTEM_V1.md",
+      "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/docs/AKALYNTH_SYSTEMS_DECISION_MATRIX_V1.md"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_SYSTEMS_BIBLE_V1",
+      "registry": "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/registry/akalynthSystemsRegistry.ts"
+    }
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "game-loop-bible"
+    },
+    {
+      "rel": "references",
+      "target": "world-events-engine"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "website_update",
+      "ref": "codex/design/systems-bible.md",
+      "status": "in_review",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "asset",
+      "ref": "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/prompts/AKALYNTH_SYSTEMS_BIBLE_POSTER_V1.prompt.md",
+      "status": "open"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/MANIFEST.md",
+      "sha256": "45bde5955b92df8342587f00df6f5d5831937d9f95f0a0aa9faf93190510d872"
+    },
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/MANIFEST.csv",
+      "sha256": "08520c2a9d36e722b19d40740fbbd3a7017b5a10745377dfb7c157eb5ec46650"
+    },
+    {
+      "kind": "checksum",
+      "ref": "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/CHECKSUMS_SHA256.txt"
+    }
+  ],
+  "public_projection": null,
+  "tags": [
+    "system",
+    "combat",
+    "economy",
+    "progression",
+    "bible"
+  ]
+}

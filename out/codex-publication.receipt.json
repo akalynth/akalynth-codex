@@ -1,0 +1,201 @@
+{
+  "artifact": "AKALYNTH_CODEX_PUBLICATION_V1",
+  "generated_by": "codex/tools/project.mjs",
+  "public_graph_sha256": "e3ec347ac6d8622a7537b6312274a1f24fd61770eb6863e3a52fcd4b2e58d103",
+  "public_entries": 22,
+  "gate": {
+    "rule": "visibility.public && public_projection.published && lineage.accepted",
+    "passed": 22
+  },
+  "source_provenance": [
+    {
+      "id": "artifacts-codex",
+      "status": "accepted",
+      "origin": "AKALYNTH_ARTIFACTS_CODEX_V1",
+      "source_kind": "source",
+      "source_ref": "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_ARTIFACTS_CODEX_V1.md",
+      "evidence_sha256": "623158c2a8fb78b65f0c8d54dd81068fefeffa430fec1cece06e54bfb2200235"
+    },
+    {
+      "id": "chronicle-of-ages",
+      "status": "accepted",
+      "origin": "AKALYNTH_CHRONICLE_OF_AGES_V1",
+      "source_kind": "source",
+      "source_ref": "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_CHRONICLE_OF_AGES_V1.md",
+      "evidence_sha256": "ea25be36dbd9963e42f5b8721860df5b056e4405abf7f7b1d1979164528972d9"
+    },
+    {
+      "id": "chronoshell-turtle",
+      "status": "accepted",
+      "origin": "codex.html creature codex",
+      "source_kind": "asserted",
+      "source_ref": null,
+      "evidence_sha256": null
+    },
+    {
+      "id": "cindervale",
+      "status": "accepted",
+      "origin": "AKALYNTH_CITIES_SUMMARY_V1",
+      "source_kind": "source",
+      "source_ref": "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_CITIES_SUMMARY_V1.md",
+      "evidence_sha256": "3ab9b3eb971e746298cb5ac74bc0ff2244e64f8739fce66fa56a155a6040618b"
+    },
+    {
+      "id": "dreamweaver",
+      "status": "accepted",
+      "origin": "codex.html creature codex",
+      "source_kind": "asserted",
+      "source_ref": null,
+      "evidence_sha256": null
+    },
+    {
+      "id": "dungeon-codex",
+      "status": "accepted",
+      "origin": "AKALYNTH_DUNGEON_CODEX_V1",
+      "source_kind": "source",
+      "source_ref": "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_DUNGEON_CODEX_V1.md",
+      "evidence_sha256": "75a2145a34706bf49072c820c137e3d663ee5610a7c5d1124d433a9ad355599e"
+    },
+    {
+      "id": "echo-stalker",
+      "status": "accepted",
+      "origin": "codex.html creature codex",
+      "source_kind": "asserted",
+      "source_ref": null,
+      "evidence_sha256": null
+    },
+    {
+      "id": "ember-road",
+      "status": "accepted",
+      "origin": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
+      "source_kind": "receipt",
+      "source_ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/MANIFEST.md",
+      "evidence_sha256": "4d9eed25b50dba215da5061a72ddd5aec778ae917d588202289adebe6fd3c823"
+    },
+    {
+      "id": "emberwilds-atlas",
+      "status": "accepted",
+      "origin": "AKALYNTH world atlas",
+      "source_kind": "asserted",
+      "source_ref": null,
+      "evidence_sha256": null
+    },
+    {
+      "id": "emberwilds",
+      "status": "accepted",
+      "origin": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
+      "source_kind": "receipt",
+      "source_ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/MANIFEST.md",
+      "evidence_sha256": "4d9eed25b50dba215da5061a72ddd5aec778ae917d588202289adebe6fd3c823"
+    },
+    {
+      "id": "factions-codex",
+      "status": "accepted",
+      "origin": "AKALYNTH_FACTIONS_CODEX_V1",
+      "source_kind": "source",
+      "source_ref": "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_FACTIONS_CODEX_V1.md",
+      "evidence_sha256": "9c6c5a4afcff73644094d4eb561555ee49b12eb582641f419429a6a43cc3dafc"
+    },
+    {
+      "id": "flamebound",
+      "status": "accepted",
+      "origin": "AKALYNTH_FACTIONS_CODEX_V1",
+      "source_kind": "source",
+      "source_ref": "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_FACTIONS_CODEX_V1.md",
+      "evidence_sha256": "9c6c5a4afcff73644094d4eb561555ee49b12eb582641f419429a6a43cc3dafc"
+    },
+    {
+      "id": "forgehold",
+      "status": "accepted",
+      "origin": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
+      "source_kind": "receipt",
+      "source_ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/MANIFEST.md",
+      "evidence_sha256": "4d9eed25b50dba215da5061a72ddd5aec778ae917d588202289adebe6fd3c823"
+    },
+    {
+      "id": "heartforge",
+      "status": "accepted",
+      "origin": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
+      "source_kind": "receipt",
+      "source_ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/MANIFEST.md",
+      "evidence_sha256": "4d9eed25b50dba215da5061a72ddd5aec778ae917d588202289adebe6fd3c823"
+    },
+    {
+      "id": "heroes-codex",
+      "status": "accepted",
+      "origin": "AKALYNTH_HEROES_CODEX_V1",
+      "source_kind": "source",
+      "source_ref": "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_HEROES_CODEX_V1.md",
+      "evidence_sha256": "3f9d4f903f455312dad0d9940221bceb75223ef3b0aa92d3ed2f3185c111d630"
+    },
+    {
+      "id": "high-city",
+      "status": "accepted",
+      "origin": "AKALYNTH_CITIES_SUMMARY_V1",
+      "source_kind": "source",
+      "source_ref": "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_CITIES_SUMMARY_V1.md",
+      "evidence_sha256": "3ab9b3eb971e746298cb5ac74bc0ff2244e64f8739fce66fa56a155a6040618b"
+    },
+    {
+      "id": "memory-serpent",
+      "status": "accepted",
+      "origin": "codex.html creature codex",
+      "source_kind": "asserted",
+      "source_ref": null,
+      "evidence_sha256": null
+    },
+    {
+      "id": "moonspire",
+      "status": "accepted",
+      "origin": "AKALYNTH_CITIES_SUMMARY_V1",
+      "source_kind": "source",
+      "source_ref": "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_CITIES_SUMMARY_V1.md",
+      "evidence_sha256": "3ab9b3eb971e746298cb5ac74bc0ff2244e64f8739fce66fa56a155a6040618b"
+    },
+    {
+      "id": "soulsteel",
+      "status": "accepted",
+      "origin": "AKALYNTH_SOULSTEEL_STABILIZATION_V1",
+      "source_kind": "asserted",
+      "source_ref": null,
+      "evidence_sha256": null
+    },
+    {
+      "id": "veridium-port",
+      "status": "accepted",
+      "origin": "AKALYNTH_CITIES_SUMMARY_V1",
+      "source_kind": "source",
+      "source_ref": "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_CITIES_SUMMARY_V1.md",
+      "evidence_sha256": "3ab9b3eb971e746298cb5ac74bc0ff2244e64f8739fce66fa56a155a6040618b"
+    },
+    {
+      "id": "void-whale",
+      "status": "accepted",
+      "origin": "codex.html creature codex",
+      "source_kind": "asserted",
+      "source_ref": null,
+      "evidence_sha256": null
+    },
+    {
+      "id": "witness-moth",
+      "status": "accepted",
+      "origin": "codex.html creature codex",
+      "source_kind": "asserted",
+      "source_ref": null,
+      "evidence_sha256": null
+    }
+  ],
+  "receipt_backed": 4,
+  "source_backed": 10,
+  "asserted_only": [
+    "chronoshell-turtle",
+    "dreamweaver",
+    "echo-stalker",
+    "emberwilds-atlas",
+    "memory-serpent",
+    "soulsteel",
+    "void-whale",
+    "witness-moth"
+  ],
+  "leak_check": "pass"
+}

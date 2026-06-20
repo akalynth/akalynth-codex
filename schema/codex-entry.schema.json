@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akalynth/codex/codex-entry.schema.json",
+  "title": "Akalynth Codex Entry (live object) v1",
+  "description": "One node in the Akalynth world graph. A live object that aggregates an entity's lore, design status, graph edges, work packets, assets, and proof receipts. Surfaces (public/builder/operator/agent) are views over this object. The PUBLIC surface renders ONLY `public_projection` — internal fields are never in the public build input, which is the structural leak-proofing.",
+  "type": "object",
+  "required": ["schema_version", "id", "type", "title", "authority", "status", "visibility", "lineage"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "codex-entry/v1" },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "description": "Stable slug; graph edges reference this." },
+    "type": { "enum": ["place", "region", "faction", "creature", "npc", "boss", "item", "material", "mechanic", "system", "quest", "route", "event", "decision", "lore", "asset", "packet", "receipt"] },
+    "title": { "type": "string" },
+    "authority": { "type": "string", "description": "Who owns the truth of this object." },
+    "author": { "type": "string", "description": "Who authored this Codex entry." },
+    "created": { "type": "string", "format": "date-time" },
+    "updated": { "type": "string", "format": "date-time" },
+    "status": { "enum": ["draft", "candidate", "reviewed", "accepted", "obsolete", "blocked"], "description": "Machine source-of-truth for agents: what is safe to act on." },
+    "visibility": {
+      "type": "object", "additionalProperties": false,
+      "description": "Which surfaces may see the OBJECT. Public is never implied — public exposure happens only through a published public_projection.",
+      "required": ["builder", "operator", "agent", "public"],
+      "properties": {
+        "builder": { "type": "boolean" },
+        "operator": { "type": "boolean" },
+        "agent": { "type": "boolean" },
+        "public": { "type": "boolean", "description": "True only when a reviewed public_projection exists and is published." }
+      }
+    },
+    "summary": { "type": "string", "description": "Internal one-line summary." },
+    "lineage": {
+      "type": "object", "additionalProperties": false, "required": ["origin"],
+      "properties": {
+        "origin": { "type": "string", "description": "The lane / proposal / decision that created this (the 'why')." },
+        "accepted": { "type": "boolean" },
+        "accepted_at": { "type": "string", "format": "date-time" },
+        "last_accepted_change": { "type": "string", "description": "Most recent accepted lane/change touching this object." }
+      }
+    },
+    "world": {
+      "type": "object", "additionalProperties": false,
+      "description": "Builder-layer design facts (private).",
+      "properties": {
+        "description": { "type": "string" },
+        "design_refs": { "type": "array", "items": { "type": "string" }, "description": "Repo-relative paths to design docs/data." },
+        "implementation": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "stage": { "enum": ["concept", "spec", "prototype", "in_engine", "shipped"] },
+            "slice": { "type": "string", "description": "Lane/slice id implementing this." },
+            "registry": { "type": "string", "description": "Repo path to the runtime registry, if any." }
+          }
+        }
+      }
+    },
+    "related": {
+      "type": "array",
+      "description": "Typed graph edges to other Codex entries (by id) or external refs (ext:<name> = node not yet modeled).",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["rel", "target"],
+        "properties": {
+          "rel": { "enum": ["located_in", "home_of", "part_of", "connects_to", "produces", "guards", "unlocks", "references", "faction_of", "contains"] },
+          "target": { "type": "string" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["kind", "path"],
+        "properties": {
+          "kind": { "enum": ["banner", "card", "wallpaper", "og", "thumb", "sprite", "tile", "icon", "plate", "poster"] },
+          "path": { "type": "string" },
+          "sha256": { "type": "string" }
+        }
+      }
+    },
+    "packets": {
+      "type": "array",
+      "description": "Open work this object can generate (the engineering-brain hook → delegation/Issues).",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["kind", "ref", "status"],
+        "properties": {
+          "kind": { "enum": ["website_update", "prototype_data", "asset", "quest", "mechanic", "map", "dialogue", "review"] },
+          "ref": { "type": "string" },
+          "status": { "enum": ["open", "assigned", "in_review", "accepted", "blocked"] },
+          "assignee": { "type": "string" }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "description": "Proof receipts / checksums / manifests backing this object's accepted state.",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["kind", "ref"],
+        "properties": {
+          "kind": { "enum": ["manifest", "checksum", "receipt", "screenshot", "verification"] },
+          "ref": { "type": "string" },
+          "sha256": { "type": "string" }
+        }
+      }
+    },
+    "public_projection": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "description": "The ONLY content the public Codex (L1) renders. The curated ~10-20% window. If null or unpublished, nothing public is emitted.",
+      "required": ["published"],
+      "properties": {
+        "published": { "type": "boolean" },
+        "reviewed_by": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "summary": { "type": "string" },
+        "body": { "type": "string", "description": "Public, spoiler-free lore (markdown)." },
+        "assets": { "type": "array", "items": { "type": "string" }, "description": "Asset paths cleared for public use." },
+        "related": { "type": "array", "items": { "type": "string" }, "description": "Public-safe related entry ids." },
+        "source_ref": { "type": "string", "description": "Authoritative internal object id this window projects from (= this entry's id)." }
+      }
+    },
+    "tags": { "type": "array", "items": { "type": "string" } }
+  }
+}

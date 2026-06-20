@@ -1,0 +1,97 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "world-events-engine",
+  "type": "system",
+  "title": "World Events Engine",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-05T21:06:47Z",
+  "updated": "2026-06-13T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "The live-world event layer — turns the Chronicle, Game Loop, and Systems Bible into a repeatable event engine: lifecycle, types, canon cards, contribution scoring, rewards, and failure/aftermath.",
+  "lineage": {
+    "origin": "AKALYNTH_WORLD_EVENTS_ENGINE_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-05T21:06:47Z",
+    "last_accepted_change": "AKALYNTH_WORLD_EVENTS_ENGINE_V1 (event lifecycle, event types, canon event cards, contribution scoring, rewards, failure/aftermath, Witness Moth Bloom prototype)"
+  },
+  "world": {
+    "description": "The live-world event layer for Akalynth. Turns the Chronicle, Game Loop, and Systems Bible into a repeatable event engine: event lifecycle, event types catalog, canon event cards, contribution scoring, reward structure, and failure/aftermath, with the Witness Moth Bloom as the prototype event.",
+    "design_refs": [
+      "codex/design/world-events-engine.md",
+      "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/docs/AKALYNTH_WORLD_EVENTS_ENGINE_V1.md",
+      "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/docs/AKALYNTH_EVENT_LIFECYCLE_V1.md",
+      "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/docs/AKALYNTH_EVENT_TYPES_CATALOG_V1.md",
+      "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/docs/AKALYNTH_CANON_EVENT_CARDS_V1.md",
+      "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/docs/AKALYNTH_EVENT_CONTRIBUTION_SCORING_V1.md",
+      "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/docs/AKALYNTH_EVENT_REWARD_STRUCTURE_V1.md",
+      "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/docs/AKALYNTH_WORLD_EVENTS_INTEGRATION_MATRIX_V1.md"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_WORLD_EVENTS_ENGINE_V1",
+      "registry": "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/registry/akalynthWorldEventsRegistry.ts"
+    }
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "game-loop-bible"
+    },
+    {
+      "rel": "references",
+      "target": "systems-bible"
+    },
+    {
+      "rel": "references",
+      "target": "witness-moth",
+      "note": "prototype event: Witness Moth Bloom"
+    },
+    {
+      "rel": "references",
+      "target": "chronicle-of-ages"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "website_update",
+      "ref": "codex/design/world-events-engine.md",
+      "status": "in_review",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "asset",
+      "ref": "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/prompts/AKALYNTH_WORLD_EVENTS_ENGINE_POSTER_V1.prompt.md",
+      "status": "open"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/MANIFEST.md",
+      "sha256": "14e83c6f3df8498ebd6e17ea5ff251f29d3d2f5a721e63ef0293f2b043bc7f57"
+    },
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/MANIFEST.csv",
+      "sha256": "ead6b5846f49c6e5b1d47106ef41a2468440189994c090d11f772936ecf448fd"
+    },
+    {
+      "kind": "checksum",
+      "ref": "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/CHECKSUMS_SHA256.txt"
+    }
+  ],
+  "public_projection": null,
+  "tags": [
+    "system",
+    "world-events",
+    "live-ops",
+    "engine"
+  ]
+}

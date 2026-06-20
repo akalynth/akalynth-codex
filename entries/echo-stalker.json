@@ -1,0 +1,51 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "echo-stalker",
+  "type": "creature",
+  "title": "The Echo Stalker",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "Shadow Hunter of Forgotten Sounds",
+  "lineage": {
+    "origin": "codex.html creature codex",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "codex.html creature codex"
+  },
+  "world": {
+    "description": "Shadow Hunter of Forgotten Sounds · Threat: Extreme."
+  },
+  "related": [],
+  "assets": [
+    {
+      "kind": "plate",
+      "path": "repos/akalynth-site/assets/codex/echo-stalker.png"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "The Echo Stalker",
+    "category": "Creatures",
+    "summary": "Shadow Hunter of Forgotten Sounds · Threat: Extreme",
+    "body": "A shadow that hunts by forgotten sounds; it stalks the spaces between what was heard and what was meant.",
+    "assets": [
+      "assets/codex/echo-stalker.png"
+    ],
+    "related": [],
+    "source_ref": "echo-stalker"
+  },
+  "tags": [
+    "creature",
+    "threat-extreme"
+  ]
+}

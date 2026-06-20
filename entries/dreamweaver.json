@@ -1,0 +1,58 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "dreamweaver",
+  "type": "creature",
+  "title": "The Dreamweaver",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "Architect of Dreams · Weaver of Possibilities",
+  "lineage": {
+    "origin": "codex.html creature codex",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "codex.html creature codex"
+  },
+  "world": {
+    "description": "Architect of Dreams · Weaver of Possibilities · Threat: High (Indirect)."
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "moonspire"
+    }
+  ],
+  "assets": [
+    {
+      "kind": "plate",
+      "path": "repos/akalynth-site/assets/codex/dreamweaver.png"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "The Dreamweaver",
+    "category": "Creatures",
+    "summary": "Architect of Dreams · Weaver of Possibilities · Threat: High (Indirect)",
+    "body": "An architect of dreams that weaves possibility itself; its threat is subtle and indirect.",
+    "assets": [
+      "assets/codex/dreamweaver.png"
+    ],
+    "related": [
+      "moonspire"
+    ],
+    "source_ref": "dreamweaver"
+  },
+  "tags": [
+    "creature",
+    "threat-high-indirect-"
+  ]
+}

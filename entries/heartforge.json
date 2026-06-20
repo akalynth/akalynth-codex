@@ -1,0 +1,55 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "heartforge",
+  "type": "place",
+  "title": "The Heartforge",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "The great forge at the heart of Forgehold.",
+  "lineage": {
+    "origin": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1"
+  },
+  "world": {
+    "description": "The Heartforge burns at the centre of Forgehold Citadel — where Soulsteel is made. (Its Trial Chamber is a separate, unreleased dungeon.)"
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "forgehold"
+    },
+    {
+      "rel": "references",
+      "target": "soulsteel"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "The Heartforge",
+    "category": "Places",
+    "summary": "The great forge at the heart of Forgehold.",
+    "body": "The Heartforge burns at the centre of Forgehold Citadel — where Soulsteel is made. (Its Trial Chamber is a separate, unreleased dungeon.)",
+    "assets": [],
+    "related": [
+      "forgehold",
+      "soulsteel"
+    ],
+    "source_ref": "heartforge"
+  },
+  "tags": [
+    "emberwilds",
+    "place"
+  ]
+}

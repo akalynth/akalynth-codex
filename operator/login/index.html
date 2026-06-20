@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050910" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Akalynth Operator — Sign in</title>
+    <style>
+      :root { --gold:#e5b75c; --gold2:#ffd982; --text:#f6f0e6; --soft:#c2c8d0; --muted:#9aa3ad; --line:rgba(255,255,255,.1); --bad:#ff8a7a; --ok:#8bd38f; }
+      * { box-sizing: border-box; }
+      body {
+        margin:0; min-height:100vh; display:grid; place-items:center; color:var(--text);
+        font-family: Inter, system-ui, sans-serif; line-height:1.55; padding:24px;
+        background:
+          radial-gradient(circle at 78% 12%, rgba(229,183,92,.1), transparent 30%),
+          radial-gradient(circle at 22% 4%, rgba(112,183,255,.05), transparent 24%),
+          linear-gradient(180deg,#050910 0%,#07101b 58%,#050910 100%);
+        background-attachment: fixed;
+      }
+      .card {
+        width:min(420px, 100%); border:1px solid var(--line); border-radius:14px; padding:30px 30px 26px;
+        background:linear-gradient(180deg, rgba(13,20,31,.92), rgba(8,13,22,.88)); box-shadow:0 24px 80px rgba(0,0,0,.5);
+      }
+      .eyebrow { color:var(--gold); font-size:11px; text-transform:uppercase; letter-spacing:.16em; font-weight:700; margin:0; }
+      h1 { font-family:"Cinzel",Georgia,serif; font-size:30px; color:var(--gold); margin:.25em 0 .1em; letter-spacing:-.01em; }
+      .sub { color:var(--muted); font-size:14px; margin:0 0 22px; }
+      label { display:block; font-size:13px; color:var(--gold); margin:14px 0 6px; }
+      input {
+        width:100%; padding:11px 12px; border:1px solid rgba(255,255,255,.14); border-radius:8px;
+        background:rgba(4,9,16,.6); color:var(--text); font-size:15px; outline:none;
+      }
+      input:focus { border-color:rgba(229,183,92,.55); }
+      button {
+        width:100%; margin-top:22px; padding:12px; border:0; border-radius:8px; cursor:pointer;
+        font-family:"Cinzel",Georgia,serif; font-weight:700; font-size:15px; color:#141008;
+        background:linear-gradient(180deg, var(--gold2), var(--gold));
+      }
+      button:disabled { opacity:.6; cursor:not-allowed; }
+      .msg { margin-top:16px; font-size:14px; min-height:1.2em; }
+      .msg.bad { color:var(--bad); } .msg.ok { color:var(--ok); }
+      .foot { margin-top:20px; padding-top:14px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; }
+      a { color:var(--gold2); }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <p class="eyebrow">Operator Codex</p>
+      <h1>Sign in</h1>
+      <p class="sub">Admin / operator / builder access. Sign in with your Akalynth account.</p>
+      <form id="login">
+        <label for="identifier">Nickname or email</label>
+        <input id="identifier" name="identifier" type="text" autocomplete="username" required />
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required />
+        <button id="submit" type="submit">Sign in</button>
+      </form>
+      <p id="msg" class="msg" role="status" aria-live="polite"></p>
+      <p class="foot">Restricted operator surface. Access is role-based; ask an admin if you need a role granted.</p>
+    </main>
+    <script>
+      (function () {
+        // Role -> surface map mirrors the server (SURFACE_ROLE_MAP in account/service.ts).
+        var SURFACE_ROLES = {
+          operator: ["admin", "operator"],
+          builder: ["admin", "builder"],
+          agent: ["admin", "operator", "agent"],
+        };
+        function param(name) {
+          return new URLSearchParams(location.search).get(name) || "";
+        }
+        // Only allow a same-site, path-absolute next (no "//" protocol-relative).
+        function safeNext(raw) {
+          if (raw && raw.charAt(0) === "/" && raw.charAt(1) !== "/") return raw;
+          return "/operator/";
+        }
+        function surfaceOf(next) {
+          var m = /^\/(operator|builder|agent)(\/|$)/.exec(next);
+          return m ? m[1] : "operator";
+        }
+        var next = safeNext(param("next"));
+        var surface = surfaceOf(next);
+        var msg = document.getElementById("msg");
+        var btn = document.getElementById("submit");
+        function show(text, kind) { msg.textContent = text; msg.className = "msg " + (kind || ""); }
+
+        document.getElementById("login").addEventListener("submit", function (e) {
+          e.preventDefault();
+          btn.disabled = true;
+          show("Signing in…", "");
+          var identifier = document.getElementById("identifier").value.trim();
+          var password = document.getElementById("password").value;
+          // Same-origin /v1 (proxied to the game server on this host) so the
+          // session cookie scopes to this domain for the forward_auth gate.
+          fetch("/v1/accounts/login", {
+            method: "POST",
+            credentials: "include",
+            headers: { "Content-Type": "application/json", Accept: "application/json" },
+            body: JSON.stringify({ identifier: identifier, password: password }),
+          })
+            .then(function (r) { return r.json().catch(function () { return {}; }).then(function (b) { return { ok: r.ok, b: b }; }); })
+            .then(function (res) {
+              if (!res.ok || !res.b.ok) {
+                show(res.b && res.b.error === "invalid_credentials" ? "Invalid email or password." : "Sign-in failed.", "bad");
+                btn.disabled = false;
+                return;
+              }
+              // Logged in — check the role grants this surface before redirecting,
+              // so an account without a role gets a clear message (not a raw 403).
+              return fetch("/v1/accounts/me", { credentials: "include", headers: { Accept: "application/json" } })
+                .then(function (r) { return r.json(); })
+                .then(function (me) {
+                  var roles = (me && me.account && me.account.roles) || [];
+                  var allowed = SURFACE_ROLES[surface] || [];
+                  if (roles.some(function (role) { return allowed.indexOf(role) !== -1; })) {
+                    show("Signed in. Entering…", "ok");
+                    location.href = next;
+                  } else {
+                    show("Signed in, but this account has no " + surface + " access. Ask an admin to grant a role.", "bad");
+                    btn.disabled = false;
+                  }
+                });
+            })
+            .catch(function () { show("Network error. Try again.", "bad"); btn.disabled = false; });
+        });
+      })();
+    </script>
+  </body>
+</html>

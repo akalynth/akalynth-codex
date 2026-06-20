@@ -1,0 +1,60 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "flamebound",
+  "type": "faction",
+  "title": "The Flamebound",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "Forge-sworn of the Emberwilds.",
+  "lineage": {
+    "origin": "AKALYNTH_FACTIONS_CODEX_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH_FACTIONS_CODEX_V1"
+  },
+  "world": {
+    "description": "The faction of Forgehold — forge-sworn keepers of Soulsteel and the Heartforge. Their domain is Strength; their origin role is the Flamekeeper."
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "forgehold"
+    },
+    {
+      "rel": "references",
+      "target": "soulsteel"
+    },
+    {
+      "rel": "references",
+      "target": "heartforge"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "The Flamebound",
+    "category": "Factions",
+    "summary": "Forge-sworn of the Emberwilds.",
+    "body": "The faction of Forgehold — forge-sworn keepers of Soulsteel and the Heartforge. Their domain is Strength; their origin role is the Flamekeeper.",
+    "assets": [],
+    "related": [
+      "forgehold",
+      "soulsteel",
+      "heartforge"
+    ],
+    "source_ref": "flamebound"
+  },
+  "tags": [
+    "emberwilds",
+    "faction"
+  ]
+}

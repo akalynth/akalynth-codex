@@ -1,0 +1,61 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "dungeon-codex",
+  "type": "lore",
+  "title": "Dungeon Codex",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "Places Where History Still Breathes.",
+  "lineage": {
+    "origin": "AKALYNTH_DUNGEON_CODEX_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH_DUNGEON_CODEX_V1"
+  },
+  "world": {
+    "description": "Places Where History Still Breathes.",
+    "design_refs": [
+      "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_DUNGEON_CODEX_V1.md"
+    ]
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "high-city"
+    }
+  ],
+  "assets": [
+    {
+      "kind": "plate",
+      "path": "repos/akalynth-site/assets/codex/dungeon-codex.png"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "Dungeon Codex",
+    "category": "Codices",
+    "summary": "Places Where History Still Breathes.",
+    "body": "A dungeon is a wound in history that has not yet closed. Volume I begins with the First Archive — the vault beneath High City that preserves the earliest laws, treaties, maps, and forbidden memory records.",
+    "assets": [
+      "assets/codex/dungeon-codex.png"
+    ],
+    "related": [
+      "high-city"
+    ],
+    "source_ref": "dungeon-codex"
+  },
+  "tags": [
+    "codex",
+    "archive"
+  ]
+}

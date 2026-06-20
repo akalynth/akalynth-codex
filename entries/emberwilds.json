@@ -1,0 +1,60 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "emberwilds",
+  "type": "region",
+  "title": "The Emberwilds",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "The living-volcano frontier.",
+  "lineage": {
+    "origin": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1"
+  },
+  "world": {
+    "description": "A volcanic frontier region anchored by Forgehold Citadel and watched from the ash-edge by Cindervale. Crossed by the Ember Road."
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "forgehold"
+    },
+    {
+      "rel": "references",
+      "target": "cindervale"
+    },
+    {
+      "rel": "references",
+      "target": "ember-road"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "The Emberwilds",
+    "category": "Places",
+    "summary": "The living-volcano frontier.",
+    "body": "A volcanic frontier region anchored by Forgehold Citadel and watched from the ash-edge by Cindervale. Crossed by the Ember Road.",
+    "assets": [],
+    "related": [
+      "forgehold",
+      "cindervale",
+      "ember-road"
+    ],
+    "source_ref": "emberwilds"
+  },
+  "tags": [
+    "emberwilds",
+    "region"
+  ]
+}

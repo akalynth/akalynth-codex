@@ -1,0 +1,66 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "heroes-codex",
+  "type": "lore",
+  "title": "Heroes Codex",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "The First Legends.",
+  "lineage": {
+    "origin": "AKALYNTH_HEROES_CODEX_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH_HEROES_CODEX_V1"
+  },
+  "world": {
+    "description": "The First Legends.",
+    "design_refs": [
+      "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_HEROES_CODEX_V1.md"
+    ]
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "factions-codex"
+    },
+    {
+      "rel": "references",
+      "target": "chronicle-of-ages"
+    }
+  ],
+  "assets": [
+    {
+      "kind": "plate",
+      "path": "repos/akalynth-site/assets/codex/heroes-codex.png"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "Heroes Codex",
+    "category": "Codices",
+    "summary": "The First Legends.",
+    "body": "Civilizations are forged by those who dared leave their mark upon eternity. Volume I begins with the First Archivist — the One Who Refused Forgetting — whose recording of the Great Accord kept civilization from falling into ignorance.",
+    "assets": [
+      "assets/codex/heroes-codex.png"
+    ],
+    "related": [
+      "factions-codex",
+      "chronicle-of-ages"
+    ],
+    "source_ref": "heroes-codex"
+  },
+  "tags": [
+    "codex",
+    "archive"
+  ]
+}

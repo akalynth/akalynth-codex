@@ -1,0 +1,121 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "high-city",
+  "type": "place",
+  "title": "High City",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-13T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "Crown of Convergence — capital of Akalynth and birthplace of the Great Accord; home object of the First Playable vertical slice.",
+  "lineage": {
+    "origin": "AKALYNTH_CITIES_SUMMARY_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH_FIRST_PLAYABLE_SLICE_V1 (first 1-3h vertical slice: Origins, Factions, High City Outskirts, First Archive Lower Vault dungeon, Unindexed Truth boss, Witness Moth Bloom)"
+  },
+  "world": {
+    "description": "Crown of Convergence — capital of Akalynth and birthplace of the Great Accord. Civic domain: Order. Anchors the First Playable Slice: origin openings, the First Archive Lower Vault dungeon, and the Unindexed Truth confrontation.",
+    "design_refs": [
+      "codex/design/high-city.md",
+      "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/docs/AKALYNTH_FIRST_PLAYABLE_SLICE_V1.md",
+      "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/docs/AKALYNTH_FIRST_ARCHIVE_LOWER_VAULT_DUNGEON_V1.md",
+      "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/docs/AKALYNTH_UNINDEXED_TRUTH_BOSS_V1.md",
+      "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/docs/AKALYNTH_ORIGIN_OPENINGS_V1.md",
+      "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/docs/AKALYNTH_FIRST_PLAYABLE_SLICE_PRODUCTION_CHECKLIST_V1.md"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_FIRST_PLAYABLE_SLICE_V1",
+      "registry": "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/registry/akalynthFirstPlayableSliceRegistry.ts"
+    }
+  },
+  "related": [
+    {
+      "rel": "connects_to",
+      "target": "forgehold"
+    },
+    {
+      "rel": "connects_to",
+      "target": "veridium-port"
+    },
+    {
+      "rel": "connects_to",
+      "target": "moonspire"
+    },
+    {
+      "rel": "connects_to",
+      "target": "cindervale"
+    }
+  ],
+  "assets": [
+    {
+      "kind": "card",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/cards/01-high-city-dawn.card-800x1000.webp"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "website_update",
+      "ref": "codex/design/high-city.md",
+      "status": "in_review",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "prototype_data",
+      "ref": "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/prompts/CLAUDE_CODE_AKALYNTH_PLAYABLE_SLICE_PROTOTYPE_DATA.prompt.md",
+      "status": "in_review",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "asset",
+      "ref": "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/prompts/AKALYNTH_FIRST_PLAYABLE_SLICE_POSTER_V1.prompt.md",
+      "status": "open"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/MANIFEST.md",
+      "sha256": "064c0c407fdf66c2e869b396e9f32c3f7c40df14b7f67cbd972ca75f9c58995e"
+    },
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/MANIFEST.csv",
+      "sha256": "13578133f242b9575e12d091d505262aff66267f8db9d4be50f602779502e342"
+    },
+    {
+      "kind": "checksum",
+      "ref": "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/CHECKSUMS_SHA256.txt"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "High City",
+    "category": "Cities",
+    "summary": "Crown of Convergence — capital of Akalynth and birthplace of the Great Accord.",
+    "body": "High City rises atop converging ley currents as the political, cultural, and intellectual heart of Akalynth. Known for the Trinity Nexus, the Great Archive Vaults, the Sky Spires, the Accord Chambers, and the Conclave Citadel.",
+    "assets": [
+      "assets/akalynth/visuals/cards/01-high-city-dawn.card-800x1000.webp"
+    ],
+    "related": [
+      "forgehold",
+      "veridium-port",
+      "moonspire",
+      "cindervale"
+    ],
+    "source_ref": "high-city"
+  },
+  "tags": [
+    "city",
+    "order"
+  ]
+}

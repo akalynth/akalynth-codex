@@ -1,0 +1,66 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "emberwilds-atlas",
+  "type": "lore",
+  "title": "Emberwilds Atlas",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "The volcanic frontier, mapped.",
+  "lineage": {
+    "origin": "AKALYNTH world atlas",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH world atlas"
+  },
+  "world": {
+    "description": "The volcanic frontier, mapped.",
+    "design_refs": [
+      "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH world atlas.md"
+    ]
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "forgehold"
+    },
+    {
+      "rel": "references",
+      "target": "cindervale"
+    }
+  ],
+  "assets": [
+    {
+      "kind": "plate",
+      "path": "repos/akalynth-site/assets/codex/emberwilds-atlas.png"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "Emberwilds Atlas",
+    "category": "Codices",
+    "summary": "The volcanic frontier, mapped.",
+    "body": "A regional atlas of the Emberwilds — the living-volcano frontier anchored by Forgehold Citadel and watched from the ash-edge by Cindervale.",
+    "assets": [
+      "assets/codex/emberwilds-atlas.png"
+    ],
+    "related": [
+      "forgehold",
+      "cindervale"
+    ],
+    "source_ref": "emberwilds-atlas"
+  },
+  "tags": [
+    "codex",
+    "archive"
+  ]
+}

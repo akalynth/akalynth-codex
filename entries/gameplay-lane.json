@@ -1,0 +1,85 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "gameplay-lane",
+  "type": "system",
+  "title": "Gameplay Lane — Origins, Professions, Equipment, Map, Campaign, Raids",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-05T21:37:00Z",
+  "updated": "2026-06-13T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "Player-facing gameplay lane: who you are (Origins), what you do (Professions), how you express your path (Equipment), where you travel (World Map V2), the Campaign Book, and Raid Bosses.",
+  "lineage": {
+    "origin": "AKALYNTH_GAMEPLAY_LANE_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-05T21:37:00Z",
+    "last_accepted_change": "AKALYNTH_GAMEPLAY_LANE_V1 (Origins, Professions, Equipment, World Map V2, Campaign Book, Raid Bosses, progression matrix)"
+  },
+  "world": {
+    "description": "The next gameplay-facing lane. Answers the player-facing questions: Who am I when I enter Akalynth? What do I do inside this world? What gear expresses my path? Where do I travel? Defines Origins, Professions, Equipment, the World Map V2, the Campaign Book, and Raid Bosses with a player progression matrix.",
+    "design_refs": [
+      "codex/design/gameplay-lane.md",
+      "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/docs/AKALYNTH_PLAYER_PROGRESSION_MATRIX_V1.md",
+      "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/docs/AKALYNTH_ORIGINS_CODEX_V1.md",
+      "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/docs/AKALYNTH_PROFESSIONS_CODEX_V1.md",
+      "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/docs/AKALYNTH_EQUIPMENT_CODEX_V1.md",
+      "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/docs/AKALYNTH_WORLD_MAP_V2.md",
+      "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/docs/AKALYNTH_CAMPAIGN_BOOK_V1.md",
+      "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/docs/AKALYNTH_RAID_BOSSES_CODEX_V1.md"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_GAMEPLAY_LANE_V1"
+    }
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "game-loop-bible"
+    },
+    {
+      "rel": "references",
+      "target": "systems-bible"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "website_update",
+      "ref": "codex/design/gameplay-lane.md",
+      "status": "in_review",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "asset",
+      "ref": "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/prompts/image_briefs",
+      "status": "open"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/MANIFEST.md",
+      "sha256": "61ea01bb7b93decf404756728b990bb6488dcbb922d38ffea91a0236fa28a95d"
+    },
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/MANIFEST.csv",
+      "sha256": "5ab151a46921e3947590e5248a81f47d76b9315f23acec14f62ae5bf440e45d3"
+    }
+  ],
+  "public_projection": null,
+  "tags": [
+    "system",
+    "gameplay",
+    "origins",
+    "professions",
+    "equipment",
+    "map"
+  ]
+}

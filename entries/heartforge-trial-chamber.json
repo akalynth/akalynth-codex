@@ -1,0 +1,54 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "heartforge-trial-chamber",
+  "type": "place",
+  "title": "Heartforge Trial Chamber",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "candidate",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "Heartforge Trial Chamber — builder-only (unreleased).",
+  "lineage": {
+    "origin": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1"
+  },
+  "world": {
+    "description": "The trial dungeon beneath the Heartforge — Soulsteel-stabilization trials guarding the route's final tempering. Designed, not yet released.",
+    "design_refs": [
+      "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/docs/AKALYNTH_HEARTFORGE_TRIAL_CHAMBER_DUNGEON_V1.md"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1"
+    }
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "forgehold"
+    },
+    {
+      "rel": "references",
+      "target": "heartforge"
+    },
+    {
+      "rel": "references",
+      "target": "oathless-forge"
+    }
+  ],
+  "public_projection": null,
+  "tags": [
+    "unreleased",
+    "forgehold-slice",
+    "place"
+  ]
+}

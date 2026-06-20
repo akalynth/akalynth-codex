@@ -1,0 +1,51 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "void-whale",
+  "type": "creature",
+  "title": "The Void Whale",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "Skybound Leviathan · Herald of the Gap",
+  "lineage": {
+    "origin": "codex.html creature codex",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "codex.html creature codex"
+  },
+  "world": {
+    "description": "Skybound Leviathan · Herald of the Gap · Threat: Catastrophic."
+  },
+  "related": [],
+  "assets": [
+    {
+      "kind": "plate",
+      "path": "repos/akalynth-site/assets/codex/void-whale.png"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "The Void Whale",
+    "category": "Creatures",
+    "summary": "Skybound Leviathan · Herald of the Gap · Threat: Catastrophic",
+    "body": "Not a creature of the stars but of absence — a vast leviathan that drifts where the world thins.",
+    "assets": [
+      "assets/codex/void-whale.png"
+    ],
+    "related": [],
+    "source_ref": "void-whale"
+  },
+  "tags": [
+    "creature",
+    "threat-catastrophic"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "moonspire",
+  "type": "place",
+  "title": "Moonspire",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-13T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "City of Dreams — spiritual capital built around a great Dream Sanctum; home object of the Moonspire Dream Gate playable slice.",
+  "lineage": {
+    "origin": "AKALYNTH_CITIES_SUMMARY_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1 (playable slice: Dream Gates, Dreamwalker gameplay, symbolic puzzles, Liminal Web dungeon, Unchosen Self boss)"
+  },
+  "world": {
+    "description": "City of Dreams — spiritual capital built around a great Dream Sanctum. Civic domain: Wisdom. Anchors the Moonspire Dream Gate slice: dream-state traversal, symbolic puzzles, and the Unchosen Self confrontation.",
+    "design_refs": [
+      "codex/design/moonspire.md",
+      "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/docs/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1.md",
+      "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/docs/AKALYNTH_DREAM_GATE_SYSTEM_V1.md",
+      "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/docs/AKALYNTH_DREAMWALKER_GAMEPLAY_V1.md",
+      "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/docs/AKALYNTH_SYMBOLIC_PUZZLES_V1.md",
+      "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/docs/AKALYNTH_UNCHOSEN_SELF_BOSS_V1.md",
+      "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/docs/AKALYNTH_MOONSPIRE_DREAM_GATE_PRODUCTION_CHECKLIST_V1.md"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1",
+      "registry": "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/registry/akalynthMoonspireDreamGateSliceRegistry.ts"
+    }
+  },
+  "related": [
+    {
+      "rel": "connects_to",
+      "target": "high-city"
+    },
+    {
+      "rel": "connects_to",
+      "target": "dreamweaver"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "website_update",
+      "ref": "codex/design/moonspire.md",
+      "status": "in_review",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "prototype_data",
+      "ref": "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/prompts/CLAUDE_CODE_AKALYNTH_MOONSPIRE_DREAM_GATE_PROTOTYPE_DATA.prompt.md",
+      "status": "in_review",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "asset",
+      "ref": "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/prompts/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_POSTER_V1.prompt.md",
+      "status": "open"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/MANIFEST.md",
+      "sha256": "18f45249176e86559f47bd94a80ad2a8d9018736bee18ac54d55c29d547c78c8"
+    },
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/MANIFEST.csv",
+      "sha256": "a076dee4a874abfc2fe6e0c1eb59faa63f90fe203ab59886e78ddfc4b3e7a6ca"
+    },
+    {
+      "kind": "checksum",
+      "ref": "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/CHECKSUMS_SHA256.txt"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "Moonspire",
+    "category": "Cities",
+    "summary": "City of Dreams — spiritual capital built around a great Dream Sanctum.",
+    "body": "Pilgrims come to Moonspire seeking visions, memory exploration, and dream rites. Known for the Dream Sanctums, the Reflection Pools, the Memory Gardens, the Moon Archives, and the Silent Observatory.",
+    "assets": [],
+    "related": [
+      "high-city",
+      "dreamweaver"
+    ],
+    "source_ref": "moonspire"
+  },
+  "tags": [
+    "city",
+    "wisdom"
+  ]
+}

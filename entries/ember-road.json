@@ -1,0 +1,60 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "ember-road",
+  "type": "route",
+  "title": "The Ember Road",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "High City to the Forgehold Outer Gate.",
+  "lineage": {
+    "origin": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1"
+  },
+  "world": {
+    "description": "The first route expansion of Akalynth: regional travel from High City through the Emberwilds to the Forgehold Outer Gate."
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "high-city"
+    },
+    {
+      "rel": "references",
+      "target": "forgehold"
+    },
+    {
+      "rel": "references",
+      "target": "emberwilds"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "The Ember Road",
+    "category": "Places",
+    "summary": "High City to the Forgehold Outer Gate.",
+    "body": "The first route expansion of Akalynth: regional travel from High City through the Emberwilds to the Forgehold Outer Gate.",
+    "assets": [],
+    "related": [
+      "high-city",
+      "forgehold",
+      "emberwilds"
+    ],
+    "source_ref": "ember-road"
+  },
+  "tags": [
+    "emberwilds",
+    "route"
+  ]
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Akalynth Codex — Builder (PRIVATE)</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="builder.css" />
+  </head>
+  <body>
+    <!--
+      PRIVATE Builder surface (Layer 2 — studio design). Renders the design-layer
+      view of the Codex world graph, INCLUDING unreleased (builder-only) content
+      that is absent from the public Codex. builder-data.js holds design data only
+      (no operator receipts/packets). NOT for the public site. Run locally.
+    -->
+    <div class="banner">⚑ Private — Builder Surface · studio design · includes unreleased · do not deploy</div>
+    <header class="topbar">
+      <div class="brand">AKALYNTH · CODEX <small>/ BUILDER</small></div>
+      <div class="stat-strip" id="stats"></div>
+      <div class="chips" id="chips"></div>
+    </header>
+    <main>
+      <section class="list" id="list"></section>
+      <aside class="detail" id="detail"></aside>
+    </main>
+    <script src="builder-data.js"></script>
+    <script src="builder.js"></script>
+  </body>
+</html>

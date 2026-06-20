@@ -1,0 +1,61 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "factions-codex",
+  "type": "lore",
+  "title": "Factions Codex",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-12T00:00:00Z",
+  "updated": "2026-06-12T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "Powers That Shape the World.",
+  "lineage": {
+    "origin": "AKALYNTH_FACTIONS_CODEX_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-12T00:00:00Z",
+    "last_accepted_change": "AKALYNTH_FACTIONS_CODEX_V1"
+  },
+  "world": {
+    "description": "Powers That Shape the World.",
+    "design_refs": [
+      "repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_FACTIONS_CODEX_V1.md"
+    ]
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "high-city"
+    }
+  ],
+  "assets": [
+    {
+      "kind": "plate",
+      "path": "repos/akalynth-site/assets/codex/factions-codex.png"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "Factions Codex",
+    "category": "Codices",
+    "summary": "Powers That Shape the World.",
+    "body": "The institutions whose laws and beliefs shape Akalynth. Volume I opens with the Codexborn — keepers of order and guardians of recorded truth, founded by the First Archivist after the Great Accord.",
+    "assets": [
+      "assets/codex/factions-codex.png"
+    ],
+    "related": [
+      "high-city"
+    ],
+    "source_ref": "factions-codex"
+  },
+  "tags": [
+    "codex",
+    "archive"
+  ]
+}

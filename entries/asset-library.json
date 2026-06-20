@@ -1,0 +1,75 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "asset-library",
+  "type": "asset",
+  "title": "Asset Library V1",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-05T21:39:00Z",
+  "updated": "2026-06-13T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "Canonical visual + text asset library: world art (19 images across world-bible, city/region atlas, creature codex, collection posters) plus the 10 codex source markdown docs the rest of the Codex graph was seeded from.",
+  "lineage": {
+    "origin": "AKALYNTH_ASSET_LIBRARY_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-05T21:39:00Z",
+    "last_accepted_change": "AKALYNTH_ASSET_LIBRARY_V1 (world/city/creature art + Cities/Creatures/Heroes/Factions/Artifacts/Dungeon/Chronicle/Origins/Villains codex source markdown)"
+  },
+  "world": {
+    "description": "The Asset Library bundle: the source-of-truth collection of Akalynth visual and text assets created during the build session. Its markdown docs (Cities Summary, Creatures Summary, Heroes/Factions/Artifacts/Dungeon Codices, Chronicle of Ages, Origins, Villains) are the lore source the Codex's place/creature/faction/codex objects were seeded from; its images are the world-bible plates, city/region atlas, creature codex art, and collection posters.",
+    "design_refs": [
+      "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_ASSET_LIBRARY_INDEX.md",
+      "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_CITIES_SUMMARY_V1.md",
+      "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_CREATURES_SUMMARY_V1.md",
+      "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_HEROES_CODEX_V1.md",
+      "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_FACTIONS_CODEX_V1.md",
+      "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_ARTIFACTS_CODEX_V1.md",
+      "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_DUNGEON_CODEX_V1.md",
+      "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_CHRONICLE_OF_AGES_V1.md",
+      "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_ORIGINS_CODEX_V1.md",
+      "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_VILLAINS_CODEX_V1.md"
+    ],
+    "implementation": {
+      "stage": "shipped",
+      "slice": "AKALYNTH_ASSET_LIBRARY_V1"
+    }
+  },
+  "related": [
+    { "rel": "references", "target": "heroes-codex", "note": "seeded from AKALYNTH_HEROES_CODEX_V1.md" },
+    { "rel": "references", "target": "factions-codex", "note": "seeded from AKALYNTH_FACTIONS_CODEX_V1.md" },
+    { "rel": "references", "target": "artifacts-codex", "note": "seeded from AKALYNTH_ARTIFACTS_CODEX_V1.md" },
+    { "rel": "references", "target": "dungeon-codex", "note": "seeded from AKALYNTH_DUNGEON_CODEX_V1.md" },
+    { "rel": "references", "target": "chronicle-of-ages", "note": "seeded from AKALYNTH_CHRONICLE_OF_AGES_V1.md" },
+    { "rel": "references", "target": "emberwilds-atlas", "note": "city/region atlas art" }
+  ],
+  "assets": [
+    { "kind": "poster", "path": "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/images/04_collection_posters/AKALYNTH_HEROES_CODEX_POSTER_V1.png" },
+    { "kind": "poster", "path": "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/images/04_collection_posters/AKALYNTH_FACTIONS_CODEX_POSTER_V1.png" },
+    { "kind": "plate", "path": "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/images/02_city_region_atlas/EMBERWILDS_ATLAS_V1.png" }
+  ],
+  "evidence": [
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/manifests/MANIFEST.md",
+      "sha256": "290b5282bccc794b6d67b3dc6da62b29ca32c3f96f5e4fabdfc9146183b9e900"
+    },
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/manifests/MANIFEST.csv",
+      "sha256": "45f87e44ec4c41bdfa919d9e660c0c4a4337869d33295fe3b6bdc8fa6383b778"
+    },
+    {
+      "kind": "checksum",
+      "ref": "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/manifests/SHA256SUMS.txt",
+      "sha256": "aa7f48dc2db97acc8e98f276915d1797cc98004670fc575f004c0717b1e55681"
+    }
+  ],
+  "public_projection": null,
+  "tags": ["asset", "library", "art", "lore-source", "shipped"]
+}

@@ -1,0 +1,6 @@
+# Generated projection samples (rebuild with: node tools/project.mjs)
+out/codex-agent.graph.json
+out/codex-builder.graph.json
+out/codex-operator.graph.json
+out/codex-public.graph.json
+out/codex-build-plan.json

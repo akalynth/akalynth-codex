@@ -1,0 +1,166 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "forgehold",
+  "type": "place",
+  "title": "Forgehold Citadel",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-05T23:41:31Z",
+  "updated": "2026-06-13T00:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": true
+  },
+  "summary": "Volcanic citadel of the Flamebound; second playable slice (High City -> Ember Road -> Forgehold).",
+  "lineage": {
+    "origin": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-05T23:41:31Z",
+    "last_accepted_change": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1 (second playable slice: route unlock, Soulsteel crafting, Heartforge Trial dungeon, Oathless Forge boss)"
+  },
+  "world": {
+    "description": "An industrial fortress carved into a living volcano - heart of the Emberwilds, home of the Flamebound, Soulsteel production, and the Heartforge. Civic virtue: Strength.",
+    "design_refs": [
+      "codex/design/forgehold.md",
+      "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/docs/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1.md",
+      "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/docs/AKALYNTH_EMBER_ROAD_ROUTE_SPEC_V1.md",
+      "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/docs/AKALYNTH_HEARTFORGE_TRIAL_CHAMBER_DUNGEON_V1.md",
+      "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/docs/AKALYNTH_OATHLESS_FORGE_BOSS_V1.md",
+      "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/docs/AKALYNTH_SOULSTEEL_STABILIZATION_V1.md"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
+      "registry": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/registry/akalynthForgeholdRouteSliceRegistry.ts"
+    }
+  },
+  "related": [
+    {
+      "rel": "connects_to",
+      "target": "high-city",
+      "note": "route origin: High City -> Ember Road -> Forgehold Outer Gate"
+    },
+    {
+      "rel": "connects_to",
+      "target": "ember-road",
+      "note": "regional travel route"
+    },
+    {
+      "rel": "located_in",
+      "target": "emberwilds",
+      "note": "volcanic region"
+    },
+    {
+      "rel": "home_of",
+      "target": "flamebound",
+      "note": "faction"
+    },
+    {
+      "rel": "produces",
+      "target": "soulsteel",
+      "note": "material + crafting system"
+    },
+    {
+      "rel": "contains",
+      "target": "heartforge",
+      "note": "the great forge"
+    },
+    {
+      "rel": "contains",
+      "target": "heartforge-trial-chamber",
+      "note": "dungeon (unreleased — builder-only)"
+    },
+    {
+      "rel": "guards",
+      "target": "oathless-forge",
+      "note": "boss (unreleased — builder-only)"
+    }
+  ],
+  "assets": [
+    {
+      "kind": "banner",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/banners/03-forgehold.banner-1600x700.webp"
+    },
+    {
+      "kind": "card",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/cards/03-forgehold.card-800x1000.webp"
+    },
+    {
+      "kind": "wallpaper",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/wallpapers/03-forgehold.wallpaper-1080x1920.webp"
+    },
+    {
+      "kind": "og",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/og/03-forgehold.og-1200x630.webp"
+    },
+    {
+      "kind": "thumb",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/thumbs/03-forgehold.thumb-480x720.webp"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "website_update",
+      "ref": "codex/design/forgehold.md",
+      "status": "in_review",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "prototype_data",
+      "ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/prompts/CLAUDE_CODE_AKALYNTH_FORGEHOLD_ROUTE_PROTOTYPE_DATA.prompt.md",
+      "status": "in_review",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "asset",
+      "ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/prompts/AKALYNTH_FORGEHOLD_ROUTE_SLICE_POSTER_V1.prompt.md",
+      "status": "open"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/MANIFEST.md",
+      "sha256": "4d9eed25b50dba215da5061a72ddd5aec778ae917d588202289adebe6fd3c823"
+    },
+    {
+      "kind": "manifest",
+      "ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/MANIFEST.csv",
+      "sha256": "760039525c074727c89532572ef7fe41c9478f9f4f3f9f87ec3578cddd28ab52"
+    },
+    {
+      "kind": "checksum",
+      "ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/CHECKSUMS_SHA256.txt"
+    }
+  ],
+  "public_projection": {
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
+    "title": "Forgehold Citadel",
+    "category": "Cities",
+    "summary": "Heart of the Emberwilds - an industrial fortress carved into a living volcano.",
+    "body": "Forgehold Citadel is carved into a living volcano at the heart of the Emberwilds. Home of the Flamebound, it is where Soulsteel is forged and the Heartforge burns. Its civic virtue is Strength.",
+    "assets": [
+      "assets/akalynth/visuals/cards/03-forgehold.card-800x1000.webp"
+    ],
+    "related": [
+      "high-city",
+      "ember-road",
+      "emberwilds",
+      "flamebound",
+      "soulsteel",
+      "heartforge"
+    ],
+    "source_ref": "forgehold"
+  },
+  "tags": [
+    "city",
+    "emberwilds",
+    "flamebound",
+    "route-slice",
+    "strength"
+  ]
+}

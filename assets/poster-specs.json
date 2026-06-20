@@ -1,0 +1,152 @@
+{
+  "artifact": "AKALYNTH_CODEX_POSTER_SPECS_V1",
+  "note": "Consolidated poster-generation specs from the codex asset packets. Generation is BLOCKED in this environment (no image-gen API key). With OPENAI_API_KEY set, run codex/tools/generate-posters.mjs to produce out/<poster_id>.png, then attach each to its object's assets[] (kind:poster).",
+  "model": "gpt-image-1",
+  "default_size": "1024x1536",
+  "count": 13,
+  "specs": [
+    {
+      "object": "forgehold",
+      "poster_id": "akalynth-forgehold-route-slice-poster-v1",
+      "brief": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/prompts/AKALYNTH_FORGEHOLD_ROUTE_SLICE_POSTER_V1.prompt.md",
+      "title": "AKALYNTH FORGEHOLD ROUTE SLICE",
+      "subtitle": "The Road of Fire",
+      "description": "Create a high-fantasy MMO vertical-slice infographic poster titled:",
+      "out": "codex/assets/out/akalynth-forgehold-route-slice-poster-v1.png",
+      "size": "1024x1536",
+      "status": "blocked-on-credentials"
+    },
+    {
+      "object": "high-city",
+      "poster_id": "akalynth-first-playable-slice-poster-v1",
+      "brief": "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/prompts/AKALYNTH_FIRST_PLAYABLE_SLICE_POSTER_V1.prompt.md",
+      "title": "AKALYNTH FIRST PLAYABLE SLICE",
+      "subtitle": "The First 1–3 Hours",
+      "description": "Create a high-fantasy MMO vertical-slice infographic poster titled:",
+      "out": "codex/assets/out/akalynth-first-playable-slice-poster-v1.png",
+      "size": "1024x1536",
+      "status": "blocked-on-credentials"
+    },
+    {
+      "object": "moonspire",
+      "poster_id": "akalynth-moonspire-dream-gate-slice-poster-v1",
+      "brief": "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/prompts/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_POSTER_V1.prompt.md",
+      "title": "AKALYNTH MOONSPIRE DREAM GATE SLICE",
+      "subtitle": "The Liminal Web",
+      "description": "Create a high-fantasy MMO vertical-slice infographic poster titled:",
+      "out": "codex/assets/out/akalynth-moonspire-dream-gate-slice-poster-v1.png",
+      "size": "1024x1536",
+      "status": "blocked-on-credentials"
+    },
+    {
+      "object": "cindervale",
+      "poster_id": "akalynth-cinderwatch-frontier-slice-poster-v1",
+      "brief": "repos/akalynth/drop/AKALYNTH_CINDERWATCH_FRONTIER_SLICE_V1/prompts/AKALYNTH_CINDERWATCH_FRONTIER_SLICE_POSTER_V1.prompt.md",
+      "title": "AKALYNTH CINDERWATCH FRONTIER SLICE",
+      "subtitle": "The Ashline Frontier",
+      "description": "Create a high-fantasy MMO vertical-slice infographic poster titled:",
+      "out": "codex/assets/out/akalynth-cinderwatch-frontier-slice-poster-v1.png",
+      "size": "1024x1536",
+      "status": "blocked-on-credentials"
+    },
+    {
+      "object": "campaign-act-i",
+      "poster_id": "akalynth-campaign-act-i-poster-v1",
+      "brief": "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/prompts/AKALYNTH_CAMPAIGN_ACT_I_POSTER_V1.prompt.md",
+      "title": "AKALYNTH — ACT I",
+      "subtitle": "The Four Proofs",
+      "description": "Create a high-fantasy MMO campaign infographic poster titled:",
+      "out": "codex/assets/out/akalynth-campaign-act-i-poster-v1.png",
+      "size": "1024x1536",
+      "status": "blocked-on-credentials"
+    },
+    {
+      "object": "gameplay-lane",
+      "poster_id": "akalynth-equipment-codex-poster-v1",
+      "brief": "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/prompts/image_briefs/AKALYNTH_EQUIPMENT_CODEX_POSTER_V1.prompt.md",
+      "title": "AKALYNTH EQUIPMENT CODEX POSTER",
+      "subtitle": null,
+      "description": "Create a vertical game equipment codex poster showing six equipment sets: Codexborn Investigator, Flamekeeper Tempered, Dreamwalker Liminal, Ashwarden Frontier, Tide Navigator Stormglass, and Convergence Accord.",
+      "out": "codex/assets/out/akalynth-equipment-codex-poster-v1.png",
+      "size": "1024x1536",
+      "status": "blocked-on-credentials"
+    },
+    {
+      "object": "gameplay-lane",
+      "poster_id": "akalynth-origins-codex-poster-v1",
+      "brief": "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/prompts/image_briefs/AKALYNTH_ORIGINS_CODEX_POSTER_V1.prompt.md",
+      "title": "AKALYNTH ORIGINS CODEX POSTER",
+      "subtitle": null,
+      "description": "Create a vertical high-fantasy codex poster showing six player origins: Archivist, Flamekeeper, Dreamwalker, Ashwarden, Tide Navigator, and Convergence Adept.",
+      "out": "codex/assets/out/akalynth-origins-codex-poster-v1.png",
+      "size": "1024x1536",
+      "status": "blocked-on-credentials"
+    },
+    {
+      "object": "gameplay-lane",
+      "poster_id": "akalynth-professions-codex-poster-v1",
+      "brief": "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/prompts/image_briefs/AKALYNTH_PROFESSIONS_CODEX_POSTER_V1.prompt.md",
+      "title": "AKALYNTH PROFESSIONS CODEX POSTER",
+      "subtitle": null,
+      "description": "Create a vertical fantasy infographic codex poster showing profession families: Archive, Forge, Dream, Frontier, Maritime, Convergence, and Legendary Professions.",
+      "out": "codex/assets/out/akalynth-professions-codex-poster-v1.png",
+      "size": "1024x1536",
+      "status": "blocked-on-credentials"
+    },
+    {
+      "object": "gameplay-lane",
+      "poster_id": "akalynth-raid-bosses-codex-poster-v1",
+      "brief": "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/prompts/image_briefs/AKALYNTH_RAID_BOSSES_CODEX_POSTER_V1.prompt.md",
+      "title": "AKALYNTH RAID BOSSES CODEX POSTER",
+      "subtitle": null,
+      "description": "Create a vertical raid boss codex poster showing six raid bosses: The Unindexed Truth, The Unfinished Colossus, The Broken Astronomer, The Keeper Without a Name, The Dream That Chose You, and The King Nobody Remembers.",
+      "out": "codex/assets/out/akalynth-raid-bosses-codex-poster-v1.png",
+      "size": "1024x1536",
+      "status": "blocked-on-credentials"
+    },
+    {
+      "object": "gameplay-lane",
+      "poster_id": "akalynth-world-map-v2-poster",
+      "brief": "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/prompts/image_briefs/AKALYNTH_WORLD_MAP_V2_POSTER.prompt.md",
+      "title": "AKALYNTH WORLD MAP V2 POSTER",
+      "subtitle": null,
+      "description": "Create a large fantasy world map for Akalynth showing High City, Forgehold, Cindervale, Veridium Port, Moonspire, Emberwilds, Silent Expanse, Shattered Observatory, Forgotten Kingdom, and travel lanes.",
+      "out": "codex/assets/out/akalynth-world-map-v2-poster.png",
+      "size": "1024x1536",
+      "status": "blocked-on-credentials"
+    },
+    {
+      "object": "game-loop-bible",
+      "poster_id": "akalynth-game-loop-bible-poster-v1",
+      "brief": "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/prompts/AKALYNTH_GAME_LOOP_BIBLE_POSTER_V1.prompt.md",
+      "title": "AKALYNTH GAME LOOP BIBLE",
+      "subtitle": "Why Players Return",
+      "description": "Create a high-fantasy game design infographic poster titled:",
+      "out": "codex/assets/out/akalynth-game-loop-bible-poster-v1.png",
+      "size": "1024x1536",
+      "status": "blocked-on-credentials"
+    },
+    {
+      "object": "systems-bible",
+      "poster_id": "akalynth-systems-bible-poster-v1",
+      "brief": "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/prompts/AKALYNTH_SYSTEMS_BIBLE_POSTER_V1.prompt.md",
+      "title": "AKALYNTH SYSTEMS BIBLE",
+      "subtitle": "Mechanics That Make The World Playable",
+      "description": "Create a high-fantasy game systems infographic poster titled:",
+      "out": "codex/assets/out/akalynth-systems-bible-poster-v1.png",
+      "size": "1024x1536",
+      "status": "blocked-on-credentials"
+    },
+    {
+      "object": "world-events-engine",
+      "poster_id": "akalynth-world-events-engine-poster-v1",
+      "brief": "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/prompts/AKALYNTH_WORLD_EVENTS_ENGINE_POSTER_V1.prompt.md",
+      "title": "AKALYNTH WORLD EVENTS ENGINE",
+      "subtitle": "The Living Chronicle System",
+      "description": "Create a high-fantasy MMO systems infographic poster titled:",
+      "out": "codex/assets/out/akalynth-world-events-engine-poster-v1.png",
+      "size": "1024x1536",
+      "status": "blocked-on-credentials"
+    }
+  ]
+}
