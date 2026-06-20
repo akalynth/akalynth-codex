@@ -68,10 +68,9 @@
     },
     {
       "kind": "prototype_data",
-      "ref": "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/prompts/CLAUDE_CODE_AKALYNTH_CAMPAIGN_ACT_I_PROTOTYPE_DATA.prompt.md",
-      "status": "blocked",
-      "assignee": "codex-build-delegation",
-      "note": "source drop directory absent from repo; prompt file not checked in"
+      "ref": "codex/prompts/CLAUDE_CODE_AKALYNTH_CAMPAIGN_ACT_I_PROTOTYPE_DATA.prompt.md",
+      "status": "accepted",
+      "assignee": "codex-build-delegation"
     },
     {
       "kind": "asset",
