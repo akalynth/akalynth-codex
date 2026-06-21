@@ -35,7 +35,9 @@
         "lane:staging:check",
         "lane:sim:check",
         "lane:beta:deploy",
-        "lane:staging:deploy"
+        "lane:staging:deploy",
+        "lane:beta:publish-account-play",
+        "lane:staging:publish-account-play"
       ]
     },
     "action_params": {
@@ -70,6 +72,10 @@
         "deploy_passed",
         "deploy_failed",
         "deploy_dry_run_passed",
+        "publish_skipped",
+        "publish_passed",
+        "publish_failed",
+        "publish_dry_run_passed",
         "expired",
         "blocked"
       ]
