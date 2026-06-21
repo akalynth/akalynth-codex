@@ -1,6 +1,6 @@
 # Witness Council DAO v1 — Ops Packet
 
-Codex object: council-dao · Status: **`codex:ready`**
+Codex object: council-dao · Status: **`codex:accepted`**
 
 Authority object: `AKALYNTH_COUNCIL_DAO_V1`
 

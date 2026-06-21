@@ -6,8 +6,8 @@
   "authority": "Akalynth ops / VaultMesh",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-21T12:00:00Z",
-  "updated": "2026-06-21T12:00:00Z",
-  "status": "candidate",
+  "updated": "2026-06-21T18:00:00Z",
+  "status": "accepted",
   "visibility": {
     "builder": false,
     "operator": true,
@@ -17,8 +17,9 @@
   "summary": "Local ops governance shell: proposals, vote receipts, audit chaining, and execution permits that terminate at controlled lane workflows. v1 gates only akalynth-lane-deploy.sh check — zero runtime auto-mutation.",
   "lineage": {
     "origin": "AKALYNTH_COUNCIL_DAO_V1 packet seed — post chill-zone showcase closure",
-    "accepted": false,
-    "last_accepted_change": "codex seed: schemas + design packet authored 2026-06-21"
+    "accepted": true,
+    "accepted_at": "2026-06-21T18:00:00Z",
+    "last_accepted_change": "AKALYNTH_COUNCIL_DAO_V1 execution merged akalynth PR #335 @ bcae5f5"
   },
   "world": {
     "description": "Operator-layer Witness Council. Not the in-fiction Accord Council (see systems-bible). This object models how Akalynth ops proposals become receipt-backed permits before any lane action. v1 action classes are read-only lane check only.",
@@ -29,7 +30,7 @@
       "codex/schema/council-execution-permit.schema.json"
     ],
     "implementation": {
-      "stage": "spec",
+      "stage": "shipped",
       "slice": "AKALYNTH_COUNCIL_DAO_V1",
       "registry": "akalynth-ops/council/"
     }
@@ -50,7 +51,7 @@
     {
       "kind": "review",
       "ref": "codex/design/council-dao-v1.md",
-      "status": "open",
+      "status": "accepted",
       "assignee": "codex-agent"
     }
   ],
@@ -66,6 +67,14 @@
     {
       "kind": "manifest",
       "ref": "codex/schema/council-execution-permit.schema.json"
+    },
+    {
+      "kind": "receipt",
+      "ref": "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_COUNCIL_DAO_V1/receipt.json"
+    },
+    {
+      "kind": "verification",
+      "ref": "akalynth-ops/scripts/verify-council-dao-v1.sh"
     }
   ],
   "public_projection": null,
