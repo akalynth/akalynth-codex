@@ -42,9 +42,11 @@
       "enum": [
         "lane:beta:check",
         "lane:staging:check",
-        "lane:sim:check"
+        "lane:sim:check",
+        "lane:beta:deploy",
+        "lane:staging:deploy"
       ],
-      "description": "v1 permits read-only lane preflight only. No build, restart, or deploy."
+      "description": "v1 check classes are read-only. Deploy classes require DEPLOY_PERMIT_V1 + human ack."
     },
     "action_params": {
       "type": "object",
@@ -52,7 +54,12 @@
       "required": ["lane"],
       "properties": {
         "lane": { "enum": ["beta", "staging", "sim"] },
-        "dry_run": { "type": "boolean", "default": false }
+        "dry_run": { "type": "boolean", "default": false },
+        "execution_ack_required": {
+          "type": "boolean",
+          "default": false,
+          "description": "Deploy classes must set true; gate refuses deploy without human ack."
+        }
       }
     },
     "quorum": {
@@ -74,7 +81,11 @@
       "required": ["object_id", "path"],
       "properties": {
         "object_id": {
-          "enum": ["AKALYNTH_COUNCIL_DAO_V1", "AKALYNTH_COUNCIL_DAO_V2"]
+          "enum": [
+            "AKALYNTH_COUNCIL_DAO_V1",
+            "AKALYNTH_COUNCIL_DAO_V2",
+            "AKALYNTH_COUNCIL_DAO_DEPLOY_PERMIT_V1"
+          ]
         },
         "path": { "type": "string" }
       }

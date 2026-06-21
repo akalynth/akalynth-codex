@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://akalynth/codex/council-execution-permit.schema.json",
   "title": "Akalynth Council Execution Permit (local ops) v1",
-  "description": "Permit issued after quorum approval. v1 adapter may only invoke akalynth-lane-deploy.sh <lane> check.",
+  "description": "Permit issued after quorum approval. Check adapter is read-only; deploy adapter requires human ack.",
   "type": "object",
   "required": [
     "schema_version",
@@ -33,7 +33,9 @@
       "enum": [
         "lane:beta:check",
         "lane:staging:check",
-        "lane:sim:check"
+        "lane:sim:check",
+        "lane:beta:deploy",
+        "lane:staging:deploy"
       ]
     },
     "action_params": {
@@ -42,7 +44,8 @@
       "required": ["lane"],
       "properties": {
         "lane": { "enum": ["beta", "staging", "sim"] },
-        "dry_run": { "type": "boolean" }
+        "dry_run": { "type": "boolean" },
+        "execution_ack_required": { "type": "boolean" }
       }
     },
     "vote_tally": {
@@ -58,7 +61,18 @@
       }
     },
     "execution_status": {
-      "enum": ["pending", "check_passed", "check_failed", "expired", "blocked"]
+      "enum": [
+        "pending",
+        "check_passed",
+        "check_failed",
+        "ack_required",
+        "deploy_skipped",
+        "deploy_passed",
+        "deploy_failed",
+        "deploy_dry_run_passed",
+        "expired",
+        "blocked"
+      ]
     },
     "executed_utc": { "type": "string", "format": "date-time" },
     "adapter": {
@@ -82,6 +96,10 @@
       "type": "string",
       "pattern": "^AKALYNTH_COUNCIL_LEDGER_[A-Z0-9_]+$",
       "description": "v2 ledger row appended on permit issuance."
+    },
+    "human_ack": {
+      "$ref": "https://akalynth/codex/council-human-ack.schema.json",
+      "description": "Deploy-class permits record explicit operator acknowledgment."
     },
     "reputation_resolution": {
       "type": "object",
@@ -109,10 +127,16 @@
         "auto_execution"
       ],
       "properties": {
-        "runtime_trees": { "const": "unchanged" },
-        "runtime_state": { "const": "unchanged" },
+        "runtime_trees": {
+          "enum": ["unchanged", "mutated", "dry_run_only"]
+        },
+        "runtime_state": {
+          "enum": ["unchanged", "mutated", "dry_run_only"]
+        },
         "key_config_custody": { "const": "unchanged" },
-        "deployment": { "const": "not_performed" },
+        "deployment": {
+          "enum": ["not_performed", "performed", "dry_run_performed", "skipped"]
+        },
         "auto_execution": { "const": "not_performed" }
       }
     }

@@ -1,0 +1,38 @@
+{
+  "schema_version": "council-proposal/v1",
+  "object_id": "AKALYNTH_COUNCIL_PROPOSAL_SAMPLE_BETA_DEPLOY",
+  "status": "approved",
+  "title": "Beta lane deploy after council v2 closure",
+  "summary": "Gated beta deploy with explicit human ack and v2 weighted quorum.",
+  "proposer_id": "sovereign",
+  "created_utc": "2026-06-21T22:00:00Z",
+  "voting_opens_utc": "2026-06-21T22:00:00Z",
+  "voting_closes_utc": "2026-06-21T23:00:00Z",
+  "action_class": "lane:beta:deploy",
+  "action_params": {
+    "lane": "beta",
+    "dry_run": false,
+    "execution_ack_required": true
+  },
+  "quorum": {
+    "min_approvals": 1,
+    "min_participation": 1,
+    "min_weighted_approvals": 2.0
+  },
+  "packet_authority": {
+    "object_id": "AKALYNTH_COUNCIL_DAO_DEPLOY_PERMIT_V1",
+    "path": "codex/design/council-dao-deploy-permit-v1.md"
+  },
+  "source_inputs": [
+    "codex/design/council-dao-deploy-permit-v1.md",
+    "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_COUNCIL_DAO_V2/receipt.json",
+    "akalynth-ops/bin/akalynth-lane-deploy.sh"
+  ],
+  "codex_entry_id": "council-dao",
+  "non_claims": [
+    "Does not deploy without explicit human ack at gate invocation.",
+    "Does not auto-execute on vote approval.",
+    "Does not gate sim deploy in v1."
+  ],
+  "prior_receipt_hash": null
+}

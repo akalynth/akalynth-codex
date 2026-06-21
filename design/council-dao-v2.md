@@ -134,7 +134,7 @@ The packet is accepted only after:
 
 ## Follow-On Loop (not this packet)
 
-- `AKALYNTH_COUNCIL_DAO_DEPLOY_PERMIT_V1` — gated `lane:beta:deploy` with human ack (**next**)
+- `AKALYNTH_COUNCIL_DAO_DEPLOY_PERMIT_V1` — gated `lane:beta:deploy` with human ack (**seeded** @ `codex/design/council-dao-deploy-permit-v1.md`)
 - `AKALYNTH_FORGEHOLD_ASHGLASS_EVIDENCE_V1` — content evidence ordering (parallel)
 
 ## Closure
