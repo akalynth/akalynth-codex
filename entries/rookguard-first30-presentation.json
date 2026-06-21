@@ -7,7 +7,7 @@
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-21T19:00:00Z",
   "updated": "2026-06-21T19:00:00Z",
-  "status": "candidate",
+  "status": "accepted",
   "visibility": {
     "builder": true,
     "operator": true,
@@ -17,8 +17,8 @@
   "summary": "Presentation transcript linking sim 0-30 gameplan, timeline frames, and live Codex Path WebSocket proof.",
   "lineage": {
     "origin": "AKALYNTH_ROOKGUARD_FIRST30_PRESENTATION_V1 packet — post Forgehold Act II",
-    "accepted": false,
-    "last_accepted_change": "codex seed: presentation transcript schema + design packet 2026-06-21"
+    "accepted": true,
+    "last_accepted_change": "AKALYNTH_ROOKGUARD_FIRST30_PRESENTATION_V1 merged akalynth PR #337 @ 54a5cab"
   },
   "world": {
     "description": "Rookguard onboarding presentation proof. Six five-minute windows with lane split (live vs sim/debug). No launch claim.",
@@ -28,7 +28,7 @@
       "repos/akalynth/docs/ROOKGUARD_FIRST_30_MINUTES_V1.md"
     ],
     "implementation": {
-      "stage": "spec",
+      "stage": "implemented",
       "slice": "AKALYNTH_ROOKGUARD_FIRST30_PRESENTATION_V1",
       "registry": "apps/server/src/simulation/simLifeSnapshot.ts"
     }
@@ -44,7 +44,7 @@
     {
       "kind": "presentation",
       "ref": "codex/design/rookguard-first30-presentation-v1.md",
-      "status": "open",
+      "status": "closed",
       "assignee": "codex-agent"
     }
   ],
