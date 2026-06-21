@@ -78,6 +78,26 @@
     },
     "prior_receipt_hash": { "type": ["string", "null"] },
     "receipt_hash": { "type": "string" },
+    "treasury_ledger_entry_id": {
+      "type": "string",
+      "pattern": "^AKALYNTH_COUNCIL_LEDGER_[A-Z0-9_]+$",
+      "description": "v2 ledger row appended on permit issuance."
+    },
+    "reputation_resolution": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "enum": ["vote_receipt", "member_registry", "mixed"],
+          "description": "How vote weights were resolved."
+        },
+        "members_dir": { "type": "string" },
+        "resolved_weights": {
+          "type": "object",
+          "additionalProperties": { "type": "number", "minimum": 0 }
+        }
+      }
+    },
     "non_mutation_boundary": {
       "type": "object",
       "additionalProperties": false,

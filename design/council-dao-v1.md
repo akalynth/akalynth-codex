@@ -176,6 +176,6 @@ The packet is accepted only after:
 
 ## Follow-On Loop (not this packet)
 
-- `AKALYNTH_COUNCIL_DAO_V2` — treasury ledger + reputation weighting
+- `AKALYNTH_COUNCIL_DAO_V2` — treasury ledger + reputation weighting (**seeded** @ `codex/design/council-dao-v2.md`)
 - `AKALYNTH_COUNCIL_DAO_DEPLOY_PERMIT_V1` — gated `lane:beta:deploy` with human ack
 - `AKALYNTH_FORGEHOLD_ASHGLASS_EVIDENCE_V1` — content evidence ordering (parallel track)

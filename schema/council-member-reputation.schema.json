@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akalynth/codex/council-member-reputation.schema.json",
+  "title": "Akalynth Council Member Reputation (local ops) v1",
+  "description": "Operator council member registry entry. Source of truth for vote weight resolution in council DAO v2.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "member_id",
+    "reputation_score",
+    "status",
+    "updated_utc"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "council-member-reputation/v1" },
+    "member_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable council member slug (operator handle or agent id)."
+    },
+    "display_name": { "type": "string" },
+    "reputation_score": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Vote weight used by council-execution-gate when --members-dir is set."
+    },
+    "status": {
+      "enum": ["active", "suspended", "retired"],
+      "description": "Suspended members cannot cast weighted votes through the gate."
+    },
+    "roles": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Optional operator roles (witness, deploy-ack, etc.)."
+    },
+    "updated_utc": { "type": "string", "format": "date-time" },
+    "notes": { "type": "string" },
+    "evidence_refs": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

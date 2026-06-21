@@ -60,7 +60,12 @@
       "additionalProperties": false,
       "properties": {
         "min_approvals": { "type": "integer", "minimum": 1, "default": 1 },
-        "min_participation": { "type": "integer", "minimum": 1, "default": 1 }
+        "min_participation": { "type": "integer", "minimum": 1, "default": 1 },
+        "min_weighted_approvals": {
+          "type": "number",
+          "minimum": 0,
+          "description": "v2 optional weighted quorum floor (registry-resolved vote weights)."
+        }
       }
     },
     "packet_authority": {
@@ -68,7 +73,9 @@
       "additionalProperties": false,
       "required": ["object_id", "path"],
       "properties": {
-        "object_id": { "const": "AKALYNTH_COUNCIL_DAO_V1" },
+        "object_id": {
+          "enum": ["AKALYNTH_COUNCIL_DAO_V1", "AKALYNTH_COUNCIL_DAO_V2"]
+        },
         "path": { "type": "string" }
       }
     },

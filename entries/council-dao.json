@@ -6,7 +6,7 @@
   "authority": "Akalynth ops / VaultMesh",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-21T12:00:00Z",
-  "updated": "2026-06-21T18:00:00Z",
+  "updated": "2026-06-21T20:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": false,
@@ -14,7 +14,7 @@
     "agent": true,
     "public": false
   },
-  "summary": "Local ops governance shell: proposals, vote receipts, audit chaining, and execution permits that terminate at controlled lane workflows. v1 gates only akalynth-lane-deploy.sh check — zero runtime auto-mutation.",
+  "summary": "Local ops governance shell: proposals, vote receipts, member reputation registry, treasury ledger, audit chaining, and execution permits that terminate at controlled lane workflows. v1 gates lane check only; v2 adds registry-resolved weights and append-only ops_credit ledger.",
   "lineage": {
     "origin": "AKALYNTH_COUNCIL_DAO_V1 packet seed — post chill-zone showcase closure",
     "accepted": true,
@@ -25,9 +25,12 @@
     "description": "Operator-layer Witness Council. Not the in-fiction Accord Council (see systems-bible). This object models how Akalynth ops proposals become receipt-backed permits before any lane action. v1 action classes are read-only lane check only.",
     "design_refs": [
       "codex/design/council-dao-v1.md",
+      "codex/design/council-dao-v2.md",
       "codex/schema/council-proposal.schema.json",
       "codex/schema/council-vote-receipt.schema.json",
-      "codex/schema/council-execution-permit.schema.json"
+      "codex/schema/council-execution-permit.schema.json",
+      "codex/schema/council-member-reputation.schema.json",
+      "codex/schema/council-treasury-ledger-entry.schema.json"
     ],
     "implementation": {
       "stage": "shipped",
@@ -53,6 +56,12 @@
       "ref": "codex/design/council-dao-v1.md",
       "status": "accepted",
       "assignee": "codex-agent"
+    },
+    {
+      "kind": "review",
+      "ref": "codex/design/council-dao-v2.md",
+      "status": "candidate",
+      "assignee": "codex-agent"
     }
   ],
   "evidence": [
@@ -75,6 +84,22 @@
     {
       "kind": "verification",
       "ref": "akalynth-ops/scripts/verify-council-dao-v1.sh"
+    },
+    {
+      "kind": "manifest",
+      "ref": "codex/schema/council-member-reputation.schema.json"
+    },
+    {
+      "kind": "manifest",
+      "ref": "codex/schema/council-treasury-ledger-entry.schema.json"
+    },
+    {
+      "kind": "verification",
+      "ref": "akalynth-ops/scripts/verify-council-dao-v2.sh"
+    },
+    {
+      "kind": "receipt",
+      "ref": "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_COUNCIL_DAO_V2/receipt.json"
     }
   ],
   "public_projection": null,
@@ -86,6 +111,8 @@
     "execution-gate",
     "witness",
     "packet",
-    "no-auto-mutation"
+    "no-auto-mutation",
+    "treasury",
+    "reputation"
   ]
 }

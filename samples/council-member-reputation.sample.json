@@ -1,0 +1,13 @@
+{
+  "schema_version": "council-member-reputation/v1",
+  "member_id": "sovereign",
+  "display_name": "Sovereign Operator",
+  "reputation_score": 2.0,
+  "status": "active",
+  "roles": ["witness", "proposer"],
+  "updated_utc": "2026-06-21T18:00:00Z",
+  "notes": "Founding council member; v2 weighted quorum fixture.",
+  "evidence_refs": [
+    "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_COUNCIL_DAO_V1/receipt.json"
+  ]
+}
