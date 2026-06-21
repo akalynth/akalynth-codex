@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akalynth/codex/council-proposal.schema.json",
+  "title": "Akalynth Council Proposal (local ops) v1",
+  "description": "Local Witness Council proposal. Governs ops action classes only; never auto-mutates runtime.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "object_id",
+    "status",
+    "title",
+    "summary",
+    "proposer_id",
+    "created_utc",
+    "action_class",
+    "action_params",
+    "packet_authority",
+    "non_claims"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "council-proposal/v1" },
+    "object_id": {
+      "type": "string",
+      "pattern": "^AKALYNTH_COUNCIL_PROPOSAL_[A-Z0-9_]+$",
+      "description": "Stable proposal identifier."
+    },
+    "status": {
+      "enum": ["draft", "open", "voting", "approved", "rejected", "executed", "expired", "blocked"],
+      "description": "Machine source-of-truth for council workflow state."
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "summary": { "type": "string", "minLength": 1 },
+    "proposer_id": {
+      "type": "string",
+      "description": "Council member id (operator handle, agent id, or local member slug)."
+    },
+    "created_utc": { "type": "string", "format": "date-time" },
+    "voting_opens_utc": { "type": "string", "format": "date-time" },
+    "voting_closes_utc": { "type": "string", "format": "date-time" },
+    "action_class": {
+      "enum": [
+        "lane:beta:check",
+        "lane:staging:check",
+        "lane:sim:check"
+      ],
+      "description": "v1 permits read-only lane preflight only. No build, restart, or deploy."
+    },
+    "action_params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lane"],
+      "properties": {
+        "lane": { "enum": ["beta", "staging", "sim"] },
+        "dry_run": { "type": "boolean", "default": false }
+      }
+    },
+    "quorum": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "min_approvals": { "type": "integer", "minimum": 1, "default": 1 },
+        "min_participation": { "type": "integer", "minimum": 1, "default": 1 }
+      }
+    },
+    "packet_authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_id", "path"],
+      "properties": {
+        "object_id": { "const": "AKALYNTH_COUNCIL_DAO_V1" },
+        "path": { "type": "string" }
+      }
+    },
+    "source_inputs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Repo-relative paths or ops artifacts informing the proposal."
+    },
+    "codex_entry_id": {
+      "type": "string",
+      "const": "council-dao",
+      "description": "Link to akalynth-codex live object."
+    },
+    "non_claims": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "prior_receipt_hash": {
+      "type": ["string", "null"],
+      "description": "Optional hash chaining to prior council receipt."
+    }
+  }
+}

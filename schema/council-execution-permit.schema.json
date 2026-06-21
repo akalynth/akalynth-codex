@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akalynth/codex/council-execution-permit.schema.json",
+  "title": "Akalynth Council Execution Permit (local ops) v1",
+  "description": "Permit issued after quorum approval. v1 adapter may only invoke akalynth-lane-deploy.sh <lane> check.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "object_id",
+    "proposal_id",
+    "approved_utc",
+    "action_class",
+    "action_params",
+    "vote_tally",
+    "execution_status",
+    "adapter",
+    "non_mutation_boundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "council-execution-permit/v1" },
+    "object_id": {
+      "type": "string",
+      "pattern": "^AKALYNTH_COUNCIL_PERMIT_[A-Z0-9_]+$"
+    },
+    "proposal_id": {
+      "type": "string",
+      "pattern": "^AKALYNTH_COUNCIL_PROPOSAL_[A-Z0-9_]+$"
+    },
+    "approved_utc": { "type": "string", "format": "date-time" },
+    "permit_expires_utc": { "type": "string", "format": "date-time" },
+    "action_class": {
+      "enum": [
+        "lane:beta:check",
+        "lane:staging:check",
+        "lane:sim:check"
+      ]
+    },
+    "action_params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lane"],
+      "properties": {
+        "lane": { "enum": ["beta", "staging", "sim"] },
+        "dry_run": { "type": "boolean" }
+      }
+    },
+    "vote_tally": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["approve", "reject", "abstain", "quorum_met"],
+      "properties": {
+        "approve": { "type": "number", "minimum": 0 },
+        "reject": { "type": "number", "minimum": 0 },
+        "abstain": { "type": "number", "minimum": 0 },
+        "weighted_approve": { "type": "number", "minimum": 0 },
+        "quorum_met": { "type": "boolean" }
+      }
+    },
+    "execution_status": {
+      "enum": ["pending", "check_passed", "check_failed", "expired", "blocked"]
+    },
+    "executed_utc": { "type": "string", "format": "date-time" },
+    "adapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["script", "invoked_command"],
+      "properties": {
+        "script": { "type": "string" },
+        "invoked_command": { "type": "string" },
+        "exit_code": { "type": "integer" },
+        "evidence_dir": { "type": "string" }
+      }
+    },
+    "vote_receipt_refs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "prior_receipt_hash": { "type": ["string", "null"] },
+    "receipt_hash": { "type": "string" },
+    "non_mutation_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_trees",
+        "runtime_state",
+        "key_config_custody",
+        "deployment",
+        "auto_execution"
+      ],
+      "properties": {
+        "runtime_trees": { "const": "unchanged" },
+        "runtime_state": { "const": "unchanged" },
+        "key_config_custody": { "const": "unchanged" },
+        "deployment": { "const": "not_performed" },
+        "auto_execution": { "const": "not_performed" }
+      }
+    }
+  }
+}

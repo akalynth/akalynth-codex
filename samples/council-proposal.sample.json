@@ -1,0 +1,35 @@
+{
+  "schema_version": "council-proposal/v1",
+  "object_id": "AKALYNTH_COUNCIL_PROPOSAL_SAMPLE_BETA_CHECK",
+  "status": "approved",
+  "title": "Beta lane preflight check after chill-zone closure",
+  "summary": "Read-only beta lane check to confirm runtime tree health before any future deploy discussion.",
+  "proposer_id": "sovereign",
+  "created_utc": "2026-06-21T12:00:00Z",
+  "voting_opens_utc": "2026-06-21T12:00:00Z",
+  "voting_closes_utc": "2026-06-21T18:00:00Z",
+  "action_class": "lane:beta:check",
+  "action_params": {
+    "lane": "beta",
+    "dry_run": false
+  },
+  "quorum": {
+    "min_approvals": 1,
+    "min_participation": 1
+  },
+  "packet_authority": {
+    "object_id": "AKALYNTH_COUNCIL_DAO_V1",
+    "path": "codex/design/council-dao-v1.md"
+  },
+  "source_inputs": [
+    "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_CHILL_ZONE_SHOWCASE_V1/receipt.json",
+    "akalynth-ops/bin/akalynth-lane-deploy.sh"
+  ],
+  "codex_entry_id": "council-dao",
+  "non_claims": [
+    "Does not deploy, restart, or build beta.",
+    "Does not mutate /opt, /var/lib, or /etc.",
+    "Does not auto-execute on vote approval without explicit gate invocation."
+  ],
+  "prior_receipt_hash": null
+}

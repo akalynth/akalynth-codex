@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akalynth/codex/council-vote-receipt.schema.json",
+  "title": "Akalynth Council Vote Receipt (local ops) v1",
+  "description": "Append-only vote receipt for a council proposal. Feeds execution permit issuance.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "object_id",
+    "proposal_id",
+    "voter_id",
+    "vote",
+    "cast_utc",
+    "reputation_weight"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "council-vote-receipt/v1" },
+    "object_id": {
+      "type": "string",
+      "pattern": "^AKALYNTH_COUNCIL_VOTE_[A-Z0-9_]+$"
+    },
+    "proposal_id": {
+      "type": "string",
+      "pattern": "^AKALYNTH_COUNCIL_PROPOSAL_[A-Z0-9_]+$"
+    },
+    "voter_id": { "type": "string", "minLength": 1 },
+    "vote": { "enum": ["approve", "reject", "abstain"] },
+    "cast_utc": { "type": "string", "format": "date-time" },
+    "reputation_weight": {
+      "type": "number",
+      "minimum": 0,
+      "description": "v1 default 1.0; future weighting from operator reputation ledger."
+    },
+    "rationale": { "type": "string" },
+    "evidence_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Optional paths to validation transcripts or engineering-loop receipts."
+    },
+    "prior_receipt_hash": {
+      "type": ["string", "null"],
+      "description": "Hash of prior council receipt in local chain."
+    },
+    "receipt_hash": {
+      "type": "string",
+      "description": "Self-hash recorded after write (optional at authoring time)."
+    }
+  }
+}

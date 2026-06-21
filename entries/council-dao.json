@@ -1,0 +1,82 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "council-dao",
+  "type": "system",
+  "title": "Witness Council DAO (local ops)",
+  "authority": "Akalynth ops / VaultMesh",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-21T12:00:00Z",
+  "updated": "2026-06-21T12:00:00Z",
+  "status": "candidate",
+  "visibility": {
+    "builder": false,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "Local ops governance shell: proposals, vote receipts, audit chaining, and execution permits that terminate at controlled lane workflows. v1 gates only akalynth-lane-deploy.sh check — zero runtime auto-mutation.",
+  "lineage": {
+    "origin": "AKALYNTH_COUNCIL_DAO_V1 packet seed — post chill-zone showcase closure",
+    "accepted": false,
+    "last_accepted_change": "codex seed: schemas + design packet authored 2026-06-21"
+  },
+  "world": {
+    "description": "Operator-layer Witness Council. Not the in-fiction Accord Council (see systems-bible). This object models how Akalynth ops proposals become receipt-backed permits before any lane action. v1 action classes are read-only lane check only.",
+    "design_refs": [
+      "codex/design/council-dao-v1.md",
+      "codex/schema/council-proposal.schema.json",
+      "codex/schema/council-vote-receipt.schema.json",
+      "codex/schema/council-execution-permit.schema.json"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_COUNCIL_DAO_V1",
+      "registry": "akalynth-ops/council/"
+    }
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "witness-moth",
+      "note": "Lore-adjacent witness/evidence motif; ops council is operator machinery, not the creature."
+    },
+    {
+      "rel": "references",
+      "target": "systems-bible",
+      "note": "In-fiction Accord Council and governance pillars are separate from this ops shell."
+    }
+  ],
+  "packets": [
+    {
+      "kind": "review",
+      "ref": "codex/design/council-dao-v1.md",
+      "status": "open",
+      "assignee": "codex-agent"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "manifest",
+      "ref": "codex/schema/council-proposal.schema.json"
+    },
+    {
+      "kind": "manifest",
+      "ref": "codex/schema/council-vote-receipt.schema.json"
+    },
+    {
+      "kind": "manifest",
+      "ref": "codex/schema/council-execution-permit.schema.json"
+    }
+  ],
+  "public_projection": null,
+  "tags": [
+    "ops",
+    "governance",
+    "council",
+    "receipts",
+    "execution-gate",
+    "witness",
+    "packet",
+    "no-auto-mutation"
+  ]
+}

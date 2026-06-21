@@ -1,0 +1,14 @@
+{
+  "schema_version": "council-vote-receipt/v1",
+  "object_id": "AKALYNTH_COUNCIL_VOTE_SAMPLE_BETA_CHECK_SOVEREIGN",
+  "proposal_id": "AKALYNTH_COUNCIL_PROPOSAL_SAMPLE_BETA_CHECK",
+  "voter_id": "sovereign",
+  "vote": "approve",
+  "cast_utc": "2026-06-21T12:05:00Z",
+  "reputation_weight": 1.0,
+  "rationale": "Chill-zone closure merged; beta check is appropriate read-only hygiene.",
+  "evidence_refs": [
+    "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_CHILL_ZONE_SHOWCASE_V1/receipt.json"
+  ],
+  "prior_receipt_hash": null
+}
