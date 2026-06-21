@@ -1,0 +1,14 @@
+{
+  "schema_version": "council-treasury-ledger-entry/v1",
+  "object_id": "AKALYNTH_COUNCIL_LEDGER_SAMPLE_PERMIT_EXECUTION",
+  "entry_type": "permit_execution",
+  "amount": -1.0,
+  "currency_unit": "ops_credit",
+  "balance_after": 99.0,
+  "related_permit_id": "AKALYNTH_COUNCIL_PERMIT_SAMPLE_BETA_CHECK",
+  "related_proposal_id": "AKALYNTH_COUNCIL_PROPOSAL_SAMPLE_BETA_CHECK",
+  "recorded_utc": "2026-06-21T18:05:00Z",
+  "recorded_by": "council-execution-gate",
+  "memo": "Symbolic debit for lane beta check permit issuance.",
+  "prior_entry_hash": null
+}

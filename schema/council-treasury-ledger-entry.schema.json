@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akalynth/codex/council-treasury-ledger-entry.schema.json",
+  "title": "Akalynth Council Treasury Ledger Entry (local ops) v1",
+  "description": "Append-only ops treasury ledger row. Symbolic ops_credit bookkeeping only — not in-game gold or real money.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "object_id",
+    "entry_type",
+    "amount",
+    "currency_unit",
+    "recorded_utc",
+    "recorded_by"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "council-treasury-ledger-entry/v1" },
+    "object_id": {
+      "type": "string",
+      "pattern": "^AKALYNTH_COUNCIL_LEDGER_[A-Z0-9_]+$"
+    },
+    "entry_type": {
+      "enum": [
+        "opening_balance",
+        "permit_execution",
+        "allocation",
+        "adjustment",
+        "closing_note"
+      ]
+    },
+    "amount": {
+      "type": "number",
+      "description": "Signed delta in currency_unit (negative = debit)."
+    },
+    "currency_unit": {
+      "const": "ops_credit",
+      "description": "Symbolic ops bookkeeping unit only."
+    },
+    "balance_after": {
+      "type": "number",
+      "description": "Running balance after this entry (optional at write time)."
+    },
+    "related_permit_id": {
+      "type": "string",
+      "pattern": "^AKALYNTH_COUNCIL_PERMIT_[A-Z0-9_]+$"
+    },
+    "related_proposal_id": {
+      "type": "string",
+      "pattern": "^AKALYNTH_COUNCIL_PROPOSAL_[A-Z0-9_]+$"
+    },
+    "recorded_utc": { "type": "string", "format": "date-time" },
+    "recorded_by": {
+      "type": "string",
+      "description": "Operator or gate adapter id."
+    },
+    "memo": { "type": "string" },
+    "prior_entry_hash": {
+      "type": ["string", "null"],
+      "description": "Hash of prior ledger line for append-only chaining."
+    },
+    "entry_hash": {
+      "type": "string",
+      "description": "Self-hash recorded after write (optional at authoring time)."
+    }
+  }
+}

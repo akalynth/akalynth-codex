@@ -1,0 +1,38 @@
+{
+  "schema_version": "council-proposal/v1",
+  "object_id": "AKALYNTH_COUNCIL_PROPOSAL_SAMPLE_BETA_CHECK_V2",
+  "status": "approved",
+  "title": "Beta lane preflight check (v2 weighted quorum)",
+  "summary": "Read-only beta lane check with registry-resolved reputation weight and treasury ledger append.",
+  "proposer_id": "sovereign",
+  "created_utc": "2026-06-21T18:00:00Z",
+  "voting_opens_utc": "2026-06-21T18:00:00Z",
+  "voting_closes_utc": "2026-06-21T19:00:00Z",
+  "action_class": "lane:beta:check",
+  "action_params": {
+    "lane": "beta",
+    "dry_run": false
+  },
+  "quorum": {
+    "min_approvals": 1,
+    "min_participation": 1,
+    "min_weighted_approvals": 2.0
+  },
+  "packet_authority": {
+    "object_id": "AKALYNTH_COUNCIL_DAO_V2",
+    "path": "codex/design/council-dao-v2.md"
+  },
+  "source_inputs": [
+    "codex/design/council-dao-v2.md",
+    "codex/schema/council-member-reputation.schema.json",
+    "codex/schema/council-treasury-ledger-entry.schema.json",
+    "akalynth-ops/council/members/sovereign.json"
+  ],
+  "codex_entry_id": "council-dao",
+  "non_claims": [
+    "Does not deploy, restart, or build beta.",
+    "Does not move real money or custodial keys.",
+    "Treasury ledger uses symbolic ops_credit only."
+  ],
+  "prior_receipt_hash": null
+}
