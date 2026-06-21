@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akalynth/codex/council-human-ack.schema.json",
+  "title": "Akalynth Council Human Acknowledgment (local ops) v1",
+  "description": "Explicit operator acknowledgment required before deploy-class council permits execute.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "ack_required"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "council-human-ack/v1" },
+    "status": {
+      "enum": ["required", "provided", "missing", "not_required"],
+      "description": "Whether operator ack was required and supplied."
+    },
+    "ack_required": { "type": "boolean" },
+    "provided_utc": { "type": "string", "format": "date-time" },
+    "source": {
+      "enum": [
+        "AKALYNTH_COUNCIL_DEPLOY_ACK",
+        "gate_flag_human_ack",
+        "not_applicable"
+      ],
+      "description": "How ack was supplied."
+    },
+    "operator_id": {
+      "type": "string",
+      "description": "Optional operator handle when ack is recorded."
+    },
+    "note": { "type": "string" }
+  }
+}

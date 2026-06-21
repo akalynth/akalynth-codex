@@ -1,0 +1,30 @@
+{
+  "schema_version": "council-proposal/v1",
+  "object_id": "AKALYNTH_COUNCIL_PROPOSAL_SAMPLE_STAGING_DEPLOY",
+  "status": "approved",
+  "title": "Staging lane deploy (dry-run fixture)",
+  "summary": "Gated staging deploy sample for council deploy-permit v1 contract tests.",
+  "proposer_id": "sovereign",
+  "created_utc": "2026-06-21T22:00:00Z",
+  "action_class": "lane:staging:deploy",
+  "action_params": {
+    "lane": "staging",
+    "dry_run": true,
+    "execution_ack_required": true
+  },
+  "quorum": {
+    "min_approvals": 1,
+    "min_participation": 1,
+    "min_weighted_approvals": 2.0
+  },
+  "packet_authority": {
+    "object_id": "AKALYNTH_COUNCIL_DAO_DEPLOY_PERMIT_V1",
+    "path": "codex/design/council-dao-deploy-permit-v1.md"
+  },
+  "codex_entry_id": "council-dao",
+  "non_claims": [
+    "Fixture uses dry_run for verifier hosts.",
+    "Does not deploy without explicit human ack."
+  ],
+  "prior_receipt_hash": null
+}
