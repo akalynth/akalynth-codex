@@ -44,9 +44,11 @@
         "lane:staging:check",
         "lane:sim:check",
         "lane:beta:deploy",
-        "lane:staging:deploy"
+        "lane:staging:deploy",
+        "lane:beta:publish-account-play",
+        "lane:staging:publish-account-play"
       ],
-      "description": "v1 check classes are read-only. Deploy classes require DEPLOY_PERMIT_V1 + human ack."
+      "description": "Check classes read-only. Deploy/publish classes require human ack."
     },
     "action_params": {
       "type": "object",
@@ -84,7 +86,8 @@
           "enum": [
             "AKALYNTH_COUNCIL_DAO_V1",
             "AKALYNTH_COUNCIL_DAO_V2",
-            "AKALYNTH_COUNCIL_DAO_DEPLOY_PERMIT_V1"
+            "AKALYNTH_COUNCIL_DAO_DEPLOY_PERMIT_V1",
+            "AKALYNTH_COUNCIL_PUBLISH_PLAY_PERMIT_V1"
           ]
         },
         "path": { "type": "string" }

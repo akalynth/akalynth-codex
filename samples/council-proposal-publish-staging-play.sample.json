@@ -1,0 +1,30 @@
+{
+  "schema_version": "council-proposal/v1",
+  "object_id": "AKALYNTH_COUNCIL_PROPOSAL_SAMPLE_STAGING_PUBLISH_PLAY",
+  "status": "approved",
+  "title": "Staging publish-account-play (council gated)",
+  "summary": "Gated staging /play/ publish with human ack; formalizes manual screenshot-proof publish.",
+  "proposer_id": "sovereign",
+  "created_utc": "2026-06-21T23:30:00Z",
+  "action_class": "lane:staging:publish-account-play",
+  "action_params": {
+    "lane": "staging",
+    "dry_run": false,
+    "execution_ack_required": true
+  },
+  "quorum": {
+    "min_approvals": 1,
+    "min_participation": 1,
+    "min_weighted_approvals": 2.0
+  },
+  "packet_authority": {
+    "object_id": "AKALYNTH_COUNCIL_PUBLISH_PLAY_PERMIT_V1",
+    "path": "codex/design/council-publish-play-permit-v1.md"
+  },
+  "codex_entry_id": "council-dao",
+  "non_claims": [
+    "Does not publish without explicit human ack.",
+    "Does not auto-execute on vote approval."
+  ],
+  "prior_receipt_hash": null
+}
