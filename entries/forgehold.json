@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-05T23:41:31Z",
-  "updated": "2026-06-20T00:00:00Z",
+  "updated": "2026-06-21T23:50:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -19,7 +19,7 @@
     "origin": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
     "accepted": true,
     "accepted_at": "2026-06-05T23:41:31Z",
-    "last_accepted_change": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1 (second playable slice: route unlock, Soulsteel crafting, Heartforge Trial dungeon, Oathless Forge boss)"
+    "last_accepted_change": "AKALYNTH_FORGEHOLD_NEXT_PACKET_V1 missing-shipment proof merged akalynth PR #342 @ 1173ea7"
   },
   "world": {
     "description": "An industrial fortress carved into a living volcano - heart of the Emberwilds, home of the Flamebound, Soulsteel production, and the Heartforge. Civic virtue: Strength.",
@@ -119,6 +119,12 @@
       "ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/prompts/AKALYNTH_FORGEHOLD_ROUTE_SLICE_POSTER_V1.prompt.md",
       "status": "accepted",
       "note": "reused existing akalynth-site webp assets"
+    },
+    {
+      "kind": "mechanic",
+      "ref": "codex/design/forgehold-missing-shipment-v1.md",
+      "status": "accepted",
+      "assignee": "codex-agent"
     }
   ],
   "evidence": [
@@ -135,6 +141,10 @@
     {
       "kind": "checksum",
       "ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/CHECKSUMS_SHA256.txt"
+    },
+    {
+      "kind": "receipt",
+      "ref": "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_FORGEHOLD_MISSING_SHIPMENT_V1/receipt.json"
     }
   ],
   "public_projection": {

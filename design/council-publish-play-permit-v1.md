@@ -1,6 +1,6 @@
 # Witness Council DAO — Publish Play Permit v1
 
-Codex object: council-dao · Status: **`codex:candidate`**
+Codex object: council-dao · Status: **`codex:accepted`** (publish-play permit packet)
 
 Authority object: `AKALYNTH_COUNCIL_PUBLISH_PLAY_PERMIT_V1`
 
@@ -35,3 +35,11 @@ Without ack → `ack_required`, no publish.
 akalynth-ops/scripts/verify-council-publish-play-permit-v1.sh
 npm -w apps/server run verify:council-publish-play-permit-v1
 ```
+
+## Closure
+
+Merged upstream:
+
+- `akalynth-codex` PR #5 @ `fe0f5e5`
+- `akalynth` PR #341 @ `1c50c2c`
+- Loop receipt: `docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_COUNCIL_PUBLISH_PLAY_PERMIT_V1/receipt.json`

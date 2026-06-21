@@ -1,6 +1,6 @@
 # Forgehold Missing Shipment v1
 
-Codex object: forgehold · Status: **`codex:candidate`**
+Codex object: forgehold · Status: **`codex:accepted`** (missing-shipment proof packet)
 
 Authority object: `AKALYNTH_FORGEHOLD_NEXT_PACKET_V1`
 
@@ -28,3 +28,11 @@ travel unlock, rewards, heat, or economy mutation.
 ```bash
 npm -w apps/server run verify:forgehold-missing-shipment-v1
 ```
+
+## Closure
+
+Merged upstream:
+
+- `akalynth-codex` design seed PR #5 @ `fe0f5e5`
+- `akalynth` PR #342 @ `1173ea7`
+- Loop receipt: `docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_FORGEHOLD_MISSING_SHIPMENT_V1/receipt.json`
