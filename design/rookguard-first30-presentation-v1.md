@@ -70,5 +70,5 @@ bash scripts/verify-rookguard-first30-presentation.sh
 
 ## Follow-On
 
+- `AKALYNTH_LIVE_BETA_STAGING_SCREENSHOT_PROOF_V1` — live beta/staging screenshot proof (closed)
 - `AKALYNTH_COUNCIL_DAO_V2` — treasury + reputation
-- Live beta/staging screenshot proof (release lane)

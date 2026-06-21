@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akalynth/codex/live-lane-screenshot-register.schema.json",
+  "title": "Live Lane Screenshot Register v1",
+  "description": "Register for beta/staging Rookguard presentation Playwright screenshot proof.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "packet_authority",
+    "proof_target",
+    "captured_utc",
+    "ops_host",
+    "lanes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "live-lane-screenshot-register/v1" },
+    "packet_authority": { "const": "AKALYNTH_LIVE_BETA_STAGING_SCREENSHOT_PROOF_V1" },
+    "proof_target": { "const": "live_lane_presentation_screenshot_v1" },
+    "captured_utc": { "type": "string", "format": "date-time" },
+    "ops_host": { "type": "string", "minLength": 1 },
+    "lanes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "lane",
+          "webBase",
+          "apiBase",
+          "wsUrl",
+          "probe",
+          "playable",
+          "screenshots",
+          "status"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "lane": { "enum": ["beta", "staging"] },
+          "webBase": { "type": "string", "format": "uri" },
+          "apiBase": { "type": "string", "format": "uri" },
+          "wsUrl": { "type": "string", "pattern": "^wss://" },
+          "probe": {
+            "type": "object",
+            "required": ["play", "account", "worlds"],
+            "properties": {
+              "play": { "$ref": "#/$defs/probeResult" },
+              "account": { "$ref": "#/$defs/probeResult" },
+              "worlds": { "$ref": "#/$defs/probeResult" }
+            }
+          },
+          "playable": { "type": "boolean" },
+          "screenshots": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/screenshotEntry" }
+          },
+          "smoke": {
+            "type": ["object", "null"],
+            "properties": {
+              "character_name": { "type": "string" },
+              "mode": { "enum": ["disposable-account", "real-account"] }
+            }
+          },
+          "status": { "enum": ["passed", "blocked", "failed"] },
+          "blocked_reason": { "type": "string" },
+          "error": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "probeResult": {
+      "type": "object",
+      "required": ["status", "ok"],
+      "properties": {
+        "status": { "type": "integer" },
+        "ok": { "type": "boolean" },
+        "error": { "type": "string" }
+      }
+    },
+    "screenshotEntry": {
+      "type": "object",
+      "required": ["file", "lane", "viewport", "bytes", "sha256_prefix"],
+      "additionalProperties": true,
+      "properties": {
+        "file": { "type": "string", "minLength": 1 },
+        "lane": { "enum": ["beta", "staging"] },
+        "viewport": {
+          "enum": ["desktop_1440x900", "mobile_landscape_932x430"]
+        },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "sha256_prefix": { "type": "string", "pattern": "^[a-f0-9]{16}$" },
+        "map_hint": { "type": "string" }
+      }
+    }
+  }
+}
