@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akalynth/codex/rookguard-presentation-transcript.schema.json",
+  "title": "Rookguard First30 Presentation Transcript v1",
+  "description": "Maps Rookguard 0-30 minute windows to sim gameplan, timeline frames, and live proof lanes.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "packet_authority",
+    "proof_target",
+    "source_contract",
+    "windows",
+    "sim_snapshot",
+    "authority_boundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "rookguard-presentation-transcript/v1" },
+    "packet_authority": { "const": "AKALYNTH_ROOKGUARD_FIRST30_PRESENTATION_V1" },
+    "proof_target": { "const": "rookguard_first30_presentation_v1" },
+    "source_contract": { "const": "docs/ROOKGUARD_FIRST_30_MINUTES_V1.md" },
+    "windows": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "window_id",
+          "from_minute",
+          "to_minute",
+          "lane",
+          "player_beat",
+          "receipt_actions",
+          "sim_frame_labels"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "window_id": { "type": "string", "pattern": "^rookguard_minute_\\d+_\\d+$" },
+          "from_minute": { "type": "integer", "minimum": 0, "maximum": 25 },
+          "to_minute": { "type": "integer", "minimum": 5, "maximum": 30 },
+          "lane": { "enum": ["live", "sim_debug", "sim_optional"] },
+          "player_beat": { "type": "string", "minLength": 1 },
+          "receipt_actions": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "minItems": 1
+          },
+          "sim_frame_labels": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "live_proof_ref": { "type": "string" }
+        }
+      }
+    },
+    "sim_snapshot": {
+      "type": "object",
+      "required": [
+        "mode",
+        "rookguard_newcomer_agent_id",
+        "gameplan_step_count",
+        "newcomer_timeline_frame_count"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mode": { "const": "sim_life_viewer_v1" },
+        "rookguard_newcomer_agent_id": { "const": "sim:rookguard:newcomer:1" },
+        "gameplan_step_count": { "const": 6 },
+        "newcomer_timeline_frame_count": { "type": "integer", "minimum": 10 }
+      }
+    },
+    "authority_boundary": {
+      "type": "object",
+      "required": ["sim_receipts", "live_ws_proof"],
+      "additionalProperties": false,
+      "properties": {
+        "sim_receipts": { "const": "simulated_receipts_only" },
+        "live_ws_proof": { "const": "rookguard_codex_path_ws_e2e_verified" }
+      }
+    }
+  }
+}

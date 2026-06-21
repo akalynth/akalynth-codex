@@ -1,0 +1,89 @@
+{
+  "schema_version": "rookguard-presentation-transcript/v1",
+  "packet_authority": "AKALYNTH_ROOKGUARD_FIRST30_PRESENTATION_V1",
+  "proof_target": "rookguard_first30_presentation_v1",
+  "source_contract": "docs/ROOKGUARD_FIRST_30_MINUTES_V1.md",
+  "windows": [
+    {
+      "window_id": "rookguard_minute_0_5",
+      "from_minute": 0,
+      "to_minute": 5,
+      "lane": "live",
+      "player_beat": "Spawn in Rookguard, read the first objective, and step onto the movement rune without the client choosing the result.",
+      "receipt_actions": ["presence_entered", "tutorial_step_complete"],
+      "sim_frame_labels": ["Newcomer completes movement in Rookguard"],
+      "live_proof_ref": "verify-rookguard-codex-path:movement"
+    },
+    {
+      "window_id": "rookguard_minute_5_10",
+      "from_minute": 5,
+      "to_minute": 10,
+      "lane": "live",
+      "player_beat": "Use local chat once, see it broadcast nearby, and understand chat is server-readable proof for the tutorial.",
+      "receipt_actions": ["chat", "tutorial_step_complete"],
+      "sim_frame_labels": [
+        "Newcomer sends first accountable chat signal",
+        "Rookguard chat lesson is marked complete"
+      ],
+      "live_proof_ref": "verify-rookguard-codex-path:chat"
+    },
+    {
+      "window_id": "rookguard_minute_10_15",
+      "from_minute": 10,
+      "to_minute": 15,
+      "lane": "live",
+      "player_beat": "Step onto the Tem marker, receive the friendly challenge, and answer it through chat.",
+      "receipt_actions": ["tem_challenge_issued", "tem_challenge_passed", "tutorial_step_complete"],
+      "sim_frame_labels": [
+        "Tem challenge is issued in the safe corridor",
+        "Tem answer passes and the tutorial step closes",
+        "Rookguard Tem lesson is marked complete"
+      ],
+      "live_proof_ref": "verify-rookguard-codex-path:tem"
+    },
+    {
+      "window_id": "rookguard_minute_15_20",
+      "from_minute": 15,
+      "to_minute": 20,
+      "lane": "sim_debug",
+      "player_beat": "Visit the runestone table, trigger one server-rolled result, and see that it grants flavor rather than power.",
+      "receipt_actions": ["runestone_cast", "presence_lingered"],
+      "sim_frame_labels": ["Runestone table gives a harmless public roll"]
+    },
+    {
+      "window_id": "rookguard_minute_20_25",
+      "from_minute": 20,
+      "to_minute": 25,
+      "lane": "sim_optional",
+      "player_beat": "Find the legend stone and learn that some world objects record attention without giving loot.",
+      "receipt_actions": ["legend_sighted"],
+      "sim_frame_labels": ["Legend stone sighting teaches refusal without loot"]
+    },
+    {
+      "window_id": "rookguard_minute_25_30",
+      "from_minute": 25,
+      "to_minute": 30,
+      "lane": "live",
+      "player_beat": "Defeat the training slime, declare a Heroes Codex vocation in the guild hall, then finish Rookguard cleanly.",
+      "receipt_actions": ["mob_kill", "item_minted", "vocation_declared", "gate_unlock", "tutorial_completed"],
+      "sim_frame_labels": [
+        "Training slime practice proves starter combat",
+        "Training slime loot is minted before pickup",
+        "Newcomer declares a Heroes Codex vocation",
+        "Newcomer returns to the gate with tutorial, training, and Codex proof",
+        "Rookguard tutorial completes before transfer"
+      ],
+      "live_proof_ref": "verify-rookguard-codex-path:training_vocation_gate"
+    }
+  ],
+  "sim_snapshot": {
+    "mode": "sim_life_viewer_v1",
+    "rookguard_newcomer_agent_id": "sim:rookguard:newcomer:1",
+    "gameplan_step_count": 6,
+    "newcomer_timeline_frame_count": 13
+  },
+  "authority_boundary": {
+    "sim_receipts": "simulated_receipts_only",
+    "live_ws_proof": "rookguard_codex_path_ws_e2e_verified"
+  }
+}

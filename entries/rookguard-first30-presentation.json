@@ -1,0 +1,70 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "rookguard-first30-presentation",
+  "type": "mechanic",
+  "title": "Rookguard First30 Presentation",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-21T19:00:00Z",
+  "updated": "2026-06-21T19:00:00Z",
+  "status": "candidate",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "Presentation transcript linking sim 0-30 gameplan, timeline frames, and live Codex Path WebSocket proof.",
+  "lineage": {
+    "origin": "AKALYNTH_ROOKGUARD_FIRST30_PRESENTATION_V1 packet — post Forgehold Act II",
+    "accepted": false,
+    "last_accepted_change": "codex seed: presentation transcript schema + design packet 2026-06-21"
+  },
+  "world": {
+    "description": "Rookguard onboarding presentation proof. Six five-minute windows with lane split (live vs sim/debug). No launch claim.",
+    "design_refs": [
+      "codex/design/rookguard-first30-presentation-v1.md",
+      "codex/schema/rookguard-presentation-transcript.schema.json",
+      "repos/akalynth/docs/ROOKGUARD_FIRST_30_MINUTES_V1.md"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_ROOKGUARD_FIRST30_PRESENTATION_V1",
+      "registry": "apps/server/src/simulation/simLifeSnapshot.ts"
+    }
+  },
+  "related": [
+    {
+      "rel": "part_of",
+      "target": "rookguard",
+      "note": "Onboarding presentation layer"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "presentation",
+      "ref": "codex/design/rookguard-first30-presentation-v1.md",
+      "status": "open",
+      "assignee": "codex-agent"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "manifest",
+      "ref": "codex/schema/rookguard-presentation-transcript.schema.json"
+    },
+    {
+      "kind": "sample",
+      "ref": "codex/samples/rookguard-first30-presentation-transcript.sample.json"
+    }
+  ],
+  "public_projection": null,
+  "tags": [
+    "rookguard",
+    "onboarding",
+    "presentation",
+    "sim",
+    "transcript",
+    "packet"
+  ]
+}
