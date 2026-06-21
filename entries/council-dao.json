@@ -6,7 +6,7 @@
   "authority": "Akalynth ops / VaultMesh",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-21T12:00:00Z",
-  "updated": "2026-06-21T20:00:00Z",
+  "updated": "2026-06-21T21:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": false,
@@ -19,7 +19,7 @@
     "origin": "AKALYNTH_COUNCIL_DAO_V1 packet seed — post chill-zone showcase closure",
     "accepted": true,
     "accepted_at": "2026-06-21T18:00:00Z",
-    "last_accepted_change": "AKALYNTH_COUNCIL_DAO_V1 execution merged akalynth PR #335 @ bcae5f5"
+    "last_accepted_change": "AKALYNTH_COUNCIL_DAO_V2 execution merged akalynth PR #339 @ 06305cb, codex PR #3 @ da8d2f6"
   },
   "world": {
     "description": "Operator-layer Witness Council. Not the in-fiction Accord Council (see systems-bible). This object models how Akalynth ops proposals become receipt-backed permits before any lane action. v1 action classes are read-only lane check only.",
@@ -34,7 +34,7 @@
     ],
     "implementation": {
       "stage": "shipped",
-      "slice": "AKALYNTH_COUNCIL_DAO_V1",
+      "slice": "AKALYNTH_COUNCIL_DAO_V2",
       "registry": "akalynth-ops/council/"
     }
   },
@@ -60,7 +60,7 @@
     {
       "kind": "review",
       "ref": "codex/design/council-dao-v2.md",
-      "status": "candidate",
+      "status": "accepted",
       "assignee": "codex-agent"
     }
   ],

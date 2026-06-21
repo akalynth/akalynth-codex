@@ -1,6 +1,6 @@
 # Witness Council DAO v2 — Treasury + Reputation
 
-Codex object: council-dao · Status: **`codex:candidate`** (v2 packet)
+Codex object: council-dao · Status: **`codex:accepted`** (v2 packet)
 
 Authority object: `AKALYNTH_COUNCIL_DAO_V2`
 
@@ -134,5 +134,13 @@ The packet is accepted only after:
 
 ## Follow-On Loop (not this packet)
 
-- `AKALYNTH_COUNCIL_DAO_DEPLOY_PERMIT_V1` — gated `lane:beta:deploy` with human ack
+- `AKALYNTH_COUNCIL_DAO_DEPLOY_PERMIT_V1` — gated `lane:beta:deploy` with human ack (**next**)
 - `AKALYNTH_FORGEHOLD_ASHGLASS_EVIDENCE_V1` — content evidence ordering (parallel)
+
+## Closure
+
+Merged upstream:
+
+- `akalynth-codex` PR #3 @ `da8d2f6`
+- `akalynth` PR #339 @ `06305cb`
+- Loop receipt: `docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_COUNCIL_DAO_V2/receipt.json`
