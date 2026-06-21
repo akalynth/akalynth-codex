@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akalynth/codex/forgehold-evidence-object.schema.json",
+  "title": "Forgehold Act II Evidence Object v1",
+  "description": "Server-owned Ember Road evidence recovery record. No travel unlock, item mint, or economy mutation.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "object_id",
+    "evidence_object_id",
+    "location_id",
+    "act_id",
+    "receipt_action",
+    "recovered_utc"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "forgehold-evidence-object/v1" },
+    "object_id": {
+      "type": "string",
+      "pattern": "^AKALYNTH_FORGEHOLD_EVIDENCE_[A-Z0-9_]+$"
+    },
+    "evidence_object_id": {
+      "enum": ["broken_route_seal", "charred_shipment_plate", "ashglass_shard"]
+    },
+    "location_id": {
+      "enum": ["ember_road_milepost", "burned_caravan_site", "ashglass_ravine"]
+    },
+    "act_id": { "const": "act_02_ember_road_recovery" },
+    "skill_id": {
+      "enum": ["route:evidence:milepost", "route:evidence:caravan", "route:evidence:ravine"]
+    },
+    "receipt_action": {
+      "enum": [
+        "forgehold_milepost_evidence_recovered",
+        "forgehold_caravan_evidence_recovered",
+        "forgehold_ashglass_ravine_evidence_recovered"
+      ]
+    },
+    "route_id": { "const": "forgehold_route_slice_v1" },
+    "recovered_utc": { "type": "string", "format": "date-time" },
+    "travel_unlocked": { "const": false },
+    "economy_impact": { "const": "none" },
+    "packet_authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_id", "path"],
+      "properties": {
+        "object_id": { "const": "AKALYNTH_FORGEHOLD_ASHGLASS_EVIDENCE_V1" },
+        "path": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "forgehold-ashglass-evidence",
+  "type": "mechanic",
+  "title": "Forgehold Act II Ashglass Evidence",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-21T18:00:00Z",
+  "updated": "2026-06-21T18:00:00Z",
+  "status": "candidate",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "Act II Ember Road evidence ordering: milepost seal, caravan plate, ashglass shard — server-owned receipts before shipment contradiction investigation.",
+  "lineage": {
+    "origin": "AKALYNTH_FORGEHOLD_ASHGLASS_EVIDENCE_V1 packet — post Council DAO v1",
+    "accepted": false,
+    "last_accepted_change": "codex seed: Act II evidence schema + design packet 2026-06-21"
+  },
+  "world": {
+    "description": "Forgehold route slice Act II. Three recoverable evidence objects on Ember Road; gates Act III missing-shipment investigation. Distinct from post-gate Heartforge Ashglass lab evidence.",
+    "design_refs": [
+      "codex/design/forgehold-ashglass-evidence-v1.md",
+      "codex/design/forgehold.md",
+      "codex/schema/forgehold-evidence-object.schema.json"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_FORGEHOLD_ASHGLASS_EVIDENCE_V1",
+      "registry": "repos/akalynth/apps/server/src/skills/handlers.ts"
+    }
+  },
+  "related": [
+    {
+      "rel": "part_of",
+      "target": "forgehold",
+      "note": "Act II of Forgehold route slice"
+    },
+    {
+      "rel": "references",
+      "target": "ember-road",
+      "note": "Recovery corridor"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "mechanic",
+      "ref": "codex/design/forgehold-ashglass-evidence-v1.md",
+      "status": "open",
+      "assignee": "codex-agent"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "manifest",
+      "ref": "codex/schema/forgehold-evidence-object.schema.json"
+    }
+  ],
+  "public_projection": null,
+  "tags": [
+    "forgehold",
+    "evidence",
+    "ashglass",
+    "ember-road",
+    "act-ii",
+    "server-authority",
+    "receipts",
+    "packet"
+  ]
+}

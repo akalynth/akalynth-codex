@@ -1,0 +1,35 @@
+{
+  "schema_version": "forgehold-act-ii-chain/v1",
+  "packet_authority": "AKALYNTH_FORGEHOLD_ASHGLASS_EVIDENCE_V1",
+  "route_id": "forgehold_route_slice_v1",
+  "act_id": "act_02_ember_road_recovery",
+  "ordered_steps": [
+    {
+      "order": 1,
+      "skill_id": "route:evidence:milepost",
+      "location_id": "ember_road_milepost",
+      "evidence_object_id": "broken_route_seal",
+      "receipt_action": "forgehold_milepost_evidence_recovered"
+    },
+    {
+      "order": 2,
+      "skill_id": "route:evidence:caravan",
+      "location_id": "burned_caravan_site",
+      "evidence_object_id": "charred_shipment_plate",
+      "receipt_action": "forgehold_caravan_evidence_recovered"
+    },
+    {
+      "order": 3,
+      "skill_id": "route:evidence:ravine",
+      "location_id": "ashglass_ravine",
+      "evidence_object_id": "ashglass_shard",
+      "receipt_action": "forgehold_ashglass_ravine_evidence_recovered"
+    }
+  ],
+  "gates_act_iii_skill": "route:quest:shipment",
+  "non_claims": [
+    "No travel unlock",
+    "No item mint",
+    "No wallet mutation"
+  ]
+}
