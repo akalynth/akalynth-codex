@@ -1,0 +1,75 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "live-lane-presentation-screenshot-proof",
+  "type": "mechanic",
+  "title": "Live Lane Presentation Screenshot Proof",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-21T05:10:00Z",
+  "updated": "2026-06-21T05:10:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "Beta and staging Playwright screenshot proof for connected Rookguard presentation after First30 transcript closure.",
+  "lineage": {
+    "origin": "AKALYNTH_LIVE_BETA_STAGING_SCREENSHOT_PROOF_V1 packet — post Rookguard First30",
+    "accepted": true,
+    "last_accepted_change": "Live beta+staging screenshot captures closed on ops-laptop with operator approval approved7"
+  },
+  "world": {
+    "description": "Release-lane visual proof that beta and staging /play/ clients connect to Rookguard with presentation UI visible.",
+    "design_refs": [
+      "codex/design/live-lane-presentation-screenshot-proof-v1.md",
+      "codex/schema/live-lane-screenshot-register.schema.json",
+      "codex/design/rookguard-first30-presentation-v1.md"
+    ],
+    "implementation": {
+      "stage": "implemented",
+      "slice": "AKALYNTH_LIVE_BETA_STAGING_SCREENSHOT_PROOF_V1",
+      "registry": "akalynth-ops/tools/screenshots/live-lane-presentation-screenshots.mjs"
+    }
+  },
+  "related": [
+    {
+      "rel": "follows",
+      "target": "rookguard-first30-presentation",
+      "note": "Visual release-lane proof after presentation transcript"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "screenshot-proof",
+      "ref": "codex/design/live-lane-presentation-screenshot-proof-v1.md",
+      "status": "closed",
+      "assignee": "codex-agent"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "manifest",
+      "ref": "codex/schema/live-lane-screenshot-register.schema.json"
+    },
+    {
+      "kind": "sample",
+      "ref": "codex/samples/live-lane-presentation-screenshot-register.sample.json"
+    },
+    {
+      "kind": "ops-closure",
+      "ref": "akalynth-ops/evidence/live-lane-presentation-screenshot-proof/closure.json"
+    }
+  ],
+  "public_projection": null,
+  "tags": [
+    "rookguard",
+    "beta",
+    "staging",
+    "screenshot",
+    "presentation",
+    "release-lane",
+    "packet"
+  ]
+}
