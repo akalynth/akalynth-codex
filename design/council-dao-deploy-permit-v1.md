@@ -1,6 +1,6 @@
 # Witness Council DAO — Deploy Permit v1
 
-Codex object: council-dao · Status: **`codex:candidate`** (deploy permit packet)
+Codex object: council-dao · Status: **`codex:accepted`** (deploy permit packet)
 
 Authority object: `AKALYNTH_COUNCIL_DAO_DEPLOY_PERMIT_V1`
 
@@ -98,3 +98,11 @@ npm -w apps/server run verify:council-dao-deploy-permit-v1
 
 - `lane:staging:publish-account-play` council gate
 - Multi-member deploy ack (separate ack receipts per operator)
+
+## Closure
+
+Merged upstream:
+
+- `akalynth-codex` PR #4 @ `2eeb5c8`
+- `akalynth` PR #340 @ `df2fc34`
+- Loop receipt: `docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_COUNCIL_DAO_DEPLOY_PERMIT_V1/receipt.json`
