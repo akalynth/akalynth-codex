@@ -18,7 +18,7 @@
   "lineage": {
     "origin": "AKALYNTH_LIVE_BETA_STAGING_SCREENSHOT_PROOF_V1 packet — post Rookguard First30",
     "accepted": true,
-    "last_accepted_change": "Live beta+staging screenshot captures closed on ops-laptop with operator approval approved7"
+    "last_accepted_change": "AKALYNTH_LIVE_BETA_STAGING_SCREENSHOT_PROOF_V1 merged akalynth PR #338 @ 25cd609 and akalynth-codex PR #1 @ da17636"
   },
   "world": {
     "description": "Release-lane visual proof that beta and staging /play/ clients connect to Rookguard with presentation UI visible.",
