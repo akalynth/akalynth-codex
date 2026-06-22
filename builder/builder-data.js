@@ -775,8 +775,9 @@ window.CODEX_BUILDER = [
       "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_PLAY_BUILD_GOVERN_SURFACE_V1/receipt.json"
     ],
     "implementation": {
-      "stage": "spec",
-      "slice": "AKALYNTH_PLAY_BUILD_GOVERN_SURFACE_V1"
+      "stage": "prototype",
+      "slice": "AKALYNTH_PLAY_BUILD_GOVERN_SURFACE_V1",
+      "registry": "apps/server/src/builder/draftNamespace.ts"
     },
     "related": [
       {
@@ -1311,4 +1312,4 @@ window.CODEX_BUILDER = [
     ]
   }
 ];
-window.CODEX_BUILDER_STATS = {"objects":37,"public":24,"internal":13,"by_category":{"Cities":5,"Quests":1,"Codices":6,"asset":1,"mechanic":4,"Systems":5,"Places":4,"Civilization Codices":1,"World Foundation":1,"Materials":1,"Creatures":6,"Factions":1,"Bosses":1},"by_stage":{"spec":13,"lore":18,"shipped":1,"concept":1,"implemented":3,"live":1},"by_status":{"accepted":35,"candidate":1,"draft":1}};
+window.CODEX_BUILDER_STATS = {"objects":37,"public":24,"internal":13,"by_category":{"Cities":5,"Quests":1,"Codices":6,"asset":1,"mechanic":4,"Systems":5,"Places":4,"Civilization Codices":1,"World Foundation":1,"Materials":1,"Creatures":6,"Factions":1,"Bosses":1},"by_stage":{"spec":12,"lore":18,"shipped":1,"concept":1,"implemented":3,"prototype":1,"live":1},"by_status":{"accepted":35,"candidate":1,"draft":1}};

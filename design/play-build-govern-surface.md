@@ -403,6 +403,23 @@ No live receipts are emitted by this design object. Future implementation should
 - Promotion packets must distinguish public text, builder-only design, and operator-only evidence.
 - Asset generation must preserve original Akalynth art direction and avoid importing another project's identity.
 
+## Runtime Scaffold (PR-6)
+
+Prototype-only builder draft namespace in `repos/akalynth` (no lane publish, no chronicle writes):
+
+| Module | Path |
+|---|---|
+| Shared contracts | `packages/shared/builderDraft.ts` |
+| Draft namespace store | `apps/server/src/builder/draftNamespace.ts` |
+| Preview session scaffold | `apps/server/src/builder/previewSession.ts` |
+| Namespace verifier | `apps/server/tools/verify-builder-draft-namespace-v1.ts` |
+
+Proof target: `builder_draft_namespace_v1`
+
+```bash
+npm -w apps/server run verify:builder-draft-namespace-v1
+```
+
 ## Builder Workflow Contracts (PR-4)
 
 Codex schemas and samples for the builder → preview → operator review chain:
