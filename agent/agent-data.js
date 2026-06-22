@@ -435,8 +435,8 @@ window.CODEX_AGENT = {
       "title": "Play, Build, Govern Surface",
       "type": "system",
       "category": "Systems",
-      "status": "candidate",
-      "accepted": false,
+      "status": "accepted",
+      "accepted": true,
       "related": [
         {
           "rel": "references",
@@ -1100,55 +1100,55 @@ window.CODEX_AGENT = {
     {
       "object_id": "play-build-govern-surface",
       "object_title": "Play, Build, Govern Surface",
-      "object_status": "candidate",
+      "object_status": "accepted",
       "kind": "map",
       "ref": "codex/design/play-build-govern-surface.md#rookguard-builder-kit",
       "ref_name": "play-build-govern-surface.md#rookguard-builder-kit",
-      "status": "open",
+      "status": "accepted",
       "assignee": "codex-build-delegation",
       "ready": false
     },
     {
       "object_id": "play-build-govern-surface",
       "object_title": "Play, Build, Govern Surface",
-      "object_status": "candidate",
+      "object_status": "accepted",
       "kind": "quest",
       "ref": "codex/design/play-build-govern-surface.md#high-city-first-quest-kit",
       "ref_name": "play-build-govern-surface.md#high-city-first-quest-kit",
-      "status": "open",
+      "status": "accepted",
       "assignee": "codex-build-delegation",
       "ready": false
     },
     {
       "object_id": "play-build-govern-surface",
       "object_title": "Play, Build, Govern Surface",
-      "object_status": "candidate",
+      "object_status": "accepted",
       "kind": "mechanic",
       "ref": "codex/design/play-build-govern-surface.md#local-preview-contract",
       "ref_name": "play-build-govern-surface.md#local-preview-contract",
-      "status": "open",
+      "status": "accepted",
       "assignee": "codex-build-delegation",
       "ready": false
     },
     {
       "object_id": "play-build-govern-surface",
       "object_title": "Play, Build, Govern Surface",
-      "object_status": "candidate",
+      "object_status": "accepted",
       "kind": "review",
       "ref": "codex/design/play-build-govern-surface.md#promotion-review-contract",
       "ref_name": "play-build-govern-surface.md#promotion-review-contract",
-      "status": "open",
+      "status": "accepted",
       "assignee": "operator-review",
       "ready": false
     },
     {
       "object_id": "play-build-govern-surface",
       "object_title": "Play, Build, Govern Surface",
-      "object_status": "candidate",
+      "object_status": "accepted",
       "kind": "asset",
       "ref": "codex/design/play-build-govern-surface.md#asset-production-backlog",
       "ref_name": "play-build-govern-surface.md#asset-production-backlog",
-      "status": "open",
+      "status": "accepted",
       "assignee": "asset-pipeline",
       "ready": false
     },
@@ -1210,13 +1210,12 @@ window.CODEX_AGENT = {
   ],
   "stats": {
     "objects": 38,
-    "open_packets": 5,
+    "open_packets": 0,
     "ready": 0,
     "by_packet_status": {
-      "accepted": 27,
+      "accepted": 32,
       "closed": 3,
-      "blocked": 3,
-      "open": 5
+      "blocked": 3
     },
     "by_packet_kind": {
       "website_update": 9,
@@ -1230,8 +1229,8 @@ window.CODEX_AGENT = {
       "presentation": 1
     },
     "by_object_status": {
-      "accepted": 35,
-      "candidate": 2,
+      "accepted": 36,
+      "candidate": 1,
       "draft": 1
     }
   }

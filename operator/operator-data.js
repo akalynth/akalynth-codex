@@ -1791,8 +1791,8 @@ window.CODEX_FULL = [
     "authority": "Akalynth",
     "author": "codex@akalynth",
     "created": "2026-06-22T00:00:00Z",
-    "updated": "2026-06-23T00:00:00Z",
-    "status": "candidate",
+    "updated": "2026-06-23T00:30:00Z",
+    "status": "accepted",
     "visibility": {
       "builder": true,
       "operator": true,
@@ -1802,8 +1802,9 @@ window.CODEX_FULL = [
     "summary": "Product surface that turns Akalynth's MMO positioning into the ladder Play -> Modify -> Build -> Script -> Operate -> Govern.",
     "lineage": {
       "origin": "goal-objective:1c560753-7476-45d5-9b6e-02b0e10561f7",
-      "accepted": false,
-      "last_accepted_change": "candidate positioning object from objective file; not yet reviewed for public release"
+      "accepted": true,
+      "accepted_at": "2026-06-23T00:30:00Z",
+      "last_accepted_change": "AKALYNTH_PLAY_BUILD_GOVERN_SURFACE_V1 codex spec, packet anchors, verifier, operator acceptance"
     },
     "world": {
       "description": "A builder/operator-facing product surface for Akalynth as a persistent top-down MMO with creator tools and proof-backed operations. It keeps Gameeky as a shape reference only, translating approachable progression into Play, Modify, Build, Script, Operate, and Govern surfaces for Rookguard, High City, creator tooling, local preview, operator review, and receipt-backed promotion.",
@@ -1853,31 +1854,31 @@ window.CODEX_FULL = [
       {
         "kind": "map",
         "ref": "codex/design/play-build-govern-surface.md#rookguard-builder-kit",
-        "status": "open",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "quest",
         "ref": "codex/design/play-build-govern-surface.md#high-city-first-quest-kit",
-        "status": "open",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "mechanic",
         "ref": "codex/design/play-build-govern-surface.md#local-preview-contract",
-        "status": "open",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "review",
         "ref": "codex/design/play-build-govern-surface.md#promotion-review-contract",
-        "status": "open",
+        "status": "accepted",
         "assignee": "operator-review"
       },
       {
         "kind": "asset",
         "ref": "codex/design/play-build-govern-surface.md#asset-production-backlog",
-        "status": "open",
+        "status": "accepted",
         "assignee": "asset-pipeline"
       }
     ],
@@ -1885,6 +1886,14 @@ window.CODEX_FULL = [
       {
         "kind": "verification",
         "ref": "codex/evidence/play-build-govern-surface/goal-objective.md"
+      },
+      {
+        "kind": "verification",
+        "ref": "akalynth-ops/scripts/verify-play-build-govern-surface-v1.sh"
+      },
+      {
+        "kind": "receipt",
+        "ref": "akalynth-ops/evidence/play-build-govern-surface-v1/closure.json"
       }
     ],
     "public_projection": {
@@ -3189,4 +3198,4 @@ window.CODEX_FULL = [
     "_source_kind": "asserted"
   }
 ];
-window.CODEX_STATS = {"objects":38,"by_status":{"accepted":35,"candidate":2,"draft":1},"by_category":{"Cities":5,"quest":1,"Codices":6,"asset":1,"mechanic":4,"system":5,"place":1,"Civilization Codices":1,"Systems":1,"World Foundation":1,"Materials":1,"Creatures":6,"Places":3,"Factions":1,"boss":1},"by_source_kind":{"asserted":28,"source":10},"open_packets":5,"public":24};
+window.CODEX_STATS = {"objects":38,"by_status":{"accepted":36,"candidate":1,"draft":1},"by_category":{"Cities":5,"quest":1,"Codices":6,"asset":1,"mechanic":4,"system":5,"place":1,"Civilization Codices":1,"Systems":1,"World Foundation":1,"Materials":1,"Creatures":6,"Places":3,"Factions":1,"boss":1},"by_source_kind":{"asserted":28,"source":10},"open_packets":0,"public":24};

@@ -756,7 +756,7 @@ window.CODEX_BUILDER = [
     "type": "system",
     "title": "Play, Build, Govern Surface",
     "category": "Systems",
-    "status": "candidate",
+    "status": "accepted",
     "published": false,
     "source_kind": "asserted",
     "design_source": "goal-objective:1c560753-7476-45d5-9b6e-02b0e10561f7",
@@ -1305,4 +1305,4 @@ window.CODEX_BUILDER = [
     ]
   }
 ];
-window.CODEX_BUILDER_STATS = {"objects":37,"public":24,"internal":13,"by_category":{"Cities":5,"Quests":1,"Codices":6,"asset":1,"mechanic":4,"Systems":5,"Places":4,"Civilization Codices":1,"World Foundation":1,"Materials":1,"Creatures":6,"Factions":1,"Bosses":1},"by_stage":{"spec":12,"lore":18,"shipped":1,"concept":2,"implemented":3,"live":1},"by_status":{"accepted":34,"candidate":2,"draft":1}};
+window.CODEX_BUILDER_STATS = {"objects":37,"public":24,"internal":13,"by_category":{"Cities":5,"Quests":1,"Codices":6,"asset":1,"mechanic":4,"Systems":5,"Places":4,"Civilization Codices":1,"World Foundation":1,"Materials":1,"Creatures":6,"Factions":1,"Bosses":1},"by_stage":{"spec":12,"lore":18,"shipped":1,"concept":2,"implemented":3,"live":1},"by_status":{"accepted":35,"candidate":1,"draft":1}};

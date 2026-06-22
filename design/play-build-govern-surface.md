@@ -407,10 +407,21 @@ No live receipts are emitted by this design object. Future implementation should
 
 Codex verification for this surface:
 
-1. Validate the entry JSON parses.
-2. Rebuild builder, operator, agent, and public projections.
-3. Confirm the object appears only on private builder/operator/agent surfaces unless reviewed for public projection.
-4. Confirm no public projection leaks `world`, `packets`, `evidence`, `lineage`, or operator-only paths.
+```bash
+bash akalynth-ops/scripts/verify-play-build-govern-surface-v1.sh
+```
+
+The verifier checks:
+
+1. Entry JSON contract (`accepted`, lineage, evidence refs, packet anchors).
+2. All five packet sections resolve in this design page.
+3. Reverse graph edges on `rookguard`, `high-city`, `game-loop-bible`, and `gameplay-lane`.
+4. Rebuild builder, operator, agent, and public projections.
+5. Confirm the object stays off the public surface (`visibility.public: false`, `public_projection.published: false`).
+6. Confirm no public projection leaks `world`, `packets`, `evidence`, `lineage`, or operator-only paths.
+7. Confirm the agent queue has no open packets for `play-build-govern-surface`.
+
+Closure evidence: `akalynth-ops/evidence/play-build-govern-surface-v1/closure.json`
 
 ## Public Positioning Draft
 
