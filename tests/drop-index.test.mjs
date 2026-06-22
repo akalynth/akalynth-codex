@@ -71,9 +71,10 @@ test('load-drop-index.mjs CLI emits JSON on real drop', () => {
   assert.equal(index.summary.core_bundles, 10);
 });
 
-test('goal scope: commits and codex working tree within deliverable list', () => {
+test('goal scope: deliverable-only delta and clean sibling repos', () => {
   const deliverable = loadDeliverableFiles(codexRoot);
   assert.ok(deliverable.includes('lib/drop-index.mjs'));
   const audit = auditGoalScope(codexRoot, opsRoot);
-  assert.equal(audit.violations.length, 0, JSON.stringify(audit.violations));
+  assert.equal(audit.violations.length, 0, JSON.stringify(audit.violations, null, 2));
+  assert.equal(audit.ok, true);
 });

@@ -102,15 +102,13 @@ pass('step2', 'zip-only pre/post structure equal', {
 // Scope gate — goal commits + codex working tree must match .goal-deliverable-files.txt only
 const scopeAudit = auditGoalScope(codexRoot, opsRoot);
 writeFileSync(join(scratch, 'scope-evidence.json'), JSON.stringify(scopeAudit, null, 2));
-writeFileSync(join(scratch, 'codex-git-porcelain.txt'), scopeAudit.untracked_outside_goal.codex.join('\n'));
-
 if (!scopeAudit.ok) {
   fail('scope', 'goal scope violations', { violations: scopeAudit.violations });
 }
 
 pass('scope', 'goal delta confined to deliverable files', {
   deliverable_count: scopeAudit.deliverable_files.length,
-  untracked_noted: scopeAudit.untracked_outside_goal,
+  violation_count: 0,
 });
 
 writeFileSync(join(scratch, 'pipeline-receipt.json'), JSON.stringify(receipt, null, 2));
