@@ -41,6 +41,10 @@
     {
       "rel": "references",
       "target": "heroes-codex"
+    },
+    {
+      "rel": "references",
+      "target": "play-build-govern-surface"
     }
   ],
   "assets": [

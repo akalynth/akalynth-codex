@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-12T00:00:00Z",
-  "updated": "2026-06-20T00:00:00Z",
+  "updated": "2026-06-23T00:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -53,6 +53,10 @@
     {
       "rel": "connects_to",
       "target": "cindervale"
+    },
+    {
+      "rel": "references",
+      "target": "play-build-govern-surface"
     }
   ],
   "assets": [

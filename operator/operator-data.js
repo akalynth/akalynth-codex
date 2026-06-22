@@ -8,7 +8,7 @@ window.CODEX_FULL = [
     "authority": "Akalynth",
     "author": "guardian@vaultmesh.org",
     "created": "2026-06-05T23:41:31Z",
-    "updated": "2026-06-13T00:00:00Z",
+    "updated": "2026-06-22T00:00:00Z",
     "status": "accepted",
     "visibility": {
       "builder": true,
@@ -21,7 +21,7 @@ window.CODEX_FULL = [
       "origin": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
       "accepted": true,
       "accepted_at": "2026-06-05T23:41:31Z",
-      "last_accepted_change": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1 (second playable slice: route unlock, Soulsteel crafting, Heartforge Trial dungeon, Oathless Forge boss)"
+      "last_accepted_change": "AKALYNTH_FORGEHOLD_NEXT_PACKET_V1 missing-shipment proof merged akalynth PR #342 @ 1173ea7"
     },
     "world": {
       "description": "An industrial fortress carved into a living volcano - heart of the Emberwilds, home of the Flamebound, Soulsteel production, and the Heartforge. Civic virtue: Strength.",
@@ -101,25 +101,40 @@ window.CODEX_FULL = [
       {
         "kind": "thumb",
         "path": "repos/akalynth-site/assets/akalynth/visuals/thumbs/03-forgehold.thumb-480x720.webp"
+      },
+      {
+        "kind": "hero",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/hero/03-forgehold.hero-cover-1920x1080.webp"
+      },
+      {
+        "kind": "icon",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/icons/03-forgehold.icon-candidate-1024.webp"
       }
     ],
     "packets": [
       {
         "kind": "website_update",
         "ref": "codex/design/forgehold.md",
-        "status": "in_review",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "prototype_data",
-        "ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/prompts/CLAUDE_CODE_AKALYNTH_FORGEHOLD_ROUTE_PROTOTYPE_DATA.prompt.md",
-        "status": "in_review",
+        "ref": "codex/prompts/CLAUDE_CODE_AKALYNTH_FORGEHOLD_ROUTE_PROTOTYPE_DATA.prompt.md",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "asset",
         "ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/prompts/AKALYNTH_FORGEHOLD_ROUTE_SLICE_POSTER_V1.prompt.md",
-        "status": "open"
+        "status": "accepted",
+        "note": "reused existing akalynth-site webp assets"
+      },
+      {
+        "kind": "mechanic",
+        "ref": "codex/design/forgehold-missing-shipment-v1.md",
+        "status": "accepted",
+        "assignee": "codex-agent"
       }
     ],
     "evidence": [
@@ -136,6 +151,10 @@ window.CODEX_FULL = [
       {
         "kind": "checksum",
         "ref": "repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/CHECKSUMS_SHA256.txt"
+      },
+      {
+        "kind": "receipt",
+        "ref": "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_FORGEHOLD_MISSING_SHIPMENT_V1/receipt.json"
       }
     ],
     "public_projection": {
@@ -165,7 +184,7 @@ window.CODEX_FULL = [
       "route-slice",
       "strength"
     ],
-    "_source_kind": "receipt"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -175,7 +194,7 @@ window.CODEX_FULL = [
     "authority": "Akalynth",
     "author": "guardian@vaultmesh.org",
     "created": "2026-06-06T03:30:00Z",
-    "updated": "2026-06-13T00:00:00Z",
+    "updated": "2026-06-20T00:00:00Z",
     "status": "accepted",
     "visibility": {
       "builder": true,
@@ -232,19 +251,20 @@ window.CODEX_FULL = [
       {
         "kind": "website_update",
         "ref": "codex/design/campaign-act-i.md",
-        "status": "in_review",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "prototype_data",
-        "ref": "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/prompts/CLAUDE_CODE_AKALYNTH_CAMPAIGN_ACT_I_PROTOTYPE_DATA.prompt.md",
-        "status": "in_review",
+        "ref": "codex/prompts/CLAUDE_CODE_AKALYNTH_CAMPAIGN_ACT_I_PROTOTYPE_DATA.prompt.md",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "asset",
         "ref": "repos/akalynth/drop/AKALYNTH_CAMPAIGN_ACT_I_V1/prompts/AKALYNTH_CAMPAIGN_ACT_I_POSTER_V1.prompt.md",
-        "status": "open"
+        "status": "accepted",
+        "note": "reused existing akalynth-site webp assets"
       }
     ],
     "evidence": [
@@ -270,7 +290,37 @@ window.CODEX_FULL = [
       "four-proofs",
       "spine"
     ],
-    "_source_kind": "receipt"
+    "assets": [
+      {
+        "kind": "banner",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/banners/06-trinity-convergence.banner-1600x700.webp"
+      },
+      {
+        "kind": "card",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/cards/06-trinity-convergence.card-800x1000.webp"
+      },
+      {
+        "kind": "hero",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/hero/06-trinity-convergence.hero-cover-1920x1080.webp"
+      },
+      {
+        "kind": "icon",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/icons/06-trinity-convergence.icon-candidate-1024.webp"
+      },
+      {
+        "kind": "og",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/og/06-trinity-convergence.og-1200x630.webp"
+      },
+      {
+        "kind": "thumb",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/thumbs/06-trinity-convergence.thumb-480x720.webp"
+      },
+      {
+        "kind": "wallpaper",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/wallpapers/06-trinity-convergence.wallpaper-1080x1920.webp"
+      }
+    ],
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -337,7 +387,7 @@ window.CODEX_FULL = [
       "codex",
       "archive"
     ],
-    "_source_kind": "source"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -463,7 +513,7 @@ window.CODEX_FULL = [
     "author": "guardian@vaultmesh.org",
     "created": "2026-06-20T00:00:00Z",
     "updated": "2026-06-20T00:00:00Z",
-    "status": "draft",
+    "status": "accepted",
     "visibility": {
       "builder": true,
       "operator": true,
@@ -473,7 +523,9 @@ window.CODEX_FULL = [
     "summary": "MVP no-combat micro-loop: move, gather a server-placed node, deliver to a station for a non-tradeable acknowledgment, emitting one delivery.recorded receipt per cycle. Smallest honest Recover loop, verifiable with existing movement + receipt tooling before any new system is added.",
     "lineage": {
       "origin": "gameplay-loop-designer session — MVP loop proposal (no source drop)",
-      "accepted": false
+      "accepted": true,
+      "accepted_at": "2026-06-20T00:00:00Z",
+      "last_accepted_change": "design review + server-spec step-1 mechanic packet accepted by codex-build-delegation 2026-06-20"
     },
     "world": {
       "description": "A no-combat chill-zone onboarding loop. The client sends only move/gather/deliver intents; the server owns the gather clock, inventory, and reward grant. One delivery.recorded receipt per completed cycle, with gather provenance folded in. Deliberately excludes combat, party mechanics, and tradeable economy so the Systems Bible pillars stay untouched. Placeholder intent/snapshot/receipt shapes must be reconciled with real game-server contracts (movement, inventory, receipt schema, Tem heat, zone snapshot) before implementation.",
@@ -501,13 +553,12 @@ window.CODEX_FULL = [
       {
         "kind": "review",
         "ref": "codex/design/chill-zone-gather.md",
-        "status": "open"
+        "status": "accepted"
       },
       {
         "kind": "mechanic",
         "ref": "codex/design/chill-zone-gather-step1-server-spec.md",
-        "status": "open",
-        "assignee": "game-server-steward"
+        "status": "accepted"
       }
     ],
     "public_projection": null,
@@ -587,7 +638,7 @@ window.CODEX_FULL = [
       "codex",
       "archive"
     ],
-    "_source_kind": "source"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -597,7 +648,7 @@ window.CODEX_FULL = [
     "authority": "Akalynth",
     "author": "guardian@vaultmesh.org",
     "created": "2026-06-12T00:00:00Z",
-    "updated": "2026-06-13T00:00:00Z",
+    "updated": "2026-06-22T00:00:00Z",
     "status": "accepted",
     "visibility": {
       "builder": true,
@@ -642,25 +693,50 @@ window.CODEX_FULL = [
       {
         "kind": "card",
         "path": "repos/akalynth-site/assets/akalynth/visuals/cards/09-cinderwatch-frontier.card-800x1000.webp"
+      },
+      {
+        "kind": "banner",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/banners/09-cinderwatch-frontier.banner-1600x700.webp"
+      },
+      {
+        "kind": "og",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/og/09-cinderwatch-frontier.og-1200x630.webp"
+      },
+      {
+        "kind": "thumb",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/thumbs/09-cinderwatch-frontier.thumb-480x720.webp"
+      },
+      {
+        "kind": "wallpaper",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/wallpapers/09-cinderwatch-frontier.wallpaper-1080x1920.webp"
+      },
+      {
+        "kind": "hero",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/hero/09-cinderwatch-frontier.hero-cover-1920x1080.webp"
+      },
+      {
+        "kind": "icon",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/icons/09-cinderwatch-frontier.icon-candidate-1024.webp"
       }
     ],
     "packets": [
       {
         "kind": "website_update",
         "ref": "codex/design/cindervale.md",
-        "status": "in_review",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "prototype_data",
-        "ref": "repos/akalynth/drop/AKALYNTH_CINDERWATCH_FRONTIER_SLICE_V1/prompts/CLAUDE_CODE_AKALYNTH_CINDERWATCH_FRONTIER_PROTOTYPE_DATA.prompt.md",
-        "status": "in_review",
+        "ref": "codex/prompts/CLAUDE_CODE_AKALYNTH_CINDERWATCH_FRONTIER_PROTOTYPE_DATA.prompt.md",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "asset",
         "ref": "repos/akalynth/drop/AKALYNTH_CINDERWATCH_FRONTIER_SLICE_V1/prompts/AKALYNTH_CINDERWATCH_FRONTIER_SLICE_POSTER_V1.prompt.md",
-        "status": "open"
+        "status": "accepted",
+        "note": "reused existing akalynth-site webp assets"
       }
     ],
     "evidence": [
@@ -761,7 +837,7 @@ window.CODEX_FULL = [
       "codex",
       "archive"
     ],
-    "_source_kind": "source"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -890,7 +966,81 @@ window.CODEX_FULL = [
       "codex",
       "archive"
     ],
-    "_source_kind": "source"
+    "_source_kind": "asserted"
+  },
+  {
+    "schema_version": "codex-entry/v1",
+    "id": "forgehold-ashglass-evidence",
+    "type": "mechanic",
+    "title": "Forgehold Act II Ashglass Evidence",
+    "authority": "Akalynth",
+    "author": "guardian@vaultmesh.org",
+    "created": "2026-06-21T18:00:00Z",
+    "updated": "2026-06-21T18:00:00Z",
+    "status": "accepted",
+    "visibility": {
+      "builder": true,
+      "operator": true,
+      "agent": true,
+      "public": false
+    },
+    "summary": "Act II Ember Road evidence ordering: milepost seal, caravan plate, ashglass shard — server-owned receipts before shipment contradiction investigation.",
+    "lineage": {
+      "origin": "AKALYNTH_FORGEHOLD_ASHGLASS_EVIDENCE_V1 packet — post Council DAO v1",
+      "accepted": true,
+      "last_accepted_change": "AKALYNTH_FORGEHOLD_ASHGLASS_EVIDENCE_V1 merged akalynth PR #336 @ 0890f36"
+    },
+    "world": {
+      "description": "Forgehold route slice Act II. Three recoverable evidence objects on Ember Road; gates Act III missing-shipment investigation. Distinct from post-gate Heartforge Ashglass lab evidence.",
+      "design_refs": [
+        "codex/design/forgehold-ashglass-evidence-v1.md",
+        "codex/design/forgehold.md",
+        "codex/schema/forgehold-evidence-object.schema.json"
+      ],
+      "implementation": {
+        "stage": "implemented",
+        "slice": "AKALYNTH_FORGEHOLD_ASHGLASS_EVIDENCE_V1",
+        "registry": "repos/akalynth/apps/server/src/skills/handlers.ts"
+      }
+    },
+    "related": [
+      {
+        "rel": "part_of",
+        "target": "forgehold",
+        "note": "Act II of Forgehold route slice"
+      },
+      {
+        "rel": "references",
+        "target": "ember-road",
+        "note": "Recovery corridor"
+      }
+    ],
+    "packets": [
+      {
+        "kind": "mechanic",
+        "ref": "codex/design/forgehold-ashglass-evidence-v1.md",
+        "status": "closed",
+        "assignee": "codex-agent"
+      }
+    ],
+    "evidence": [
+      {
+        "kind": "manifest",
+        "ref": "codex/schema/forgehold-evidence-object.schema.json"
+      }
+    ],
+    "public_projection": null,
+    "tags": [
+      "forgehold",
+      "evidence",
+      "ashglass",
+      "ember-road",
+      "act-ii",
+      "server-authority",
+      "receipts",
+      "packet"
+    ],
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -900,7 +1050,7 @@ window.CODEX_FULL = [
     "authority": "Akalynth",
     "author": "guardian@vaultmesh.org",
     "created": "2026-06-05T20:28:13Z",
-    "updated": "2026-06-13T00:00:00Z",
+    "updated": "2026-06-20T00:00:00Z",
     "status": "accepted",
     "visibility": {
       "builder": true,
@@ -935,6 +1085,10 @@ window.CODEX_FULL = [
     "related": [
       {
         "rel": "references",
+        "target": "play-build-govern-surface"
+      },
+      {
+        "rel": "references",
         "target": "systems-bible"
       },
       {
@@ -946,13 +1100,14 @@ window.CODEX_FULL = [
       {
         "kind": "website_update",
         "ref": "codex/design/game-loop-bible.md",
-        "status": "in_review",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "asset",
         "ref": "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/prompts/AKALYNTH_GAME_LOOP_BIBLE_POSTER_V1.prompt.md",
-        "status": "open"
+        "status": "blocked",
+        "note": "no matching site asset; requires image generation (OPENAI_API_KEY not set)"
       }
     ],
     "evidence": [
@@ -978,7 +1133,7 @@ window.CODEX_FULL = [
       "retention",
       "bible"
     ],
-    "_source_kind": "receipt"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -988,7 +1143,7 @@ window.CODEX_FULL = [
     "authority": "Akalynth",
     "author": "guardian@vaultmesh.org",
     "created": "2026-06-05T21:37:00Z",
-    "updated": "2026-06-13T00:00:00Z",
+    "updated": "2026-06-20T00:00:00Z",
     "status": "accepted",
     "visibility": {
       "builder": true,
@@ -1023,6 +1178,10 @@ window.CODEX_FULL = [
     "related": [
       {
         "rel": "references",
+        "target": "play-build-govern-surface"
+      },
+      {
+        "rel": "references",
         "target": "game-loop-bible"
       },
       {
@@ -1034,13 +1193,14 @@ window.CODEX_FULL = [
       {
         "kind": "website_update",
         "ref": "codex/design/gameplay-lane.md",
-        "status": "in_review",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "asset",
         "ref": "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/prompts/image_briefs",
-        "status": "open"
+        "status": "blocked",
+        "note": "no matching site asset; requires image generation (OPENAI_API_KEY not set)"
       }
     ],
     "evidence": [
@@ -1064,7 +1224,7 @@ window.CODEX_FULL = [
       "equipment",
       "map"
     ],
-    "_source_kind": "receipt"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -1119,7 +1279,7 @@ window.CODEX_FULL = [
       "forgehold-slice",
       "place"
     ],
-    "_source_kind": "receipt"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -1186,7 +1346,7 @@ window.CODEX_FULL = [
       "codex",
       "archive"
     ],
-    "_source_kind": "source"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -1196,7 +1356,7 @@ window.CODEX_FULL = [
     "authority": "Akalynth",
     "author": "guardian@vaultmesh.org",
     "created": "2026-06-12T00:00:00Z",
-    "updated": "2026-06-13T00:00:00Z",
+    "updated": "2026-06-23T00:00:00Z",
     "status": "accepted",
     "visibility": {
       "builder": true,
@@ -1243,31 +1403,56 @@ window.CODEX_FULL = [
       {
         "rel": "connects_to",
         "target": "cindervale"
+      },
+      {
+        "rel": "references",
+        "target": "play-build-govern-surface"
       }
     ],
     "assets": [
       {
         "kind": "card",
         "path": "repos/akalynth-site/assets/akalynth/visuals/cards/01-high-city-dawn.card-800x1000.webp"
+      },
+      {
+        "kind": "banner",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/banners/01-high-city-dawn.banner-1600x700.webp"
+      },
+      {
+        "kind": "hero",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/hero/01-high-city-dawn.hero-cover-1920x1080.webp"
+      },
+      {
+        "kind": "og",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/og/01-high-city-dawn.og-1200x630.webp"
+      },
+      {
+        "kind": "thumb",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/thumbs/01-high-city-dawn.thumb-480x720.webp"
+      },
+      {
+        "kind": "wallpaper",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/wallpapers/01-high-city-dawn.wallpaper-1080x1920.webp"
       }
     ],
     "packets": [
       {
         "kind": "website_update",
         "ref": "codex/design/high-city.md",
-        "status": "in_review",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "prototype_data",
-        "ref": "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/prompts/CLAUDE_CODE_AKALYNTH_PLAYABLE_SLICE_PROTOTYPE_DATA.prompt.md",
-        "status": "in_review",
+        "ref": "codex/prompts/CLAUDE_CODE_AKALYNTH_PLAYABLE_SLICE_PROTOTYPE_DATA.prompt.md",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "asset",
         "ref": "repos/akalynth/drop/AKALYNTH_FIRST_PLAYABLE_SLICE_V1/prompts/AKALYNTH_FIRST_PLAYABLE_SLICE_POSTER_V1.prompt.md",
-        "status": "open"
+        "status": "accepted",
+        "note": "reused existing akalynth-site webp assets"
       }
     ],
     "evidence": [
@@ -1312,13 +1497,89 @@ window.CODEX_FULL = [
   },
   {
     "schema_version": "codex-entry/v1",
+    "id": "live-lane-presentation-screenshot-proof",
+    "type": "mechanic",
+    "title": "Live Lane Presentation Screenshot Proof",
+    "authority": "Akalynth",
+    "author": "guardian@vaultmesh.org",
+    "created": "2026-06-21T05:10:00Z",
+    "updated": "2026-06-21T05:10:00Z",
+    "status": "accepted",
+    "visibility": {
+      "builder": true,
+      "operator": true,
+      "agent": true,
+      "public": false
+    },
+    "summary": "Beta and staging Playwright screenshot proof for connected Rookguard presentation after First30 transcript closure.",
+    "lineage": {
+      "origin": "AKALYNTH_LIVE_BETA_STAGING_SCREENSHOT_PROOF_V1 packet — post Rookguard First30",
+      "accepted": true,
+      "last_accepted_change": "AKALYNTH_LIVE_BETA_STAGING_SCREENSHOT_PROOF_V1 merged akalynth PR #338 @ 25cd609 and akalynth-codex PR #1 @ da17636"
+    },
+    "world": {
+      "description": "Release-lane visual proof that beta and staging /play/ clients connect to Rookguard with presentation UI visible.",
+      "design_refs": [
+        "codex/design/live-lane-presentation-screenshot-proof-v1.md",
+        "codex/schema/live-lane-screenshot-register.schema.json",
+        "codex/design/rookguard-first30-presentation-v1.md"
+      ],
+      "implementation": {
+        "stage": "implemented",
+        "slice": "AKALYNTH_LIVE_BETA_STAGING_SCREENSHOT_PROOF_V1",
+        "registry": "akalynth-ops/tools/screenshots/live-lane-presentation-screenshots.mjs"
+      }
+    },
+    "related": [
+      {
+        "rel": "follows",
+        "target": "rookguard-first30-presentation",
+        "note": "Visual release-lane proof after presentation transcript"
+      }
+    ],
+    "packets": [
+      {
+        "kind": "screenshot-proof",
+        "ref": "codex/design/live-lane-presentation-screenshot-proof-v1.md",
+        "status": "closed",
+        "assignee": "codex-agent"
+      }
+    ],
+    "evidence": [
+      {
+        "kind": "manifest",
+        "ref": "codex/schema/live-lane-screenshot-register.schema.json"
+      },
+      {
+        "kind": "sample",
+        "ref": "codex/samples/live-lane-presentation-screenshot-register.sample.json"
+      },
+      {
+        "kind": "ops-closure",
+        "ref": "akalynth-ops/evidence/live-lane-presentation-screenshot-proof/closure.json"
+      }
+    ],
+    "public_projection": null,
+    "tags": [
+      "rookguard",
+      "beta",
+      "staging",
+      "screenshot",
+      "presentation",
+      "release-lane",
+      "packet"
+    ],
+    "_source_kind": "asserted"
+  },
+  {
+    "schema_version": "codex-entry/v1",
     "id": "moonspire",
     "type": "place",
     "title": "Moonspire",
     "authority": "Akalynth",
     "author": "guardian@vaultmesh.org",
     "created": "2026-06-12T00:00:00Z",
-    "updated": "2026-06-13T00:00:00Z",
+    "updated": "2026-06-22T00:00:00Z",
     "status": "accepted",
     "visibility": {
       "builder": true,
@@ -1364,19 +1625,20 @@ window.CODEX_FULL = [
       {
         "kind": "website_update",
         "ref": "codex/design/moonspire.md",
-        "status": "in_review",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "prototype_data",
-        "ref": "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/prompts/CLAUDE_CODE_AKALYNTH_MOONSPIRE_DREAM_GATE_PROTOTYPE_DATA.prompt.md",
-        "status": "in_review",
+        "ref": "codex/prompts/CLAUDE_CODE_AKALYNTH_MOONSPIRE_DREAM_GATE_PROTOTYPE_DATA.prompt.md",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "asset",
         "ref": "repos/akalynth/drop/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_V1/prompts/AKALYNTH_MOONSPIRE_DREAM_GATE_SLICE_POSTER_V1.prompt.md",
-        "status": "open"
+        "status": "accepted",
+        "note": "reused existing akalynth-site webp assets"
       }
     ],
     "evidence": [
@@ -1413,7 +1675,414 @@ window.CODEX_FULL = [
       "city",
       "wisdom"
     ],
+    "assets": [
+      {
+        "kind": "banner",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/banners/04-liminal-web.banner-1600x700.webp"
+      },
+      {
+        "kind": "card",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/cards/04-liminal-web.card-800x1000.webp"
+      },
+      {
+        "kind": "og",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/og/04-liminal-web.og-1200x630.webp"
+      },
+      {
+        "kind": "thumb",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/thumbs/04-liminal-web.thumb-480x720.webp"
+      },
+      {
+        "kind": "wallpaper",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/wallpapers/04-liminal-web.wallpaper-1080x1920.webp"
+      },
+      {
+        "kind": "hero",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/hero/04-liminal-web.hero-cover-1920x1080.webp"
+      },
+      {
+        "kind": "icon",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/icons/04-liminal-web.icon-candidate-1024.webp"
+      }
+    ],
     "_source_kind": "source"
+  },
+  {
+    "schema_version": "codex-entry/v1",
+    "id": "origins-codex",
+    "type": "lore",
+    "title": "Origins Codex",
+    "authority": "Akalynth",
+    "author": "guardian@vaultmesh.org",
+    "created": "2026-06-20T00:00:00Z",
+    "updated": "2026-06-20T00:00:00Z",
+    "status": "accepted",
+    "visibility": {
+      "builder": true,
+      "operator": true,
+      "agent": true,
+      "public": true
+    },
+    "summary": "Volume I — six origins, six starting cities, six first choices.",
+    "lineage": {
+      "origin": "AKALYNTH_GAMEPLAY_LANE_V1",
+      "accepted": true,
+      "accepted_at": "2026-06-20T00:00:00Z",
+      "last_accepted_change": "Origins Codex published with gameplay-lane ship (Flamekeeper, Archivist, Wayfarer, and allied origin openings)"
+    },
+    "world": {
+      "description": "Who you are when you enter Akalynth: six origin stories tied to start cities, factions, and recommended professions from the Gameplay Lane.",
+      "design_refs": [
+        "codex/design/gameplay-lane.md",
+        "codex/entries/gameplay-lane.json"
+      ],
+      "implementation": {
+        "stage": "spec",
+        "slice": "AKALYNTH_GAMEPLAY_LANE_V1"
+      }
+    },
+    "related": [
+      {
+        "rel": "references",
+        "target": "heroes-codex"
+      },
+      {
+        "rel": "references",
+        "target": "factions-codex"
+      },
+      {
+        "rel": "references",
+        "target": "high-city"
+      },
+      {
+        "rel": "references",
+        "target": "forgehold"
+      }
+    ],
+    "assets": [],
+    "public_projection": {
+      "published": true,
+      "reviewed_by": "guardian@vaultmesh.org",
+      "title": "Origins Codex",
+      "category": "Civilization Codices",
+      "summary": "Volume I — Before the First Binding.",
+      "body": "Six origins define how you enter Akalynth: where you start, which faction notices you first, and which profession path feels natural. Rookguard vocations are the tutorial mark; Origins Codex is the long road — Flamekeeper at Forgehold, Archivist at High City, and the rest of the lane.",
+      "assets": [],
+      "related": [
+        "heroes-codex",
+        "factions-codex",
+        "rookguard",
+        "forgehold"
+      ],
+      "source_ref": "origins-codex"
+    },
+    "tags": [
+      "codex",
+      "origins",
+      "gameplay-lane"
+    ],
+    "_source_kind": "asserted"
+  },
+  {
+    "schema_version": "codex-entry/v1",
+    "id": "play-build-govern-surface",
+    "type": "system",
+    "title": "Play, Build, Govern Surface",
+    "authority": "Akalynth",
+    "author": "codex@akalynth",
+    "created": "2026-06-22T00:00:00Z",
+    "updated": "2026-06-23T00:00:00Z",
+    "status": "candidate",
+    "visibility": {
+      "builder": true,
+      "operator": true,
+      "agent": true,
+      "public": false
+    },
+    "summary": "Product surface that turns Akalynth's MMO positioning into the ladder Play -> Modify -> Build -> Script -> Operate -> Govern.",
+    "lineage": {
+      "origin": "goal-objective:1c560753-7476-45d5-9b6e-02b0e10561f7",
+      "accepted": false,
+      "last_accepted_change": "candidate positioning object from objective file; not yet reviewed for public release"
+    },
+    "world": {
+      "description": "A builder/operator-facing product surface for Akalynth as a persistent top-down MMO with creator tools and proof-backed operations. It keeps Gameeky as a shape reference only, translating approachable progression into Play, Modify, Build, Script, Operate, and Govern surfaces for Rookguard, High City, creator tooling, local preview, operator review, and receipt-backed promotion.",
+      "design_refs": [
+        "codex/design/play-build-govern-surface.md",
+        "codex/design/game-loop-bible.md",
+        "codex/design/gameplay-lane.md",
+        "codex/design/rookguard-first30-presentation-v1.md",
+        "codex/design/high-city.md"
+      ],
+      "implementation": {
+        "stage": "concept",
+        "slice": "AKALYNTH_PLAY_BUILD_GOVERN_SURFACE_V1"
+      }
+    },
+    "related": [
+      {
+        "rel": "references",
+        "target": "game-loop-bible"
+      },
+      {
+        "rel": "references",
+        "target": "gameplay-lane"
+      },
+      {
+        "rel": "references",
+        "target": "systems-bible"
+      },
+      {
+        "rel": "references",
+        "target": "rookguard"
+      },
+      {
+        "rel": "references",
+        "target": "high-city"
+      },
+      {
+        "rel": "references",
+        "target": "council-dao"
+      },
+      {
+        "rel": "references",
+        "target": "asset-library"
+      }
+    ],
+    "packets": [
+      {
+        "kind": "map",
+        "ref": "codex/design/play-build-govern-surface.md#rookguard-builder-kit",
+        "status": "open",
+        "assignee": "codex-build-delegation"
+      },
+      {
+        "kind": "quest",
+        "ref": "codex/design/play-build-govern-surface.md#high-city-first-quest-kit",
+        "status": "open",
+        "assignee": "codex-build-delegation"
+      },
+      {
+        "kind": "mechanic",
+        "ref": "codex/design/play-build-govern-surface.md#local-preview-contract",
+        "status": "open",
+        "assignee": "codex-build-delegation"
+      },
+      {
+        "kind": "review",
+        "ref": "codex/design/play-build-govern-surface.md#promotion-review-contract",
+        "status": "open",
+        "assignee": "operator-review"
+      },
+      {
+        "kind": "asset",
+        "ref": "codex/design/play-build-govern-surface.md#asset-production-backlog",
+        "status": "open",
+        "assignee": "asset-pipeline"
+      }
+    ],
+    "evidence": [
+      {
+        "kind": "verification",
+        "ref": "codex/evidence/play-build-govern-surface/goal-objective.md"
+      }
+    ],
+    "public_projection": {
+      "published": false,
+      "title": "Play, Build, Govern",
+      "category": "Systems",
+      "summary": "Akalynth as a persistent MMO world with creator tools and proof-backed operations.",
+      "body": "Players explore the world. Builders create maps, quests, homes, NPCs, and events. Operators promote changes through explicit review, receipts, and replayable evidence.",
+      "assets": [],
+      "related": [
+        "rookguard",
+        "high-city",
+        "game-loop-bible"
+      ],
+      "source_ref": "play-build-govern-surface"
+    },
+    "tags": [
+      "positioning",
+      "creator-tools",
+      "gameplay-loop",
+      "builder",
+      "operator",
+      "receipts",
+      "governance"
+    ],
+    "_source_kind": "asserted"
+  },
+  {
+    "schema_version": "codex-entry/v1",
+    "id": "rookguard",
+    "type": "place",
+    "title": "Rookguard",
+    "authority": "Akalynth",
+    "author": "guardian@vaultmesh.org",
+    "created": "2026-06-20T00:00:00Z",
+    "updated": "2026-06-22T00:00:00Z",
+    "status": "accepted",
+    "visibility": {
+      "builder": true,
+      "operator": true,
+      "agent": true,
+      "public": true
+    },
+    "summary": "Threshold keep where every journey begins — the Rookguard Codex Path and gate to High City.",
+    "lineage": {
+      "origin": "AKALYNTH_ROOKGUARD_CITY_EXPANSION_V1",
+      "accepted": true,
+      "accepted_at": "2026-06-20T00:00:00Z",
+      "last_accepted_change": "Rookguard Codex Path live on beta (move, chat, Tem, training slime, vocation, gate receipts)"
+    },
+    "world": {
+      "description": "The threshold keep at the edge of High City. Newcomers prove movement, chat, Tem, combat training, and Heroes Codex vocation before the gate opens to Azura.",
+      "design_refs": [
+        "repos/akalynth/docs/ROOKGUARD_FIRST_30_MINUTES_V1.md",
+        "repos/akalynth/docs/ROOKGUARD_CITY_EXPANSION_V1.md",
+        "repos/akalynth/packages/shared/maps/rookguard.json"
+      ],
+      "implementation": {
+        "stage": "live",
+        "slice": "rookguard_city_codex_path_v1"
+      }
+    },
+    "related": [
+      {
+        "rel": "connects_to",
+        "target": "high-city"
+      },
+      {
+        "rel": "references",
+        "target": "heroes-codex"
+      },
+      {
+        "rel": "references",
+        "target": "play-build-govern-surface"
+      }
+    ],
+    "assets": [
+      {
+        "kind": "banner",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/banners/02-rookguard-gate.banner-1600x700.webp"
+      },
+      {
+        "kind": "card",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/cards/02-rookguard-gate.card-800x1000.webp"
+      },
+      {
+        "kind": "wallpaper",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/wallpapers/02-rookguard-gate.wallpaper-1080x1920.webp"
+      },
+      {
+        "kind": "og",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/og/02-rookguard-gate.og-1200x630.webp"
+      },
+      {
+        "kind": "thumb",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/thumbs/02-rookguard-gate.thumb-480x720.webp"
+      },
+      {
+        "kind": "hero",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/hero/02-rookguard-gate.hero-cover-1920x1080.webp"
+      },
+      {
+        "kind": "icon",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/icons/02-rookguard-gate.icon-candidate-1024.webp"
+      }
+    ],
+    "public_projection": {
+      "published": true,
+      "reviewed_by": "guardian@vaultmesh.org",
+      "title": "Rookguard",
+      "category": "World Foundation",
+      "summary": "Threshold keep — where the Codex Path begins.",
+      "body": "Rookguard is the bounded onboarding keep: move rune, chat signal, Tem challenge, training slime, Heroes Codex vocation, and the gate to High City. Every step is receipt-backed; vocation is identity proof, not power.",
+      "assets": [],
+      "related": [
+        "high-city",
+        "heroes-codex",
+        "forgehold"
+      ],
+      "source_ref": "rookguard"
+    },
+    "tags": [
+      "city",
+      "onboarding",
+      "codex-path"
+    ],
+    "_source_kind": "asserted"
+  },
+  {
+    "schema_version": "codex-entry/v1",
+    "id": "rookguard-first30-presentation",
+    "type": "mechanic",
+    "title": "Rookguard First30 Presentation",
+    "authority": "Akalynth",
+    "author": "guardian@vaultmesh.org",
+    "created": "2026-06-21T19:00:00Z",
+    "updated": "2026-06-21T19:00:00Z",
+    "status": "accepted",
+    "visibility": {
+      "builder": true,
+      "operator": true,
+      "agent": true,
+      "public": false
+    },
+    "summary": "Presentation transcript linking sim 0-30 gameplan, timeline frames, and live Codex Path WebSocket proof.",
+    "lineage": {
+      "origin": "AKALYNTH_ROOKGUARD_FIRST30_PRESENTATION_V1 packet — post Forgehold Act II",
+      "accepted": true,
+      "last_accepted_change": "AKALYNTH_ROOKGUARD_FIRST30_PRESENTATION_V1 merged akalynth PR #337 @ 54a5cab"
+    },
+    "world": {
+      "description": "Rookguard onboarding presentation proof. Six five-minute windows with lane split (live vs sim/debug). No launch claim.",
+      "design_refs": [
+        "codex/design/rookguard-first30-presentation-v1.md",
+        "codex/schema/rookguard-presentation-transcript.schema.json",
+        "repos/akalynth/docs/ROOKGUARD_FIRST_30_MINUTES_V1.md"
+      ],
+      "implementation": {
+        "stage": "implemented",
+        "slice": "AKALYNTH_ROOKGUARD_FIRST30_PRESENTATION_V1",
+        "registry": "apps/server/src/simulation/simLifeSnapshot.ts"
+      }
+    },
+    "related": [
+      {
+        "rel": "part_of",
+        "target": "rookguard",
+        "note": "Onboarding presentation layer"
+      }
+    ],
+    "packets": [
+      {
+        "kind": "presentation",
+        "ref": "codex/design/rookguard-first30-presentation-v1.md",
+        "status": "closed",
+        "assignee": "codex-agent"
+      }
+    ],
+    "evidence": [
+      {
+        "kind": "manifest",
+        "ref": "codex/schema/rookguard-presentation-transcript.schema.json"
+      },
+      {
+        "kind": "sample",
+        "ref": "codex/samples/rookguard-first30-presentation-transcript.sample.json"
+      }
+    ],
+    "public_projection": null,
+    "tags": [
+      "rookguard",
+      "onboarding",
+      "presentation",
+      "sim",
+      "transcript",
+      "packet"
+    ],
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -1484,7 +2153,7 @@ window.CODEX_FULL = [
     "authority": "Akalynth",
     "author": "guardian@vaultmesh.org",
     "created": "2026-06-05T20:36:24Z",
-    "updated": "2026-06-13T00:00:00Z",
+    "updated": "2026-06-20T00:00:00Z",
     "status": "accepted",
     "visibility": {
       "builder": true,
@@ -1531,13 +2200,14 @@ window.CODEX_FULL = [
       {
         "kind": "website_update",
         "ref": "codex/design/systems-bible.md",
-        "status": "in_review",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "asset",
         "ref": "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/prompts/AKALYNTH_SYSTEMS_BIBLE_POSTER_V1.prompt.md",
-        "status": "open"
+        "status": "blocked",
+        "note": "no matching site asset; requires image generation (OPENAI_API_KEY not set)"
       }
     ],
     "evidence": [
@@ -1564,7 +2234,7 @@ window.CODEX_FULL = [
       "progression",
       "bible"
     ],
-    "_source_kind": "receipt"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -1788,7 +2458,7 @@ window.CODEX_FULL = [
       "emberwilds",
       "route"
     ],
-    "_source_kind": "receipt"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -1849,7 +2519,7 @@ window.CODEX_FULL = [
       "emberwilds",
       "region"
     ],
-    "_source_kind": "receipt"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -1910,7 +2580,7 @@ window.CODEX_FULL = [
       "emberwilds",
       "faction"
     ],
-    "_source_kind": "source"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -1966,7 +2636,7 @@ window.CODEX_FULL = [
       "emberwilds",
       "place"
     ],
-    "_source_kind": "receipt"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -2069,7 +2739,7 @@ window.CODEX_FULL = [
       "forgehold-slice",
       "boss"
     ],
-    "_source_kind": "receipt"
+    "_source_kind": "asserted"
   },
   {
     "schema_version": "codex-entry/v1",
@@ -2235,13 +2905,169 @@ window.CODEX_FULL = [
   },
   {
     "schema_version": "codex-entry/v1",
+    "id": "council-dao",
+    "type": "system",
+    "title": "Witness Council DAO (local ops)",
+    "authority": "Akalynth ops / VaultMesh",
+    "author": "guardian@vaultmesh.org",
+    "created": "2026-06-21T12:00:00Z",
+    "updated": "2026-06-21T23:45:00Z",
+    "status": "accepted",
+    "visibility": {
+      "builder": false,
+      "operator": true,
+      "agent": true,
+      "public": false
+    },
+    "summary": "Local ops governance shell: proposals, vote receipts, member reputation registry, treasury ledger, human-ack deploy permits, audit chaining, and execution permits that terminate at controlled lane workflows. v1 check; v2 treasury/reputation; deploy-permit v1 gates beta/staging deploy with explicit operator ack.",
+    "lineage": {
+      "origin": "AKALYNTH_COUNCIL_DAO_V1 packet seed — post chill-zone showcase closure",
+      "accepted": true,
+      "accepted_at": "2026-06-21T18:00:00Z",
+      "last_accepted_change": "AKALYNTH_COUNCIL_PUBLISH_PLAY_PERMIT_V1 merged akalynth PR #341 @ 1c50c2c, codex PR #5 @ fe0f5e5"
+    },
+    "world": {
+      "description": "Operator-layer Witness Council. Not the in-fiction Accord Council (see systems-bible). This object models how Akalynth ops proposals become receipt-backed permits before any lane action. v1 action classes are read-only lane check only.",
+      "design_refs": [
+        "codex/design/council-dao-v1.md",
+        "codex/design/council-dao-v2.md",
+        "codex/design/council-dao-deploy-permit-v1.md",
+        "codex/schema/council-proposal.schema.json",
+        "codex/schema/council-vote-receipt.schema.json",
+        "codex/schema/council-execution-permit.schema.json",
+        "codex/schema/council-member-reputation.schema.json",
+        "codex/schema/council-treasury-ledger-entry.schema.json",
+        "codex/schema/council-human-ack.schema.json"
+      ],
+      "implementation": {
+        "stage": "shipped",
+        "slice": "AKALYNTH_COUNCIL_PUBLISH_PLAY_PERMIT_V1",
+        "registry": "akalynth-ops/council/"
+      }
+    },
+    "related": [
+      {
+        "rel": "references",
+        "target": "witness-moth",
+        "note": "Lore-adjacent witness/evidence motif; ops council is operator machinery, not the creature."
+      },
+      {
+        "rel": "references",
+        "target": "systems-bible",
+        "note": "In-fiction Accord Council and governance pillars are separate from this ops shell."
+      }
+    ],
+    "packets": [
+      {
+        "kind": "review",
+        "ref": "codex/design/council-dao-v1.md",
+        "status": "accepted",
+        "assignee": "codex-agent"
+      },
+      {
+        "kind": "review",
+        "ref": "codex/design/council-dao-v2.md",
+        "status": "accepted",
+        "assignee": "codex-agent"
+      },
+      {
+        "kind": "review",
+        "ref": "codex/design/council-dao-deploy-permit-v1.md",
+        "status": "accepted",
+        "assignee": "codex-agent"
+      },
+      {
+        "kind": "review",
+        "ref": "codex/design/council-publish-play-permit-v1.md",
+        "status": "accepted",
+        "assignee": "codex-agent"
+      }
+    ],
+    "evidence": [
+      {
+        "kind": "manifest",
+        "ref": "codex/schema/council-proposal.schema.json"
+      },
+      {
+        "kind": "manifest",
+        "ref": "codex/schema/council-vote-receipt.schema.json"
+      },
+      {
+        "kind": "manifest",
+        "ref": "codex/schema/council-execution-permit.schema.json"
+      },
+      {
+        "kind": "receipt",
+        "ref": "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_COUNCIL_DAO_V1/receipt.json"
+      },
+      {
+        "kind": "verification",
+        "ref": "akalynth-ops/scripts/verify-council-dao-v1.sh"
+      },
+      {
+        "kind": "manifest",
+        "ref": "codex/schema/council-member-reputation.schema.json"
+      },
+      {
+        "kind": "manifest",
+        "ref": "codex/schema/council-treasury-ledger-entry.schema.json"
+      },
+      {
+        "kind": "verification",
+        "ref": "akalynth-ops/scripts/verify-council-dao-v2.sh"
+      },
+      {
+        "kind": "receipt",
+        "ref": "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_COUNCIL_DAO_V2/receipt.json"
+      },
+      {
+        "kind": "manifest",
+        "ref": "codex/schema/council-human-ack.schema.json"
+      },
+      {
+        "kind": "verification",
+        "ref": "akalynth-ops/scripts/verify-council-dao-deploy-permit-v1.sh"
+      },
+      {
+        "kind": "receipt",
+        "ref": "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_COUNCIL_DAO_DEPLOY_PERMIT_V1/receipt.json"
+      },
+      {
+        "kind": "verification",
+        "ref": "akalynth-ops/scripts/verify-council-publish-play-permit-v1.sh"
+      },
+      {
+        "kind": "receipt",
+        "ref": "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_COUNCIL_PUBLISH_PLAY_PERMIT_V1/receipt.json"
+      }
+    ],
+    "public_projection": null,
+    "tags": [
+      "ops",
+      "governance",
+      "council",
+      "receipts",
+      "execution-gate",
+      "witness",
+      "packet",
+      "no-auto-mutation",
+      "treasury",
+      "reputation",
+      "deploy-permit",
+      "publish-play-permit",
+      "human-ack"
+    ],
+    "_source_kind": "asserted"
+  },
+  {
+    "schema_version": "codex-entry/v1",
     "id": "world-events-engine",
     "type": "system",
     "title": "World Events Engine",
     "authority": "Akalynth",
     "author": "guardian@vaultmesh.org",
     "created": "2026-06-05T21:06:47Z",
-    "updated": "2026-06-13T00:00:00Z",
+    "updated": "2026-06-22T00:00:00Z",
     "status": "accepted",
     "visibility": {
       "builder": true,
@@ -2297,13 +3123,14 @@ window.CODEX_FULL = [
       {
         "kind": "website_update",
         "ref": "codex/design/world-events-engine.md",
-        "status": "in_review",
+        "status": "accepted",
         "assignee": "codex-build-delegation"
       },
       {
         "kind": "asset",
         "ref": "repos/akalynth/drop/AKALYNTH_WORLD_EVENTS_ENGINE_V1/prompts/AKALYNTH_WORLD_EVENTS_ENGINE_POSTER_V1.prompt.md",
-        "status": "open"
+        "status": "accepted",
+        "note": "reused existing akalynth-site webp assets"
       }
     ],
     "evidence": [
@@ -2329,7 +3156,37 @@ window.CODEX_FULL = [
       "live-ops",
       "engine"
     ],
-    "_source_kind": "receipt"
+    "assets": [
+      {
+        "kind": "banner",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/banners/05-witness-moth.banner-1600x700.webp"
+      },
+      {
+        "kind": "card",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/cards/05-witness-moth.card-800x1000.webp"
+      },
+      {
+        "kind": "icon",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/icons/05-witness-moth.icon-candidate-1024.webp"
+      },
+      {
+        "kind": "og",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/og/05-witness-moth.og-1200x630.webp"
+      },
+      {
+        "kind": "thumb",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/thumbs/05-witness-moth.thumb-480x720.webp"
+      },
+      {
+        "kind": "wallpaper",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/wallpapers/05-witness-moth.wallpaper-1080x1920.webp"
+      },
+      {
+        "kind": "hero",
+        "path": "repos/akalynth-site/assets/akalynth/visuals/hero/05-witness-moth.hero-cover-1920x1080.webp"
+      }
+    ],
+    "_source_kind": "asserted"
   }
 ];
-window.CODEX_STATS = {"objects":31,"by_status":{"accepted":28,"draft":2,"candidate":1},"by_category":{"Cities":5,"quest":1,"Codices":6,"asset":1,"mechanic":1,"system":4,"place":1,"Materials":1,"Creatures":6,"Places":3,"Factions":1,"boss":1},"by_source_kind":{"receipt":11,"source":16,"asserted":4},"open_packets":11,"public":22};
+window.CODEX_STATS = {"objects":38,"by_status":{"accepted":35,"candidate":2,"draft":1},"by_category":{"Cities":5,"quest":1,"Codices":6,"asset":1,"mechanic":4,"system":5,"place":1,"Civilization Codices":1,"Systems":1,"World Foundation":1,"Materials":1,"Creatures":6,"Places":3,"Factions":1,"boss":1},"by_source_kind":{"asserted":28,"source":10},"open_packets":5,"public":24};

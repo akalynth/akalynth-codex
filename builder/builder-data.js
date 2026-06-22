@@ -7,7 +7,7 @@ window.CODEX_BUILDER = [
     "category": "Cities",
     "status": "accepted",
     "published": true,
-    "source_kind": "receipt",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
     "description": "An industrial fortress carved into a living volcano - heart of the Emberwilds, home of the Flamebound, Soulsteel production, and the Heartforge. Civic virtue: Strength.",
     "design_refs": [
@@ -72,7 +72,7 @@ window.CODEX_BUILDER = [
     "category": "Quests",
     "status": "accepted",
     "published": false,
-    "source_kind": "receipt",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_CAMPAIGN_ACT_I_V1",
     "description": "The Act I campaign spine. Does not add a new playable slice; it connects the four existing slices into one Act via The Four Proofs: High City / First Archive (Archive Proof — Truth), Forgehold Route / Ember Road (Material Proof — Power), Moonspire / Dream Gate (Dream Proof — Possibility), Cinderwatch / Ashline Frontier (Field Proof — Survival).",
     "design_refs": [
@@ -120,7 +120,7 @@ window.CODEX_BUILDER = [
     "category": "Codices",
     "status": "accepted",
     "published": true,
-    "source_kind": "source",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_ARTIFACTS_CODEX_V1",
     "description": "Relics of Power.",
     "design_refs": [
@@ -207,7 +207,7 @@ window.CODEX_BUILDER = [
     "type": "mechanic",
     "title": "Chill-Zone Gather",
     "category": "mechanic",
-    "status": "draft",
+    "status": "accepted",
     "published": false,
     "source_kind": "asserted",
     "design_source": "gameplay-loop-designer session — MVP loop proposal (no source drop)",
@@ -246,7 +246,7 @@ window.CODEX_BUILDER = [
     "category": "Codices",
     "status": "accepted",
     "published": true,
-    "source_kind": "source",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_CHRONICLE_OF_AGES_V1",
     "description": "Events That Changed The World.",
     "design_refs": [
@@ -313,7 +313,7 @@ window.CODEX_BUILDER = [
     "category": "Codices",
     "status": "accepted",
     "published": true,
-    "source_kind": "source",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_DUNGEON_CODEX_V1",
     "description": "Places Where History Still Breathes.",
     "design_refs": [
@@ -367,7 +367,7 @@ window.CODEX_BUILDER = [
     "category": "Codices",
     "status": "accepted",
     "published": true,
-    "source_kind": "source",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_FACTIONS_CODEX_V1",
     "description": "Powers That Shape the World.",
     "design_refs": [
@@ -386,13 +386,54 @@ window.CODEX_BUILDER = [
     ]
   },
   {
+    "id": "forgehold-ashglass-evidence",
+    "type": "mechanic",
+    "title": "Forgehold Act II Ashglass Evidence",
+    "category": "mechanic",
+    "status": "accepted",
+    "published": false,
+    "source_kind": "asserted",
+    "design_source": "AKALYNTH_FORGEHOLD_ASHGLASS_EVIDENCE_V1 packet — post Council DAO v1",
+    "description": "Forgehold route slice Act II. Three recoverable evidence objects on Ember Road; gates Act III missing-shipment investigation. Distinct from post-gate Heartforge Ashglass lab evidence.",
+    "design_refs": [
+      "codex/design/forgehold-ashglass-evidence-v1.md",
+      "codex/design/forgehold.md",
+      "codex/schema/forgehold-evidence-object.schema.json"
+    ],
+    "implementation": {
+      "stage": "implemented",
+      "slice": "AKALYNTH_FORGEHOLD_ASHGLASS_EVIDENCE_V1",
+      "registry": "repos/akalynth/apps/server/src/skills/handlers.ts"
+    },
+    "related": [
+      {
+        "rel": "part_of",
+        "target": "forgehold"
+      },
+      {
+        "rel": "references",
+        "target": "ember-road"
+      }
+    ],
+    "tags": [
+      "forgehold",
+      "evidence",
+      "ashglass",
+      "ember-road",
+      "act-ii",
+      "server-authority",
+      "receipts",
+      "packet"
+    ]
+  },
+  {
     "id": "game-loop-bible",
     "type": "system",
     "title": "Game Loop Bible",
     "category": "Systems",
     "status": "accepted",
     "published": false,
-    "source_kind": "receipt",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_GAME_LOOP_BIBLE_V1",
     "description": "The first gameplay-loop layer for Akalynth. Defines what the player does minute-to-minute, in a session, and at hour 1, 10, 50, 200, and year 3; and how Origins, Professions, Factions, Dungeons, Artifacts, Cities, and World Events connect into core loops, an activity catalog, and a retention design.",
     "design_refs": [
@@ -410,6 +451,10 @@ window.CODEX_BUILDER = [
       "registry": "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/registry/akalynthGameLoopRegistry.ts"
     },
     "related": [
+      {
+        "rel": "references",
+        "target": "play-build-govern-surface"
+      },
       {
         "rel": "references",
         "target": "systems-bible"
@@ -433,7 +478,7 @@ window.CODEX_BUILDER = [
     "category": "Systems",
     "status": "accepted",
     "published": false,
-    "source_kind": "receipt",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_GAMEPLAY_LANE_V1",
     "description": "The next gameplay-facing lane. Answers the player-facing questions: Who am I when I enter Akalynth? What do I do inside this world? What gear expresses my path? Where do I travel? Defines Origins, Professions, Equipment, the World Map V2, the Campaign Book, and Raid Bosses with a player progression matrix.",
     "design_refs": [
@@ -451,6 +496,10 @@ window.CODEX_BUILDER = [
       "slice": "AKALYNTH_GAMEPLAY_LANE_V1"
     },
     "related": [
+      {
+        "rel": "references",
+        "target": "play-build-govern-surface"
+      },
       {
         "rel": "references",
         "target": "game-loop-bible"
@@ -476,7 +525,7 @@ window.CODEX_BUILDER = [
     "category": "Places",
     "status": "candidate",
     "published": false,
-    "source_kind": "receipt",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
     "description": "The trial dungeon beneath the Heartforge — Soulsteel-stabilization trials guarding the route's final tempering. Designed, not yet released.",
     "design_refs": [
@@ -513,7 +562,7 @@ window.CODEX_BUILDER = [
     "category": "Codices",
     "status": "accepted",
     "published": true,
-    "source_kind": "source",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_HEROES_CODEX_V1",
     "description": "The First Legends.",
     "design_refs": [
@@ -574,11 +623,51 @@ window.CODEX_BUILDER = [
       {
         "rel": "connects_to",
         "target": "cindervale"
+      },
+      {
+        "rel": "references",
+        "target": "play-build-govern-surface"
       }
     ],
     "tags": [
       "city",
       "order"
+    ]
+  },
+  {
+    "id": "live-lane-presentation-screenshot-proof",
+    "type": "mechanic",
+    "title": "Live Lane Presentation Screenshot Proof",
+    "category": "mechanic",
+    "status": "accepted",
+    "published": false,
+    "source_kind": "asserted",
+    "design_source": "AKALYNTH_LIVE_BETA_STAGING_SCREENSHOT_PROOF_V1 packet — post Rookguard First30",
+    "description": "Release-lane visual proof that beta and staging /play/ clients connect to Rookguard with presentation UI visible.",
+    "design_refs": [
+      "codex/design/live-lane-presentation-screenshot-proof-v1.md",
+      "codex/schema/live-lane-screenshot-register.schema.json",
+      "codex/design/rookguard-first30-presentation-v1.md"
+    ],
+    "implementation": {
+      "stage": "implemented",
+      "slice": "AKALYNTH_LIVE_BETA_STAGING_SCREENSHOT_PROOF_V1",
+      "registry": "akalynth-ops/tools/screenshots/live-lane-presentation-screenshots.mjs"
+    },
+    "related": [
+      {
+        "rel": "follows",
+        "target": "rookguard-first30-presentation"
+      }
+    ],
+    "tags": [
+      "rookguard",
+      "beta",
+      "staging",
+      "screenshot",
+      "presentation",
+      "release-lane",
+      "packet"
     ]
   },
   {
@@ -621,6 +710,183 @@ window.CODEX_BUILDER = [
     ]
   },
   {
+    "id": "origins-codex",
+    "type": "lore",
+    "title": "Origins Codex",
+    "category": "Civilization Codices",
+    "status": "accepted",
+    "published": true,
+    "source_kind": "asserted",
+    "design_source": "AKALYNTH_GAMEPLAY_LANE_V1",
+    "description": "Who you are when you enter Akalynth: six origin stories tied to start cities, factions, and recommended professions from the Gameplay Lane.",
+    "design_refs": [
+      "codex/design/gameplay-lane.md",
+      "codex/entries/gameplay-lane.json"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_GAMEPLAY_LANE_V1"
+    },
+    "related": [
+      {
+        "rel": "references",
+        "target": "heroes-codex"
+      },
+      {
+        "rel": "references",
+        "target": "factions-codex"
+      },
+      {
+        "rel": "references",
+        "target": "high-city"
+      },
+      {
+        "rel": "references",
+        "target": "forgehold"
+      }
+    ],
+    "tags": [
+      "codex",
+      "origins",
+      "gameplay-lane"
+    ]
+  },
+  {
+    "id": "play-build-govern-surface",
+    "type": "system",
+    "title": "Play, Build, Govern Surface",
+    "category": "Systems",
+    "status": "candidate",
+    "published": false,
+    "source_kind": "asserted",
+    "design_source": "goal-objective:1c560753-7476-45d5-9b6e-02b0e10561f7",
+    "description": "A builder/operator-facing product surface for Akalynth as a persistent top-down MMO with creator tools and proof-backed operations. It keeps Gameeky as a shape reference only, translating approachable progression into Play, Modify, Build, Script, Operate, and Govern surfaces for Rookguard, High City, creator tooling, local preview, operator review, and receipt-backed promotion.",
+    "design_refs": [
+      "codex/design/play-build-govern-surface.md",
+      "codex/design/game-loop-bible.md",
+      "codex/design/gameplay-lane.md",
+      "codex/design/rookguard-first30-presentation-v1.md",
+      "codex/design/high-city.md"
+    ],
+    "implementation": {
+      "stage": "concept",
+      "slice": "AKALYNTH_PLAY_BUILD_GOVERN_SURFACE_V1"
+    },
+    "related": [
+      {
+        "rel": "references",
+        "target": "game-loop-bible"
+      },
+      {
+        "rel": "references",
+        "target": "gameplay-lane"
+      },
+      {
+        "rel": "references",
+        "target": "systems-bible"
+      },
+      {
+        "rel": "references",
+        "target": "rookguard"
+      },
+      {
+        "rel": "references",
+        "target": "high-city"
+      },
+      {
+        "rel": "references",
+        "target": "council-dao"
+      },
+      {
+        "rel": "references",
+        "target": "asset-library"
+      }
+    ],
+    "tags": [
+      "positioning",
+      "creator-tools",
+      "gameplay-loop",
+      "builder",
+      "operator",
+      "receipts",
+      "governance"
+    ]
+  },
+  {
+    "id": "rookguard",
+    "type": "place",
+    "title": "Rookguard",
+    "category": "World Foundation",
+    "status": "accepted",
+    "published": true,
+    "source_kind": "asserted",
+    "design_source": "AKALYNTH_ROOKGUARD_CITY_EXPANSION_V1",
+    "description": "The threshold keep at the edge of High City. Newcomers prove movement, chat, Tem, combat training, and Heroes Codex vocation before the gate opens to Azura.",
+    "design_refs": [
+      "repos/akalynth/docs/ROOKGUARD_FIRST_30_MINUTES_V1.md",
+      "repos/akalynth/docs/ROOKGUARD_CITY_EXPANSION_V1.md",
+      "repos/akalynth/packages/shared/maps/rookguard.json"
+    ],
+    "implementation": {
+      "stage": "live",
+      "slice": "rookguard_city_codex_path_v1"
+    },
+    "related": [
+      {
+        "rel": "connects_to",
+        "target": "high-city"
+      },
+      {
+        "rel": "references",
+        "target": "heroes-codex"
+      },
+      {
+        "rel": "references",
+        "target": "play-build-govern-surface"
+      }
+    ],
+    "tags": [
+      "city",
+      "onboarding",
+      "codex-path"
+    ]
+  },
+  {
+    "id": "rookguard-first30-presentation",
+    "type": "mechanic",
+    "title": "Rookguard First30 Presentation",
+    "category": "mechanic",
+    "status": "accepted",
+    "published": false,
+    "source_kind": "asserted",
+    "design_source": "AKALYNTH_ROOKGUARD_FIRST30_PRESENTATION_V1 packet — post Forgehold Act II",
+    "description": "Rookguard onboarding presentation proof. Six five-minute windows with lane split (live vs sim/debug). No launch claim.",
+    "design_refs": [
+      "codex/design/rookguard-first30-presentation-v1.md",
+      "codex/schema/rookguard-presentation-transcript.schema.json",
+      "repos/akalynth/docs/ROOKGUARD_FIRST_30_MINUTES_V1.md"
+    ],
+    "implementation": {
+      "stage": "implemented",
+      "slice": "AKALYNTH_ROOKGUARD_FIRST30_PRESENTATION_V1",
+      "registry": "apps/server/src/simulation/simLifeSnapshot.ts"
+    },
+    "related": [
+      {
+        "rel": "part_of",
+        "target": "rookguard"
+      }
+    ],
+    "tags": [
+      "rookguard",
+      "onboarding",
+      "presentation",
+      "sim",
+      "transcript",
+      "packet"
+    ]
+  },
+  {
     "id": "soulsteel",
     "type": "material",
     "title": "Soulsteel",
@@ -658,7 +924,7 @@ window.CODEX_BUILDER = [
     "category": "Systems",
     "status": "accepted",
     "published": false,
-    "source_kind": "receipt",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_SYSTEMS_BIBLE_V1",
     "description": "The systems layer for Akalynth. Turns the Game Loop Bible into implementable mechanics: progression, combat, economy and crafting, reputation and authority, social organizations, death and failure states, and world state and events, with a systems decision matrix.",
     "design_refs": [
@@ -760,7 +1026,7 @@ window.CODEX_BUILDER = [
     "category": "Places",
     "status": "accepted",
     "published": true,
-    "source_kind": "receipt",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
     "description": "The first route expansion of Akalynth: regional travel from High City through the Emberwilds to the Forgehold Outer Gate.",
     "design_refs": [],
@@ -791,7 +1057,7 @@ window.CODEX_BUILDER = [
     "category": "Places",
     "status": "accepted",
     "published": true,
-    "source_kind": "receipt",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
     "description": "A volcanic frontier region anchored by Forgehold Citadel and watched from the ash-edge by Cindervale. Crossed by the Ember Road.",
     "design_refs": [],
@@ -822,7 +1088,7 @@ window.CODEX_BUILDER = [
     "category": "Factions",
     "status": "accepted",
     "published": true,
-    "source_kind": "source",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_FACTIONS_CODEX_V1",
     "description": "The faction of Forgehold — forge-sworn keepers of Soulsteel and the Heartforge. Their domain is Strength; their origin role is the Flamekeeper.",
     "design_refs": [],
@@ -853,7 +1119,7 @@ window.CODEX_BUILDER = [
     "category": "Places",
     "status": "accepted",
     "published": true,
-    "source_kind": "receipt",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
     "description": "The Heartforge burns at the centre of Forgehold Citadel — where Soulsteel is made. (Its Trial Chamber is a separate, unreleased dungeon.)",
     "design_refs": [],
@@ -898,7 +1164,7 @@ window.CODEX_BUILDER = [
     "category": "Bosses",
     "status": "draft",
     "published": false,
-    "source_kind": "receipt",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1",
     "description": "The boss encounter at the heart of the Heartforge Trial Chamber. Mechanics designed; unreleased.",
     "design_refs": [
@@ -995,7 +1261,7 @@ window.CODEX_BUILDER = [
     "category": "Systems",
     "status": "accepted",
     "published": false,
-    "source_kind": "receipt",
+    "source_kind": "asserted",
     "design_source": "AKALYNTH_WORLD_EVENTS_ENGINE_V1",
     "description": "The live-world event layer for Akalynth. Turns the Chronicle, Game Loop, and Systems Bible into a repeatable event engine: event lifecycle, event types catalog, canon event cards, contribution scoring, reward structure, and failure/aftermath, with the Witness Moth Bloom as the prototype event.",
     "design_refs": [
@@ -1039,4 +1305,4 @@ window.CODEX_BUILDER = [
     ]
   }
 ];
-window.CODEX_BUILDER_STATS = {"objects":31,"public":22,"internal":9,"by_category":{"Cities":5,"Quests":1,"Codices":6,"asset":1,"mechanic":1,"Systems":4,"Places":4,"Materials":1,"Creatures":6,"Factions":1,"Bosses":1},"by_stage":{"spec":11,"lore":18,"shipped":1,"concept":1},"by_status":{"accepted":28,"draft":2,"candidate":1}};
+window.CODEX_BUILDER_STATS = {"objects":37,"public":24,"internal":13,"by_category":{"Cities":5,"Quests":1,"Codices":6,"asset":1,"mechanic":4,"Systems":5,"Places":4,"Civilization Codices":1,"World Foundation":1,"Materials":1,"Creatures":6,"Factions":1,"Bosses":1},"by_stage":{"spec":12,"lore":18,"shipped":1,"concept":2,"implemented":3,"live":1},"by_status":{"accepted":34,"candidate":2,"draft":1}};

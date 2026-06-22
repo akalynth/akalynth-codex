@@ -41,6 +41,10 @@
   "related": [
     {
       "rel": "references",
+      "target": "play-build-govern-surface"
+    },
+    {
+      "rel": "references",
       "target": "game-loop-bible"
     },
     {

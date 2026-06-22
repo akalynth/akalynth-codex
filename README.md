@@ -5,6 +5,24 @@ creature, system, decision, route…) is a **live object** that aggregates its l
 design status, graph edges, work packets, assets, and proof receipts — wherever
 those fragments currently live across the repos.
 
+## Akalynth positioning lane
+
+```text
+Akalynth
+Play, build, and govern a living world.
+```
+
+The Codex now carries this as a private builder/operator object:
+`play-build-govern-surface`. It translates the creator-tooling shape into the
+Akalynth ladder:
+
+```text
+Play -> Modify -> Build -> Script -> Operate -> Govern
+```
+
+That lane is for source authority and review planning. It does not publish the
+public site or claim runtime creator tools have shipped.
+
 ## Surfaces (views over one graph)
 
 | Surface | Audience | Sees |

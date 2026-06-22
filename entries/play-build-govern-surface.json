@@ -1,0 +1,128 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "play-build-govern-surface",
+  "type": "system",
+  "title": "Play, Build, Govern Surface",
+  "authority": "Akalynth",
+  "author": "codex@akalynth",
+  "created": "2026-06-22T00:00:00Z",
+  "updated": "2026-06-23T00:00:00Z",
+  "status": "candidate",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "Product surface that turns Akalynth's MMO positioning into the ladder Play -> Modify -> Build -> Script -> Operate -> Govern.",
+  "lineage": {
+    "origin": "goal-objective:1c560753-7476-45d5-9b6e-02b0e10561f7",
+    "accepted": false,
+    "last_accepted_change": "candidate positioning object from objective file; not yet reviewed for public release"
+  },
+  "world": {
+    "description": "A builder/operator-facing product surface for Akalynth as a persistent top-down MMO with creator tools and proof-backed operations. It keeps Gameeky as a shape reference only, translating approachable progression into Play, Modify, Build, Script, Operate, and Govern surfaces for Rookguard, High City, creator tooling, local preview, operator review, and receipt-backed promotion.",
+    "design_refs": [
+      "codex/design/play-build-govern-surface.md",
+      "codex/design/game-loop-bible.md",
+      "codex/design/gameplay-lane.md",
+      "codex/design/rookguard-first30-presentation-v1.md",
+      "codex/design/high-city.md"
+    ],
+    "implementation": {
+      "stage": "concept",
+      "slice": "AKALYNTH_PLAY_BUILD_GOVERN_SURFACE_V1"
+    }
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "game-loop-bible"
+    },
+    {
+      "rel": "references",
+      "target": "gameplay-lane"
+    },
+    {
+      "rel": "references",
+      "target": "systems-bible"
+    },
+    {
+      "rel": "references",
+      "target": "rookguard"
+    },
+    {
+      "rel": "references",
+      "target": "high-city"
+    },
+    {
+      "rel": "references",
+      "target": "council-dao"
+    },
+    {
+      "rel": "references",
+      "target": "asset-library"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "map",
+      "ref": "codex/design/play-build-govern-surface.md#rookguard-builder-kit",
+      "status": "open",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "quest",
+      "ref": "codex/design/play-build-govern-surface.md#high-city-first-quest-kit",
+      "status": "open",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "mechanic",
+      "ref": "codex/design/play-build-govern-surface.md#local-preview-contract",
+      "status": "open",
+      "assignee": "codex-build-delegation"
+    },
+    {
+      "kind": "review",
+      "ref": "codex/design/play-build-govern-surface.md#promotion-review-contract",
+      "status": "open",
+      "assignee": "operator-review"
+    },
+    {
+      "kind": "asset",
+      "ref": "codex/design/play-build-govern-surface.md#asset-production-backlog",
+      "status": "open",
+      "assignee": "asset-pipeline"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "verification",
+      "ref": "codex/evidence/play-build-govern-surface/goal-objective.md"
+    }
+  ],
+  "public_projection": {
+    "published": false,
+    "title": "Play, Build, Govern",
+    "category": "Systems",
+    "summary": "Akalynth as a persistent MMO world with creator tools and proof-backed operations.",
+    "body": "Players explore the world. Builders create maps, quests, homes, NPCs, and events. Operators promote changes through explicit review, receipts, and replayable evidence.",
+    "assets": [],
+    "related": [
+      "rookguard",
+      "high-city",
+      "game-loop-bible"
+    ],
+    "source_ref": "play-build-govern-surface"
+  },
+  "tags": [
+    "positioning",
+    "creator-tools",
+    "gameplay-loop",
+    "builder",
+    "operator",
+    "receipts",
+    "governance"
+  ]
+}
