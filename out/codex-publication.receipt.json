@@ -1,11 +1,11 @@
 {
   "artifact": "AKALYNTH_CODEX_PUBLICATION_V1",
   "generated_by": "codex/tools/project.mjs",
-  "public_graph_sha256": "a2e7b69240085847eb3bdb7c0bfb0f0f6fc3f2e8135584def37159d319795c02",
-  "public_entries": 24,
+  "public_graph_sha256": "2419f693e0cdd9b94fcba2091bcfbb7fb8e710b31bf50501f708db01f3cb7faa",
+  "public_entries": 25,
   "gate": {
     "rule": "visibility.public && public_projection.published && lineage.accepted",
-    "passed": 24
+    "passed": 25
   },
   "source_provenance": [
     {
@@ -161,6 +161,14 @@
       "evidence_sha256": null
     },
     {
+      "id": "play-build-govern-surface",
+      "status": "accepted",
+      "origin": "goal-objective:1c560753-7476-45d5-9b6e-02b0e10561f7",
+      "source_kind": "asserted",
+      "source_ref": null,
+      "evidence_sha256": null
+    },
+    {
       "id": "rookguard",
       "status": "accepted",
       "origin": "AKALYNTH_ROOKGUARD_CITY_EXPANSION_V1",
@@ -223,6 +231,7 @@
     "memory-serpent",
     "moonspire",
     "origins-codex",
+    "play-build-govern-surface",
     "rookguard",
     "soulsteel",
     "veridium-port",

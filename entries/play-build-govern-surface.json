@@ -6,20 +6,20 @@
   "authority": "Akalynth",
   "author": "codex@akalynth",
   "created": "2026-06-22T00:00:00Z",
-  "updated": "2026-06-23T02:00:00Z",
+  "updated": "2026-06-23T03:05:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
     "operator": true,
     "agent": true,
-    "public": false
+    "public": true
   },
   "summary": "Product surface that turns Akalynth's MMO positioning into the ladder Play -> Modify -> Build -> Script -> Operate -> Govern.",
   "lineage": {
     "origin": "goal-objective:1c560753-7476-45d5-9b6e-02b0e10561f7",
     "accepted": true,
     "accepted_at": "2026-06-23T00:30:00Z",
-    "last_accepted_change": "AKALYNTH_PLAY_BUILD_GOVERN_SURFACE_V1 PR-6 builder draft namespace prototype on akalynth main"
+    "last_accepted_change": "AKALYNTH_PLAY_BUILD_GOVERN_SURFACE_V1 PR-12 beta lane publish + PR-13 public projection"
   },
   "world": {
     "description": "A builder/operator-facing product surface for Akalynth as a persistent top-down MMO with creator tools and proof-backed operations. It keeps Gameeky as a shape reference only, translating approachable progression into Play, Modify, Build, Script, Operate, and Govern surfaces for Rookguard, High City, creator tooling, local preview, operator review, and receipt-backed promotion.",
@@ -37,7 +37,7 @@
       "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_PLAY_BUILD_GOVERN_SURFACE_V1/receipt.json"
     ],
     "implementation": {
-      "stage": "prototype",
+      "stage": "beta",
       "slice": "AKALYNTH_PLAY_BUILD_GOVERN_SURFACE_V1",
       "registry": "apps/server/src/builder/draftNamespace.ts"
     }
@@ -148,10 +148,15 @@
     {
       "kind": "manifest",
       "ref": "repos/akalynth/packages/shared/builderDraft.ts"
+    },
+    {
+      "kind": "receipt",
+      "ref": "akalynth-ops/evidence/play-build-govern-surface-v1/lane-publish-beta.json"
     }
   ],
   "public_projection": {
-    "published": false,
+    "published": true,
+    "reviewed_by": "guardian@vaultmesh.org",
     "title": "Play, Build, Govern",
     "category": "Systems",
     "summary": "Akalynth as a persistent MMO world with creator tools and proof-backed operations.",
