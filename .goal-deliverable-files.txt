@@ -1,0 +1,14 @@
+# Akalynth drop full-index goal — codex-only deliverable boundary.
+# Only these paths may be modified/committed for this goal.
+
+lib/drop-index.mjs
+lib/drop-manifest.mjs
+lib/drop-roles.mjs
+lib/drop-unzip.mjs
+lib/drop-zip-toc.mjs
+tools/load-drop-index.mjs
+tools/resolve-ops-root.mjs
+tools/verify-drop-index-pipeline.mjs
+tools/verify-drop-landing.mjs
+tests/drop-index.test.mjs
+.goal-deliverable-files.txt
