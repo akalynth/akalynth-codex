@@ -9,10 +9,13 @@ import { ensureUnzippedIfNeeded } from '../lib/drop-unzip.mjs';
 
 const codexRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
 const opsRoot = resolveOpsRoot(codexRoot);
-const dropRoot = join(opsRoot, 'repos', 'akalynth', 'drop');
 
 const args = process.argv.slice(2);
 const doUnzip = args.includes('--unzip-if-needed');
+const dropIdx = args.indexOf('--drop-root');
+const dropRoot = dropIdx >= 0
+  ? args[dropIdx + 1]
+  : join(opsRoot, 'repos', 'akalynth', 'drop');
 const outIdx = args.indexOf('--out');
 const outPath = outIdx >= 0 ? args[outIdx + 1] : null;
 
@@ -22,7 +25,9 @@ if (doUnzip) {
     console.error('unzip-if-needed failed:', unzip.bundles.filter((b) => b.action === 'failed'));
     process.exit(1);
   }
-  console.error(`unzip-if-needed: ${unzip.bundles.filter((b) => b.action === 'extracted').length} extracted, ${unzip.bundles.filter((b) => b.action === 'skipped').length} skipped`);
+  const extracted = unzip.bundles.filter((b) => b.action === 'extracted').length;
+  const skipped = unzip.bundles.filter((b) => b.action === 'skipped').length;
+  console.error(`unzip-if-needed: ${extracted} extracted, ${skipped} skipped`);
 }
 
 const index = buildDropIndex(dropRoot, opsRoot);
