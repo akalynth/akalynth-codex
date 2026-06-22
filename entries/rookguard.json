@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-20T00:00:00Z",
-  "updated": "2026-06-22T00:00:00Z",
+  "updated": "2026-06-20T00:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -14,7 +14,7 @@
     "agent": true,
     "public": true
   },
-  "summary": "Threshold keep where every journey begins \u2014 the Rookguard Codex Path and gate to High City.",
+  "summary": "Threshold keep where every journey begins — the Rookguard Codex Path and gate to High City.",
   "lineage": {
     "origin": "AKALYNTH_ROOKGUARD_CITY_EXPANSION_V1",
     "accepted": true,
@@ -34,43 +34,13 @@
     }
   },
   "related": [
-    {
-      "rel": "connects_to",
-      "target": "high-city"
-    },
-    {
-      "rel": "references",
-      "target": "heroes-codex"
-    }
+    { "rel": "connects_to", "target": "high-city" },
+    { "rel": "references", "target": "heroes-codex" }
   ],
   "assets": [
     {
-      "kind": "banner",
-      "path": "repos/akalynth-site/assets/akalynth/visuals/banners/02-rookguard-gate.banner-1600x700.webp"
-    },
-    {
-      "kind": "card",
-      "path": "repos/akalynth-site/assets/akalynth/visuals/cards/02-rookguard-gate.card-800x1000.webp"
-    },
-    {
       "kind": "wallpaper",
-      "path": "repos/akalynth-site/assets/akalynth/visuals/wallpapers/02-rookguard-gate.wallpaper-1080x1920.webp"
-    },
-    {
-      "kind": "og",
-      "path": "repos/akalynth-site/assets/akalynth/visuals/og/02-rookguard-gate.og-1200x630.webp"
-    },
-    {
-      "kind": "thumb",
-      "path": "repos/akalynth-site/assets/akalynth/visuals/thumbs/02-rookguard-gate.thumb-480x720.webp"
-    },
-    {
-      "kind": "hero",
-      "path": "repos/akalynth-site/assets/akalynth/visuals/hero/02-rookguard-gate.hero-cover-1920x1080.webp"
-    },
-    {
-      "kind": "icon",
-      "path": "repos/akalynth-site/assets/akalynth/visuals/icons/02-rookguard-gate.icon-candidate-1024.webp"
+      "path": "repos/akalynth-site/assets/akalynth/visuals/wallpapers/rookguard-gate.wallpaper-1920x1080.webp"
     }
   ],
   "public_projection": {
@@ -78,19 +48,11 @@
     "reviewed_by": "guardian@vaultmesh.org",
     "title": "Rookguard",
     "category": "World Foundation",
-    "summary": "Threshold keep \u2014 where the Codex Path begins.",
+    "summary": "Threshold keep — where the Codex Path begins.",
     "body": "Rookguard is the bounded onboarding keep: move rune, chat signal, Tem challenge, training slime, Heroes Codex vocation, and the gate to High City. Every step is receipt-backed; vocation is identity proof, not power.",
     "assets": [],
-    "related": [
-      "high-city",
-      "heroes-codex",
-      "forgehold"
-    ],
+    "related": ["high-city", "heroes-codex", "forgehold"],
     "source_ref": "rookguard"
   },
-  "tags": [
-    "city",
-    "onboarding",
-    "codex-path"
-  ]
+  "tags": ["city", "onboarding", "codex-path"]
 }
