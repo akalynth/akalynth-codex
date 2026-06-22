@@ -770,7 +770,9 @@ window.CODEX_BUILDER = [
       "codex/schema/builder-draft-manifest.schema.json",
       "codex/schema/local-preview-session.schema.json",
       "codex/schema/promotion-review-packet.schema.json",
-      "codex/schema/builder-promotion-permit.schema.json"
+      "codex/schema/builder-promotion-permit.schema.json",
+      "repos/akalynth/docs/PLAY_BUILD_GOVERN_SURFACE_RUNBOOK.md",
+      "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_PLAY_BUILD_GOVERN_SURFACE_V1/receipt.json"
     ],
     "implementation": {
       "stage": "spec",

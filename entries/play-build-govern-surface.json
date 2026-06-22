@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "codex@akalynth",
   "created": "2026-06-22T00:00:00Z",
-  "updated": "2026-06-23T01:00:00Z",
+  "updated": "2026-06-23T01:45:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -19,7 +19,7 @@
     "origin": "goal-objective:1c560753-7476-45d5-9b6e-02b0e10561f7",
     "accepted": true,
     "accepted_at": "2026-06-23T00:30:00Z",
-    "last_accepted_change": "AKALYNTH_PLAY_BUILD_GOVERN_SURFACE_V1 codex spec, packet anchors, builder workflow schemas, promotion gate"
+    "last_accepted_change": "AKALYNTH_PLAY_BUILD_GOVERN_SURFACE_V1 engineering-loop closure PR-5 on akalynth main"
   },
   "world": {
     "description": "A builder/operator-facing product surface for Akalynth as a persistent top-down MMO with creator tools and proof-backed operations. It keeps Gameeky as a shape reference only, translating approachable progression into Play, Modify, Build, Script, Operate, and Govern surfaces for Rookguard, High City, creator tooling, local preview, operator review, and receipt-backed promotion.",
@@ -32,7 +32,9 @@
       "codex/schema/builder-draft-manifest.schema.json",
       "codex/schema/local-preview-session.schema.json",
       "codex/schema/promotion-review-packet.schema.json",
-      "codex/schema/builder-promotion-permit.schema.json"
+      "codex/schema/builder-promotion-permit.schema.json",
+      "repos/akalynth/docs/PLAY_BUILD_GOVERN_SURFACE_RUNBOOK.md",
+      "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_PLAY_BUILD_GOVERN_SURFACE_V1/receipt.json"
     ],
     "implementation": {
       "stage": "spec",
@@ -129,6 +131,14 @@
     {
       "kind": "verification",
       "ref": "akalynth-ops/bin/builder-promotion-gate.sh"
+    },
+    {
+      "kind": "receipt",
+      "ref": "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_PLAY_BUILD_GOVERN_SURFACE_V1/receipt.json"
+    },
+    {
+      "kind": "verification",
+      "ref": "repos/akalynth/apps/server/tools/verify-play-build-govern-surface-v1.ts"
     }
   ],
   "public_projection": {
