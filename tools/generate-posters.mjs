@@ -14,9 +14,10 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { resolveOpsRoot } from './resolve-ops-root.mjs';
 
 const codexRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
-const opsRoot = join(codexRoot, '..');
+const opsRoot = resolveOpsRoot(codexRoot);
 const specPath = join(codexRoot, 'assets', 'poster-specs.json');
 const outDir = join(codexRoot, 'assets', 'out');
 
@@ -72,7 +73,10 @@ for (const s of specs) {        // sequential — respect image API rate limits
 
 const by = (k) => results.filter((r) => r.result === k).length;
 console.log(`\n  summary   : would-generate ${by('would-generate')} · generated ${by('generated')} · skip-exists ${by('skip-exists')} · errors ${results.length - by('would-generate') - by('generated') - by('skip-exists')}`);
-if (DRY) console.log('  next      : set OPENAI_API_KEY and re-run to produce codex/assets/out/*.png, then attach each to its codex object assets[] (kind: poster).');
+if (DRY) {
+  console.log('  next      : bin/akalynth-codex-grok.sh generate   # grok-cli image_gen (no OPENAI_API_KEY)');
+  console.log('           or export OPENAI_API_KEY and re-run this script for OpenAI Images API.');
+}
 // non-zero only on real generation errors (not dry-run)
 const hardErrors = results.filter((r) => ['api-error', 'no-image-data', 'exception', 'brief-missing'].includes(r.result)).length;
 process.exit(!DRY && hardErrors ? 1 : 0);

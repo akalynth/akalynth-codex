@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-05T21:37:00Z",
-  "updated": "2026-06-20T00:00:00Z",
+  "updated": "2026-06-23T03:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -62,8 +62,30 @@
     {
       "kind": "asset",
       "ref": "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/prompts/image_briefs",
-      "status": "blocked",
-      "note": "no matching site asset; requires image generation (OPENAI_API_KEY not set)"
+      "status": "accepted",
+      "assignee": "asset-pipeline"
+    }
+  ],
+  "assets": [
+    {
+      "kind": "poster",
+      "path": "codex/assets/out/akalynth-equipment-codex-poster-v1.png"
+    },
+    {
+      "kind": "poster",
+      "path": "codex/assets/out/akalynth-origins-codex-poster-v1.png"
+    },
+    {
+      "kind": "poster",
+      "path": "codex/assets/out/akalynth-professions-codex-poster-v1.png"
+    },
+    {
+      "kind": "poster",
+      "path": "codex/assets/out/akalynth-raid-bosses-codex-poster-v1.png"
+    },
+    {
+      "kind": "poster",
+      "path": "codex/assets/out/akalynth-world-map-v2-poster.png"
     }
   ],
   "evidence": [

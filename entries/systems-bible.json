@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-05T20:36:24Z",
-  "updated": "2026-06-20T00:00:00Z",
+  "updated": "2026-06-23T03:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -59,8 +59,14 @@
     {
       "kind": "asset",
       "ref": "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/prompts/AKALYNTH_SYSTEMS_BIBLE_POSTER_V1.prompt.md",
-      "status": "blocked",
-      "note": "no matching site asset; requires image generation (OPENAI_API_KEY not set)"
+      "status": "accepted",
+      "assignee": "asset-pipeline"
+    }
+  ],
+  "assets": [
+    {
+      "kind": "poster",
+      "path": "codex/assets/out/akalynth-systems-bible-poster-v1.png"
     }
   ],
   "evidence": [

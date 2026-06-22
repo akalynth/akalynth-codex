@@ -994,8 +994,8 @@ window.CODEX_AGENT = {
       "kind": "asset",
       "ref": "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/prompts/AKALYNTH_GAME_LOOP_BIBLE_POSTER_V1.prompt.md",
       "ref_name": "AKALYNTH_GAME_LOOP_BIBLE_POSTER_V1.prompt.md",
-      "status": "blocked",
-      "assignee": null,
+      "status": "accepted",
+      "assignee": "asset-pipeline",
       "ready": false
     },
     {
@@ -1016,8 +1016,8 @@ window.CODEX_AGENT = {
       "kind": "asset",
       "ref": "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/prompts/image_briefs",
       "ref_name": "image_briefs",
-      "status": "blocked",
-      "assignee": null,
+      "status": "accepted",
+      "assignee": "asset-pipeline",
       "ready": false
     },
     {
@@ -1181,8 +1181,8 @@ window.CODEX_AGENT = {
       "kind": "asset",
       "ref": "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/prompts/AKALYNTH_SYSTEMS_BIBLE_POSTER_V1.prompt.md",
       "ref_name": "AKALYNTH_SYSTEMS_BIBLE_POSTER_V1.prompt.md",
-      "status": "blocked",
-      "assignee": null,
+      "status": "accepted",
+      "assignee": "asset-pipeline",
       "ready": false
     },
     {
@@ -1213,9 +1213,8 @@ window.CODEX_AGENT = {
     "open_packets": 0,
     "ready": 0,
     "by_packet_status": {
-      "accepted": 32,
-      "closed": 3,
-      "blocked": 3
+      "accepted": 35,
+      "closed": 3
     },
     "by_packet_kind": {
       "website_update": 9,

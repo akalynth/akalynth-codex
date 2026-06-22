@@ -1050,7 +1050,7 @@ window.CODEX_FULL = [
     "authority": "Akalynth",
     "author": "guardian@vaultmesh.org",
     "created": "2026-06-05T20:28:13Z",
-    "updated": "2026-06-20T00:00:00Z",
+    "updated": "2026-06-23T03:00:00Z",
     "status": "accepted",
     "visibility": {
       "builder": true,
@@ -1106,8 +1106,14 @@ window.CODEX_FULL = [
       {
         "kind": "asset",
         "ref": "repos/akalynth/drop/AKALYNTH_GAME_LOOP_BIBLE_V1/prompts/AKALYNTH_GAME_LOOP_BIBLE_POSTER_V1.prompt.md",
-        "status": "blocked",
-        "note": "no matching site asset; requires image generation (OPENAI_API_KEY not set)"
+        "status": "accepted",
+        "assignee": "asset-pipeline"
+      }
+    ],
+    "assets": [
+      {
+        "kind": "poster",
+        "path": "codex/assets/out/akalynth-game-loop-bible-poster-v1.png"
       }
     ],
     "evidence": [
@@ -1143,7 +1149,7 @@ window.CODEX_FULL = [
     "authority": "Akalynth",
     "author": "guardian@vaultmesh.org",
     "created": "2026-06-05T21:37:00Z",
-    "updated": "2026-06-20T00:00:00Z",
+    "updated": "2026-06-23T03:00:00Z",
     "status": "accepted",
     "visibility": {
       "builder": true,
@@ -1199,8 +1205,30 @@ window.CODEX_FULL = [
       {
         "kind": "asset",
         "ref": "repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/prompts/image_briefs",
-        "status": "blocked",
-        "note": "no matching site asset; requires image generation (OPENAI_API_KEY not set)"
+        "status": "accepted",
+        "assignee": "asset-pipeline"
+      }
+    ],
+    "assets": [
+      {
+        "kind": "poster",
+        "path": "codex/assets/out/akalynth-equipment-codex-poster-v1.png"
+      },
+      {
+        "kind": "poster",
+        "path": "codex/assets/out/akalynth-origins-codex-poster-v1.png"
+      },
+      {
+        "kind": "poster",
+        "path": "codex/assets/out/akalynth-professions-codex-poster-v1.png"
+      },
+      {
+        "kind": "poster",
+        "path": "codex/assets/out/akalynth-raid-bosses-codex-poster-v1.png"
+      },
+      {
+        "kind": "poster",
+        "path": "codex/assets/out/akalynth-world-map-v2-poster.png"
       }
     ],
     "evidence": [
@@ -2201,7 +2229,7 @@ window.CODEX_FULL = [
     "authority": "Akalynth",
     "author": "guardian@vaultmesh.org",
     "created": "2026-06-05T20:36:24Z",
-    "updated": "2026-06-20T00:00:00Z",
+    "updated": "2026-06-23T03:00:00Z",
     "status": "accepted",
     "visibility": {
       "builder": true,
@@ -2254,8 +2282,14 @@ window.CODEX_FULL = [
       {
         "kind": "asset",
         "ref": "repos/akalynth/drop/AKALYNTH_SYSTEMS_BIBLE_V1/prompts/AKALYNTH_SYSTEMS_BIBLE_POSTER_V1.prompt.md",
-        "status": "blocked",
-        "note": "no matching site asset; requires image generation (OPENAI_API_KEY not set)"
+        "status": "accepted",
+        "assignee": "asset-pipeline"
+      }
+    ],
+    "assets": [
+      {
+        "kind": "poster",
+        "path": "codex/assets/out/akalynth-systems-bible-poster-v1.png"
       }
     ],
     "evidence": [
