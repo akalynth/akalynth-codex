@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-12T00:00:00Z",
-  "updated": "2026-06-20T00:00:00Z",
+  "updated": "2026-06-22T00:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -122,6 +122,14 @@
     {
       "kind": "wallpaper",
       "path": "repos/akalynth-site/assets/akalynth/visuals/wallpapers/04-liminal-web.wallpaper-1080x1920.webp"
+    },
+    {
+      "kind": "hero",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/hero/04-liminal-web.hero-cover-1920x1080.webp"
+    },
+    {
+      "kind": "icon",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/icons/04-liminal-web.icon-candidate-1024.webp"
     }
   ]
 }
