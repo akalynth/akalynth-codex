@@ -9,15 +9,18 @@ import { readFileSync, readdirSync, writeFileSync, mkdirSync, statSync, existsSy
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { resolveOpsRoot } from './resolve-ops-root.mjs';
 
 const codexRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
-const opsRoot = join(codexRoot, '..');
+const opsRoot = resolveOpsRoot(codexRoot);
 const dropDir = join(opsRoot, 'repos', 'akalynth', 'drop');
 const entriesDir = join(codexRoot, 'entries');
 const receiptDir = join(opsRoot, 'receipts', 'AKALYNTH_DROP_LANDING_V1');
 
 const bundles = readdirSync(dropDir).filter((f) => {
-  try { return statSync(join(dropDir, f)).isDirectory(); } catch { return false; }
+  try {
+    return statSync(join(dropDir, f)).isDirectory() && /^AKALYNTH_.*_V1$/.test(f);
+  } catch { return false; }
 }).sort();
 
 const entries = readdirSync(entriesDir).filter((f) => f.endsWith('.json'))
