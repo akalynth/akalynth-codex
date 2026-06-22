@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-05T23:41:31Z",
-  "updated": "2026-06-21T23:50:00Z",
+  "updated": "2026-06-22T00:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -99,6 +99,14 @@
     {
       "kind": "thumb",
       "path": "repos/akalynth-site/assets/akalynth/visuals/thumbs/03-forgehold.thumb-480x720.webp"
+    },
+    {
+      "kind": "hero",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/hero/03-forgehold.hero-cover-1920x1080.webp"
+    },
+    {
+      "kind": "icon",
+      "path": "repos/akalynth-site/assets/akalynth/visuals/icons/03-forgehold.icon-candidate-1024.webp"
     }
   ],
   "packets": [
