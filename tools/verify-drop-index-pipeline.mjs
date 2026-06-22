@@ -3,7 +3,6 @@
 import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { execFileSync } from 'node:child_process';
 import { resolveOpsRoot } from './resolve-ops-root.mjs';
 import {
   buildDropIndex,
