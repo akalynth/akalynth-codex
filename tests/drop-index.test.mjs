@@ -16,6 +16,7 @@ import {
 import { ensureBundleExtracted } from '../lib/drop-unzip.mjs';
 import { verifyBundleChecksums } from '../lib/drop-manifest.mjs';
 import { zipListEntries, DropZipTocError } from '../lib/drop-zip-toc.mjs';
+import { auditGoalScope, loadDeliverableFiles } from '../lib/drop-scope.mjs';
 
 const codexRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
 const opsRoot = resolveOpsRoot(codexRoot);
@@ -68,4 +69,11 @@ test('load-drop-index.mjs CLI emits JSON on real drop', () => {
   const out = execFileSync(node, [loader], { encoding: 'utf8', cwd: opsRoot });
   const index = JSON.parse(out);
   assert.equal(index.summary.core_bundles, 10);
+});
+
+test('goal scope: commits and codex working tree within deliverable list', () => {
+  const deliverable = loadDeliverableFiles(codexRoot);
+  assert.ok(deliverable.includes('lib/drop-index.mjs'));
+  const audit = auditGoalScope(codexRoot, opsRoot);
+  assert.equal(audit.violations.length, 0, JSON.stringify(audit.violations));
 });

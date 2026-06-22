@@ -13,6 +13,7 @@ import {
   compareIndexStructure,
 } from '../lib/drop-index.mjs';
 import { ensureUnzippedIfNeeded } from '../lib/drop-unzip.mjs';
+import { auditGoalScope } from '../lib/drop-scope.mjs';
 
 const codexRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
 const opsRoot = resolveOpsRoot(codexRoot);
@@ -99,31 +100,19 @@ pass('step2', 'zip-only pre/post structure equal', {
   extracted: unzip.bundles.filter((b) => b.action === 'extracted').length,
 });
 
-// Scope evidence — codex deliverable only; server/agent-skills must not be in goal delta
-function gitPorcelain(repoPath) {
-  try {
-    return execFileSync('git', ['status', '--porcelain'], { cwd: repoPath, encoding: 'utf8' }).trim();
-  } catch {
-    return 'git_unavailable';
-  }
+// Scope gate — goal commits + codex working tree must match .goal-deliverable-files.txt only
+const scopeAudit = auditGoalScope(codexRoot, opsRoot);
+writeFileSync(join(scratch, 'scope-evidence.json'), JSON.stringify(scopeAudit, null, 2));
+writeFileSync(join(scratch, 'codex-git-porcelain.txt'), scopeAudit.untracked_outside_goal.codex.join('\n'));
+
+if (!scopeAudit.ok) {
+  fail('scope', 'goal scope violations', { violations: scopeAudit.violations });
 }
 
-const scopeEvidence = {
-  codex_deliverable_only: true,
-  codex_porcelain: gitPorcelain(codexRoot).split('\n').filter(Boolean).map((l) => l.trim()),
-  akalynth_porcelain: gitPorcelain(join(opsRoot, 'repos', 'akalynth')).split('\n').filter(Boolean),
-  agent_skills_porcelain: existsSync(join(opsRoot, 'repos', 'akalynth-agent-skills'))
-    ? gitPorcelain(join(opsRoot, 'repos', 'akalynth-agent-skills')).split('\n').filter(Boolean)
-    : [],
-};
-writeFileSync(join(scratch, 'scope-evidence.json'), JSON.stringify(scopeEvidence, null, 2));
-
-const serverTrackedDirty = scopeEvidence.akalynth_porcelain.filter((l) => /^ M/.test(l) && l.includes('apps/server'));
-if (serverTrackedDirty.length) {
-  fail('scope', 'tracked server files modified in akalynth repo', { serverTrackedDirty });
-}
-
-pass('scope', 'no tracked server mutations in akalynth goal delta');
+pass('scope', 'goal delta confined to deliverable files', {
+  deliverable_count: scopeAudit.deliverable_files.length,
+  untracked_noted: scopeAudit.untracked_outside_goal,
+});
 
 writeFileSync(join(scratch, 'pipeline-receipt.json'), JSON.stringify(receipt, null, 2));
 console.log(`receipt: ${join(scratch, 'pipeline-receipt.json')}`);

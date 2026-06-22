@@ -4,6 +4,7 @@
 lib/drop-index.mjs
 lib/drop-manifest.mjs
 lib/drop-roles.mjs
+lib/drop-scope.mjs
 lib/drop-unzip.mjs
 lib/drop-zip-toc.mjs
 tools/load-drop-index.mjs
