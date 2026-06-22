@@ -1,0 +1,46 @@
+{
+  "schema_version": "promotion-review-packet/v1",
+  "packet_id": "AKALYNTH_REVIEW_ROOKGUARD_KIT_V1",
+  "source_object": "rookguard",
+  "draft_manifest_ref": "codex/samples/rookguard-builder-draft-manifest.sample.json",
+  "preview_session_ref": "codex/samples/rookguard-local-preview-session.sample.json",
+  "changed_files": [
+    {
+      "path": "codex/samples/rookguard-builder-draft-manifest.sample.json",
+      "sha256": "490990e212156a691ecbbe128a5b346296a91efac46f04ac2ce41f8b81d11dcc"
+    }
+  ],
+  "preview_evidence": [
+    "builder/previews/rookguard-kit-v1/replay.jsonl",
+    "builder/previews/rookguard-kit-v1/guild-hall-annex-after.png",
+    "builder/previews/rookguard-kit-v1/gate-overlook-after.png"
+  ],
+  "receipt_expectations": [
+    {
+      "receipt_type": "builder_draft_manifest",
+      "lane": "preview_only"
+    },
+    {
+      "receipt_type": "review_decision",
+      "lane": "live"
+    },
+    {
+      "receipt_type": "promotion_permit",
+      "lane": "live"
+    },
+    {
+      "receipt_type": "lane_publish_receipt",
+      "lane": "live",
+      "note": "Emitted only after explicit operator lane publish with permit attached."
+    }
+  ],
+  "abuse_review": "pass",
+  "lane_target": "beta",
+  "reviewer": "guardian@vaultmesh.org",
+  "decision": "accept",
+  "decision_note": "Rookguard builder kit spec is coherent, preview-only, and does not bypass gate receipts.",
+  "non_claims": [
+    "Does not auto-publish to beta or staging.",
+    "Does not mutate /opt or runtime state without separate lane publish invocation."
+  ]
+}

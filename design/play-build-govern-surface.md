@@ -99,7 +99,7 @@ These are codex-side packets, not runtime claims. Each section below is the pack
 
 ## Rookguard Builder Kit
 
-Codex packet: map · Status: **open** · Target object: `rookguard`
+Codex packet: map · Status: **accepted** · Target object: `rookguard`
 
 ### Scope
 
@@ -150,7 +150,7 @@ No live receipts from this packet. Expected future receipt types after promotion
 
 ## High City First-Quest Kit
 
-Codex packet: quest · Status: **open** · Target objects: `high-city`, `game-loop-bible`
+Codex packet: quest · Status: **accepted** · Target objects: `high-city`, `game-loop-bible`
 
 ### Scope
 
@@ -202,7 +202,7 @@ No live receipts from this packet. Expected future receipt types:
 
 ## Local Preview Contract
 
-Codex packet: mechanic · Status: **open** · Applies to all builder drafts
+Codex packet: mechanic · Status: **accepted** · Applies to all builder drafts
 
 ### Scope
 
@@ -255,7 +255,7 @@ These receipts are explicitly non-authoritative and excluded from lane promotion
 
 ## Promotion Review Contract
 
-Codex packet: review · Status: **open** · Assignee: operator-review
+Codex packet: review · Status: **accepted** · Assignee: operator-review
 
 ### Scope
 
@@ -319,7 +319,7 @@ Operator workflow receipts (future):
 
 ## Asset Production Backlog
 
-Codex packet: asset · Status: **open** · Assignee: asset-pipeline
+Codex packet: asset · Status: **accepted** · Assignee: asset-pipeline
 
 ### Scope
 
@@ -403,6 +403,31 @@ No live receipts are emitted by this design object. Future implementation should
 - Promotion packets must distinguish public text, builder-only design, and operator-only evidence.
 - Asset generation must preserve original Akalynth art direction and avoid importing another project's identity.
 
+## Builder Workflow Contracts (PR-4)
+
+Codex schemas and samples for the builder → preview → operator review chain:
+
+| Artifact | Path |
+|---|---|
+| Draft manifest schema | `codex/schema/builder-draft-manifest.schema.json` |
+| Preview session schema | `codex/schema/local-preview-session.schema.json` |
+| Review packet schema | `codex/schema/promotion-review-packet.schema.json` |
+| Promotion permit schema | `codex/schema/builder-promotion-permit.schema.json` |
+| Rookguard draft sample | `codex/samples/rookguard-builder-draft-manifest.sample.json` |
+| Rookguard preview sample | `codex/samples/rookguard-local-preview-session.sample.json` |
+| Rookguard review sample | `codex/samples/rookguard-promotion-review-packet.sample.json` |
+
+Gate adapter (ops-local, no lane publish):
+
+```bash
+bin/builder-promotion-gate.sh \
+  --manifest codex/samples/rookguard-builder-draft-manifest.sample.json \
+  --preview codex/samples/rookguard-local-preview-session.sample.json \
+  --review codex/samples/rookguard-promotion-review-packet.sample.json \
+  --emit-permit builder/permits/rookguard-kit-v1.json \
+  --skip-publish
+```
+
 ## Verification Path
 
 Codex verification for this surface:
@@ -415,11 +440,12 @@ The verifier checks:
 
 1. Entry JSON contract (`accepted`, lineage, evidence refs, packet anchors).
 2. All five packet sections resolve in this design page.
-3. Reverse graph edges on `rookguard`, `high-city`, `game-loop-bible`, and `gameplay-lane`.
-4. Rebuild builder, operator, agent, and public projections.
-5. Confirm the object stays off the public surface (`visibility.public: false`, `public_projection.published: false`).
-6. Confirm no public projection leaks `world`, `packets`, `evidence`, `lineage`, or operator-only paths.
-7. Confirm the agent queue has no open packets for `play-build-govern-surface`.
+3. Builder workflow schemas, samples, and promotion gate dry-run.
+4. Reverse graph edges on `rookguard`, `high-city`, `game-loop-bible`, and `gameplay-lane`.
+5. Rebuild builder, operator, agent, and public projections.
+6. Confirm the object stays off the public surface (`visibility.public: false`, `public_projection.published: false`).
+7. Confirm no public projection leaks `world`, `packets`, `evidence`, `lineage`, or operator-only paths.
+8. Confirm the agent queue has no open packets for `play-build-govern-surface`.
 
 Closure evidence: `akalynth-ops/evidence/play-build-govern-surface-v1/closure.json`
 

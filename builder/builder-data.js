@@ -766,10 +766,14 @@ window.CODEX_BUILDER = [
       "codex/design/game-loop-bible.md",
       "codex/design/gameplay-lane.md",
       "codex/design/rookguard-first30-presentation-v1.md",
-      "codex/design/high-city.md"
+      "codex/design/high-city.md",
+      "codex/schema/builder-draft-manifest.schema.json",
+      "codex/schema/local-preview-session.schema.json",
+      "codex/schema/promotion-review-packet.schema.json",
+      "codex/schema/builder-promotion-permit.schema.json"
     ],
     "implementation": {
-      "stage": "concept",
+      "stage": "spec",
       "slice": "AKALYNTH_PLAY_BUILD_GOVERN_SURFACE_V1"
     },
     "related": [
@@ -1305,4 +1309,4 @@ window.CODEX_BUILDER = [
     ]
   }
 ];
-window.CODEX_BUILDER_STATS = {"objects":37,"public":24,"internal":13,"by_category":{"Cities":5,"Quests":1,"Codices":6,"asset":1,"mechanic":4,"Systems":5,"Places":4,"Civilization Codices":1,"World Foundation":1,"Materials":1,"Creatures":6,"Factions":1,"Bosses":1},"by_stage":{"spec":12,"lore":18,"shipped":1,"concept":2,"implemented":3,"live":1},"by_status":{"accepted":35,"candidate":1,"draft":1}};
+window.CODEX_BUILDER_STATS = {"objects":37,"public":24,"internal":13,"by_category":{"Cities":5,"Quests":1,"Codices":6,"asset":1,"mechanic":4,"Systems":5,"Places":4,"Civilization Codices":1,"World Foundation":1,"Materials":1,"Creatures":6,"Factions":1,"Bosses":1},"by_stage":{"spec":13,"lore":18,"shipped":1,"concept":1,"implemented":3,"live":1},"by_status":{"accepted":35,"candidate":1,"draft":1}};

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akalynth/codex/promotion-review-packet.schema.json",
+  "title": "Akalynth Promotion Review Packet v1",
+  "description": "Operator review packet for builder draft promotion into beta or staging. Never defaults to production.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "packet_id",
+    "source_object",
+    "draft_manifest_ref",
+    "preview_session_ref",
+    "changed_files",
+    "preview_evidence",
+    "receipt_expectations",
+    "abuse_review",
+    "lane_target",
+    "reviewer",
+    "decision",
+    "decision_note",
+    "non_claims"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "promotion-review-packet/v1" },
+    "packet_id": {
+      "type": "string",
+      "pattern": "^AKALYNTH_REVIEW_[A-Z0-9_]+$"
+    },
+    "source_object": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "draft_manifest_ref": { "type": "string" },
+    "preview_session_ref": { "type": "string" },
+    "changed_files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": { "type": "string" },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        }
+      }
+    },
+    "preview_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "receipt_expectations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["receipt_type", "lane"],
+        "properties": {
+          "receipt_type": { "type": "string" },
+          "lane": { "enum": ["preview_only", "live"] },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "abuse_review": { "enum": ["pass", "fail"] },
+    "lane_target": { "enum": ["beta", "staging"] },
+    "reviewer": { "type": "string", "minLength": 1 },
+    "decision": { "enum": ["accept", "reject", "revise"] },
+    "decision_note": { "type": "string", "minLength": 1 },
+    "promotion_permit_ref": { "type": "string" },
+    "non_claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    }
+  }
+}
