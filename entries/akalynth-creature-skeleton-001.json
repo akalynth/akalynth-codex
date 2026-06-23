@@ -1,0 +1,93 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "akalynth-creature-skeleton-001",
+  "type": "creature",
+  "title": "Creature Skeleton 001",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-23T11:08:00Z",
+  "updated": "2026-06-23T12:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "Studio behavior-binding export for skeleton guardian archetype; builder permit issued for beta lane, no runtime mutation.",
+  "lineage": {
+    "origin": "AKALYNTH_CREATURE_SKELETON_001",
+    "accepted": true,
+    "accepted_at": "2026-06-23T11:08:13Z",
+    "last_accepted_change": "studio-export behavior_binding + builder permit 20260623110813"
+  },
+  "world": {
+    "description": "Guardian skeleton with idle/alert states, vision aggro, patrol radius 4, leash 8. Subject asset akalynth_creature_skeleton_001. Codex studio plate creatures__skeleton.png.",
+    "design_refs": [
+      "codex/studio-exports/wp-68062e43e9aecc21d20d8bc5.json",
+      "codex/receipts/AKALYNTH_REVIEW_AKALYNTH_CREATURE_SKELETON_001_20260623110813.json",
+      "codex/receipts/AKALYNTH_BUILDER_PERMIT_AKALYNTH_CREATURE_SKELETON_001_20260623110813.json"
+    ],
+    "implementation": {
+      "stage": "spec",
+      "slice": "AKALYNTH_CREATURE_SKELETON_001",
+      "registry": "codex/studio/akalynth-ledger.js"
+    }
+  },
+  "related": [
+    {
+      "rel": "references",
+      "target": "asset-library",
+      "note": "Creature codex art lineage from AKALYNTH_ASSET_LIBRARY_V1"
+    }
+  ],
+  "assets": [
+    {
+      "kind": "sprite",
+      "path": "codex/studio/creatures__skeleton.png"
+    },
+    {
+      "kind": "sprite",
+      "path": "codex/studio/characters/skeleton_warrior_01.png"
+    },
+    {
+      "kind": "sprite",
+      "path": "repos/akalynth/data/assets-built/sprites/creatures__skeleton.png"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "studio_export",
+      "ref": "codex/studio-exports/wp-68062e43e9aecc21d20d8bc5.json",
+      "status": "accepted"
+    },
+    {
+      "kind": "builder_permit",
+      "ref": "codex/receipts/AKALYNTH_BUILDER_PERMIT_AKALYNTH_CREATURE_SKELETON_001_20260623110813.json",
+      "status": "accepted"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "receipt",
+      "ref": "codex/receipts/AKALYNTH_REVIEW_AKALYNTH_CREATURE_SKELETON_001_20260623110813.json"
+    },
+    {
+      "kind": "receipt",
+      "ref": "codex/receipts/AKALYNTH_BUILDER_PERMIT_AKALYNTH_CREATURE_SKELETON_001_20260623110813.json"
+    },
+    {
+      "kind": "verify",
+      "ref": "codex/studio/verify/asset-add-lanes.json",
+      "note": "lane_creatures creatures__skeleton.png"
+    }
+  ],
+  "public_projection": null,
+  "tags": [
+    "creature",
+    "skeleton",
+    "studio",
+    "behavior_binding",
+    "beta-permit"
+  ]
+}
