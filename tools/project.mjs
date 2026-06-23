@@ -16,8 +16,22 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
-const root = join(dirname(fileURLToPath(import.meta.url)), '..');           // akalynth-ops/codex
-const opsRoot = join(root, '..');                                          // akalynth-ops
+const root = join(dirname(fileURLToPath(import.meta.url)), '..');           // codex repo root
+// Anchor opsRoot on the ops marker. `codex` is a symlink into repos/akalynth-codex
+// and Node realpaths import.meta.url, so a naive join(root,'..') lands on
+// .../akalynth-ops/repos and every repos/* source path misses (→ all asserted).
+// Walk up until we find the dir that actually holds repos/akalynth/drop + receipts/.
+function findOpsRoot(start) {
+  let d = start;
+  for (let i = 0; i < 8; i++) {
+    if (existsSync(join(d, 'repos', 'akalynth', 'drop')) && existsSync(join(d, 'receipts'))) return d;
+    const up = dirname(d);
+    if (up === d) break;
+    d = up;
+  }
+  return join(start, '..');   // fallback to prior behaviour
+}
+const opsRoot = findOpsRoot(root);                                         // akalynth-ops
 const entriesDir = join(root, 'entries');
 const outDir = join(root, 'out');
 const receiptDir = join(opsRoot, 'receipts', 'AKALYNTH_CODEX_PUBLICATION_V1');
@@ -26,15 +40,31 @@ const PUBLIC_ALLOWED = new Set(['published', 'reviewed_by', 'title', 'category',
 const FORBIDDEN_PUBLIC = ['world', 'design_refs', 'implementation', 'evidence', 'packets', 'lineage', 'visibility'];
 
 // Resolve lineage.origin to a real source on disk → (kind, path) or null.
+// Canonical authority is the akalynth game repo (repos/akalynth); the drop
+// bundles carry MANIFEST.md receipts (strongest) and per-doc markdown sources.
+// Candidates are tried in strength order: receipt-backed first, then source.
+const ASSET_MD = 'repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown';
+const FORGEHOLD_DOCS = 'repos/akalynth/drop/AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1/docs';
 function resolveSource(origin) {
   if (!origin) return null;
   const candidates = [
+    // drop-bundle receipts (origin names a drop dir, e.g. *_ROUTE_SLICE_V1, *_LANE_V1)
     ['receipt', `repos/akalynth/drop/${origin}/MANIFEST.md`],
-    ['source', `repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/${origin}.md`],
+    ['receipt', `repos/akalynth/drop/${origin}/CHECKSUMS_SHA256.txt`],
+    // asset-library codices/summaries (origin names a markdown stem)
+    ['source', `${ASSET_MD}/${origin}.md`],
+    // a doc inside the Forgehold route slice (e.g. AKALYNTH_SOULSTEEL_STABILIZATION_V1)
+    ['source', `${FORGEHOLD_DOCS}/${origin}.md`],
+    // game-repo design docs, with/without the AKALYNTH_ prefix (e.g. AKALYNTH_ROOKGUARD_CITY_EXPANSION_V1)
+    ['source', `repos/akalynth/docs/${origin}.md`],
+    ['source', `repos/akalynth/docs/${origin.replace(/^AKALYNTH_/, '')}.md`],
     ['source', `repos/akalynth/drop/${origin}/README.md`],
   ];
-  if (origin === 'AKALYNTH_CITIES_SUMMARY_V1') candidates.push(['source', 'repos/akalynth-site/drop/AKALYNTH_ASSET_LIBRARY_V1/markdown/AKALYNTH_CITIES_SUMMARY_V1.md']);
-  if (/creature codex/i.test(origin)) candidates.push(['source', 'repos/akalynth-site/codex.html']);
+  // free-text origins → their canonical backing source
+  if (/creature codex/i.test(origin)) candidates.push(['source', `${ASSET_MD}/AKALYNTH_CREATURES_SUMMARY_V1.md`]);
+  if (/world atlas|world map/i.test(origin)) candidates.push(['source', 'repos/akalynth/drop/AKALYNTH_GAMEPLAY_LANE_V1/docs/AKALYNTH_WORLD_MAP_V2.md']);
+  // goal-objective:<uuid> → the runtime registry the surface object implements
+  if (/^goal-objective:/.test(origin)) candidates.push(['source', 'repos/akalynth/apps/server/src/builder/draftNamespace.ts']);
   for (const [kind, rel] of candidates) if (existsSync(join(opsRoot, rel))) return { kind, path: rel };
   return null;
 }
