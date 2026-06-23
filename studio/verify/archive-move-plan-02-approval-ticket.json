@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ASSET_ARCHIVE_APPROVAL_TICKET_V1",
+  "generated_at": "2026-06-23T13:45:59.837Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "blocked_pending_explicit_plan_approval",
+  "may_execute": false,
+  "approved": false,
+  "executed": false,
+  "plan_id": "archive_move_plan_02",
+  "approval_scope": "exact_plan_id_only",
+  "required_explicit_approval_phrase": "approve archive execution archive_move_plan_02",
+  "blocking_reasons": [
+    "explicit_plan_approval_missing"
+  ],
+  "source_family_prefix": "emblem/imported/trash_character_system_loose_contact_sheets",
+  "source_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/emblem/imported/trash_character_system_loose_contact_sheets",
+  "proposed_archive_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/_archive/2026-06-23/imported-mirrors/character-system-loose-contact-sheets",
+  "proposed_archive_relpath": "_archive/2026-06-23/imported-mirrors/character-system-loose-contact-sheets",
+  "rollback_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/emblem/imported/trash_character_system_loose_contact_sheets",
+  "rollback_relpath": "emblem/imported/trash_character_system_loose_contact_sheets",
+  "planned_execution_receipt_relpath": "receipts/2026-06-23/asset-archive-loop-character-system-loose-contact-sheets.json",
+  "counts": {
+    "planned_file_count": 1,
+    "planned_bytes": 58095,
+    "unique_content_hashes": 1,
+    "duplicate_coverage_unique_hashes": 1
+  },
+  "evidence": {
+    "asset_archive_report": "studio/verify/asset-archive-map.json",
+    "asset_archive_report_sha256": "e2f79bba9d6c81068dda1c7e9fb2718dbcc6724fe9ca676dde5f761f62c78fc5",
+    "source_family_report": "studio/verify/assets-src-family-map.json",
+    "source_family_report_sha256": "61e0a80acb42e0737d5fcef7ee225aeeb7a4e795c323f0a4471ace21656a380e",
+    "archive_review_report": "studio/verify/archive-review-candidates.json",
+    "archive_review_report_sha256": "2925f1c47c5ff84342493203b3981c7f6a3d70f8454171a5221b77898da31bcd",
+    "archive_move_plans_report": "studio/verify/archive-move-plans.json",
+    "archive_move_plans_report_sha256": "22775bbcf307b449d8e9cc5af515dbe7e0ecbdf09a491283a7882ff428894646",
+    "dry_run_receipt_report": "studio/verify/archive-move-plan-02-dry-run-receipt.json",
+    "dry_run_receipt_sha256": "1d9c8de2ee4b543f98c6ca729de3abcc733451cb1cc656757d74564d7042dc1c",
+    "dry_run_receipt_set_report": "studio/verify/archive-move-dry-run-receipts.json",
+    "dry_run_receipt_set_sha256": "5b36b0c66c777b5ff598bfc823e0ced34f44372fff9b85bf6a9a974fa63e6b98",
+    "execution_preflight_report": "studio/verify/archive-move-execution-preflight.json",
+    "execution_preflight_sha256": "2a0ddbabbf78216cff51cf02ee47d3c977df2b23858617b0fd2439c1b904769d",
+    "execution_receipt_template_report": "studio/verify/archive-move-plan-02-execution-receipt-template.json",
+    "execution_receipt_template_sha256": "e121f219d96a4af55bfa7758c8bc5b6aa61e0c9c6f1fc01f2ff1cdb990af2043",
+    "file_manifest_sha256": "915a172cfbffeebad51a9bebaf4561744a66fc33eea1a35c5a9c335446b1d175"
+  },
+  "operator_hold_points": [
+    "Do not execute from this ticket alone.",
+    "Get the exact required_explicit_approval_phrase immediately before any move.",
+    "Rerun node tools/map-asset-archive-loop.mjs after approval and before writing the execution receipt.",
+    "Write the planned execution receipt before moving files.",
+    "Move only source_path to proposed_archive_path for this exact plan id."
+  ],
+  "pre_execution_checks": [
+    "archive_move_plans_report_sha256 still matches this ticket.",
+    "dry_run_receipt_sha256 still matches this ticket.",
+    "execution_preflight_sha256 still matches this ticket.",
+    "execution_receipt_template_sha256 still matches this ticket.",
+    "blocking_reasons contains only explicit_plan_approval_missing.",
+    "source_path exists.",
+    "proposed_archive_path is absent.",
+    "planned execution receipt path is absent before writing the receipt."
+  ],
+  "post_execution_checks": [
+    "source_path is absent.",
+    "proposed_archive_path exists.",
+    "archive file count equals planned_file_count.",
+    "archive file hashes match file_manifest_sha256 and every file manifest entry.",
+    "no non-selected source, runtime, Android, debug-client, receipt, key, beta, prod, or /opt path was changed.",
+    "mapper rerun records the new archived state before any follow-up plan."
+  ],
+  "rollback_checks": [
+    "rollback_path is the original source_path.",
+    "move proposed_archive_path back to rollback_path if rollback is required.",
+    "rollback file count equals planned_file_count.",
+    "rollback file hashes match file_manifest_sha256 and every file manifest entry.",
+    "mapper rerun returns this plan to blocked_pending_explicit_plan_approval after rollback."
+  ],
+  "prohibited_actions": [
+    "No deletion.",
+    "No runtime sync.",
+    "No /opt mutation.",
+    "No Android/package rebuild in the same lane.",
+    "No production or beta deploy action."
+  ],
+  "ticket_sha256": "1f0a4df97485273d2630dbc545cff214003801dc42e10131014ad2da36f92289"
+}

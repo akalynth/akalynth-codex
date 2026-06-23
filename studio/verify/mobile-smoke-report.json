@@ -1,0 +1,276 @@
+{
+  "generated_by": "studio-mobile-smoke-v1",
+  "stamped_at": "2026-06-23T11:22:48.460Z",
+  "source": "studio/index.html",
+  "viewport": {
+    "ok": true,
+    "detail": "width=device-width present"
+  },
+  "responsive": {
+    "ok": true,
+    "checks": {
+      "clamp": {
+        "ok": true,
+        "count": 7,
+        "min": 5
+      },
+      "media_queries": {
+        "ok": true,
+        "count": 2,
+        "min": 1
+      },
+      "min_width_guards": {
+        "ok": true,
+        "count": 36,
+        "min": 8
+      },
+      "mobile_classes": {
+        "ok": true,
+        "count": 44,
+        "min": 6
+      }
+    }
+  },
+  "tabs": [
+    {
+      "id": "index",
+      "label": "Index",
+      "marker": "isIndex",
+      "lane": null,
+      "ok": true,
+      "checks": {
+        "section_found": {
+          "ok": true
+        },
+        "bounded_shell": {
+          "ok": true
+        },
+        "min_width_guards": {
+          "ok": true,
+          "count": 1
+        },
+        "overflow_guards": {
+          "ok": true,
+          "count": 1
+        },
+        "overflow_risks": {
+          "ok": true,
+          "total": 0,
+          "unmitigated": 0,
+          "samples": []
+        }
+      }
+    },
+    {
+      "id": "codex",
+      "label": "Codex",
+      "marker": "isCodex",
+      "lane": null,
+      "ok": true,
+      "checks": {
+        "section_found": {
+          "ok": true
+        },
+        "bounded_shell": {
+          "ok": true
+        },
+        "min_width_guards": {
+          "ok": true,
+          "count": 3
+        },
+        "overflow_guards": {
+          "ok": true,
+          "count": 11
+        },
+        "overflow_risks": {
+          "ok": true,
+          "total": 2,
+          "unmitigated": 0,
+          "samples": []
+        }
+      }
+    },
+    {
+      "id": "play",
+      "label": "Play",
+      "marker": "isPlay",
+      "lane": null,
+      "ok": true,
+      "checks": {
+        "section_found": {
+          "ok": true
+        },
+        "bounded_shell": {
+          "ok": true
+        },
+        "min_width_guards": {
+          "ok": true,
+          "count": 2
+        },
+        "overflow_guards": {
+          "ok": true,
+          "count": 1
+        },
+        "overflow_risks": {
+          "ok": true,
+          "total": 0,
+          "unmitigated": 0,
+          "samples": []
+        }
+      }
+    },
+    {
+      "id": "builder",
+      "label": "Builder",
+      "marker": "isPlay",
+      "lane": "play_shell_builder",
+      "ok": true,
+      "checks": {
+        "section_found": {
+          "ok": true
+        },
+        "bounded_shell": {
+          "ok": true
+        },
+        "min_width_guards": {
+          "ok": true,
+          "count": 2
+        },
+        "overflow_guards": {
+          "ok": true,
+          "count": 1
+        },
+        "overflow_risks": {
+          "ok": true,
+          "total": 0,
+          "unmitigated": 0,
+          "samples": []
+        }
+      }
+    },
+    {
+      "id": "atlas",
+      "label": "Atlas",
+      "marker": "isAtlas",
+      "lane": null,
+      "ok": true,
+      "checks": {
+        "section_found": {
+          "ok": true
+        },
+        "bounded_shell": {
+          "ok": true
+        },
+        "min_width_guards": {
+          "ok": true,
+          "count": 1
+        },
+        "overflow_guards": {
+          "ok": true,
+          "count": 4
+        },
+        "overflow_risks": {
+          "ok": true,
+          "total": 0,
+          "unmitigated": 0,
+          "samples": []
+        }
+      }
+    },
+    {
+      "id": "behavior",
+      "label": "Behavior",
+      "marker": "isBehavior",
+      "lane": null,
+      "ok": true,
+      "checks": {
+        "section_found": {
+          "ok": true
+        },
+        "bounded_shell": {
+          "ok": true
+        },
+        "min_width_guards": {
+          "ok": true,
+          "count": 2
+        },
+        "overflow_guards": {
+          "ok": true,
+          "count": 5
+        },
+        "overflow_risks": {
+          "ok": true,
+          "total": 0,
+          "unmitigated": 0,
+          "samples": []
+        }
+      }
+    },
+    {
+      "id": "agent",
+      "label": "Agent",
+      "marker": "isAgent",
+      "lane": null,
+      "ok": true,
+      "checks": {
+        "section_found": {
+          "ok": true
+        },
+        "bounded_shell": {
+          "ok": true
+        },
+        "min_width_guards": {
+          "ok": true,
+          "count": 3
+        },
+        "overflow_guards": {
+          "ok": true,
+          "count": 6
+        },
+        "overflow_risks": {
+          "ok": true,
+          "total": 0,
+          "unmitigated": 0,
+          "samples": []
+        }
+      }
+    },
+    {
+      "id": "gaps",
+      "label": "Gaps",
+      "marker": "isGaps",
+      "lane": null,
+      "ok": true,
+      "checks": {
+        "section_found": {
+          "ok": true
+        },
+        "bounded_shell": {
+          "ok": true
+        },
+        "min_width_guards": {
+          "ok": true,
+          "count": 24
+        },
+        "overflow_guards": {
+          "ok": true,
+          "count": 90
+        },
+        "overflow_risks": {
+          "ok": true,
+          "total": 0,
+          "unmitigated": 0,
+          "samples": []
+        }
+      }
+    }
+  ],
+  "summary": {
+    "tab_count": 8,
+    "tabs_pass": 8,
+    "tabs_fail": 0,
+    "overflow_risk_total": 2,
+    "overflow_risk_unmitigated": 0
+  },
+  "ok": true
+}

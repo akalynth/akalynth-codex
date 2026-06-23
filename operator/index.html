@@ -3,28 +3,43 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Akalynth Codex — Operator (PRIVATE)</title>
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="stylesheet" href="operator.css" />
+    <meta http-equiv="refresh" content="0; url=../studio/" />
+    <title>Akalynth Codex — Studio</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #111412;
+        color: #e8e2cf;
+        font-family: Inter, system-ui, sans-serif;
+      }
+      main {
+        max-width: 560px;
+        padding: 28px;
+      }
+      a {
+        color: #d9b25a;
+      }
+      .kicker {
+        color: #8eb99f;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+    </style>
+    <script>
+      location.replace("../studio/");
+    </script>
   </head>
   <body>
-    <!--
-      PRIVATE operator surface. Renders the FULL Codex world graph (internal
-      fields: lineage, design refs, evidence paths, work packets). NOT for the
-      public site — operator-data.js carries internal data. Run locally only.
-    -->
-    <div class="banner">⚠ Private — Operator Surface · full world graph · do not deploy</div>
-    <header class="topbar">
-      <div class="brand">AKALYNTH · CODEX</div>
-      <div class="surface-tabs" id="tabs"></div>
-      <div class="stat-strip" id="stats"></div>
-      <div class="surface-note" id="note"></div>
-    </header>
     <main>
-      <section class="list" id="list"></section>
-      <aside class="detail" id="detail"></aside>
+      <p class="kicker">Operator replaced</p>
+      <h1>Akalynth Studio is now the canonical private operator surface.</h1>
+      <p><a href="../studio/">Open the new Studio/Codex system</a>.</p>
     </main>
-    <script src="operator-data.js"></script>
-    <script src="operator.js"></script>
   </body>
 </html>

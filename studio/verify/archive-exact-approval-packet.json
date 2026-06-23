@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ARCHIVE_EXACT_APPROVAL_PACKET_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "approval_packet_ready_blocked_pending_exact_phrase",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "approval_scope": "exact_plan_id_only",
+  "blocker": "explicit_plan_approval_missing",
+  "intent": "Bundle every no-mutation proof needed for an operator to approve one exact archive plan without guessing across reports.",
+  "source_rule": "This packet is approval evidence only. It does not record approval, execute moves, write live receipts, sync runtimes, or deploy.",
+  "totals": {
+    "packet_count": 0,
+    "planned_file_count": 0,
+    "planned_bytes": 0,
+    "ready_after_exact_approval_phrase_count": 0,
+    "approval_recorded_count": 0,
+    "executed_count": 0,
+    "executable_packet_count": 0,
+    "packet_missing_evidence_count": 0
+  },
+  "checks": {
+    "packet_count_matches_archive_move_plans": true,
+    "planned_file_count_matches_archive_move_plans": true,
+    "all_packets_have_required_phrase": true,
+    "all_packets_ready_after_exact_approval_phrase": true,
+    "all_packets_have_complete_evidence": true,
+    "all_packets_block_execution_without_approval": true,
+    "no_packets_approved_or_executed": true,
+    "source_tree_mutated_by_approval_packet": false
+  },
+  "packets": [],
+  "required_next_gate": [
+    "Choose exactly one plan packet.",
+    "Use only the required explicit approval phrase shown in that packet.",
+    "Rerun mapper before approval and compare packet/report hashes.",
+    "After approval, execute only the approved plan and write the live execution receipt before moving files."
+  ],
+  "report_sha256": "87e26d41ab1cf576105f8cb9ca9c8200c7462063d84a625ca02d11e418724058"
+}

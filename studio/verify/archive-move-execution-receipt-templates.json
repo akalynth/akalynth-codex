@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ASSET_ARCHIVE_EXECUTION_RECEIPT_TEMPLATE_SET_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "template_only_no_source_mutation",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "archive_move_plans_report": "studio/verify/archive-move-plans.json",
+  "archive_move_plans_report_sha256": "415057fd8ff1740639b7437ddd96649c581de35f21d5b272543de1237a5d8f99",
+  "dry_run_receipt_set_report": "studio/verify/archive-move-dry-run-receipts.json",
+  "dry_run_receipt_set_sha256": "e498bfad44d0128cbfad8629545d890b9f7c59719dd80e9d9a3b6145425f8b22",
+  "execution_preflight_report": "studio/verify/archive-move-execution-preflight.json",
+  "execution_preflight_sha256": "bde886ec4812e565653a819c119d272606a4103426438f42fea7bdc473649fc3",
+  "totals": {
+    "template_count": 0,
+    "planned_file_count": 0,
+    "planned_bytes": 0,
+    "executable_template_count": 0,
+    "approved_template_count": 0,
+    "executed_template_count": 0
+  },
+  "checks": {
+    "plan_count_matches_template_count": true,
+    "planned_file_count_matches_templates": true,
+    "dry_run_receipt_set_valid": true,
+    "execution_preflight_blocks_without_approval": true,
+    "all_templates_block_execution": true,
+    "no_templates_approved": true,
+    "no_templates_executed": true,
+    "source_tree_mutated_by_templates": false
+  },
+  "templates": [],
+  "template_set_sha256": "910e820d694005f727967f418c80aebb2182847aa6ae3243b835e58852d4dcad"
+}

@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ASSET_ARCHIVE_MOVE_EXECUTION_RECEIPT_TEMPLATE_V1",
+  "generated_at": "2026-06-23T13:45:59.837Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "template_only_no_source_mutation",
+  "may_execute": false,
+  "approved": false,
+  "executed": false,
+  "plan_id": "archive_move_plan_03",
+  "required_explicit_approval_phrase": "approve archive execution archive_move_plan_03",
+  "intended_execution_receipt_path": "/home/sovereign/akalynth-ops/receipts/2026-06-23/asset-archive-loop-akalynth-character-recolor-pack-v2.json",
+  "intended_execution_receipt_relpath": "receipts/2026-06-23/asset-archive-loop-akalynth-character-recolor-pack-v2.json",
+  "source_family_prefix": "emblem/imported/trash_akalynth_character_recolor_pack_v2",
+  "source_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/emblem/imported/trash_akalynth_character_recolor_pack_v2",
+  "proposed_archive_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2",
+  "proposed_archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2",
+  "rollback_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/emblem/imported/trash_akalynth_character_recolor_pack_v2",
+  "rollback_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2",
+  "counts": {
+    "planned_file_count": 34,
+    "planned_bytes": 55604,
+    "unique_content_hashes": 34,
+    "duplicate_coverage_unique_hashes": 34
+  },
+  "evidence": {
+    "archive_review_report": "studio/verify/archive-review-candidates.json",
+    "archive_review_report_sha256": "2925f1c47c5ff84342493203b3981c7f6a3d70f8454171a5221b77898da31bcd",
+    "asset_archive_report": "studio/verify/asset-archive-map.json",
+    "asset_archive_report_sha256": "e2f79bba9d6c81068dda1c7e9fb2718dbcc6724fe9ca676dde5f761f62c78fc5",
+    "source_family_report": "studio/verify/assets-src-family-map.json",
+    "source_family_report_sha256": "61e0a80acb42e0737d5fcef7ee225aeeb7a4e795c323f0a4471ace21656a380e",
+    "archive_move_plans_report": "studio/verify/archive-move-plans.json",
+    "archive_move_plans_report_sha256": "22775bbcf307b449d8e9cc5af515dbe7e0ecbdf09a491283a7882ff428894646",
+    "dry_run_receipt_report": "studio/verify/archive-move-plan-03-dry-run-receipt.json",
+    "dry_run_receipt_sha256": "e7f4751e11e62a59903746f85889caed1aff094f0dd86501fe747032ba19a80f",
+    "dry_run_receipt_set_report": "studio/verify/archive-move-dry-run-receipts.json",
+    "dry_run_receipt_set_sha256": "5b36b0c66c777b5ff598bfc823e0ced34f44372fff9b85bf6a9a974fa63e6b98",
+    "execution_preflight_report": "studio/verify/archive-move-execution-preflight.json",
+    "execution_preflight_sha256": "2a0ddbabbf78216cff51cf02ee47d3c977df2b23858617b0fd2439c1b904769d"
+  },
+  "preflight": {
+    "status": "blocked_pending_explicit_approval",
+    "ready_after_explicit_approval": true,
+    "may_execute": false,
+    "blocking_reasons": [
+      "explicit_plan_approval_missing"
+    ]
+  },
+  "checks_to_record_before_move": [
+    "Exact plan id was approved immediately before execution.",
+    "Mapper was rerun and all evidence hashes still match this template.",
+    "This execution receipt was written before moving files.",
+    "Source path exists and archive destination is absent."
+  ],
+  "checks_to_record_after_move": [
+    "Source path is absent.",
+    "Archive path exists.",
+    "Archive file count matches planned_file_count.",
+    "Archive file hashes match file_manifest_sha256 and each file_manifest entry.",
+    "No non-selected source, runtime, Android, debug-client, or /opt path was modified."
+  ],
+  "rollback_verification": {
+    "rollback_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/emblem/imported/trash_akalynth_character_recolor_pack_v2",
+    "verify_after_rollback": [
+      "Rollback path exists.",
+      "Archive path is absent.",
+      "Rollback file count matches planned_file_count.",
+      "Rollback file hashes match file_manifest_sha256 and each file_manifest entry.",
+      "Mapper rerun returns the selected plan to blocked_pending_explicit_approval."
+    ]
+  },
+  "prohibited_actions": [
+    "No deletion.",
+    "No runtime sync.",
+    "No /opt mutation.",
+    "No Android/package rebuild in the same lane.",
+    "No production or beta deploy action."
+  ],
+  "file_manifest_sha256": "ebc69dbc23177489a2473197473066d3a16b6eefd12dbc625333495ce05a3ff9",
+  "file_manifest": [
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/guard_city_01_variant_sheet_4x.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/guard_city_01_variant_sheet_4x.png",
+      "sha256": "ea2ab87945114fb781c6b6928295342e0d1f28d8e2808ee8dae0a765ba1ab92a",
+      "size": 12657
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/guard_city_01_variant_sheet_native_64.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/guard_city_01_variant_sheet_native_64.png",
+      "sha256": "9f1cc1aa91f64fb8806cf191f718749e18d139552f26080c63f68e2f6f440650",
+      "size": 6431
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/masks/back/boots.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/masks/back/boots.png",
+      "sha256": "dbf99f3839881b8daff45e34ec9221130512db8ef2702c749a08837a65a710c9",
+      "size": 248
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/masks/back/cape.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/masks/back/cape.png",
+      "sha256": "72cab62a073bf176c6d5dba29eb4a2b2aa4572055a93a76580377627a3b04f71",
+      "size": 314
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/masks/back/hair.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/masks/back/hair.png",
+      "sha256": "672d7d73289c6b002e84d8b009d26807510d75350c9a82899cbd3ecdbdd0d6eb",
+      "size": 323
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/masks/back/leather.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/masks/back/leather.png",
+      "sha256": "508180029dac5112efcebcdac572698fa1648f81408cab7278dff629246668e5",
+      "size": 235
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/masks/back/magic_color.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/masks/back/magic_color.png",
+      "sha256": "72803dc9364d1d3e1f4be145795791b8561e27f50e3ca58744c4b0b532439331",
+      "size": 226
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/masks/back/skin.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/masks/back/skin.png",
+      "sha256": "c7f88c5ffadc7950a240f0ded1d201b3c53c836490ed47923021331ca05d620d",
+      "size": 298
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/masks/back/trim.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/masks/back/trim.png",
+      "sha256": "5afde5d98603d4e16392f12f6e3a443b681bcbafbf48ecb3e8e182090ccc8fa7",
+      "size": 410
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/masks/front/magic_color.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/masks/front/magic_color.png",
+      "sha256": "20c8526547cae7925ca68109b87252b90f9709c6bab4194a0855961b2c998911",
+      "size": 226
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/masks/front/primary_cloth.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/masks/front/primary_cloth.png",
+      "sha256": "096e90d57f2d610cec81389852ce46077a88426ee2fe2ba2fef94042b4fe2d90",
+      "size": 307
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/masks/front/secondary_cloth.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/masks/front/secondary_cloth.png",
+      "sha256": "df4b64d3f4b6ac2c692060d1aa91585c2c2f0cbd032d2eb2039d93086b976485",
+      "size": 258
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/masks/front/skin.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/masks/front/skin.png",
+      "sha256": "05db0af26327e35aec37c5dd03ebbf3707715a0a2110a5292bd4aef159babf17",
+      "size": 308
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/masks/front/trim.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/masks/front/trim.png",
+      "sha256": "acbbe1387a468e723df6a07a482732863dae93ce1e5a73fd1aabf1335c955431",
+      "size": 400
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/native_64/guard_city_01_back.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/native_64/guard_city_01_back.png",
+      "sha256": "f2f1ab667211dcbad4604eac5386550f3147c021790e023b701a108b87aa699f",
+      "size": 991
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/native_64/guard_city_01_front.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/native_64/guard_city_01_front.png",
+      "sha256": "c621c799e7824a033803c1cdbc132ce9c428834171ddb831af22bd6d8af012a7",
+      "size": 1287
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/preview_4x/guard_city_01_back_4x.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/preview_4x/guard_city_01_back_4x.png",
+      "sha256": "9ebc8bf2c2c6d47a520acc69e88d8ba0f54fdd58fd81ae6e5f2ed6e89a154c78",
+      "size": 1968
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/preview_4x/guard_city_01_front_4x.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/preview_4x/guard_city_01_front_4x.png",
+      "sha256": "5ef5588d081d374d3c3df2d1136988359b88385b312563af740b2e61ea26ae84",
+      "size": 2361
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/native_64/guard_city_01_back_arcane_guard.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/native_64/guard_city_01_back_arcane_guard.png",
+      "sha256": "a9baacc02a086a42f5613b0250ff3fd72797960dba8a977e270a9a9832933f93",
+      "size": 994
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/native_64/guard_city_01_back_forest_guard.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/native_64/guard_city_01_back_forest_guard.png",
+      "sha256": "28adc99f8b226ed1efc90b588e5093eeb4267b1d25d4759df2925136735f450c",
+      "size": 997
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/native_64/guard_city_01_back_red_guard.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/native_64/guard_city_01_back_red_guard.png",
+      "sha256": "0bdb9da5ddbd48a95d8a271418f9c1d68923bd7a053d8d1f97676092654f505c",
+      "size": 1003
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/native_64/guard_city_01_back_silver_guard.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/native_64/guard_city_01_back_silver_guard.png",
+      "sha256": "664390ee52f17454d13df1d3a7cc09bf516ccad74c3215edc1dfdfae707f89b7",
+      "size": 988
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/native_64/guard_city_01_front_arcane_guard.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/native_64/guard_city_01_front_arcane_guard.png",
+      "sha256": "acf461d810153d02f050bce466a9989d88c3b7220ffe8c1fc2ad621a3e95fcda",
+      "size": 1279
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/native_64/guard_city_01_front_forest_guard.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/native_64/guard_city_01_front_forest_guard.png",
+      "sha256": "76a42ac9e87dc766d8664382974d39173e1abab856050dbc0c378d84a1a0cf5e",
+      "size": 1277
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/native_64/guard_city_01_front_red_guard.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/native_64/guard_city_01_front_red_guard.png",
+      "sha256": "fbd5a1426f9aad083ba44dac4e69aec0efaed062db221f9b5cfa5467323bc08f",
+      "size": 1274
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/native_64/guard_city_01_front_silver_guard.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/native_64/guard_city_01_front_silver_guard.png",
+      "sha256": "e4bd1ff5aa60977fc8d427db43c8eadbef876cc087f0802d2d9585275dc3bbb2",
+      "size": 1287
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/preview_4x/guard_city_01_back_arcane_guard_4x.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/preview_4x/guard_city_01_back_arcane_guard_4x.png",
+      "sha256": "5e695c30a17616761dcf2329122aab77023bf789d425a81db8acccc14437fa3d",
+      "size": 1969
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/preview_4x/guard_city_01_back_forest_guard_4x.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/preview_4x/guard_city_01_back_forest_guard_4x.png",
+      "sha256": "66127d939d2a3d54a40ded358abb466164798c48f13aede381c86718095c2aa8",
+      "size": 1975
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/preview_4x/guard_city_01_back_red_guard_4x.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/preview_4x/guard_city_01_back_red_guard_4x.png",
+      "sha256": "41dbec54a00842561eb51e903e8388330741fc1f1d576c502e4df3ed1a1e1c00",
+      "size": 1986
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/preview_4x/guard_city_01_back_silver_guard_4x.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/preview_4x/guard_city_01_back_silver_guard_4x.png",
+      "sha256": "b584c9be9b865af8476019a9b17022ff717ef3fd1df03c99ad6c0878d95fa895",
+      "size": 1931
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/preview_4x/guard_city_01_front_arcane_guard_4x.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/preview_4x/guard_city_01_front_arcane_guard_4x.png",
+      "sha256": "935f91e4e56d9e6968d27921219b745dd4fa4198d1ad16a02d7f3aa6af40b232",
+      "size": 2348
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/preview_4x/guard_city_01_front_forest_guard_4x.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/preview_4x/guard_city_01_front_forest_guard_4x.png",
+      "sha256": "18515a6c3132d5127ca08ba4639aac0ae75453199cfdd479bb5bbf6a031f4c0e",
+      "size": 2342
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/preview_4x/guard_city_01_front_red_guard_4x.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/preview_4x/guard_city_01_front_red_guard_4x.png",
+      "sha256": "160ca0ab9286a68fe6432daff05cabd257a0bf2710fadf6172d4f0703c30152b",
+      "size": 2359
+    },
+    {
+      "source_relpath": "emblem/imported/trash_akalynth_character_recolor_pack_v2/characters/guard_city_01/variants/preview_4x/guard_city_01_front_silver_guard_4x.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/akalynth-character-recolor-pack-v2/characters/guard_city_01/variants/preview_4x/guard_city_01_front_silver_guard_4x.png",
+      "sha256": "802a9e8039a201d127ee0d7e8f1aaf05a73e511eba7eaa9590ec0b9dd297f853",
+      "size": 2347
+    }
+  ],
+  "execution_result_placeholder": {
+    "approved_by": null,
+    "approved_at": null,
+    "executed_by": null,
+    "executed_at": null,
+    "post_move_verification": null,
+    "rollback_performed": false
+  },
+  "template_sha256": "7b8725de8f90f0a2affa8566a57b0f3cd02eb46a88070f791b7b20e7a7d9cd33"
+}

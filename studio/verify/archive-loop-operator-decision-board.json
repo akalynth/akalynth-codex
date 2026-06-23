@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ARCHIVE_LOOP_OPERATOR_DECISION_BOARD_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "operator_decision_board_incomplete",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "approval_scope": "exact_plan_id_only",
+  "intent": "Turn the remaining archive-loop review queue into operator-readable decisions while preserving the no-mutation gate.",
+  "source_rule": "Decision cards are review prompts only. They do not approve source moves, archive creation, receipt writes, runtime sync, or deploys.",
+  "totals": {
+    "lane_card_count": 3,
+    "decision_card_count": 7,
+    "open_decision_card_count": 6,
+    "exact_plan_approval_card_count": 0,
+    "review_only_card_count": 7,
+    "source_only_family_card_count": 0,
+    "represented_file_count": 118,
+    "represented_unique_content_hashes": 113,
+    "source_only_family_mentions": 0,
+    "executable_decision_card_count": 0
+  },
+  "checks": {
+    "lane_cards_match_gap_closure_map": true,
+    "lane_cards_cover_review_queue": false,
+    "decision_cards_cover_review_queue": true,
+    "open_cards_match_review_queue": true,
+    "exact_approval_cards_match_runbook": true,
+    "all_decision_cards_have_prompt": true,
+    "all_decision_cards_have_next_verification": true,
+    "all_lane_cards_have_evidence": true,
+    "all_decision_cards_block_execution": true,
+    "source_tree_mutated_by_decision_board": false
+  },
+  "lane_cards": [
+    {
+      "lane": "studio_to_source_or_registry_review",
+      "priority_rank": 1,
+      "status": "open_review",
+      "blocker": "studio_to_source_or_registry_review_missing",
+      "may_execute": false,
+      "item_count": 1,
+      "file_count": 55,
+      "unique_content_hashes": 53,
+      "source_only_family_mentions": 0,
+      "next_action": "Promote the Studio-only image into assets-src, register it as Studio-only reference, or remove it from the working surface.",
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6",
+        "archive_loop_review_queue_report": "studio/verify/archive-loop-review-queue.json",
+        "archive_loop_review_queue_sha256": "d1490e341eb592b243b66df336ab73ef63d16c7ca64ec8aefa24608f81dc6fdb"
+      },
+      "item_ids": [
+        "non_source_drift_codex_studio"
+      ],
+      "sample_subjects": [
+        "codex_studio"
+      ]
+    },
+    {
+      "lane": "poster_reference_review",
+      "priority_rank": 2,
+      "status": "open_review",
+      "blocker": "poster_reference_review_missing",
+      "may_execute": false,
+      "item_count": 1,
+      "file_count": 7,
+      "unique_content_hashes": 7,
+      "source_only_family_mentions": 0,
+      "next_action": "Keep as poster/reference output unless a human selects a specific image for promotion.",
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6",
+        "archive_loop_review_queue_report": "studio/verify/archive-loop-review-queue.json",
+        "archive_loop_review_queue_sha256": "d1490e341eb592b243b66df336ab73ef63d16c7ca64ec8aefa24608f81dc6fdb"
+      },
+      "item_ids": [
+        "non_source_drift_codex_posters"
+      ],
+      "sample_subjects": [
+        "codex_posters"
+      ]
+    },
+    {
+      "lane": "freeze_reference_snapshot",
+      "priority_rank": 3,
+      "status": "evidence_freeze",
+      "blocker": "none_reference_snapshot",
+      "may_execute": false,
+      "item_count": 1,
+      "file_count": 15,
+      "unique_content_hashes": 15,
+      "source_only_family_mentions": 0,
+      "next_action": "Keep as frozen incoming reference evidence unless a specific file is promoted through source registration.",
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6",
+        "archive_loop_review_queue_report": "studio/verify/archive-loop-review-queue.json",
+        "archive_loop_review_queue_sha256": "d1490e341eb592b243b66df336ab73ef63d16c7ca64ec8aefa24608f81dc6fdb"
+      },
+      "item_ids": [
+        "non_source_drift_incoming_drop_studio"
+      ],
+      "sample_subjects": [
+        "incoming_drop_studio"
+      ]
+    }
+  ],
+  "decision_cards": [
+    {
+      "id": "non_source_drift_codex_studio",
+      "priority_rank": 25,
+      "lane": "studio_to_source_or_registry_review",
+      "item_type": "non_source_drift_root",
+      "status": "open_review",
+      "blocker": "studio_to_source_or_registry_review_missing",
+      "subject": "codex_studio",
+      "plan_id": null,
+      "file_count": 55,
+      "unique_content_hashes": 53,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "decision_prompt": "Should this non-source image root be promoted to source, retained as reference, or cleaned from the working surface?",
+      "allowed_decisions": [
+        "promote selected image into assets-src with metadata",
+        "register as Studio-only reference",
+        "remove from working surface after evidence review"
+      ],
+      "forbidden_actions": [
+        "move source files",
+        "delete source files",
+        "create _archive destination",
+        "write live execution receipt",
+        "sync runtime or Android outputs",
+        "deploy beta or production"
+      ],
+      "required_operator_action": "Decide whether this Studio image should be promoted into data/assets-src/sprites, registered as Studio-only reference, or removed from the working surface.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first.",
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      }
+    },
+    {
+      "id": "non_source_drift_debug_client_dist_atlas",
+      "priority_rank": 35,
+      "lane": "rebuild_or_prune_dist_output",
+      "item_type": "non_source_drift_root",
+      "status": "open_review",
+      "blocker": "rebuild_or_prune_dist_output_missing",
+      "subject": "debug_client_dist_atlas",
+      "plan_id": null,
+      "file_count": 4,
+      "unique_content_hashes": 4,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "decision_prompt": "Should this non-source image root be promoted to source, retained as reference, or cleaned from the working surface?",
+      "allowed_decisions": [
+        "review evidence only"
+      ],
+      "forbidden_actions": [
+        "move source files",
+        "delete source files",
+        "create _archive destination",
+        "write live execution receipt",
+        "sync runtime or Android outputs",
+        "deploy beta or production"
+      ],
+      "required_operator_action": "Reproduce from the build lane or prune as distribution output; do not use it as source authority.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first.",
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      }
+    },
+    {
+      "id": "non_source_drift_android_assets",
+      "priority_rank": 45,
+      "lane": "unknown_non_source_review",
+      "item_type": "non_source_drift_root",
+      "status": "open_review",
+      "blocker": "unknown_non_source_review_missing",
+      "subject": "android_assets",
+      "plan_id": null,
+      "file_count": 29,
+      "unique_content_hashes": 26,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "decision_prompt": "Should this non-source image root be promoted to source, retained as reference, or cleaned from the working surface?",
+      "allowed_decisions": [
+        "review evidence only"
+      ],
+      "forbidden_actions": [
+        "move source files",
+        "delete source files",
+        "create _archive destination",
+        "write live execution receipt",
+        "sync runtime or Android outputs",
+        "deploy beta or production"
+      ],
+      "required_operator_action": "Review manually before custody, archive, or cleanup claims.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first.",
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      }
+    },
+    {
+      "id": "non_source_drift_incoming_drop_studio",
+      "priority_rank": 45,
+      "lane": "freeze_reference_snapshot",
+      "item_type": "non_source_drift_root",
+      "status": "evidence_freeze",
+      "blocker": "none_reference_snapshot",
+      "subject": "incoming_drop_studio",
+      "plan_id": null,
+      "file_count": 15,
+      "unique_content_hashes": 15,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "decision_prompt": "Should this non-source image root be promoted to source, retained as reference, or cleaned from the working surface?",
+      "allowed_decisions": [
+        "keep frozen as incoming reference evidence",
+        "promote a selected file only through source registration"
+      ],
+      "forbidden_actions": [
+        "move source files",
+        "delete source files",
+        "create _archive destination",
+        "write live execution receipt",
+        "sync runtime or Android outputs",
+        "deploy beta or production"
+      ],
+      "required_operator_action": "Keep as original drop evidence. Promote a specific file only through a source-registration lane.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first.",
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      }
+    },
+    {
+      "id": "non_source_drift_codex_posters",
+      "priority_rank": 45,
+      "lane": "poster_reference_review",
+      "item_type": "non_source_drift_root",
+      "status": "open_review",
+      "blocker": "poster_reference_review_missing",
+      "subject": "codex_posters",
+      "plan_id": null,
+      "file_count": 7,
+      "unique_content_hashes": 7,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "decision_prompt": "Should this non-source image root be promoted to source, retained as reference, or cleaned from the working surface?",
+      "allowed_decisions": [
+        "keep as poster/reference output",
+        "promote one selected file through source registration"
+      ],
+      "forbidden_actions": [
+        "move source files",
+        "delete source files",
+        "create _archive destination",
+        "write live execution receipt",
+        "sync runtime or Android outputs",
+        "deploy beta or production"
+      ],
+      "required_operator_action": "Keep as poster/reference output unless a human selects a concrete image for source promotion.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first.",
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      }
+    },
+    {
+      "id": "non_source_drift_debug_client_public_atlas",
+      "priority_rank": 45,
+      "lane": "unknown_non_source_review",
+      "item_type": "non_source_drift_root",
+      "status": "open_review",
+      "blocker": "unknown_non_source_review_missing",
+      "subject": "debug_client_public_atlas",
+      "plan_id": null,
+      "file_count": 4,
+      "unique_content_hashes": 4,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "decision_prompt": "Should this non-source image root be promoted to source, retained as reference, or cleaned from the working surface?",
+      "allowed_decisions": [
+        "review evidence only"
+      ],
+      "forbidden_actions": [
+        "move source files",
+        "delete source files",
+        "create _archive destination",
+        "write live execution receipt",
+        "sync runtime or Android outputs",
+        "deploy beta or production"
+      ],
+      "required_operator_action": "Review manually before custody, archive, or cleanup claims.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first.",
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      }
+    },
+    {
+      "id": "non_source_drift_game_built_assets",
+      "priority_rank": 45,
+      "lane": "unknown_non_source_review",
+      "item_type": "non_source_drift_root",
+      "status": "open_review",
+      "blocker": "unknown_non_source_review_missing",
+      "subject": "game_built_assets",
+      "plan_id": null,
+      "file_count": 4,
+      "unique_content_hashes": 4,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "decision_prompt": "Should this non-source image root be promoted to source, retained as reference, or cleaned from the working surface?",
+      "allowed_decisions": [
+        "review evidence only"
+      ],
+      "forbidden_actions": [
+        "move source files",
+        "delete source files",
+        "create _archive destination",
+        "write live execution receipt",
+        "sync runtime or Android outputs",
+        "deploy beta or production"
+      ],
+      "required_operator_action": "Review manually before custody, archive, or cleanup claims.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first.",
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      }
+    }
+  ],
+  "recommended_sequence": [
+    "Review source-only family cards before assuming source content is archiveable.",
+    "Resolve non-source drift cards as promote, retain, or clean decisions outside archive execution.",
+    "Keep exact-plan approval cards blocked unless the human approves one exact phrase in a separate execution lane.",
+    "Rerun the mapper after any decision and verify this board still has zero executable cards."
+  ],
+  "report_sha256": "c45f1420eb89492977f546c59c756e68aa5fcae8db55cb8717932f9f73b7f822"
+}

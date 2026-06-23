@@ -1,0 +1,1177 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ASSET_ADD_LANES_V1",
+  "generated_at": "2026-06-23T11:22:35.646Z",
+  "generated_by": "akalynth-codex/tools/map-asset-add-lanes.mjs",
+  "intent": "Map the eight Studio asset add lanes to assets-src source families for promotion metadata work.",
+  "source_reports": {
+    "family_map": "studio/verify/assets-src-family-map.json",
+    "egress_index": "studio/verify/assets-src-egress-index.json",
+    "gap_audit_lanes": "studio/gap-audit.js"
+  },
+  "totals": {
+    "lane_count": 8,
+    "studio_surface_image_files": 158,
+    "studio_lane_declared_asset_count": 158,
+    "studio_lane_sample_asset_count": 93,
+    "studio_asset_count": 158,
+    "source_family_count": 38,
+    "source_family_count_mapped": 38,
+    "source_image_files_mapped": 3488,
+    "source_unique_content_hashes_mapped": 2995,
+    "unmapped_source_families": 0,
+    "multi_lane_family_count": 1,
+    "mixed_lane_family_count": 2
+  },
+  "checks": {
+    "all_lanes_present": true,
+    "all_source_families_assigned": true,
+    "studio_lane_counts_match_gap_audit": true,
+    "family_map_totals_reconcile": true,
+    "every_lane_has_source_families": true,
+    "every_lane_has_studio_assets": true,
+    "studio_lane_declared_count_matches_gap_audit": true
+  },
+  "family_assignments": [
+    {
+      "prefix": "characters/high_city_character_pack_v2_tibia_like",
+      "bucket": "character_system_source",
+      "lanes": [
+        "lane_characters"
+      ],
+      "file_count": 1395
+    },
+    {
+      "prefix": "emblem/imported/trash_high_city_character_pack_v2_tibia_like",
+      "bucket": "archive_review_import_mirror",
+      "lanes": [
+        "lane_characters"
+      ],
+      "file_count": 1100
+    },
+    {
+      "prefix": "characters/akalynth_character_system_v3",
+      "bucket": "character_system_source",
+      "lanes": [
+        "lane_characters"
+      ],
+      "file_count": 393
+    },
+    {
+      "prefix": "emblem/imported/trash_akalynth_character_system_v3",
+      "bucket": "archive_review_import_mirror",
+      "lanes": [
+        "lane_characters"
+      ],
+      "file_count": 202
+    },
+    {
+      "prefix": "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+      "bucket": "archive_review_import_mirror",
+      "lanes": [
+        "lane_characters",
+        "lane_creatures",
+        "lane_items_rewards",
+        "lane_terrain",
+        "lane_structures",
+        "lane_props",
+        "lane_ui_effects"
+      ],
+      "file_count": 133
+    },
+    {
+      "prefix": "characters/akalynth_character_recolor_pack_v2",
+      "bucket": "character_system_source",
+      "lanes": [
+        "lane_characters"
+      ],
+      "file_count": 48
+    },
+    {
+      "prefix": "emblem/imported/trash_akalynth_character_recolor_pack_v2",
+      "bucket": "archive_review_import_mirror",
+      "lanes": [
+        "lane_characters"
+      ],
+      "file_count": 34
+    },
+    {
+      "prefix": "emblem/imported/legacy_akalynth_props_base",
+      "bucket": "legacy_prop_promotion_review",
+      "lanes": [
+        "lane_props"
+      ],
+      "file_count": 27
+    },
+    {
+      "prefix": "top_level/item",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_items_rewards"
+      ],
+      "file_count": 20
+    },
+    {
+      "prefix": "high_city",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_props"
+      ],
+      "file_count": 13
+    },
+    {
+      "prefix": "top_level/ui",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_ui_effects"
+      ],
+      "file_count": 13
+    },
+    {
+      "prefix": "city_objects",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_props"
+      ],
+      "file_count": 11
+    },
+    {
+      "prefix": "art",
+      "bucket": "lore_reference_review",
+      "lanes": [
+        "lane_lore_plates"
+      ],
+      "file_count": 9
+    },
+    {
+      "prefix": "top_level/effect",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_ui_effects"
+      ],
+      "file_count": 9
+    },
+    {
+      "prefix": "swamp",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_props"
+      ],
+      "file_count": 8
+    },
+    {
+      "prefix": "top_level/swamp",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_props"
+      ],
+      "file_count": 8
+    },
+    {
+      "prefix": "top_level/tile",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_terrain"
+      ],
+      "file_count": 7
+    },
+    {
+      "prefix": "interior",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_props"
+      ],
+      "file_count": 6
+    },
+    {
+      "prefix": "characters/AKALYNTH_CHARACTER_SYSTEM_V3_STATIC_ACCEPTANCE_V1",
+      "bucket": "character_system_source",
+      "lanes": [
+        "lane_characters"
+      ],
+      "file_count": 5
+    },
+    {
+      "prefix": "creatures",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_creatures"
+      ],
+      "file_count": 5
+    },
+    {
+      "prefix": "castle",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_props"
+      ],
+      "file_count": 4
+    },
+    {
+      "prefix": "data/assets-built/atlas",
+      "bucket": "derived_inside_source_review",
+      "lanes": [
+        "lane_lore_plates"
+      ],
+      "file_count": 4
+    },
+    {
+      "prefix": "doors",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_structures"
+      ],
+      "file_count": 4
+    },
+    {
+      "prefix": "roofs",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_structures"
+      ],
+      "file_count": 4
+    },
+    {
+      "prefix": "terrain",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_terrain"
+      ],
+      "file_count": 4
+    },
+    {
+      "prefix": "walls",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_structures"
+      ],
+      "file_count": 4
+    },
+    {
+      "prefix": "emblem",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_props"
+      ],
+      "file_count": 3
+    },
+    {
+      "prefix": "sewer",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_props"
+      ],
+      "file_count": 3
+    },
+    {
+      "prefix": "market",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_props"
+      ],
+      "file_count": 2
+    },
+    {
+      "prefix": "top_level/creature",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_creatures"
+      ],
+      "file_count": 2
+    },
+    {
+      "prefix": "apps/debug-client/src/assets",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_lore_plates"
+      ],
+      "file_count": 1
+    },
+    {
+      "prefix": "characters/character_system_v3_contact_sheet_4x.png",
+      "bucket": "character_system_source",
+      "lanes": [
+        "lane_characters"
+      ],
+      "file_count": 1
+    },
+    {
+      "prefix": "characters/walk_animation_v1_contact_sheet_4x.png",
+      "bucket": "character_system_source",
+      "lanes": [
+        "lane_characters"
+      ],
+      "file_count": 1
+    },
+    {
+      "prefix": "emblem/imported/trash_character_system_loose_contact_sheets",
+      "bucket": "archive_review_import_mirror",
+      "lanes": [
+        "lane_characters"
+      ],
+      "file_count": 1
+    },
+    {
+      "prefix": "props",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_props"
+      ],
+      "file_count": 1
+    },
+    {
+      "prefix": "top_level/ground",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_terrain"
+      ],
+      "file_count": 1
+    },
+    {
+      "prefix": "top_level/prop",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_props"
+      ],
+      "file_count": 1
+    },
+    {
+      "prefix": "top_level/structure",
+      "bucket": "active_source_lane",
+      "lanes": [
+        "lane_structures"
+      ],
+      "file_count": 1
+    }
+  ],
+  "lanes": [
+    {
+      "id": "lane_characters",
+      "title": "Playable/NPC character roster",
+      "count": 12,
+      "owner": "content-designer + gameplay-loop-designer",
+      "status": "Ready to map",
+      "next": "Map each to NPC/combat role, dialogue hook, spawn bounds, behavior preset, and receipt events.",
+      "studio_assets": [
+        "characters/base_human_male_01.png",
+        "characters/guard_city_01.png",
+        "characters/blacksmith_01.png",
+        "characters/mage_apprentice_01.png",
+        "characters/merchant_food_01.png",
+        "characters/merchant_cloth_01.png",
+        "characters/priest_01.png",
+        "characters/rat_hunter_01.png",
+        "characters/sewer_worker_01.png",
+        "characters/noble_male_01.png",
+        "characters/castle_guard_red_01.png",
+        "characters/skeleton_warrior_01.png"
+      ],
+      "studio_asset_sample_count": 12,
+      "studio_asset_count": 12,
+      "source_family_prefixes": [
+        "characters/akalynth_character_recolor_pack_v2",
+        "characters/akalynth_character_system_v3",
+        "characters/AKALYNTH_CHARACTER_SYSTEM_V3_STATIC_ACCEPTANCE_V1",
+        "characters/character_system_v3_contact_sheet_4x.png",
+        "characters/high_city_character_pack_v2_tibia_like",
+        "characters/walk_animation_v1_contact_sheet_4x.png",
+        "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+        "emblem/imported/trash_akalynth_character_recolor_pack_v2",
+        "emblem/imported/trash_akalynth_character_system_v3",
+        "emblem/imported/trash_character_system_loose_contact_sheets",
+        "emblem/imported/trash_high_city_character_pack_v2_tibia_like"
+      ],
+      "source_families": [
+        {
+          "id": "characters_high_city_character_pack_v2_tibia_like",
+          "prefix": "characters/high_city_character_pack_v2_tibia_like",
+          "title": "High City Character Pack V2 Tibia Like",
+          "bucket": "character_system_source",
+          "file_count": 1395,
+          "unique_content_hashes": 1100,
+          "studio_match_unique_hashes": 13,
+          "source_only_unique_hashes": 1087,
+          "filesystem_egress_unique_content_hashes": 13,
+          "filesystem_target_root_count": 1
+        },
+        {
+          "id": "emblem_imported_trash_high_city_character_pack_v2_tibia_like",
+          "prefix": "emblem/imported/trash_high_city_character_pack_v2_tibia_like",
+          "title": "Trash / High City Character Pack V2 Tibia Like",
+          "bucket": "archive_review_import_mirror",
+          "file_count": 1100,
+          "unique_content_hashes": 1100,
+          "studio_match_unique_hashes": 13,
+          "source_only_unique_hashes": 1087,
+          "filesystem_egress_unique_content_hashes": 13,
+          "filesystem_target_root_count": 1
+        },
+        {
+          "id": "characters_akalynth_character_system_v3",
+          "prefix": "characters/akalynth_character_system_v3",
+          "title": "Akalynth Character System V3",
+          "bucket": "character_system_source",
+          "file_count": 393,
+          "unique_content_hashes": 202,
+          "studio_match_unique_hashes": 4,
+          "source_only_unique_hashes": 198,
+          "filesystem_egress_unique_content_hashes": 4,
+          "filesystem_target_root_count": 1
+        },
+        {
+          "id": "emblem_imported_trash_akalynth_character_system_v3",
+          "prefix": "emblem/imported/trash_akalynth_character_system_v3",
+          "title": "Trash / Akalynth Character System V3",
+          "bucket": "archive_review_import_mirror",
+          "file_count": 202,
+          "unique_content_hashes": 202,
+          "studio_match_unique_hashes": 4,
+          "source_only_unique_hashes": 198,
+          "filesystem_egress_unique_content_hashes": 4,
+          "filesystem_target_root_count": 1
+        },
+        {
+          "id": "emblem_imported_desktop_akalynth_main_assets_src_sprites",
+          "prefix": "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+          "title": "Desktop Akalynth Main Assets Src Sprites",
+          "bucket": "archive_review_import_mirror",
+          "file_count": 133,
+          "unique_content_hashes": 133,
+          "studio_match_unique_hashes": 116,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 133,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "characters_akalynth_character_recolor_pack_v2",
+          "prefix": "characters/akalynth_character_recolor_pack_v2",
+          "title": "Akalynth Character Recolor Pack V2",
+          "bucket": "character_system_source",
+          "file_count": 48,
+          "unique_content_hashes": 41,
+          "studio_match_unique_hashes": 0,
+          "source_only_unique_hashes": 41,
+          "filesystem_egress_unique_content_hashes": 0,
+          "filesystem_target_root_count": 0
+        },
+        {
+          "id": "emblem_imported_trash_akalynth_character_recolor_pack_v2",
+          "prefix": "emblem/imported/trash_akalynth_character_recolor_pack_v2",
+          "title": "Trash / Akalynth Character Recolor Pack V2",
+          "bucket": "archive_review_import_mirror",
+          "file_count": 34,
+          "unique_content_hashes": 34,
+          "studio_match_unique_hashes": 0,
+          "source_only_unique_hashes": 34,
+          "filesystem_egress_unique_content_hashes": 0,
+          "filesystem_target_root_count": 0
+        },
+        {
+          "id": "characters_AKALYNTH_CHARACTER_SYSTEM_V3_STATIC_ACCEPTANCE_V1",
+          "prefix": "characters/AKALYNTH_CHARACTER_SYSTEM_V3_STATIC_ACCEPTANCE_V1",
+          "title": "AKALYNTH CHARACTER SYSTEM V3 STATIC ACCEPTANCE V1",
+          "bucket": "character_system_source",
+          "file_count": 5,
+          "unique_content_hashes": 5,
+          "studio_match_unique_hashes": 0,
+          "source_only_unique_hashes": 5,
+          "filesystem_egress_unique_content_hashes": 0,
+          "filesystem_target_root_count": 0
+        },
+        {
+          "id": "characters_character_system_v3_contact_sheet_4x_png",
+          "prefix": "characters/character_system_v3_contact_sheet_4x.png",
+          "title": "Character System V3 Contact Sheet 4x.Png",
+          "bucket": "character_system_source",
+          "file_count": 1,
+          "unique_content_hashes": 1,
+          "studio_match_unique_hashes": 0,
+          "source_only_unique_hashes": 1,
+          "filesystem_egress_unique_content_hashes": 0,
+          "filesystem_target_root_count": 0
+        },
+        {
+          "id": "characters_walk_animation_v1_contact_sheet_4x_png",
+          "prefix": "characters/walk_animation_v1_contact_sheet_4x.png",
+          "title": "Walk Animation V1 Contact Sheet 4x.Png",
+          "bucket": "character_system_source",
+          "file_count": 1,
+          "unique_content_hashes": 1,
+          "studio_match_unique_hashes": 0,
+          "source_only_unique_hashes": 1,
+          "filesystem_egress_unique_content_hashes": 0,
+          "filesystem_target_root_count": 0
+        },
+        {
+          "id": "emblem_imported_trash_character_system_loose_contact_sheets",
+          "prefix": "emblem/imported/trash_character_system_loose_contact_sheets",
+          "title": "Trash / Character System Loose Contact Sheets",
+          "bucket": "archive_review_import_mirror",
+          "file_count": 1,
+          "unique_content_hashes": 1,
+          "studio_match_unique_hashes": 0,
+          "source_only_unique_hashes": 1,
+          "filesystem_egress_unique_content_hashes": 0,
+          "filesystem_target_root_count": 0
+        }
+      ],
+      "source_family_count": 11,
+      "source_file_count": 3313,
+      "source_unique_content_hashes": 2820,
+      "promotion_status": "studio_and_archive_mirror_mapped"
+    },
+    {
+      "id": "lane_creatures",
+      "title": "Starter creatures and pets",
+      "count": 9,
+      "owner": "content-designer + anti-cheat-steward",
+      "status": "Needs spawn/drop metadata",
+      "next": "Define spawn tables, hostile/passive role, drop table, XP, heat thresholds, and death/loot receipts.",
+      "studio_assets": [
+        "swamp__bog_slime.png",
+        "swamp__frog.png",
+        "creature__rookguard_training_slime.png",
+        "creatures__skeleton.png",
+        "creatures/cat_01.png",
+        "creatures/dog_01.png",
+        "creatures/rat_small_01.png",
+        "creatures/rat_large_01.png",
+        "creatures/diseased_rat_01.png"
+      ],
+      "studio_asset_sample_count": 9,
+      "studio_asset_count": 9,
+      "source_family_prefixes": [
+        "creatures",
+        "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+        "top_level/creature"
+      ],
+      "source_families": [
+        {
+          "id": "emblem_imported_desktop_akalynth_main_assets_src_sprites",
+          "prefix": "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+          "title": "Desktop Akalynth Main Assets Src Sprites",
+          "bucket": "archive_review_import_mirror",
+          "file_count": 133,
+          "unique_content_hashes": 133,
+          "studio_match_unique_hashes": 116,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 133,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "creatures",
+          "prefix": "creatures",
+          "title": "Creatures",
+          "bucket": "active_source_lane",
+          "file_count": 5,
+          "unique_content_hashes": 5,
+          "studio_match_unique_hashes": 0,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 5,
+          "filesystem_target_root_count": 5
+        },
+        {
+          "id": "top_level_creature",
+          "prefix": "top_level/creature",
+          "title": "Creature",
+          "bucket": "active_source_lane",
+          "file_count": 2,
+          "unique_content_hashes": 2,
+          "studio_match_unique_hashes": 2,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 2,
+          "filesystem_target_root_count": 6
+        }
+      ],
+      "source_family_count": 3,
+      "source_file_count": 140,
+      "source_unique_content_hashes": 140,
+      "promotion_status": "studio_and_archive_mirror_mapped"
+    },
+    {
+      "id": "lane_items_rewards",
+      "title": "Items, loot, tokens, and crafting parts",
+      "count": 20,
+      "owner": "economy-steward + receipt-chain-steward",
+      "status": "Needs economy budget",
+      "next": "Classify consumable/resource/quest/currency-like items and bind every grant/spend to receipts.",
+      "studio_assets": [
+        "item__ashglass_shard.png",
+        "item__charred_shipment_plate.png",
+        "item__city_rat_goo.png",
+        "item__healing_herb.png",
+        "item__keystone_token.png",
+        "item__ley_mote.png",
+        "item__mark_token.png",
+        "item__pilgrim_mark.png",
+        "item__ration.png",
+        "item__refined_ley_mote.png",
+        "item__soulsteel_frame.png",
+        "item__training_slime_goo.png"
+      ],
+      "studio_asset_sample_count": 12,
+      "studio_asset_count": 20,
+      "source_family_prefixes": [
+        "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+        "top_level/item"
+      ],
+      "source_families": [
+        {
+          "id": "emblem_imported_desktop_akalynth_main_assets_src_sprites",
+          "prefix": "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+          "title": "Desktop Akalynth Main Assets Src Sprites",
+          "bucket": "archive_review_import_mirror",
+          "file_count": 133,
+          "unique_content_hashes": 133,
+          "studio_match_unique_hashes": 116,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 133,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "top_level_item",
+          "prefix": "top_level/item",
+          "title": "Item",
+          "bucket": "active_source_lane",
+          "file_count": 20,
+          "unique_content_hashes": 20,
+          "studio_match_unique_hashes": 20,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 20,
+          "filesystem_target_root_count": 6
+        }
+      ],
+      "source_family_count": 2,
+      "source_file_count": 153,
+      "source_unique_content_hashes": 153,
+      "promotion_status": "studio_and_archive_mirror_mapped"
+    },
+    {
+      "id": "lane_terrain",
+      "title": "Ground, terrain, water, tutorial tiles",
+      "count": 17,
+      "owner": "map-and-lore-builder + protocol-guardian",
+      "status": "Needs collision contract",
+      "next": "Declare walkable/water/gate/tutorial behavior explicitly before map compiler/server use.",
+      "studio_assets": [
+        "ground__grass.png",
+        "swamp__bog_water.png",
+        "swamp__mud.png",
+        "tile__grass.png",
+        "tile__stone_ground.png",
+        "tile__water.png",
+        "tile__gate_to_azura.png",
+        "tile__tutorial_move.png",
+        "tile__tutorial_chat.png",
+        "tile__tutorial_tem.png",
+        "terrain/floor_cobble_01.png",
+        "terrain/floor_stone_01.png"
+      ],
+      "studio_asset_sample_count": 12,
+      "studio_asset_count": 17,
+      "source_family_prefixes": [
+        "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+        "terrain",
+        "top_level/ground",
+        "top_level/tile"
+      ],
+      "source_families": [
+        {
+          "id": "emblem_imported_desktop_akalynth_main_assets_src_sprites",
+          "prefix": "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+          "title": "Desktop Akalynth Main Assets Src Sprites",
+          "bucket": "archive_review_import_mirror",
+          "file_count": 133,
+          "unique_content_hashes": 133,
+          "studio_match_unique_hashes": 116,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 133,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "top_level_tile",
+          "prefix": "top_level/tile",
+          "title": "Tile",
+          "bucket": "active_source_lane",
+          "file_count": 7,
+          "unique_content_hashes": 7,
+          "studio_match_unique_hashes": 7,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 7,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "terrain",
+          "prefix": "terrain",
+          "title": "Terrain",
+          "bucket": "active_source_lane",
+          "file_count": 4,
+          "unique_content_hashes": 4,
+          "studio_match_unique_hashes": 4,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 4,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "top_level_ground",
+          "prefix": "top_level/ground",
+          "title": "Ground",
+          "bucket": "active_source_lane",
+          "file_count": 1,
+          "unique_content_hashes": 1,
+          "studio_match_unique_hashes": 1,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 1,
+          "filesystem_target_root_count": 6
+        }
+      ],
+      "source_family_count": 4,
+      "source_file_count": 145,
+      "source_unique_content_hashes": 145,
+      "promotion_status": "studio_and_archive_mirror_mapped"
+    },
+    {
+      "id": "lane_structures",
+      "title": "Walls, roofs, doors, structures",
+      "count": 16,
+      "owner": "map-and-lore-builder + content-designer",
+      "status": "Needs interaction metadata",
+      "next": "Attach block-sight, collider, door toggle, access-control, and reversible-apply metadata.",
+      "studio_assets": [
+        "structures__stone_wall.png",
+        "walls/wall_stone_north.png",
+        "walls/wall_stone_south.png",
+        "walls/wall_stone_corner_ne.png",
+        "walls/wall_stone_corner_nw.png",
+        "doors/door_wood_closed_east.png",
+        "doors/door_wood_open_east.png",
+        "doors/door_wood_closed_south.png",
+        "doors/door_wood_open_south.png",
+        "roofs/roof_castle_overlay.png",
+        "roofs/roof_red_large_overlay.png",
+        "roofs/roof_red_small_overlay.png"
+      ],
+      "studio_asset_sample_count": 12,
+      "studio_asset_count": 16,
+      "source_family_prefixes": [
+        "doors",
+        "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+        "roofs",
+        "top_level/structure",
+        "walls"
+      ],
+      "source_families": [
+        {
+          "id": "emblem_imported_desktop_akalynth_main_assets_src_sprites",
+          "prefix": "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+          "title": "Desktop Akalynth Main Assets Src Sprites",
+          "bucket": "archive_review_import_mirror",
+          "file_count": 133,
+          "unique_content_hashes": 133,
+          "studio_match_unique_hashes": 116,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 133,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "doors",
+          "prefix": "doors",
+          "title": "Doors",
+          "bucket": "active_source_lane",
+          "file_count": 4,
+          "unique_content_hashes": 4,
+          "studio_match_unique_hashes": 4,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 4,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "roofs",
+          "prefix": "roofs",
+          "title": "Roofs",
+          "bucket": "active_source_lane",
+          "file_count": 4,
+          "unique_content_hashes": 4,
+          "studio_match_unique_hashes": 4,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 4,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "walls",
+          "prefix": "walls",
+          "title": "Walls",
+          "bucket": "active_source_lane",
+          "file_count": 4,
+          "unique_content_hashes": 4,
+          "studio_match_unique_hashes": 4,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 4,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "top_level_structure",
+          "prefix": "top_level/structure",
+          "title": "Structure",
+          "bucket": "active_source_lane",
+          "file_count": 1,
+          "unique_content_hashes": 1,
+          "studio_match_unique_hashes": 1,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 1,
+          "filesystem_target_root_count": 6
+        }
+      ],
+      "source_family_count": 5,
+      "source_file_count": 146,
+      "source_unique_content_hashes": 146,
+      "promotion_status": "studio_and_archive_mirror_mapped"
+    },
+    {
+      "id": "lane_props",
+      "title": "World props and placeable objects",
+      "count": 47,
+      "owner": "map-and-lore-builder + classic-32-art-pipeline",
+      "status": "Ready for prefab expansion",
+      "next": "Build addable prefab families: plaza, fishing post, notice board, shrine, shop, sewer room.",
+      "studio_assets": [
+        "props__tree.png",
+        "swamp__dead_tree.png",
+        "swamp__log.png",
+        "swamp__mushroom.png",
+        "swamp__reeds.png",
+        "city_objects/bench.png",
+        "city_objects/fountain.png",
+        "city_objects/notice_board.png",
+        "city_objects/rookguard_amber_lantern.png",
+        "city_objects/rookguard_fishing_post.png",
+        "city_objects/rookguard_supply_sack.png",
+        "interior/bookshelf.png"
+      ],
+      "studio_asset_sample_count": 12,
+      "studio_asset_count": 47,
+      "source_family_prefixes": [
+        "castle",
+        "city_objects",
+        "emblem",
+        "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+        "emblem/imported/legacy_akalynth_props_base",
+        "high_city",
+        "interior",
+        "market",
+        "props",
+        "sewer",
+        "swamp",
+        "top_level/prop",
+        "top_level/swamp"
+      ],
+      "source_families": [
+        {
+          "id": "emblem_imported_desktop_akalynth_main_assets_src_sprites",
+          "prefix": "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+          "title": "Desktop Akalynth Main Assets Src Sprites",
+          "bucket": "archive_review_import_mirror",
+          "file_count": 133,
+          "unique_content_hashes": 133,
+          "studio_match_unique_hashes": 116,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 133,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "emblem_imported_legacy_akalynth_props_base",
+          "prefix": "emblem/imported/legacy_akalynth_props_base",
+          "title": "Legacy Akalynth Props Base",
+          "bucket": "legacy_prop_promotion_review",
+          "file_count": 27,
+          "unique_content_hashes": 27,
+          "studio_match_unique_hashes": 0,
+          "source_only_unique_hashes": 27,
+          "filesystem_egress_unique_content_hashes": 0,
+          "filesystem_target_root_count": 0
+        },
+        {
+          "id": "high_city",
+          "prefix": "high_city",
+          "title": "High City",
+          "bucket": "active_source_lane",
+          "file_count": 13,
+          "unique_content_hashes": 13,
+          "studio_match_unique_hashes": 13,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 13,
+          "filesystem_target_root_count": 5
+        },
+        {
+          "id": "city_objects",
+          "prefix": "city_objects",
+          "title": "City Objects",
+          "bucket": "active_source_lane",
+          "file_count": 11,
+          "unique_content_hashes": 11,
+          "studio_match_unique_hashes": 11,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 11,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "swamp",
+          "prefix": "swamp",
+          "title": "Swamp",
+          "bucket": "active_source_lane",
+          "file_count": 8,
+          "unique_content_hashes": 8,
+          "studio_match_unique_hashes": 8,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 8,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "top_level_swamp",
+          "prefix": "top_level/swamp",
+          "title": "Swamp",
+          "bucket": "active_source_lane",
+          "file_count": 8,
+          "unique_content_hashes": 8,
+          "studio_match_unique_hashes": 8,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 8,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "interior",
+          "prefix": "interior",
+          "title": "Interior",
+          "bucket": "active_source_lane",
+          "file_count": 6,
+          "unique_content_hashes": 6,
+          "studio_match_unique_hashes": 6,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 6,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "castle",
+          "prefix": "castle",
+          "title": "Castle",
+          "bucket": "active_source_lane",
+          "file_count": 4,
+          "unique_content_hashes": 4,
+          "studio_match_unique_hashes": 4,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 4,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "emblem",
+          "prefix": "emblem",
+          "title": "Emblem",
+          "bucket": "active_source_lane",
+          "file_count": 3,
+          "unique_content_hashes": 3,
+          "studio_match_unique_hashes": 0,
+          "source_only_unique_hashes": 3,
+          "filesystem_egress_unique_content_hashes": 0,
+          "filesystem_target_root_count": 0
+        },
+        {
+          "id": "sewer",
+          "prefix": "sewer",
+          "title": "Sewer",
+          "bucket": "active_source_lane",
+          "file_count": 3,
+          "unique_content_hashes": 3,
+          "studio_match_unique_hashes": 3,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 3,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "market",
+          "prefix": "market",
+          "title": "Market",
+          "bucket": "active_source_lane",
+          "file_count": 2,
+          "unique_content_hashes": 2,
+          "studio_match_unique_hashes": 2,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 2,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "props",
+          "prefix": "props",
+          "title": "Props",
+          "bucket": "active_source_lane",
+          "file_count": 1,
+          "unique_content_hashes": 1,
+          "studio_match_unique_hashes": 1,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 1,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "top_level_prop",
+          "prefix": "top_level/prop",
+          "title": "Prop",
+          "bucket": "active_source_lane",
+          "file_count": 1,
+          "unique_content_hashes": 1,
+          "studio_match_unique_hashes": 1,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 1,
+          "filesystem_target_root_count": 6
+        }
+      ],
+      "source_family_count": 13,
+      "source_file_count": 220,
+      "source_unique_content_hashes": 220,
+      "promotion_status": "mixed_lane_source_family"
+    },
+    {
+      "id": "lane_ui_effects",
+      "title": "HUD chrome and chronicle effects",
+      "count": 22,
+      "owner": "debug-client + observability-steward",
+      "status": "Needs UI state map",
+      "next": "Map HUD states, disabled/pressed variants, and receipt/chronicle event visual triggers.",
+      "studio_assets": [
+        "ui_panel_frame.png",
+        "ui_dock_frame.png",
+        "ui_dpad_frame.png",
+        "ui_action_ring.png",
+        "ui_action_ring_danger.png",
+        "ui_hp_fill.png",
+        "ui_mp_fill.png",
+        "effect__chronicle_create.png",
+        "effect__chronicle_combat.png",
+        "effect__chronicle_pickup.png",
+        "effect__chronicle_zone.png",
+        "effect__chronicle_world.png"
+      ],
+      "studio_asset_sample_count": 12,
+      "studio_asset_count": 22,
+      "source_family_prefixes": [
+        "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+        "top_level/effect",
+        "top_level/ui"
+      ],
+      "source_families": [
+        {
+          "id": "emblem_imported_desktop_akalynth_main_assets_src_sprites",
+          "prefix": "emblem/imported/desktop_akalynth_main_assets_src_sprites",
+          "title": "Desktop Akalynth Main Assets Src Sprites",
+          "bucket": "archive_review_import_mirror",
+          "file_count": 133,
+          "unique_content_hashes": 133,
+          "studio_match_unique_hashes": 116,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 133,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "top_level_ui",
+          "prefix": "top_level/ui",
+          "title": "Ui",
+          "bucket": "active_source_lane",
+          "file_count": 13,
+          "unique_content_hashes": 13,
+          "studio_match_unique_hashes": 13,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 13,
+          "filesystem_target_root_count": 5
+        },
+        {
+          "id": "top_level_effect",
+          "prefix": "top_level/effect",
+          "title": "Effect",
+          "bucket": "active_source_lane",
+          "file_count": 9,
+          "unique_content_hashes": 9,
+          "studio_match_unique_hashes": 9,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 9,
+          "filesystem_target_root_count": 6
+        }
+      ],
+      "source_family_count": 3,
+      "source_file_count": 155,
+      "source_unique_content_hashes": 155,
+      "promotion_status": "studio_and_archive_mirror_mapped"
+    },
+    {
+      "id": "lane_lore_plates",
+      "title": "Lore plates and atlas sheets not direct sprites",
+      "count": 15,
+      "owner": "classic-32-art-pipeline + map-and-lore-builder",
+      "status": "Needs projection decision",
+      "next": "Decide whether each belongs in public lore library, Studio reference, or atlas/runtime evidence only.",
+      "studio_assets": [
+        "art/HighCity.png",
+        "art/world.png",
+        "art/Heros.png",
+        "art/ARTIFACTS.png",
+        "art/FACTIONS.png",
+        "art/Memory.png",
+        "art/Witness.png",
+        "art/The_Void.png",
+        "art/dungones.png",
+        "data/assets-built/atlas/world.png",
+        "data/assets-built/atlas/items.png",
+        "data/assets-built/atlas/ui.png"
+      ],
+      "studio_asset_sample_count": 12,
+      "studio_asset_count": 15,
+      "source_family_prefixes": [
+        "apps/debug-client/src/assets",
+        "art",
+        "data/assets-built/atlas"
+      ],
+      "source_families": [
+        {
+          "id": "art",
+          "prefix": "art",
+          "title": "Art",
+          "bucket": "lore_reference_review",
+          "file_count": 9,
+          "unique_content_hashes": 9,
+          "studio_match_unique_hashes": 9,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 9,
+          "filesystem_target_root_count": 3
+        },
+        {
+          "id": "data_assets_built_atlas",
+          "prefix": "data/assets-built/atlas",
+          "title": "Atlas",
+          "bucket": "derived_inside_source_review",
+          "file_count": 4,
+          "unique_content_hashes": 4,
+          "studio_match_unique_hashes": 4,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 4,
+          "filesystem_target_root_count": 6
+        },
+        {
+          "id": "apps_debug_client_src_assets",
+          "prefix": "apps/debug-client/src/assets",
+          "title": "Assets",
+          "bucket": "active_source_lane",
+          "file_count": 1,
+          "unique_content_hashes": 1,
+          "studio_match_unique_hashes": 1,
+          "source_only_unique_hashes": 0,
+          "filesystem_egress_unique_content_hashes": 1,
+          "filesystem_target_root_count": 4
+        }
+      ],
+      "source_family_count": 3,
+      "source_file_count": 14,
+      "source_unique_content_hashes": 14,
+      "promotion_status": "lore_projection_pending"
+    }
+  ],
+  "status": "mapped_complete",
+  "complete": true,
+  "report_sha256": "e6e1fd56008c120716e97266177a192a1529c3e1a8b716ba0bb497de92b8da22"
+}

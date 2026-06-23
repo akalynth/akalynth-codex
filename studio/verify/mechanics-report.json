@@ -1,0 +1,26 @@
+{
+  "schema_version": "studio-mechanics-report/v1",
+  "generated_at": "2026-06-23T11:22:16.691Z",
+  "ok": true,
+  "lane_contracts": {
+    "status": "PASS",
+    "path": "studio/data/mechanics/lane-contracts.json",
+    "lanes_declared": 8,
+    "lanes_expected": 8,
+    "schema_errors": [],
+    "coverage_findings": []
+  },
+  "item_economy": {
+    "status": "PASS",
+    "path": "studio/data/mechanics/item-economy.json",
+    "items_declared": 20,
+    "items_expected": 20,
+    "schema_errors": [],
+    "coverage_findings": []
+  },
+  "gaps_resolved": [
+    "gap_map_metadata",
+    "gap_economy_heat"
+  ],
+  "classic_32_rule": "never infer walkability from pixels"
+}

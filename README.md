@@ -27,10 +27,16 @@ public site or claim runtime creator tools have shipped.
 
 | Surface | Audience | Sees |
 |---|---|---|
+| **Studio/Codex** | studio/operator/agents | imported full dropped system: Index, Codex, Play, Atlas, Behavior, Agent loop, ledger prototype, map-builder docs |
 | **Public Codex** (L1) | players | `public_projection` only (~10–20%) |
 | **Builder Codex** (L2) | studio | `world` design + related + status |
 | **Operator Codex** (L3) | you | `lineage`, `evidence`, `packets`, everything |
 | **Agent Codex** | AI workers | `status` + assigned `packets` (what is safe to act on) |
+
+`studio/index.html` is now the canonical private Studio/Codex entrypoint for the
+new dropped system. The older private `builder/`, `operator/`, and `agent/`
+entrypoints hand off to `studio/` so local users land on the replacement surface
+instead of the previous split consoles.
 
 ## Publication pipeline (leak-proof)
 
@@ -48,6 +54,9 @@ projection*, not what's hidden.
 ## Files
 
 - `schema/codex-entry.schema.json` — the live-object contract (JSON Schema 2020-12).
+- `studio/` — imported full Akalynth MMO positioning bundle: unified Codex UI,
+  Studio map-builder prototypes, browser-local ledger prototype, asset registry,
+  atlas/runtime-shape data, and planning docs.
 - `entries/forgehold.json` — first real object, assembled from existing files:
   lore (`AKALYNTH_CITIES_SUMMARY_V1`), design (`AKALYNTH_FORGEHOLD_ROUTE_SLICE_V1`
   docs + registry), receipts (the slice MANIFEST + CHECKSUMS), open packets (the

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ASSET_ARCHIVE_EXECUTION_PREFLIGHT_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "blocked_pending_explicit_plan_approval",
+  "may_execute": false,
+  "selected_plan_id": null,
+  "requires_explicit_approval": true,
+  "approval_scope": "exact_plan_id_only",
+  "source_root": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites",
+  "archive_root_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/_archive/2026-06-23/imported-mirrors",
+  "archive_root_relpath": "_archive/2026-06-23/imported-mirrors",
+  "archive_move_plans_report": "studio/verify/archive-move-plans.json",
+  "archive_move_plans_report_sha256": "415057fd8ff1740639b7437ddd96649c581de35f21d5b272543de1237a5d8f99",
+  "dry_run_receipt_set_report": "studio/verify/archive-move-dry-run-receipts.json",
+  "dry_run_receipt_set_sha256": "e498bfad44d0128cbfad8629545d890b9f7c59719dd80e9d9a3b6145425f8b22",
+  "totals": {
+    "plan_count": 0,
+    "ready_after_explicit_approval_count": 0,
+    "blocked_pending_explicit_approval_count": 0,
+    "blocked_preflight_failed_count": 0,
+    "executable_plan_count": 0,
+    "planned_file_count": 0,
+    "planned_bytes": 0
+  },
+  "checks": {
+    "dry_run_receipt_set_valid": true,
+    "all_sources_exist": true,
+    "all_destinations_absent": true,
+    "all_planned_execution_receipt_parents_exist": true,
+    "all_planned_execution_receipts_absent": true,
+    "all_paths_inside_allowed_roots": true,
+    "all_rollbacks_match_sources": true,
+    "all_hard_preflight_checks_pass": true,
+    "explicit_plan_approval_recorded": false,
+    "all_execution_blocked_without_approval": true,
+    "source_tree_mutated_by_preflight": false
+  },
+  "preflights": [],
+  "required_before_any_execution": [
+    "Human explicitly approves one exact plan id immediately before execution.",
+    "Mapper is rerun and report hashes still match the preflight evidence.",
+    "Execution receipt is written under /home/sovereign/akalynth-ops/receipts/2026-06-23 before moving files.",
+    "Only the selected source family is moved to its planned _archive destination.",
+    "Post-move verifier checks source absence, archive presence, file count, and hashes."
+  ],
+  "preflight_sha256": "bde886ec4812e565653a819c119d272606a4103426438f42fea7bdc473649fc3"
+}

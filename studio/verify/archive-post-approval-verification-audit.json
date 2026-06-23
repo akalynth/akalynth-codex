@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ARCHIVE_POST_APPROVAL_VERIFICATION_AUDIT_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "post_approval_verification_contract_ready_no_mutation",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "approval_scope": "exact_plan_id_only",
+  "blocker": "explicit_plan_approval_missing",
+  "intent": "Convert exact approval packets into the post-execution checks that must pass after any future approved archive move.",
+  "source_rule": "This report is a verification contract only. It does not record approval, move files, create _archive, sync runtimes, or deploy.",
+  "totals": {
+    "contract_count": 0,
+    "planned_file_count": 0,
+    "planned_bytes": 0,
+    "ready_contract_count": 0,
+    "rollback_contract_count": 0,
+    "executable_contract_count": 0,
+    "approval_recorded_count": 0,
+    "post_approval_verification_issue_count": 0
+  },
+  "checks": {
+    "contract_count_matches_archive_move_plans": true,
+    "planned_file_count_matches_archive_move_plans": true,
+    "all_contracts_have_approval_packets": true,
+    "all_contracts_have_simulation_evidence": true,
+    "all_contracts_have_retention_evidence": true,
+    "all_contracts_have_reference_evidence": true,
+    "all_contracts_require_mapper_rerun_after_execution": true,
+    "all_contracts_block_execution_now": true,
+    "no_contracts_record_approval_now": true,
+    "no_runtime_sync_or_deploy_in_contract": true,
+    "source_tree_mutated_by_post_approval_audit": false
+  },
+  "contracts": [],
+  "required_next_gate": [
+    "Keep source larger than runtime until each source-only or duplicate family is classified.",
+    "Use an exact approval phrase before executing any plan.",
+    "After approval, verify source absence, archive presence, file count, hashes, live receipt, and rollback contract for only the approved plan.",
+    "Rerun mapper after execution and before any runtime, Android, or deploy lane."
+  ],
+  "report_sha256": "84c8fda300aaf122b985b07be75335e82c4be9fbd9b627eeb505fdd47aabe7c0"
+}

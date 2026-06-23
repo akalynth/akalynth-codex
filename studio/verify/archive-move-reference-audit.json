@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ARCHIVE_MOVE_REFERENCE_AUDIT_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "reference_audit_clear_no_mutation",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "approval_scope": "exact_plan_id_only_after_reference_review",
+  "intent": "Scan text references before any dry-run archive plan is approved so planned source paths are not silently moved while still referenced by runtime, registries, or unknown surfaces.",
+  "source_rule": "This audit only reads files. It never moves assets, creates _archive, syncs runtime outputs, or writes live receipts.",
+  "search_roots": [
+    {
+      "id": "akalynth-codex",
+      "path": "/home/sovereign/akalynth-ops/repos/akalynth-codex",
+      "role": "Studio, archive-loop tooling, docs, and tests."
+    },
+    {
+      "id": "akalynth-game",
+      "path": "/home/sovereign/akalynth-ops/repos/akalynth",
+      "role": "Game repo source, runtime, registries, scripts, and docs."
+    }
+  ],
+  "totals": {
+    "plan_count": 0,
+    "planned_file_count": 0,
+    "search_root_count": 2,
+    "text_file_count": 2177,
+    "reference_record_count": 0,
+    "reference_file_count": 0,
+    "plan_id_reference_count": 0,
+    "planned_source_family_reference_count": 0,
+    "planned_source_file_reference_count": 0,
+    "archive_relpath_reference_count": 0,
+    "runtime_or_registry_reference_count": 0,
+    "game_documentation_reference_count": 0,
+    "source_material_reference_count": 0,
+    "studio_operator_documentation_or_ui_reference_count": 0,
+    "archive_loop_tooling_or_tests_reference_count": 0,
+    "blocking_reference_count": 0,
+    "review_before_archive_approval_count": 0,
+    "executable_reference_record_count": 0
+  },
+  "checks": {
+    "all_plans_checked": true,
+    "all_reference_records_block_execution": true,
+    "no_blocking_runtime_references_to_planned_paths": true,
+    "no_unclassified_reference_review_required": true,
+    "source_tree_mutated_by_reference_audit": false
+  },
+  "category_counts": {},
+  "risk_counts": {},
+  "match_type_counts": {},
+  "plan_summaries": [],
+  "reference_records": [],
+  "required_before_execution": [
+    "Review any blocking_before_archive_approval record before exact plan approval.",
+    "Review any review_before_archive_approval record before exact plan approval.",
+    "Rerun this audit immediately before writing an execution receipt.",
+    "Only the selected plan id may be approved; this audit is not approval."
+  ],
+  "report_sha256": "56bfd186ffef811f4287e3ad719edcb515bdd5e65cb404ad572c2c5caa494b7f"
+}

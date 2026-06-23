@@ -1,0 +1,536 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ARCHIVE_LOOP_COMPLETION_AUDIT_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "mapping_complete_execution_blocked_pending_exact_approval",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "approval_scope": "exact_plan_id_only",
+  "blocker": "explicit_plan_approval_missing",
+  "intent": "Requirement-by-requirement audit of the full asset archive loop mapping, separating proven no-mutation mapping from unapproved archive execution.",
+  "source_rule": "Mapping complete does not equal execution approval. data/assets-src/sprites remains source authority until an exact-plan approval lane writes a live execution receipt and verifies rollback.",
+  "totals": {
+    "requirement_count": 28,
+    "mapping_requirement_count": 13,
+    "planning_requirement_count": 10,
+    "review_requirement_count": 3,
+    "verification_requirement_count": 1,
+    "execution_requirement_count": 1,
+    "proven_complete_count": 27,
+    "blocked_count": 1,
+    "executable_requirement_count": 0,
+    "open_review_item_count": 6
+  },
+  "checks": {
+    "mapping_requirements_complete": true,
+    "archive_execution_blocked_without_approval": true,
+    "all_generated_actions_block_execution": true,
+    "source_png_count_matches_manifest": true,
+    "archive_root_absent_now": true,
+    "no_approval_or_execution_recorded": true,
+    "source_tree_mutated_by_completion_audit": false
+  },
+  "requirements": [
+    {
+      "id": "custody_roots_and_duplicate_map",
+      "phase": "mapping",
+      "requirement": "Scan all known image custody roots and group exact duplicate content before cleanup.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/asset-archive-map.json",
+        "sha256": "5c8784634e2d49b18051ce0470c58693fe724e41869abe9beaadf1f0992b60b5"
+      },
+      "proof": {
+        "filesystem_image_files": 1179,
+        "filesystem_unique_content_hashes": 193,
+        "duplicate_groups_crossing_roots": 160,
+        "root_count": 8
+      }
+    },
+    {
+      "id": "source_authority_identified",
+      "phase": "mapping",
+      "requirement": "Identify data/assets-src/sprites as the source authority and keep it larger than selected runtime copies.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/assets-src-family-map.json",
+        "sha256": "5d2b18904a7553d4663ef0c169007e27746392a1bc38766e7ffc43731a08c639"
+      },
+      "proof": {
+        "source_image_files": 143,
+        "source_unique_content_hashes": 133,
+        "source_family_count": 23
+      }
+    },
+    {
+      "id": "source_authority_size_gap_classified",
+      "phase": "mapping",
+      "requirement": "Classify why assets-src is larger than runtime and Studio copies before archive execution.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/assets-src-authority-gap-audit.json",
+        "sha256": "0db53c6cb106d22e8aff383842e0f6dd6c260b013d4b7c23eb48f947a5741e08"
+      },
+      "proof": {
+        "source_image_files": 143,
+        "largest_non_source_root_id": "android_assets",
+        "source_vs_largest_non_source_file_delta": -106,
+        "source_unique_content_only_in_source": 0,
+        "executable_content_items": 0
+      }
+    },
+    {
+      "id": "source_only_dispositions_mapped",
+      "phase": "mapping",
+      "requirement": "Classify every source-only family backlog row as active source, retain/promote, custody review, or archive-gated mirror before archive approval.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/assets-src-source-only-disposition-audit.json",
+        "sha256": "6ef6dea8f497346f7e9a689596b04ed6698681e065f5b56035e4971df29c270a"
+      },
+      "proof": {
+        "source_only_family_count": 0,
+        "source_only_unique_content_hashes": 0,
+        "source_only_family_mentions": 0,
+        "archive_gate_duplicate_mirror_family_count": 0,
+        "active_character_source_family_count": 0,
+        "executable_disposition_count": 0
+      },
+      "next_review_state": "source_only_rows_classified_but_execution_still_requires_explicit_gate"
+    },
+    {
+      "id": "source_target_deltas_mapped",
+      "phase": "mapping",
+      "requirement": "Map root-by-root source-vs-target deltas so assets-src being larger is classified as source authority, not an unresolved mismatch.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/assets-source-target-delta-audit.json",
+        "sha256": "aeb8120ba7a7941266932b325f1f639588be4e30e80ef945f66f0bec8d4f95fe"
+      },
+      "proof": {
+        "checked_row_count": 9,
+        "runtime_subset_root_count": 4,
+        "source_image_files": 143,
+        "largest_non_source_root_id": "android_assets",
+        "source_vs_largest_non_source_file_delta": -106,
+        "records_not_in_source": 118,
+        "executable_row_count": 0
+      },
+      "next_review_state": "root_deltas_classified_no_count_equalization_required"
+    },
+    {
+      "id": "source_egress_paths_mapped",
+      "phase": "mapping",
+      "requirement": "Map every place exact assets-src contents leave the source authority.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/assets-src-egress-map.json",
+        "sha256": "860886eb529152b29d109ac1adcf3657a396c3a38119b2746246bfaccd6118a5"
+      },
+      "proof": {
+        "egress_path_count": 8,
+        "filesystem_egress_path_count": 7,
+        "source_unique_content_represented_outside_source": 133,
+        "source_unique_content_only_in_source": 0,
+        "zip_source_records_matched_by_crc_size": 143
+      }
+    },
+    {
+      "id": "zip_snapshot_reconciled",
+      "phase": "mapping",
+      "requirement": "Reconcile the dated asset ZIP against source and filesystem records before archive approval.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/zip-snapshot-reconciliation.json",
+        "sha256": "a6030e379f378dd56d324aa95cec72d3c5786d1908fd41dbe72e2701f6d02754"
+      },
+      "proof": {
+        "zip_image_entries": 3500,
+        "zip_unique_crc_size": 1514,
+        "zip_entries_without_source_crc_size_match": 3224,
+        "source_records_without_zip_crc_size_match": 0,
+        "source_crc_size_collision_key_count": 0,
+        "executable_reconciliation_record_count": 0
+      }
+    },
+    {
+      "id": "asset_egress_topology_mapped",
+      "phase": "mapping",
+      "requirement": "Represent source, egress targets, archive snapshot, duplicate overlaps, and planned archive moves as one graph.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/asset-egress-topology.json",
+        "sha256": "253b46550bd89826cf1d1c8ba11378a29572e29937d663f19ab8c2be6a302fc1"
+      },
+      "proof": {
+        "node_count": 10,
+        "total_edge_count": 32,
+        "source_egress_edge_count": 7,
+        "archive_plan_edge_count": 0,
+        "executable_edge_count": 0
+      }
+    },
+    {
+      "id": "codex_workspace_image_coverage_mapped",
+      "phase": "mapping",
+      "requirement": "Account for image files in the full akalynth-codex workspace, including evidence-only screenshots outside asset roots.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/codex-image-coverage-audit.json",
+        "sha256": "ecd066a0110428ab7f77df1883ac01ab151ea8363555c42b69312171a446472b"
+      },
+      "proof": {
+        "codex_image_file_count": 193,
+        "covered_by_archive_loop_root_count": 188,
+        "evidence_only_outside_root_count": 5,
+        "unclassified_codex_image_count": 0,
+        "executable_coverage_record_count": 0
+      }
+    },
+    {
+      "id": "source_family_egress_index_mapped",
+      "phase": "mapping",
+      "requirement": "Break source egress down by source family so each review lane has concrete evidence.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/assets-src-egress-index.json",
+        "sha256": "5b655dd91ecf2205b8e8e36710849f0d3350ecf59fb6d587bd325fd8b873c168"
+      },
+      "proof": {
+        "source_family_count": 23,
+        "families_with_filesystem_egress": 23,
+        "filesystem_unique_target_records_backed_by_source": 918,
+        "filesystem_target_record_family_mentions": 1048
+      }
+    },
+    {
+      "id": "per_content_leave_manifest_complete",
+      "phase": "mapping",
+      "requirement": "Map every unique source content hash to source records, target placements, zip evidence, plans, and queue items.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/assets-src-leave-manifest.json",
+        "sha256": "e812cea1ace96d9da5dbbec60b13fd05ef5e66c3557d7b4e4c93888e23c35313"
+      },
+      "proof": {
+        "source_unique_content_hashes": 133,
+        "source_image_files": 143,
+        "archive_plan_covered_unique_content_hashes": 0,
+        "executable_content_items": 0
+      }
+    },
+    {
+      "id": "non_source_drift_mapped",
+      "phase": "mapping",
+      "requirement": "Map non-source images that are not exact source content so drift is not mistaken for source authority.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/assets-non-source-drift.json",
+        "sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      },
+      "proof": {
+        "drift_root_count": 7,
+        "drift_record_count": 118,
+        "drift_unique_content_hashes": 60
+      },
+      "next_review_state": "open_review_items_recorded_in_queue"
+    },
+    {
+      "id": "non_source_dispositions_mapped",
+      "phase": "mapping",
+      "requirement": "Classify every non-source drift root as Studio working copy, poster/reference output, frozen reference, derived output, or manual custody review before archive approval.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/assets-non-source-disposition-audit.json",
+        "sha256": "22c20605464798f97253fa3031301d823147d1628ffdd3ec72cb499b36dfdd5b"
+      },
+      "proof": {
+        "drift_root_count": 7,
+        "drift_record_count": 118,
+        "drift_unique_content_hashes": 60,
+        "poster_reference_record_count": 7,
+        "studio_working_copy_record_count": 55,
+        "frozen_reference_record_count": 15,
+        "executable_disposition_count": 0
+      },
+      "next_review_state": "non_source_rows_classified_but_execution_still_requires_explicit_gate"
+    },
+    {
+      "id": "archive_review_candidates_selected",
+      "phase": "planning",
+      "requirement": "Separate duplicate-backed archive candidates from generated-output custody and unique-source promotion decisions.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/archive-review-candidates.json",
+        "sha256": "7584597fcc215a784cbaeaea7cfce8eb8dc13aeb4fffb8d9e72e7047b91add99"
+      },
+      "proof": {
+        "candidate_count": 0,
+        "ready_for_archive_review": 0,
+        "ready_for_custody_rehome_review": 0,
+        "blocked_promote_or_retain_first": 0
+      }
+    },
+    {
+      "id": "dry_run_archive_move_plans_created",
+      "phase": "planning",
+      "requirement": "Create archive move plans only as dry-run plans, never as execution permission.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/archive-move-plans.json",
+        "sha256": "415057fd8ff1740639b7437ddd96649c581de35f21d5b272543de1237a5d8f99"
+      },
+      "proof": {
+        "status": "dry_run_only",
+        "plan_count": 0,
+        "planned_file_count": 0,
+        "planned_bytes": 0,
+        "requires_explicit_approval": true
+      }
+    },
+    {
+      "id": "dry_run_receipts_and_hash_checks_created",
+      "phase": "planning",
+      "requirement": "Create dry-run receipt checks for every plan and prove they do not execute.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/archive-move-dry-run-receipts.json",
+        "sha256": "e498bfad44d0128cbfad8629545d890b9f7c59719dd80e9d9a3b6145425f8b22"
+      },
+      "proof": {
+        "receipt_count": 0,
+        "checked_file_count": 0,
+        "missing_file_count": 0,
+        "mismatched_file_count": 0,
+        "executable_receipt_count": 0
+      }
+    },
+    {
+      "id": "preflight_templates_and_approval_gate_created",
+      "phase": "planning",
+      "requirement": "Create execution preflight, receipt templates, and exact-plan approval tickets without writing live execution receipts.",
+      "status": "proven_complete",
+      "evidence": {
+        "preflight_report": "studio/verify/archive-move-execution-preflight.json",
+        "preflight_sha256": "bde886ec4812e565653a819c119d272606a4103426438f42fea7bdc473649fc3",
+        "receipt_templates_report": "studio/verify/archive-move-execution-receipt-templates.json",
+        "receipt_templates_sha256": "910e820d694005f727967f418c80aebb2182847aa6ae3243b835e58852d4dcad",
+        "approval_runbook_report": "studio/verify/archive-move-approval-runbook.json",
+        "approval_runbook_sha256": "39d7b116a25f705264da4cada6c97ce88d4e5d76f952f096beab1aa8a9022775"
+      },
+      "proof": {
+        "ready_after_explicit_approval_count": 0,
+        "executable_plan_count": 0,
+        "executable_template_count": 0,
+        "executable_ticket_count": 0,
+        "approved_ticket_count": 0,
+        "executed_ticket_count": 0
+      }
+    },
+    {
+      "id": "archive_move_impact_preview_created",
+      "phase": "planning",
+      "requirement": "Preview the active-source and archive-destination impact before any plan can run.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/archive-move-impact-preview.json",
+        "sha256": "ae6c3c349a8c68007edbb9931196ab0f3c4a36a0d0693b52cea6f8d00c5ff8d2"
+      },
+      "proof": {
+        "planned_file_count": 0,
+        "active_source_records_after_all_plans_if_approved": 143,
+        "archive_destination_records_after_all_plans_if_approved": 0,
+        "total_assets_src_records_after_all_plans_if_archive_counted": 143,
+        "executable_preview_count": 0
+      }
+    },
+    {
+      "id": "archive_plan_retention_audit_created",
+      "phase": "planning",
+      "requirement": "Prove each dry-run archive-plan hash retains active source authority and zip snapshot evidence before exact-plan approval.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/archive-plan-retention-audit.json",
+        "sha256": "35165996a582b8b7e6fc6f3fa80b873f1e00a104e424c91996370c7fa2e2fe07"
+      },
+      "proof": {
+        "planned_file_count": 0,
+        "retained_active_source_hash_count": 0,
+        "zip_backed_hash_count": 0,
+        "missing_retained_active_source_hash_count": 0,
+        "missing_zip_match_count": 0,
+        "executable_retention_row_count": 0
+      },
+      "next_review_state": "retention_proven_but_execution_still_requires_exact_plan_approval"
+    },
+    {
+      "id": "archive_move_execution_simulation_created",
+      "phase": "planning",
+      "requirement": "Simulate the archive move and rollback manifests without mutating the source tree.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/archive-move-execution-simulation.json",
+        "sha256": "5539acd27f4955fd79b20db6560fc7c172ab1d780eeef49b39a70422eb2393ec"
+      },
+      "proof": {
+        "simulated_operation_count": 0,
+        "active_source_records_after_simulated_execution": 143,
+        "archive_records_after_simulated_execution": 0,
+        "source_records_restored_by_simulated_rollback": 143,
+        "rollback_restores_source_manifest": true,
+        "executable_simulation_count": 0
+      }
+    },
+    {
+      "id": "archive_move_reference_audit_created",
+      "phase": "planning",
+      "requirement": "Scan planned archive source paths against Codex and game repo text references before any exact-plan approval.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/archive-move-reference-audit.json",
+        "sha256": "56bfd186ffef811f4287e3ad719edcb515bdd5e65cb404ad572c2c5caa494b7f"
+      },
+      "proof": {
+        "text_file_count": 2177,
+        "reference_record_count": 0,
+        "reference_file_count": 0,
+        "runtime_or_registry_reference_count": 0,
+        "blocking_reference_count": 0,
+        "executable_reference_record_count": 0
+      },
+      "next_review_state": "no_blocking_reference_records_before_exact_plan_approval"
+    },
+    {
+      "id": "archive_exact_approval_packet_created",
+      "phase": "planning",
+      "requirement": "Bundle each exact archive plan approval phrase with dry-run, preflight, retention, simulation, reference, template, ticket, and rollback evidence.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/archive-exact-approval-packet.json",
+        "sha256": "87e26d41ab1cf576105f8cb9ca9c8200c7462063d84a625ca02d11e418724058"
+      },
+      "proof": {
+        "packet_count": 0,
+        "planned_file_count": 0,
+        "ready_after_exact_approval_phrase_count": 0,
+        "packet_missing_evidence_count": 0,
+        "executable_packet_count": 0,
+        "approval_recorded_count": 0,
+        "executed_count": 0
+      },
+      "next_review_state": "approval_packets_ready_but_execution_still_requires_exact_phrase"
+    },
+    {
+      "id": "archive_post_approval_verification_contract_created",
+      "phase": "planning",
+      "requirement": "Define the required post-approval verification contract before any archive move is allowed.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/archive-post-approval-verification-audit.json",
+        "sha256": "84c8fda300aaf122b985b07be75335e82c4be9fbd9b627eeb505fdd47aabe7c0"
+      },
+      "proof": {
+        "contract_count": 0,
+        "ready_contract_count": 0,
+        "planned_file_count": 0,
+        "rollback_contract_count": 0,
+        "executable_contract_count": 0,
+        "post_approval_verification_issue_count": 0
+      },
+      "next_review_state": "post_approval_verification_contract_ready_but_execution_still_requires_exact_phrase"
+    },
+    {
+      "id": "review_queue_consolidated",
+      "phase": "review",
+      "requirement": "Consolidate remaining non-mutation archive-loop work into review queue items.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/archive-loop-review-queue.json",
+        "sha256": "d1490e341eb592b243b66df336ab73ef63d16c7ca64ec8aefa24608f81dc6fdb"
+      },
+      "proof": {
+        "queue_item_count": 7,
+        "open_item_count": 6,
+        "exact_plan_approval_item_count": 0,
+        "executable_item_count": 0
+      },
+      "next_review_state": "open_items_require_review_or_exact_plan_approval"
+    },
+    {
+      "id": "gap_closure_map_created",
+      "phase": "review",
+      "requirement": "Rank the remaining archive-loop gaps into closure lanes with evidence, blockers, and next actions.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/archive-loop-gap-closure-map.json",
+        "sha256": "cd490037f061bf4c9fd40aba2c2bb35348ed87868abb1f5f07651ca11ffa59dc"
+      },
+      "proof": {
+        "closure_lane_count": 3,
+        "open_decision_lane_count": 2,
+        "queue_item_count": 7,
+        "executable_action_count": 0
+      },
+      "next_review_state": "closure_lanes_ready_for_operator_review"
+    },
+    {
+      "id": "operator_decision_board_created",
+      "phase": "review",
+      "requirement": "Turn every remaining archive-loop review item into an operator-readable no-mutation decision card.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/archive-loop-operator-decision-board.json",
+        "sha256": "c45f1420eb89492977f546c59c756e68aa5fcae8db55cb8717932f9f73b7f822"
+      },
+      "proof": {
+        "lane_card_count": 3,
+        "decision_card_count": 7,
+        "open_decision_card_count": 6,
+        "exact_plan_approval_card_count": 0,
+        "executable_decision_card_count": 0
+      },
+      "next_review_state": "decision_cards_ready_for_operator_review"
+    },
+    {
+      "id": "source_tree_unmutated_by_mapping",
+      "phase": "verification",
+      "requirement": "Prove the mapping and planning reports did not move source files or create the archive destination.",
+      "status": "proven_complete",
+      "evidence": {
+        "report": "studio/verify/archive-loop-completion-audit.json"
+      },
+      "proof": {
+        "source_png_count_now": 143,
+        "source_manifest_png_count": 143,
+        "archive_root_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/_archive/2026-06-23/imported-mirrors",
+        "archive_root_exists_now": false
+      }
+    },
+    {
+      "id": "archive_execution_approval_and_move",
+      "phase": "execution",
+      "requirement": "Execute any archive move only after exact plan approval and a fresh preflight rerun.",
+      "status": "blocked_pending_explicit_approval",
+      "blocker": "explicit_plan_approval_missing",
+      "evidence": {
+        "approval_runbook_report": "studio/verify/archive-move-approval-runbook.json",
+        "approval_runbook_sha256": "39d7b116a25f705264da4cada6c97ce88d4e5d76f952f096beab1aa8a9022775"
+      },
+      "proof": {
+        "approved_ticket_count": 0,
+        "executed_ticket_count": 0,
+        "executable_ticket_count": 0,
+        "required_first_approval_phrase": null
+      }
+    }
+  ],
+  "final_state": {
+    "mapping_state": "full_duplicate_leave_map_complete",
+    "execution_state": "blocked_pending_exact_plan_approval",
+    "safe_to_review": true,
+    "safe_to_execute": false,
+    "required_next_gate": null
+  },
+  "report_sha256": "db629d9577f84247fc5bae294de5e5495f8bcf1debc3583b6e81279fe59279c2"
+}

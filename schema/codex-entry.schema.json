@@ -82,7 +82,7 @@
       "items": {
         "type": "object", "additionalProperties": false, "required": ["kind", "ref", "status"],
         "properties": {
-          "kind": { "enum": ["website_update", "prototype_data", "asset", "quest", "mechanic", "map", "dialogue", "review", "screenshot-proof", "presentation"] },
+          "kind": { "enum": ["website_update", "prototype_data", "asset", "quest", "mechanic", "map", "dialogue", "review", "screenshot-proof", "presentation", "studio_export", "builder_permit", "smoke", "evidence"] },
           "ref": { "type": "string" },
           "status": { "enum": ["open", "assigned", "in_review", "accepted", "blocked", "closed"] },
           "assignee": { "type": "string" },
@@ -96,9 +96,10 @@
       "items": {
         "type": "object", "additionalProperties": false, "required": ["kind", "ref"],
         "properties": {
-          "kind": { "enum": ["manifest", "checksum", "receipt", "screenshot", "verification", "sample", "ops-closure"] },
+          "kind": { "enum": ["manifest", "checksum", "receipt", "screenshot", "verification", "verify", "sample", "ops-closure"] },
           "ref": { "type": "string" },
-          "sha256": { "type": "string" }
+          "sha256": { "type": "string" },
+          "note": { "type": "string" }
         }
       }
     },

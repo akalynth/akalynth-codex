@@ -1,0 +1,73 @@
+{
+  "report_id": "akalynth-codex-registry-report-20260623T084016Z",
+  "generated_at": "2026-06-23T08:40:16Z",
+  "scope": "Akalynth MMO positioning standalone Codex artifact",
+  "files": {
+    "codex_data": {
+      "path": "codex-data.js",
+      "sha256": "03f68261e1e554dd35a2127b5986eea344042cb3b62eb9b2a39bfe4fcb2d5da3"
+    },
+    "built_registry": {
+      "path": "data/assets-built/registry.json",
+      "sha256": "7f23397d8c1b0dbb7413d9e8fce0450d25652ad1424802b3da295769e8ecc71d",
+      "schema_version": 1
+    }
+  },
+  "counts": {
+    "codex_assets": 143,
+    "built_registry_entries": 126,
+    "codex_types": 14,
+    "missing_thumb_paths": 0,
+    "missing_file_fields": 0
+  },
+  "codex_assets_by_type": {
+    "character": 12,
+    "creature": 9,
+    "door_overlay": 4,
+    "effect": 9,
+    "floor_overlay": 6,
+    "ground": 3,
+    "item": 20,
+    "prop": 5,
+    "structure": 1,
+    "terrain_tile": 7,
+    "tile": 7,
+    "ui": 13,
+    "wall_overlay": 5,
+    "world_object": 42
+  },
+  "registry_delta": {
+    "status": "explained",
+    "codex_only_count": 17,
+    "reason": "The standalone Codex includes additional character and creature sheet entries that are absent from the older built registry snapshot.",
+    "by_type": {
+      "character": 12,
+      "creature": 5
+    },
+    "ids": [
+      "akalynth_character_base_human_male_01",
+      "akalynth_character_blacksmith_01",
+      "akalynth_character_castle_guard_red_01",
+      "akalynth_character_guard_city_01",
+      "akalynth_character_mage_apprentice_01",
+      "akalynth_character_merchant_cloth_01",
+      "akalynth_character_merchant_food_01",
+      "akalynth_character_noble_male_01",
+      "akalynth_character_priest_01",
+      "akalynth_character_rat_hunter_01",
+      "akalynth_character_sewer_worker_01",
+      "akalynth_character_skeleton_warrior_01",
+      "akalynth_creature_cat_01",
+      "akalynth_creature_diseased_rat_01",
+      "akalynth_creature_dog_01",
+      "akalynth_creature_rat_large_01",
+      "akalynth_creature_rat_small_01"
+    ]
+  },
+  "result": "PASS",
+  "notes": [
+    "All 143 Codex asset records have thumb paths and file fields.",
+    "All 143 thumb paths resolve inside the standalone Codex artifact folder.",
+    "The built registry snapshot remains present and separately hashed."
+  ]
+}

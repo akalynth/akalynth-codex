@@ -1,0 +1,1021 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "source_root": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites",
+  "totals": {
+    "source_image_files": 143,
+    "source_unique_content_hashes": 133,
+    "family_count": 23,
+    "source_duplicate_groups": 10,
+    "source_duplicate_files": 20
+  },
+  "buckets": [
+    {
+      "bucket": "active_source_lane",
+      "family_count": 11,
+      "file_count": 131,
+      "unique_content_hashes": 131,
+      "same_source_duplicate_unique_hashes": 20,
+      "outside_duplicate_unique_hashes": 131,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0
+    },
+    {
+      "bucket": "character_system_source",
+      "family_count": 12,
+      "file_count": 12,
+      "unique_content_hashes": 12,
+      "same_source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 12,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0
+    }
+  ],
+  "families": [
+    {
+      "id": "world",
+      "prefix": "world",
+      "title": "World",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 64,
+      "unique_content_hashes": 64,
+      "source_duplicate_unique_hashes": 10,
+      "outside_duplicate_unique_hashes": 64,
+      "studio_match_unique_hashes": 64,
+      "android_match_unique_hashes": 64,
+      "built_match_unique_hashes": 64,
+      "same_source_duplicate_unique_hashes": 10,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 64,
+      "samples": [
+        "world/castle/prison_bars.png",
+        "world/castle/stone_column.png",
+        "world/castle/throne.png",
+        "world/castle/weapon_rack.png",
+        "world/city_objects/banner_blue.png",
+        "world/city_objects/banner_red.png",
+        "world/city_objects/bench.png",
+        "world/city_objects/fountain.png",
+        "world/city_objects/notice_board.png",
+        "world/city_objects/rookguard_amber_lantern.png",
+        "world/city_objects/rookguard_bait_crate.png",
+        "world/city_objects/rookguard_canal_reeds.png"
+      ]
+    },
+    {
+      "id": "top_level_item",
+      "prefix": "top_level/item",
+      "title": "Item",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 20,
+      "unique_content_hashes": 20,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 20,
+      "studio_match_unique_hashes": 20,
+      "android_match_unique_hashes": 20,
+      "built_match_unique_hashes": 20,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 20,
+      "samples": [
+        "item__ashglass_shard.png",
+        "item__charred_shipment_plate.png",
+        "item__city_rat_goo.png",
+        "item__healing_herb.png",
+        "item__keystone_token.png",
+        "item__ley_mote.png",
+        "item__mark_token.png",
+        "item__pilgrim_mark.png",
+        "item__ration.png",
+        "item__refined_ley_mote.png",
+        "item__refined_soulsteel_component.png",
+        "item__rookguard_patience_charm.png"
+      ]
+    },
+    {
+      "id": "ui",
+      "prefix": "ui",
+      "title": "Ui",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 13,
+      "unique_content_hashes": 13,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 13,
+      "studio_match_unique_hashes": 13,
+      "android_match_unique_hashes": 13,
+      "built_match_unique_hashes": 13,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 13,
+      "samples": [
+        "ui/ui_action_ring_danger.png",
+        "ui/ui_action_ring_pressed.png",
+        "ui/ui_action_ring.png",
+        "ui/ui_bar_track.png",
+        "ui/ui_button_frame.png",
+        "ui/ui_button_pressed_frame.png",
+        "ui/ui_dock_frame.png",
+        "ui/ui_dpad_button_pressed.png",
+        "ui/ui_dpad_button.png",
+        "ui/ui_dpad_frame.png",
+        "ui/ui_hp_fill.png",
+        "ui/ui_mp_fill.png"
+      ]
+    },
+    {
+      "id": "top_level_effect",
+      "prefix": "top_level/effect",
+      "title": "Effect",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 9,
+      "unique_content_hashes": 9,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 9,
+      "studio_match_unique_hashes": 9,
+      "android_match_unique_hashes": 9,
+      "built_match_unique_hashes": 9,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 9,
+      "samples": [
+        "effect__chronicle_combat.png",
+        "effect__chronicle_create.png",
+        "effect__chronicle_death.png",
+        "effect__chronicle_drop.png",
+        "effect__chronicle_pickup.png",
+        "effect__chronicle_tutorial.png",
+        "effect__chronicle_unknown.png",
+        "effect__chronicle_world.png",
+        "effect__chronicle_zone.png"
+      ]
+    },
+    {
+      "id": "top_level_swamp",
+      "prefix": "top_level/swamp",
+      "title": "Swamp",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 8,
+      "unique_content_hashes": 8,
+      "source_duplicate_unique_hashes": 8,
+      "outside_duplicate_unique_hashes": 8,
+      "studio_match_unique_hashes": 8,
+      "android_match_unique_hashes": 8,
+      "built_match_unique_hashes": 8,
+      "same_source_duplicate_unique_hashes": 8,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 8,
+      "samples": [
+        "swamp__bog_slime.png",
+        "swamp__bog_water.png",
+        "swamp__dead_tree.png",
+        "swamp__frog.png",
+        "swamp__log.png",
+        "swamp__mud.png",
+        "swamp__mushroom.png",
+        "swamp__reeds.png"
+      ]
+    },
+    {
+      "id": "top_level_tile",
+      "prefix": "top_level/tile",
+      "title": "Tile",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 7,
+      "unique_content_hashes": 7,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 7,
+      "studio_match_unique_hashes": 7,
+      "android_match_unique_hashes": 7,
+      "built_match_unique_hashes": 7,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 7,
+      "samples": [
+        "tile__gate_to_azura.png",
+        "tile__grass.png",
+        "tile__stone_ground.png",
+        "tile__tutorial_chat.png",
+        "tile__tutorial_move.png",
+        "tile__tutorial_tem.png",
+        "tile__water.png"
+      ]
+    },
+    {
+      "id": "creatures",
+      "prefix": "creatures",
+      "title": "Creatures",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 5,
+      "unique_content_hashes": 5,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 5,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 5,
+      "built_match_unique_hashes": 5,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 5,
+      "samples": [
+        "creatures/cat_01.png",
+        "creatures/diseased_rat_01.png",
+        "creatures/dog_01.png",
+        "creatures/rat_large_01.png",
+        "creatures/rat_small_01.png"
+      ]
+    },
+    {
+      "id": "top_level_creature",
+      "prefix": "top_level/creature",
+      "title": "Creature",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 2,
+      "unique_content_hashes": 2,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 2,
+      "studio_match_unique_hashes": 2,
+      "android_match_unique_hashes": 2,
+      "built_match_unique_hashes": 2,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 2,
+      "samples": [
+        "creature__rookguard_training_slime.png",
+        "creatures__skeleton.png"
+      ]
+    },
+    {
+      "id": "characters_base_human_male_01_png",
+      "prefix": "characters/base_human_male_01.png",
+      "title": "Base Human Male 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/base_human_male_01.png"
+      ]
+    },
+    {
+      "id": "characters_blacksmith_01_png",
+      "prefix": "characters/blacksmith_01.png",
+      "title": "Blacksmith 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/blacksmith_01.png"
+      ]
+    },
+    {
+      "id": "characters_castle_guard_red_01_png",
+      "prefix": "characters/castle_guard_red_01.png",
+      "title": "Castle Guard Red 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/castle_guard_red_01.png"
+      ]
+    },
+    {
+      "id": "characters_guard_city_01_png",
+      "prefix": "characters/guard_city_01.png",
+      "title": "Guard City 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/guard_city_01.png"
+      ]
+    },
+    {
+      "id": "characters_mage_apprentice_01_png",
+      "prefix": "characters/mage_apprentice_01.png",
+      "title": "Mage Apprentice 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/mage_apprentice_01.png"
+      ]
+    },
+    {
+      "id": "characters_merchant_cloth_01_png",
+      "prefix": "characters/merchant_cloth_01.png",
+      "title": "Merchant Cloth 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/merchant_cloth_01.png"
+      ]
+    },
+    {
+      "id": "characters_merchant_food_01_png",
+      "prefix": "characters/merchant_food_01.png",
+      "title": "Merchant Food 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/merchant_food_01.png"
+      ]
+    },
+    {
+      "id": "characters_noble_male_01_png",
+      "prefix": "characters/noble_male_01.png",
+      "title": "Noble Male 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/noble_male_01.png"
+      ]
+    },
+    {
+      "id": "characters_priest_01_png",
+      "prefix": "characters/priest_01.png",
+      "title": "Priest 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/priest_01.png"
+      ]
+    },
+    {
+      "id": "characters_rat_hunter_01_png",
+      "prefix": "characters/rat_hunter_01.png",
+      "title": "Rat Hunter 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/rat_hunter_01.png"
+      ]
+    },
+    {
+      "id": "characters_sewer_worker_01_png",
+      "prefix": "characters/sewer_worker_01.png",
+      "title": "Sewer Worker 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/sewer_worker_01.png"
+      ]
+    },
+    {
+      "id": "characters_skeleton_warrior_01_png",
+      "prefix": "characters/skeleton_warrior_01.png",
+      "title": "Skeleton Warrior 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/skeleton_warrior_01.png"
+      ]
+    },
+    {
+      "id": "top_level_ground",
+      "prefix": "top_level/ground",
+      "title": "Ground",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 1,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 1,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 1,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "ground__grass.png"
+      ]
+    },
+    {
+      "id": "top_level_prop",
+      "prefix": "top_level/prop",
+      "title": "Prop",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 1,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 1,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 1,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "props__tree.png"
+      ]
+    },
+    {
+      "id": "top_level_structure",
+      "prefix": "top_level/structure",
+      "title": "Structure",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 1,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "structures__stone_wall.png"
+      ]
+    }
+  ],
+  "largest_families": [
+    {
+      "id": "world",
+      "prefix": "world",
+      "title": "World",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 64,
+      "unique_content_hashes": 64,
+      "source_duplicate_unique_hashes": 10,
+      "outside_duplicate_unique_hashes": 64,
+      "studio_match_unique_hashes": 64,
+      "android_match_unique_hashes": 64,
+      "built_match_unique_hashes": 64,
+      "same_source_duplicate_unique_hashes": 10,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 64,
+      "samples": [
+        "world/castle/prison_bars.png",
+        "world/castle/stone_column.png",
+        "world/castle/throne.png",
+        "world/castle/weapon_rack.png",
+        "world/city_objects/banner_blue.png",
+        "world/city_objects/banner_red.png",
+        "world/city_objects/bench.png",
+        "world/city_objects/fountain.png",
+        "world/city_objects/notice_board.png",
+        "world/city_objects/rookguard_amber_lantern.png",
+        "world/city_objects/rookguard_bait_crate.png",
+        "world/city_objects/rookguard_canal_reeds.png"
+      ]
+    },
+    {
+      "id": "top_level_item",
+      "prefix": "top_level/item",
+      "title": "Item",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 20,
+      "unique_content_hashes": 20,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 20,
+      "studio_match_unique_hashes": 20,
+      "android_match_unique_hashes": 20,
+      "built_match_unique_hashes": 20,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 20,
+      "samples": [
+        "item__ashglass_shard.png",
+        "item__charred_shipment_plate.png",
+        "item__city_rat_goo.png",
+        "item__healing_herb.png",
+        "item__keystone_token.png",
+        "item__ley_mote.png",
+        "item__mark_token.png",
+        "item__pilgrim_mark.png",
+        "item__ration.png",
+        "item__refined_ley_mote.png",
+        "item__refined_soulsteel_component.png",
+        "item__rookguard_patience_charm.png"
+      ]
+    },
+    {
+      "id": "ui",
+      "prefix": "ui",
+      "title": "Ui",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 13,
+      "unique_content_hashes": 13,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 13,
+      "studio_match_unique_hashes": 13,
+      "android_match_unique_hashes": 13,
+      "built_match_unique_hashes": 13,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 13,
+      "samples": [
+        "ui/ui_action_ring_danger.png",
+        "ui/ui_action_ring_pressed.png",
+        "ui/ui_action_ring.png",
+        "ui/ui_bar_track.png",
+        "ui/ui_button_frame.png",
+        "ui/ui_button_pressed_frame.png",
+        "ui/ui_dock_frame.png",
+        "ui/ui_dpad_button_pressed.png",
+        "ui/ui_dpad_button.png",
+        "ui/ui_dpad_frame.png",
+        "ui/ui_hp_fill.png",
+        "ui/ui_mp_fill.png"
+      ]
+    },
+    {
+      "id": "top_level_effect",
+      "prefix": "top_level/effect",
+      "title": "Effect",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 9,
+      "unique_content_hashes": 9,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 9,
+      "studio_match_unique_hashes": 9,
+      "android_match_unique_hashes": 9,
+      "built_match_unique_hashes": 9,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 9,
+      "samples": [
+        "effect__chronicle_combat.png",
+        "effect__chronicle_create.png",
+        "effect__chronicle_death.png",
+        "effect__chronicle_drop.png",
+        "effect__chronicle_pickup.png",
+        "effect__chronicle_tutorial.png",
+        "effect__chronicle_unknown.png",
+        "effect__chronicle_world.png",
+        "effect__chronicle_zone.png"
+      ]
+    },
+    {
+      "id": "top_level_swamp",
+      "prefix": "top_level/swamp",
+      "title": "Swamp",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 8,
+      "unique_content_hashes": 8,
+      "source_duplicate_unique_hashes": 8,
+      "outside_duplicate_unique_hashes": 8,
+      "studio_match_unique_hashes": 8,
+      "android_match_unique_hashes": 8,
+      "built_match_unique_hashes": 8,
+      "same_source_duplicate_unique_hashes": 8,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 8,
+      "samples": [
+        "swamp__bog_slime.png",
+        "swamp__bog_water.png",
+        "swamp__dead_tree.png",
+        "swamp__frog.png",
+        "swamp__log.png",
+        "swamp__mud.png",
+        "swamp__mushroom.png",
+        "swamp__reeds.png"
+      ]
+    },
+    {
+      "id": "top_level_tile",
+      "prefix": "top_level/tile",
+      "title": "Tile",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 7,
+      "unique_content_hashes": 7,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 7,
+      "studio_match_unique_hashes": 7,
+      "android_match_unique_hashes": 7,
+      "built_match_unique_hashes": 7,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 7,
+      "samples": [
+        "tile__gate_to_azura.png",
+        "tile__grass.png",
+        "tile__stone_ground.png",
+        "tile__tutorial_chat.png",
+        "tile__tutorial_move.png",
+        "tile__tutorial_tem.png",
+        "tile__water.png"
+      ]
+    },
+    {
+      "id": "creatures",
+      "prefix": "creatures",
+      "title": "Creatures",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 5,
+      "unique_content_hashes": 5,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 5,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 5,
+      "built_match_unique_hashes": 5,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 5,
+      "samples": [
+        "creatures/cat_01.png",
+        "creatures/diseased_rat_01.png",
+        "creatures/dog_01.png",
+        "creatures/rat_large_01.png",
+        "creatures/rat_small_01.png"
+      ]
+    },
+    {
+      "id": "top_level_creature",
+      "prefix": "top_level/creature",
+      "title": "Creature",
+      "bucket": "active_source_lane",
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "file_count": 2,
+      "unique_content_hashes": 2,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 2,
+      "studio_match_unique_hashes": 2,
+      "android_match_unique_hashes": 2,
+      "built_match_unique_hashes": 2,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 2,
+      "samples": [
+        "creature__rookguard_training_slime.png",
+        "creatures__skeleton.png"
+      ]
+    },
+    {
+      "id": "characters_base_human_male_01_png",
+      "prefix": "characters/base_human_male_01.png",
+      "title": "Base Human Male 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/base_human_male_01.png"
+      ]
+    },
+    {
+      "id": "characters_blacksmith_01_png",
+      "prefix": "characters/blacksmith_01.png",
+      "title": "Blacksmith 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/blacksmith_01.png"
+      ]
+    },
+    {
+      "id": "characters_castle_guard_red_01_png",
+      "prefix": "characters/castle_guard_red_01.png",
+      "title": "Castle Guard Red 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/castle_guard_red_01.png"
+      ]
+    },
+    {
+      "id": "characters_guard_city_01_png",
+      "prefix": "characters/guard_city_01.png",
+      "title": "Guard City 01.Png",
+      "bucket": "character_system_source",
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "file_count": 1,
+      "unique_content_hashes": 1,
+      "source_duplicate_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "studio_match_unique_hashes": 0,
+      "android_match_unique_hashes": 1,
+      "built_match_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "not_in_non_source_roots_unique_hashes": 0,
+      "source_only_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "samples": [
+        "characters/guard_city_01.png"
+      ]
+    }
+  ],
+  "top_source_duplicate_clusters": [
+    {
+      "sha256": "3440b409df3dd0854f834e8afe2b6d7cfc46e17b19c454829dcf40c86658cfbd",
+      "file_count": 2,
+      "families": [
+        "top_level/swamp",
+        "world"
+      ],
+      "samples": [
+        "swamp__mud.png",
+        "world/swamp/swamp_mud.png"
+      ]
+    },
+    {
+      "sha256": "41e49e3f873fe1215976440846b9ec668ee6d8e2a46f2a2ee83db395a1a5b6dd",
+      "file_count": 2,
+      "families": [
+        "top_level/ground",
+        "world"
+      ],
+      "samples": [
+        "ground__grass.png",
+        "world/terrain/grass_01.png"
+      ]
+    },
+    {
+      "sha256": "5e5b765afd4e10564813923ca53e47d2221def2eb4db27dae68a1efc92150578",
+      "file_count": 2,
+      "families": [
+        "top_level/swamp",
+        "world"
+      ],
+      "samples": [
+        "swamp__mushroom.png",
+        "world/swamp/swamp_mushroom.png"
+      ]
+    },
+    {
+      "sha256": "6051f7ebad68421f1e74469afe32a630b4142c40937e093c21ff1a5abfdde56c",
+      "file_count": 2,
+      "families": [
+        "top_level/swamp",
+        "world"
+      ],
+      "samples": [
+        "swamp__dead_tree.png",
+        "world/swamp/swamp_dead_tree.png"
+      ]
+    },
+    {
+      "sha256": "662e3c0dc166d54eca67772c5ac02266ed36c06d3c3dd930b7a4e38babbd85da",
+      "file_count": 2,
+      "families": [
+        "top_level/swamp",
+        "world"
+      ],
+      "samples": [
+        "swamp__log.png",
+        "world/swamp/swamp_log.png"
+      ]
+    },
+    {
+      "sha256": "868052b9bfe12fc0870c21d1fb85f3755d99c29299194bbf7f2581ad84c73ab1",
+      "file_count": 2,
+      "families": [
+        "top_level/swamp",
+        "world"
+      ],
+      "samples": [
+        "swamp__bog_slime.png",
+        "world/swamp/swamp_bog_slime.png"
+      ]
+    },
+    {
+      "sha256": "97d93d40301c55ea180e5ecce6b86e01681644a1744fadd45488b6dd954e011d",
+      "file_count": 2,
+      "families": [
+        "top_level/swamp",
+        "world"
+      ],
+      "samples": [
+        "swamp__reeds.png",
+        "world/swamp/swamp_reeds.png"
+      ]
+    },
+    {
+      "sha256": "b0775cba09eadf2fde241b35daa28cdcd03af6d23e99e0decd32b42f13f6d220",
+      "file_count": 2,
+      "families": [
+        "top_level/swamp",
+        "world"
+      ],
+      "samples": [
+        "swamp__bog_water.png",
+        "world/swamp/swamp_bog_water.png"
+      ]
+    },
+    {
+      "sha256": "bcdec8107b5bd7be490c8bf831d0889a82ac0ce94fe4713169ee2d24d6e058cf",
+      "file_count": 2,
+      "families": [
+        "top_level/prop",
+        "world"
+      ],
+      "samples": [
+        "props__tree.png",
+        "world/props/prop_tree.png"
+      ]
+    },
+    {
+      "sha256": "c867ef71e424a8afbf322741a6c3983a571a727db35e894c57aa0384e288d266",
+      "file_count": 2,
+      "families": [
+        "top_level/swamp",
+        "world"
+      ],
+      "samples": [
+        "swamp__frog.png",
+        "world/swamp/swamp_frog.png"
+      ]
+    }
+  ],
+  "rules": [
+    "This report classifies custody and promotion review lanes only; it does not approve deletion.",
+    "Trash-labeled or imported mirrors are archive-review candidates, not automatic removal targets.",
+    "Character masks, palettes, variants, native sprites, and previews remain source-system material until a promotion lane chooses runtime slices.",
+    "Derived assets under source require explicit custody decisions because runtime outputs should normally be rebuildable."
+  ],
+  "report_sha256": "5d2b18904a7553d4663ef0c169007e27746392a1bc38766e7ffc43731a08c639"
+}
