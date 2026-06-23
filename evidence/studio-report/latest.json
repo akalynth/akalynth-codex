@@ -1,0 +1,149 @@
+{
+  "generated_by": "studio-report-v1",
+  "stamped_at": "2026-06-23T11:12:18.593Z",
+  "node_version": "v20.16.0",
+  "suites": {
+    "files": [
+      "studio-verify.test.mjs",
+      "studio-export.test.mjs",
+      "studio-promote.test.mjs"
+    ],
+    "tests": 22,
+    "pass": 22,
+    "fail": 0,
+    "failures": [],
+    "failures_truncated": 0
+  },
+  "spine": {
+    "summary": {
+      "total": 15,
+      "executable": 6,
+      "passed": 6,
+      "failed": 0,
+      "declared": 9
+    },
+    "guarantees": [
+      {
+        "g": "G1",
+        "key": "receipt_integrity",
+        "label": "Receipt integrity",
+        "executable": true,
+        "status": "PASS",
+        "finding_count": 0
+      },
+      {
+        "g": "G2",
+        "key": "chronicle_chain",
+        "label": "Chronicle chain",
+        "executable": true,
+        "status": "PASS",
+        "finding_count": 0
+      },
+      {
+        "g": "G3",
+        "key": "protocol_sync",
+        "label": "Protocol sync",
+        "executable": false,
+        "status": "DECLARED",
+        "finding_count": 0
+      },
+      {
+        "g": "G4",
+        "key": "treasury_conservation",
+        "label": "Treasury conservation",
+        "executable": false,
+        "status": "DECLARED",
+        "finding_count": 0
+      },
+      {
+        "g": "G5",
+        "key": "heat_determinism",
+        "label": "Heat determinism",
+        "executable": false,
+        "status": "DECLARED",
+        "finding_count": 0
+      },
+      {
+        "g": "G6",
+        "key": "protected_slots",
+        "label": "Protected slots",
+        "executable": false,
+        "status": "DECLARED",
+        "finding_count": 0
+      },
+      {
+        "g": "G7",
+        "key": "style_contract",
+        "label": "Style contract",
+        "executable": true,
+        "status": "PASS",
+        "finding_count": 0
+      },
+      {
+        "g": "G8",
+        "key": "schema_valid",
+        "label": "Schema valid",
+        "executable": true,
+        "status": "PASS",
+        "finding_count": 0
+      },
+      {
+        "g": "G9",
+        "key": "idempotent_apply",
+        "label": "Idempotent apply",
+        "executable": false,
+        "status": "DECLARED",
+        "finding_count": 0
+      },
+      {
+        "g": "G10",
+        "key": "no_prod_bypass",
+        "label": "No prod bypass",
+        "executable": true,
+        "status": "PASS",
+        "finding_count": 0
+      },
+      {
+        "g": "G11",
+        "key": "authority_scope",
+        "label": "Authority scope",
+        "executable": false,
+        "status": "DECLARED",
+        "finding_count": 0
+      },
+      {
+        "g": "G12",
+        "key": "spawn_bounds",
+        "label": "Spawn bounds",
+        "executable": false,
+        "status": "DECLARED",
+        "finding_count": 0
+      },
+      {
+        "g": "G13",
+        "key": "collision_sound",
+        "label": "Collision sound",
+        "executable": false,
+        "status": "DECLARED",
+        "finding_count": 0
+      },
+      {
+        "g": "G14",
+        "key": "asset_provenance",
+        "label": "Asset provenance",
+        "executable": true,
+        "status": "PASS",
+        "finding_count": 0
+      },
+      {
+        "g": "G15",
+        "key": "reversible_apply",
+        "label": "Reversible apply",
+        "executable": false,
+        "status": "DECLARED",
+        "finding_count": 0
+      }
+    ]
+  },
+  "ok": true
+}
