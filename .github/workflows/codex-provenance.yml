@@ -1,0 +1,54 @@
+name: codex-provenance
+
+# Guards the public Codex projection against provenance regressions: every
+# published entry must resolve to a real on-disk source with a matching
+# fingerprint (no `asserted`). See tools/verify-provenance.mjs.
+#
+# Provenance sources live in the SIBLING `akalynth` repo (repos/akalynth/drop),
+# not in this repo. The gate self-skips when those sources are absent, so it
+# only enforces when the workspace is assembled. Set repo secret WORKSPACE_PAT
+# (read access to akalynth/akalynth) to make CI enforce; without it the job
+# runs green but reports SKIP.
+
+on:
+  push:
+    paths:
+      - 'tools/project.mjs'
+      - 'tools/resolve-ops-root.mjs'
+      - 'tools/verify-provenance.mjs'
+      - 'entries/**'
+      - 'tests/provenance.test.mjs'
+      - '.github/workflows/codex-provenance.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    steps:
+      # Lay the checkout out as akalynth-ops/repos/akalynth-codex so resolveOpsRoot
+      # finds the workspace root and the sibling source repo beside it.
+      - name: Checkout codex
+        uses: actions/checkout@v4
+        with:
+          path: akalynth-ops/repos/akalynth-codex
+
+      - name: Checkout akalynth sources (optional, enables enforcement)
+        if: ${{ secrets.WORKSPACE_PAT != '' }}
+        uses: actions/checkout@v4
+        with:
+          repository: akalynth/akalynth
+          token: ${{ secrets.WORKSPACE_PAT }}
+          path: akalynth-ops/repos/akalynth
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Provenance gate
+        working-directory: akalynth-ops/repos/akalynth-codex
+        run: node tools/verify-provenance.mjs
+
+      - name: Test suite (provenance test)
+        working-directory: akalynth-ops/repos/akalynth-codex
+        run: node --test tests/provenance.test.mjs
