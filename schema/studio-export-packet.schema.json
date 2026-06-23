@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akalynth/codex/studio-export-packet.schema.json",
+  "title": "Akalynth Studio Export Packet v1",
+  "description": "A durable codex artifact exported from a verified browser-local Studio work packet. Carries the packet payload (a placement set, behavior binding, or asset registration) plus cryptographic provenance from the ledger event chain it was reconstructed from. This is the boundary object that turns browser-local replay into a repo-durable, schema-validated packet — the prerequisite for any promotion claim. It does NOT itself establish external/production authority; that is a later review-gate step.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "packet_id", "kind", "exported_at", "provenance", "payload"],
+  "properties": {
+    "schema_version": { "const": "studio-export/v1" },
+    "packet_id": { "type": "string", "pattern": "^wp:[0-9a-f]{8,}$", "description": "The originating Studio work-packet id." },
+    "kind": { "enum": ["behavior_binding", "placement", "asset_registration"] },
+    "exported_at": { "type": "string", "description": "ISO-8601 timestamp the export was produced." },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonicalization", "event_count", "chain_verified", "last_event_digest"],
+      "description": "Evidence linking this durable packet back to the verified ledger chain.",
+      "properties": {
+        "canonicalization": { "const": "akalynth-canonical-json-v1" },
+        "event_count": { "type": "number" },
+        "first_event_at": { "type": ["string", "null"] },
+        "chain_verified": { "const": true, "description": "Export refuses to emit unless the source chain verified PASS." },
+        "last_event_digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "receipt_digest": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+        "signer_key_id": { "type": ["string", "null"], "description": "akx-key id of the receipt signature, when the chain carried a signed receipt." },
+        "external_authority": { "const": "NOT ESTABLISHED", "description": "Honest marker: durable != promoted. Promotion is a separate review-gated step." }
+      }
+    },
+    "payload": {
+      "type": "object",
+      "description": "The packet body. Shape depends on `kind`; validated structurally here and by the kind-specific validator in lib/studio-export.mjs.",
+      "required": ["output_digest"],
+      "properties": {
+        "output_digest": { "type": "string", "pattern": "^[0-9a-f]{64}$", "description": "sha256 of the canonical payload-minus-this-field; ties payload to the committed ledger output." }
+      }
+    }
+  }
+}

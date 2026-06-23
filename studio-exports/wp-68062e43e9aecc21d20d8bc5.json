@@ -1,0 +1,47 @@
+{
+  "schema_version": "studio-export/v1",
+  "packet_id": "wp:68062e43e9aecc21d20d8bc5",
+  "kind": "behavior_binding",
+  "exported_at": "2026-06-23T10:53:36.785Z",
+  "provenance": {
+    "canonicalization": "akalynth-canonical-json-v1",
+    "event_count": 5,
+    "first_event_at": "2026-06-23T10:53:36.790Z",
+    "chain_verified": true,
+    "last_event_digest": "8ad95a9dcf6c33023f2aa92d777c2ebb13a155f1e97c432663b4becfffea8d01",
+    "receipt_digest": "8ad95a9dcf6c33023f2aa92d777c2ebb13a155f1e97c432663b4becfffea8d01",
+    "signer_key_id": "akx-key:4f3e486f7ab8236d",
+    "external_authority": "NOT ESTABLISHED"
+  },
+  "payload": {
+    "behavior_schema_version": 1,
+    "behavior_id": "beh-spine",
+    "subject_asset_id": "akalynth_creature_skeleton_001",
+    "archetype": "guardian",
+    "initial_state": "idle",
+    "states": [
+      "idle",
+      "alert"
+    ],
+    "transitions": [
+      {
+        "from": "idle",
+        "to": "alert",
+        "condition": "vision"
+      },
+      {
+        "from": "alert",
+        "to": "idle",
+        "condition": "lost"
+      }
+    ],
+    "parameters": {
+      "aggro": 5,
+      "leash": 8,
+      "cooldown": 900,
+      "fleeHp": 0,
+      "patrolR": 4
+    },
+    "output_digest": "bf800f274f36f6b87141a1389782c0254dd98ee089ac2c920b41453f449a0ac4"
+  }
+}
