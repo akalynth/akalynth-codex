@@ -46,7 +46,7 @@
         "implementation": {
           "type": "object", "additionalProperties": false,
           "properties": {
-            "stage": { "enum": ["concept", "spec", "prototype", "in_engine", "shipped"] },
+            "stage": { "enum": ["concept", "spec", "prototype", "in_engine", "implemented", "shipped", "beta", "live"] },
             "slice": { "type": "string", "description": "Lane/slice id implementing this." },
             "registry": { "type": "string", "description": "Repo path to the runtime registry, if any." }
           }
@@ -59,7 +59,7 @@
       "items": {
         "type": "object", "additionalProperties": false, "required": ["rel", "target"],
         "properties": {
-          "rel": { "enum": ["located_in", "home_of", "part_of", "connects_to", "produces", "guards", "unlocks", "references", "faction_of", "contains"] },
+          "rel": { "enum": ["located_in", "home_of", "part_of", "connects_to", "produces", "guards", "unlocks", "references", "faction_of", "contains", "follows"] },
           "target": { "type": "string" },
           "note": { "type": "string" }
         }
@@ -70,7 +70,7 @@
       "items": {
         "type": "object", "additionalProperties": false, "required": ["kind", "path"],
         "properties": {
-          "kind": { "enum": ["banner", "card", "wallpaper", "og", "thumb", "sprite", "tile", "icon", "plate", "poster"] },
+          "kind": { "enum": ["banner", "card", "wallpaper", "og", "thumb", "sprite", "tile", "icon", "plate", "poster", "hero"] },
           "path": { "type": "string" },
           "sha256": { "type": "string" }
         }
@@ -82,10 +82,11 @@
       "items": {
         "type": "object", "additionalProperties": false, "required": ["kind", "ref", "status"],
         "properties": {
-          "kind": { "enum": ["website_update", "prototype_data", "asset", "quest", "mechanic", "map", "dialogue", "review"] },
+          "kind": { "enum": ["website_update", "prototype_data", "asset", "quest", "mechanic", "map", "dialogue", "review", "screenshot-proof", "presentation"] },
           "ref": { "type": "string" },
-          "status": { "enum": ["open", "assigned", "in_review", "accepted", "blocked"] },
-          "assignee": { "type": "string" }
+          "status": { "enum": ["open", "assigned", "in_review", "accepted", "blocked", "closed"] },
+          "assignee": { "type": "string" },
+          "note": { "type": "string" }
         }
       }
     },
@@ -95,7 +96,7 @@
       "items": {
         "type": "object", "additionalProperties": false, "required": ["kind", "ref"],
         "properties": {
-          "kind": { "enum": ["manifest", "checksum", "receipt", "screenshot", "verification"] },
+          "kind": { "enum": ["manifest", "checksum", "receipt", "screenshot", "verification", "sample", "ops-closure"] },
           "ref": { "type": "string" },
           "sha256": { "type": "string" }
         }
