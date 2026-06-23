@@ -1,0 +1,114 @@
+{
+  "schema_version": "codex-entry/v1",
+  "id": "azura-chill-zone",
+  "type": "place",
+  "title": "Azura · Chill Zone",
+  "authority": "Akalynth",
+  "author": "guardian@vaultmesh.org",
+  "created": "2026-06-23T12:00:00Z",
+  "updated": "2026-06-23T12:00:00Z",
+  "status": "accepted",
+  "visibility": {
+    "builder": true,
+    "operator": true,
+    "agent": true,
+    "public": false
+  },
+  "summary": "High City map Azura hosts the first player-alive gather → refine → deliver loop behind runtime flags; gate from Rookguard after tutorial completion.",
+  "lineage": {
+    "origin": "AZURA_LOOP_ALIVE_V1",
+    "accepted": true,
+    "accepted_at": "2026-06-23T12:00:00Z",
+    "last_accepted_change": "AZURA_LOOP_ALIVE_V1 strike — smoke script, gather UX, studio asset lane wiring"
+  },
+  "world": {
+    "description": "Server map Azura (64×64) at spawn (32,32). Four ley-mote nodes, one refinery (Attunement Stand), one curation post. Loop: gather 3s → refine 5s → deliver keystone_token. Gated by CHILL_ZONE_GATHER_ENABLED and CHILL_ZONE_REFINE_ENABLED on beta.",
+    "design_refs": [
+      "repos/akalynth/.codex/design/chill-zone-refine.md",
+      "repos/akalynth/packages/shared/maps/azura.json",
+      "repos/akalynth/apps/server/src/world/gather.ts",
+      "repos/akalynth/scripts/smoke-beta-azura-loop.mjs",
+      "evidence/20260623T114341Z-azura-loop-alive/receipt.json"
+    ],
+    "implementation": {
+      "stage": "beta",
+      "slice": "AZURA_LOOP_ALIVE_V1",
+      "registry": "repos/akalynth/apps/server/src/world/gather.ts"
+    }
+  },
+  "related": [
+    {
+      "rel": "part_of",
+      "target": "high-city",
+      "note": "Azura is the High City chill-zone map reachable via GateToAzura from Rookguard."
+    },
+    {
+      "rel": "references",
+      "target": "chill-zone-gather",
+      "note": "Mechanic authority for gather/refine/deliver intents and receipts."
+    },
+    {
+      "rel": "connects_to",
+      "target": "rookguard",
+      "note": "New players clear Rookguard tutorial before gate transfer."
+    }
+  ],
+  "assets": [
+    {
+      "kind": "tile",
+      "path": "codex/studio/tile__gate_to_azura.png"
+    },
+    {
+      "kind": "sprite",
+      "path": "codex/studio/item__ley_mote.png"
+    },
+    {
+      "kind": "sprite",
+      "path": "codex/studio/item__refined_ley_mote.png"
+    },
+    {
+      "kind": "tile",
+      "path": "repos/akalynth/data/assets-built/sprites/tile__gate_to_azura.png"
+    },
+    {
+      "kind": "sprite",
+      "path": "repos/akalynth/data/assets-built/sprites/item__ley_mote.png"
+    }
+  ],
+  "packets": [
+    {
+      "kind": "smoke",
+      "ref": "repos/akalynth/scripts/smoke-beta-azura-loop.mjs",
+      "status": "open"
+    },
+    {
+      "kind": "evidence",
+      "ref": "evidence/20260623T114341Z-azura-loop-alive/receipt.json",
+      "status": "accepted"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "receipt",
+      "ref": "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_CHILL_ZONE_SHOWCASE_V1/receipt.json"
+    },
+    {
+      "kind": "receipt",
+      "ref": "evidence/20260623T114341Z-azura-loop-alive/receipt.json"
+    },
+    {
+      "kind": "verify",
+      "ref": "codex/studio/verify/asset-add-lanes.json",
+      "note": "lane_terrain tile__gate_to_azura; lane_items ley_mote + refined_ley_mote"
+    }
+  ],
+  "public_projection": null,
+  "tags": [
+    "azura",
+    "chill-zone",
+    "gather",
+    "refine",
+    "beta",
+    "player-alive"
+  ]
+}

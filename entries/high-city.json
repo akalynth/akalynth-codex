@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-12T00:00:00Z",
-  "updated": "2026-06-23T00:00:00Z",
+  "updated": "2026-06-23T12:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -57,6 +57,16 @@
     {
       "rel": "references",
       "target": "play-build-govern-surface"
+    },
+    {
+      "rel": "contains",
+      "target": "azura-chill-zone",
+      "note": "Azura map — first player-alive gather/refine/deliver loop on beta."
+    },
+    {
+      "rel": "references",
+      "target": "chill-zone-gather",
+      "note": "Chill-zone mechanic authority for Azura placements."
     }
   ],
   "assets": [

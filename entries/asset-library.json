@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-05T21:39:00Z",
-  "updated": "2026-06-13T00:00:00Z",
+  "updated": "2026-06-23T12:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -19,7 +19,7 @@
     "origin": "AKALYNTH_ASSET_LIBRARY_V1",
     "accepted": true,
     "accepted_at": "2026-06-05T21:39:00Z",
-    "last_accepted_change": "AKALYNTH_ASSET_LIBRARY_V1 (world/city/creature art + Cities/Creatures/Heroes/Factions/Artifacts/Dungeon/Chronicle/Origins/Villains codex source markdown)"
+    "last_accepted_change": "AKALYNTH_ASSET_ADD_LANES_V1 — studio 158-image surface mapped to 3488 assets-src files via asset-add-lanes.json"
   },
   "world": {
     "description": "The Asset Library bundle: the source-of-truth collection of Akalynth visual and text assets created during the build session. Its markdown docs (Cities Summary, Creatures Summary, Heroes/Factions/Artifacts/Dungeon Codices, Chronicle of Ages, Origins, Villains) are the lore source the Codex's place/creature/faction/codex objects were seeded from; its images are the world-bible plates, city/region atlas, creature codex art, and collection posters.",
@@ -68,6 +68,11 @@
       "kind": "checksum",
       "ref": "repos/akalynth/drop/AKALYNTH_ASSET_LIBRARY_V1/manifests/SHA256SUMS.txt",
       "sha256": "aa7f48dc2db97acc8e98f276915d1797cc98004670fc575f004c0717b1e55681"
+    },
+    {
+      "kind": "verify",
+      "ref": "codex/studio/verify/asset-add-lanes.json",
+      "note": "Eight studio lanes → assets-src families; 3488 source images mapped"
     }
   ],
   "public_projection": null,

@@ -6,7 +6,7 @@
   "authority": "Akalynth",
   "author": "guardian@vaultmesh.org",
   "created": "2026-06-20T00:00:00Z",
-  "updated": "2026-06-20T00:00:00Z",
+  "updated": "2026-06-23T12:00:00Z",
   "status": "accepted",
   "visibility": {
     "builder": true,
@@ -19,16 +19,20 @@
     "origin": "gameplay-loop-designer session \u2014 MVP loop proposal (no source drop)",
     "accepted": true,
     "accepted_at": "2026-06-20T00:00:00Z",
-    "last_accepted_change": "design review + server-spec step-1 mechanic packet accepted by codex-build-delegation 2026-06-20"
+    "last_accepted_change": "AZURA_LOOP_ALIVE_V1 — refine extension shipped, beta flags on, live smoke script landed"
   },
   "world": {
     "description": "A no-combat chill-zone onboarding loop. The client sends only move/gather/deliver intents; the server owns the gather clock, inventory, and reward grant. One delivery.recorded receipt per completed cycle, with gather provenance folded in. Deliberately excludes combat, party mechanics, and tradeable economy so the Systems Bible pillars stay untouched. Placeholder intent/snapshot/receipt shapes must be reconciled with real game-server contracts (movement, inventory, receipt schema, Tem heat, zone snapshot) before implementation.",
     "design_refs": [
       "codex/design/chill-zone-gather.md",
-      "codex/design/chill-zone-gather-step1-server-spec.md"
+      "codex/design/chill-zone-gather-step1-server-spec.md",
+      "repos/akalynth/.codex/design/chill-zone-refine.md",
+      "repos/akalynth/scripts/smoke-beta-azura-loop.mjs"
     ],
     "implementation": {
-      "stage": "concept"
+      "stage": "beta",
+      "slice": "AZURA_LOOP_ALIVE_V1",
+      "registry": "repos/akalynth/apps/server/src/world/gather.ts"
     }
   },
   "related": [
@@ -41,6 +45,27 @@
       "rel": "references",
       "target": "systems-bible",
       "note": "Non-economic, combat-free \u2014 touches none of the six System Pillars' balance surfaces."
+    },
+    {
+      "rel": "located_in",
+      "target": "azura-chill-zone",
+      "note": "First live map placement for gather nodes and stations."
+    }
+  ],
+  "assets": [
+    { "kind": "sprite", "path": "codex/studio/item__ley_mote.png" },
+    { "kind": "sprite", "path": "codex/studio/item__refined_ley_mote.png" },
+    { "kind": "sprite", "path": "codex/studio/item__tending_token.png" },
+    { "kind": "sprite", "path": "codex/studio/item__keystone_token.png" }
+  ],
+  "evidence": [
+    {
+      "kind": "receipt",
+      "ref": "repos/akalynth/docs/engineering-loop/AKALYNTH_ENGINEERING_LOOP_CHILL_ZONE_SHOWCASE_V1/receipt.json"
+    },
+    {
+      "kind": "receipt",
+      "ref": "evidence/20260623T114341Z-azura-loop-alive/receipt.json"
     }
   ],
   "packets": [
@@ -53,6 +78,11 @@
       "kind": "mechanic",
       "ref": "codex/design/chill-zone-gather-step1-server-spec.md",
       "status": "accepted"
+    },
+    {
+      "kind": "smoke",
+      "ref": "repos/akalynth/scripts/smoke-beta-azura-loop.mjs",
+      "status": "open"
     }
   ],
   "public_projection": null,
