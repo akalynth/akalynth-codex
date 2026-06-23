@@ -1,0 +1,8 @@
+{
+  "schema_version": "council-human-ack/v1",
+  "status": "provided",
+  "ack_required": true,
+  "provided_utc": "2026-06-23T11:08:13.526Z",
+  "operator_id": "guardian@vaultmesh.org",
+  "source": "gate_flag_human_ack"
+}

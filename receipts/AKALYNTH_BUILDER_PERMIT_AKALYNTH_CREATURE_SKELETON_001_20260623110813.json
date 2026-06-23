@@ -1,0 +1,22 @@
+{
+  "schema_version": "builder-promotion-permit/v1",
+  "permit_id": "AKALYNTH_BUILDER_PERMIT_AKALYNTH_CREATURE_SKELETON_001_20260623110813",
+  "review_packet_id": "AKALYNTH_REVIEW_AKALYNTH_CREATURE_SKELETON_001_20260623110813",
+  "source_object": "akalynth-creature-skeleton-001",
+  "lane_target": "beta",
+  "issued_utc": "2026-06-23T11:08:13.526Z",
+  "reviewer": "guardian@vaultmesh.org",
+  "draft_manifest_checksum": "d1cee4036aabeb98d47a456034cd21e69f1fbcf9683e8af50b583a329d282d4c",
+  "execution_status": "permit_issued",
+  "non_mutation_boundary": {
+    "deployment": "not_performed",
+    "lane_publish": "not_performed",
+    "runtime_state": "unchanged"
+  },
+  "non_claims": [
+    "No production deployment performed.",
+    "Repository-receipt authority only; not server receipt-chain or CA authority.",
+    "Browser-local ECDSA proves local replay, not external authority.",
+    "No game-runtime, lane-publish, or zone state was mutated."
+  ]
+}

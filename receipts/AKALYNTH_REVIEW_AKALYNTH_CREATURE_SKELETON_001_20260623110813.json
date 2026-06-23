@@ -1,0 +1,37 @@
+{
+  "schema_version": "promotion-review-packet/v1",
+  "packet_id": "AKALYNTH_REVIEW_AKALYNTH_CREATURE_SKELETON_001_20260623110813",
+  "source_object": "akalynth-creature-skeleton-001",
+  "draft_manifest_ref": "studio-exports/wp-68062e43e9aecc21d20d8bc5.json",
+  "preview_session_ref": "studio-export:wp:68062e43e9aecc21d20d8bc5",
+  "changed_files": [
+    {
+      "path": "studio-exports/wp-68062e43e9aecc21d20d8bc5.json",
+      "sha256": "d1cee4036aabeb98d47a456034cd21e69f1fbcf9683e8af50b583a329d282d4c"
+    }
+  ],
+  "preview_evidence": [
+    "studio-exports/wp-68062e43e9aecc21d20d8bc5.json",
+    "ledger_last_event_digest:8ad95a9dcf6c33023f2aa92d777c2ebb13a155f1e97c432663b4becfffea8d01",
+    "verification_spine:node tools/studio-verify.mjs"
+  ],
+  "receipt_expectations": [
+    {
+      "receipt_type": "studio-export/v1",
+      "lane": "preview_only",
+      "note": "durable export, chain-verified"
+    }
+  ],
+  "abuse_review": "pass",
+  "lane_target": "beta",
+  "reviewer": "guardian@vaultmesh.org",
+  "decision": "accept",
+  "decision_note": "reviewed skeleton behavior binding; chain-verified; safe for beta",
+  "non_claims": [
+    "No production deployment performed.",
+    "Repository-receipt authority only; not server receipt-chain or CA authority.",
+    "Browser-local ECDSA proves local replay, not external authority.",
+    "No game-runtime, lane-publish, or zone state was mutated."
+  ],
+  "promotion_permit_ref": "AKALYNTH_BUILDER_PERMIT_AKALYNTH_CREATURE_SKELETON_001_20260623110813"
+}
