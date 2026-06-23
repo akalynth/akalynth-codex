@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ARCHIVE_LOOP_GAP_CLOSURE_MAP_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "gap_closure_needs_review",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "approval_scope": "exact_plan_id_only",
+  "intent": "Consolidate the remaining asset archive-loop gaps into ranked closure lanes with evidence, blockers, next actions, and no execution permission.",
+  "source_rule": "This closure map decides nothing by itself. It is review evidence only; source moves, archive destinations, receipt writes, runtime sync, and deploy remain prohibited without exact approval.",
+  "totals": {
+    "closure_lane_count": 3,
+    "open_decision_lane_count": 2,
+    "queue_item_count": 7,
+    "open_queue_item_count": 6,
+    "source_only_family_review_count": 0,
+    "source_only_unique_content_hashes": 0,
+    "source_only_family_mentions": 0,
+    "exact_plan_approval_count": 0,
+    "archive_plan_file_count": 0,
+    "non_source_drift_record_count": 118,
+    "non_source_drift_unique_content_hashes": 60,
+    "legacy_promote_or_retain_unique_content_hashes": 0,
+    "generated_output_custody_file_count": 0,
+    "executable_action_count": 0
+  },
+  "checks": {
+    "closure_lanes_cover_review_queue": false,
+    "source_only_counts_match_gap_audit": true,
+    "source_only_backlog_matches_gap_audit": true,
+    "exact_plan_count_matches_approval_runbook": true,
+    "exact_plan_file_count_matches_move_plans": true,
+    "non_source_drift_count_matches_report": true,
+    "execution_simulation_still_blocks": true,
+    "all_closure_lanes_have_evidence": true,
+    "all_queue_items_block_execution": true,
+    "source_tree_mutated_by_gap_closure_map": false
+  },
+  "closure_lanes": [
+    {
+      "lane": "studio_to_source_or_registry_review",
+      "priority_rank": 1,
+      "status": "open_review",
+      "blocker": "studio_to_source_or_registry_review_missing",
+      "may_execute": false,
+      "item_count": 1,
+      "file_count": 55,
+      "unique_content_hashes": 53,
+      "source_only_family_mentions": 0,
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6",
+        "archive_loop_review_queue_report": "studio/verify/archive-loop-review-queue.json",
+        "archive_loop_review_queue_sha256": "d1490e341eb592b243b66df336ab73ef63d16c7ca64ec8aefa24608f81dc6fdb"
+      },
+      "next_action": "Promote the Studio-only image into assets-src, register it as Studio-only reference, or remove it from the working surface.",
+      "item_ids": [
+        "non_source_drift_codex_studio"
+      ]
+    },
+    {
+      "lane": "poster_reference_review",
+      "priority_rank": 2,
+      "status": "open_review",
+      "blocker": "poster_reference_review_missing",
+      "may_execute": false,
+      "item_count": 1,
+      "file_count": 7,
+      "unique_content_hashes": 7,
+      "source_only_family_mentions": 0,
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6",
+        "archive_loop_review_queue_report": "studio/verify/archive-loop-review-queue.json",
+        "archive_loop_review_queue_sha256": "d1490e341eb592b243b66df336ab73ef63d16c7ca64ec8aefa24608f81dc6fdb"
+      },
+      "next_action": "Keep as poster/reference output unless a human selects a specific image for promotion.",
+      "item_ids": [
+        "non_source_drift_codex_posters"
+      ]
+    },
+    {
+      "lane": "freeze_reference_snapshot",
+      "priority_rank": 3,
+      "status": "evidence_freeze",
+      "blocker": "none_reference_snapshot",
+      "may_execute": false,
+      "item_count": 1,
+      "file_count": 15,
+      "unique_content_hashes": 15,
+      "source_only_family_mentions": 0,
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6",
+        "archive_loop_review_queue_report": "studio/verify/archive-loop-review-queue.json",
+        "archive_loop_review_queue_sha256": "d1490e341eb592b243b66df336ab73ef63d16c7ca64ec8aefa24608f81dc6fdb"
+      },
+      "next_action": "Keep as frozen incoming reference evidence unless a specific file is promoted through source registration.",
+      "item_ids": [
+        "non_source_drift_incoming_drop_studio"
+      ]
+    }
+  ],
+  "decision_matrix": [
+    {
+      "id": "non_source_drift_codex_studio",
+      "lane": "studio_to_source_or_registry_review",
+      "item_type": "non_source_drift_root",
+      "status": "open_review",
+      "blocker": "studio_to_source_or_registry_review_missing",
+      "subject": "codex_studio",
+      "plan_id": null,
+      "file_count": 55,
+      "unique_content_hashes": 53,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "required_operator_action": "Decide whether this Studio image should be promoted into data/assets-src/sprites, registered as Studio-only reference, or removed from the working surface.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    },
+    {
+      "id": "non_source_drift_debug_client_dist_atlas",
+      "lane": "rebuild_or_prune_dist_output",
+      "item_type": "non_source_drift_root",
+      "status": "open_review",
+      "blocker": "rebuild_or_prune_dist_output_missing",
+      "subject": "debug_client_dist_atlas",
+      "plan_id": null,
+      "file_count": 4,
+      "unique_content_hashes": 4,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "required_operator_action": "Reproduce from the build lane or prune as distribution output; do not use it as source authority.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    },
+    {
+      "id": "non_source_drift_android_assets",
+      "lane": "unknown_non_source_review",
+      "item_type": "non_source_drift_root",
+      "status": "open_review",
+      "blocker": "unknown_non_source_review_missing",
+      "subject": "android_assets",
+      "plan_id": null,
+      "file_count": 29,
+      "unique_content_hashes": 26,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "required_operator_action": "Review manually before custody, archive, or cleanup claims.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    },
+    {
+      "id": "non_source_drift_incoming_drop_studio",
+      "lane": "freeze_reference_snapshot",
+      "item_type": "non_source_drift_root",
+      "status": "evidence_freeze",
+      "blocker": "none_reference_snapshot",
+      "subject": "incoming_drop_studio",
+      "plan_id": null,
+      "file_count": 15,
+      "unique_content_hashes": 15,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "required_operator_action": "Keep as original drop evidence. Promote a specific file only through a source-registration lane.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    },
+    {
+      "id": "non_source_drift_codex_posters",
+      "lane": "poster_reference_review",
+      "item_type": "non_source_drift_root",
+      "status": "open_review",
+      "blocker": "poster_reference_review_missing",
+      "subject": "codex_posters",
+      "plan_id": null,
+      "file_count": 7,
+      "unique_content_hashes": 7,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "required_operator_action": "Keep as poster/reference output unless a human selects a concrete image for source promotion.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    },
+    {
+      "id": "non_source_drift_debug_client_public_atlas",
+      "lane": "unknown_non_source_review",
+      "item_type": "non_source_drift_root",
+      "status": "open_review",
+      "blocker": "unknown_non_source_review_missing",
+      "subject": "debug_client_public_atlas",
+      "plan_id": null,
+      "file_count": 4,
+      "unique_content_hashes": 4,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "required_operator_action": "Review manually before custody, archive, or cleanup claims.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    },
+    {
+      "id": "non_source_drift_game_built_assets",
+      "lane": "unknown_non_source_review",
+      "item_type": "non_source_drift_root",
+      "status": "open_review",
+      "blocker": "unknown_non_source_review_missing",
+      "subject": "game_built_assets",
+      "plan_id": null,
+      "file_count": 4,
+      "unique_content_hashes": 4,
+      "source_only_family_mentions": 0,
+      "may_execute": false,
+      "required_operator_action": "Review manually before custody, archive, or cleanup claims.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    }
+  ],
+  "required_next_gate": [
+    "Use the closure lanes to choose a review path.",
+    "Resolve source-only families by active-source, retained-reference, or promotion-lane decisions.",
+    "Resolve drift roots by source promotion, reference retention, or working-surface cleanup decisions.",
+    "For archive execution, use only the exact plan approval phrase from the approval ticket and rerun the mapper first."
+  ],
+  "report_sha256": "cd490037f061bf4c9fd40aba2c2bb35348ed87868abb1f5f07651ca11ffa59dc"
+}

@@ -1,0 +1,517 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ASSET_ARCHIVE_LOOP_INDEX_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "mapped_with_failed_checks",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "approval_scope": "exact_plan_id_only",
+  "intent": "Top-level machine-readable index for the full Akalynth asset archive loop: source authority, egress, drift, duplicate candidates, dry-run plans, preflight, receipt templates, and approval tickets.",
+  "source_rule": "data/assets-src/sprites remains source authority. This index proves mapping and gates only; it never approves source archive, deletion, or runtime cleanup.",
+  "totals": {
+    "filesystem_image_files": 1179,
+    "filesystem_unique_content_hashes": 193,
+    "source_image_files": 143,
+    "source_unique_content_hashes": 133,
+    "source_unique_content_represented_outside_source": 133,
+    "source_unique_content_only_in_source": 0,
+    "source_content_leave_manifest_count": 133,
+    "source_content_with_filesystem_egress": 133,
+    "source_content_archive_plan_covered": 0,
+    "zip_reconciliation_entry_count": 3500,
+    "zip_reconciliation_unique_crc_size": 1514,
+    "zip_reconciliation_entries_without_source_match": 3224,
+    "zip_reconciliation_source_records_without_zip_match": 0,
+    "zip_reconciliation_crc_collision_key_count": 0,
+    "zip_reconciliation_executable_record_count": 0,
+    "asset_egress_topology_node_count": 10,
+    "asset_egress_topology_edge_count": 32,
+    "asset_egress_topology_executable_edge_count": 0,
+    "codex_image_file_count": 193,
+    "codex_image_covered_by_archive_loop_root_count": 188,
+    "codex_image_evidence_only_count": 5,
+    "codex_image_unclassified_count": 0,
+    "codex_image_executable_coverage_record_count": 0,
+    "source_authority_gap_source_only_unique": 0,
+    "source_authority_gap_duplicate_files_inside_source": 10,
+    "source_authority_gap_source_vs_largest_non_source_delta": -106,
+    "source_target_delta_checked_row_count": 9,
+    "source_target_delta_runtime_subset_root_count": 4,
+    "source_target_delta_records_not_in_source": 118,
+    "source_target_delta_executable_row_count": 0,
+    "source_only_disposition_family_count": 0,
+    "source_only_disposition_unique_content_hashes": 0,
+    "source_only_disposition_archive_gate_mirror_family_count": 0,
+    "source_only_disposition_active_character_source_family_count": 0,
+    "source_only_disposition_executable_disposition_count": 0,
+    "non_source_drift_records": 118,
+    "non_source_drift_unique_content_hashes": 60,
+    "non_source_disposition_root_count": 7,
+    "non_source_disposition_record_count": 118,
+    "non_source_disposition_executable_disposition_count": 0,
+    "archive_candidate_count": 0,
+    "archive_ready_candidate_count": 0,
+    "archive_move_plan_count": 0,
+    "archive_planned_file_count": 0,
+    "archive_impact_preview_plan_count": 0,
+    "archive_impact_preview_planned_file_count": 0,
+    "archive_impact_preview_active_source_after_all_plans": 143,
+    "archive_plan_retention_planned_file_count": 0,
+    "archive_plan_retention_retained_active_source_hash_count": 0,
+    "archive_plan_retention_zip_backed_hash_count": 0,
+    "archive_plan_retention_executable_row_count": 0,
+    "archive_execution_simulation_operation_count": 0,
+    "archive_execution_simulation_active_source_after": 143,
+    "archive_execution_simulation_rollback_records": 143,
+    "archive_move_reference_audit_reference_records": 0,
+    "archive_move_reference_audit_reference_files": 0,
+    "archive_move_reference_audit_runtime_references": 0,
+    "archive_move_reference_audit_blocking_references": 0,
+    "archive_move_reference_audit_executable_reference_records": 0,
+    "archive_exact_approval_packet_count": 0,
+    "archive_exact_approval_packet_ready_count": 0,
+    "archive_exact_approval_packet_executable_count": 0,
+    "archive_post_approval_contract_count": 0,
+    "archive_post_approval_ready_contract_count": 0,
+    "archive_post_approval_executable_contract_count": 0,
+    "archive_post_approval_issue_count": 0,
+    "completion_audit_requirement_count": 28,
+    "completion_audit_proven_requirement_count": 27,
+    "completion_audit_blocked_requirement_count": 1,
+    "approval_ticket_count": 0,
+    "review_queue_item_count": 7,
+    "review_queue_open_item_count": 6,
+    "source_only_review_family_count": 0,
+    "source_only_review_family_mentions": 0,
+    "gap_closure_lane_count": 3,
+    "gap_closure_open_decision_lane_count": 2,
+    "gap_closure_executable_action_count": 0,
+    "operator_decision_board_card_count": 7,
+    "operator_decision_board_open_card_count": 6,
+    "operator_decision_board_executable_card_count": 0,
+    "executable_ticket_count": 0,
+    "approved_ticket_count": 0,
+    "executed_ticket_count": 0
+  },
+  "checks": {
+    "source_authority_mapped": true,
+    "zip_has_full_source_crc_size_coverage": true,
+    "zip_snapshot_reconciled": false,
+    "egress_paths_mapped": true,
+    "asset_egress_topology_mapped": true,
+    "codex_image_coverage_mapped": true,
+    "source_family_index_mapped": true,
+    "source_content_leave_manifest_mapped": true,
+    "source_authority_gap_audit_mapped": false,
+    "source_target_delta_audit_mapped": false,
+    "source_only_disposition_audit_mapped": true,
+    "non_source_drift_mapped": true,
+    "non_source_disposition_audit_mapped": false,
+    "archive_candidates_mapped": false,
+    "move_plans_are_dry_run_only": true,
+    "dry_run_receipts_block_execution": true,
+    "execution_preflight_blocks_without_approval": true,
+    "execution_templates_block_execution": true,
+    "approval_runbook_blocks_execution": true,
+    "archive_move_impact_preview_mapped": true,
+    "archive_plan_retention_audit_mapped": true,
+    "archive_move_execution_simulation_mapped": true,
+    "archive_move_reference_audit_mapped": true,
+    "archive_exact_approval_packet_mapped": true,
+    "archive_post_approval_verification_audit_mapped": true,
+    "archive_loop_completion_audit_mapped": true,
+    "review_queue_mapped": true,
+    "gap_closure_map_mapped": false,
+    "operator_decision_board_mapped": false,
+    "no_approvals_recorded": true,
+    "source_tree_mutated_by_reports": false
+  },
+  "report_catalog": [
+    {
+      "id": "asset_archive_map",
+      "report": "studio/verify/asset-archive-map.json",
+      "sha256": "5c8784634e2d49b18051ce0470c58693fe724e41869abe9beaadf1f0992b60b5",
+      "kind": "AKALYNTH_ASSET_ARCHIVE_MAP_V1",
+      "role": "Top-level exact-content duplicate and custody map.",
+      "status": "mapped",
+      "may_execute": false
+    },
+    {
+      "id": "source_family_map",
+      "report": "studio/verify/assets-src-family-map.json",
+      "sha256": "5d2b18904a7553d4663ef0c169007e27746392a1bc38766e7ffc43731a08c639",
+      "kind": "AKALYNTH_ASSETS_SRC_FAMILY_MAP_V1",
+      "role": "Source-family custody and promotion triage.",
+      "status": "mapped",
+      "may_execute": false
+    },
+    {
+      "id": "source_egress_map",
+      "report": "studio/verify/assets-src-egress-map.json",
+      "sha256": "860886eb529152b29d109ac1adcf3657a396c3a38119b2746246bfaccd6118a5",
+      "kind": "AKALYNTH_ASSETS_SRC_EGRESS_MAP_V1",
+      "role": "Where exact assets-src contents leave the source authority.",
+      "status": "mapped",
+      "may_execute": false
+    },
+    {
+      "id": "zip_snapshot_reconciliation",
+      "report": "studio/verify/zip-snapshot-reconciliation.json",
+      "sha256": "a6030e379f378dd56d324aa95cec72d3c5786d1908fd41dbe72e2701f6d02754",
+      "kind": "AKALYNTH_ZIP_SNAPSHOT_RECONCILIATION_V1",
+      "role": "CRC+size reconciliation for the dated asset ZIP against source and filesystem image records.",
+      "status": "zip_snapshot_reconciliation_has_gaps",
+      "may_execute": false
+    },
+    {
+      "id": "asset_egress_topology",
+      "report": "studio/verify/asset-egress-topology.json",
+      "sha256": "253b46550bd89826cf1d1c8ba11378a29572e29937d663f19ab8c2be6a302fc1",
+      "kind": "AKALYNTH_ASSET_EGRESS_TOPOLOGY_V1",
+      "role": "Graph topology of source, egress targets, archive snapshot, duplicate overlaps, and planned archive edges.",
+      "status": "egress_topology_mapped_no_mutation",
+      "may_execute": false
+    },
+    {
+      "id": "codex_image_coverage_audit",
+      "report": "studio/verify/codex-image-coverage-audit.json",
+      "sha256": "ecd066a0110428ab7f77df1883ac01ab151ea8363555c42b69312171a446472b",
+      "kind": "AKALYNTH_CODEX_IMAGE_COVERAGE_AUDIT_V1",
+      "role": "Full akalynth-codex image coverage audit, including evidence-only screenshots outside asset roots.",
+      "status": "codex_image_coverage_mapped_no_mutation",
+      "may_execute": false
+    },
+    {
+      "id": "non_source_drift",
+      "report": "studio/verify/assets-non-source-drift.json",
+      "sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6",
+      "kind": "AKALYNTH_NON_SOURCE_ASSET_DRIFT_V1",
+      "role": "Non-source image records not present in assets-src by exact content.",
+      "status": "mapped_review_only",
+      "may_execute": false
+    },
+    {
+      "id": "non_source_disposition_audit",
+      "report": "studio/verify/assets-non-source-disposition-audit.json",
+      "sha256": "22c20605464798f97253fa3031301d823147d1628ffdd3ec72cb499b36dfdd5b",
+      "kind": "AKALYNTH_NON_SOURCE_DISPOSITION_AUDIT_V1",
+      "role": "No-mutation disposition map for non-source image drift roots before source archive approval.",
+      "status": "non_source_disposition_needs_review",
+      "may_execute": false
+    },
+    {
+      "id": "source_egress_index",
+      "report": "studio/verify/assets-src-egress-index.json",
+      "sha256": "5b655dd91ecf2205b8e8e36710849f0d3350ecf59fb6d587bd325fd8b873c168",
+      "kind": "AKALYNTH_ASSETS_SRC_EGRESS_INDEX_V1",
+      "role": "Source-family duplicate-placement index across target roots.",
+      "status": "mapped",
+      "may_execute": false
+    },
+    {
+      "id": "source_content_leave_manifest",
+      "report": "studio/verify/assets-src-leave-manifest.json",
+      "sha256": "e812cea1ace96d9da5dbbec60b13fd05ef5e66c3557d7b4e4c93888e23c35313",
+      "kind": "AKALYNTH_ASSETS_SRC_LEAVE_MANIFEST_V1",
+      "role": "Exhaustive per-content manifest of where each assets-src hash leaves source.",
+      "status": "content_leave_manifest_complete_no_mutation",
+      "may_execute": false
+    },
+    {
+      "id": "source_authority_gap_audit",
+      "report": "studio/verify/assets-src-authority-gap-audit.json",
+      "sha256": "0db53c6cb106d22e8aff383842e0f6dd6c260b013d4b7c23eb48f947a5741e08",
+      "kind": "AKALYNTH_ASSETS_SRC_AUTHORITY_GAP_AUDIT_V1",
+      "role": "Classification of why assets-src is larger and which source-only lanes remain open.",
+      "status": "source_authority_gap_needs_review",
+      "may_execute": false
+    },
+    {
+      "id": "source_target_delta_audit",
+      "report": "studio/verify/assets-source-target-delta-audit.json",
+      "sha256": "aeb8120ba7a7941266932b325f1f639588be4e30e80ef945f66f0bec8d4f95fe",
+      "kind": "AKALYNTH_ASSET_SOURCE_TARGET_DELTA_AUDIT_V1",
+      "role": "Root-by-root explanation of why assets-src is larger than runtime, Studio, and archive targets.",
+      "status": "source_target_delta_review_required",
+      "may_execute": false
+    },
+    {
+      "id": "source_only_disposition_audit",
+      "report": "studio/verify/assets-src-source-only-disposition-audit.json",
+      "sha256": "6ef6dea8f497346f7e9a689596b04ed6698681e065f5b56035e4971df29c270a",
+      "kind": "AKALYNTH_SOURCE_ONLY_DISPOSITION_AUDIT_V1",
+      "role": "No-mutation disposition map for the source-only family backlog before archive approval.",
+      "status": "source_only_disposition_mapped_no_mutation",
+      "may_execute": false
+    },
+    {
+      "id": "archive_move_impact_preview",
+      "report": "studio/verify/archive-move-impact-preview.json",
+      "sha256": "ae6c3c349a8c68007edbb9931196ab0f3c4a36a0d0693b52cea6f8d00c5ff8d2",
+      "kind": "AKALYNTH_ARCHIVE_MOVE_IMPACT_PREVIEW_V1",
+      "role": "No-mutation preview of active-source, archive-destination, runtime, zip, and rollback impact for every dry-run move plan.",
+      "status": "impact_preview_no_mutation_blocked_pending_approval",
+      "may_execute": false
+    },
+    {
+      "id": "archive_plan_retention_audit",
+      "report": "studio/verify/archive-plan-retention-audit.json",
+      "sha256": "35165996a582b8b7e6fc6f3fa80b873f1e00a104e424c91996370c7fa2e2fe07",
+      "kind": "AKALYNTH_ARCHIVE_PLAN_RETENTION_AUDIT_V1",
+      "role": "No-mutation proof that every dry-run archive-plan hash remains in active source and the frozen zip snapshot.",
+      "status": "retention_audit_ready_blocked_pending_exact_approval",
+      "may_execute": false
+    },
+    {
+      "id": "archive_move_execution_simulation",
+      "report": "studio/verify/archive-move-execution-simulation.json",
+      "sha256": "5539acd27f4955fd79b20db6560fc7c172ab1d780eeef49b39a70422eb2393ec",
+      "kind": "AKALYNTH_ARCHIVE_MOVE_EXECUTION_SIMULATION_V1",
+      "role": "No-mutation manifest simulation of the planned archive move and rollback sequence.",
+      "status": "execution_simulation_ready_blocked_pending_exact_approval",
+      "may_execute": false
+    },
+    {
+      "id": "archive_move_reference_audit",
+      "report": "studio/verify/archive-move-reference-audit.json",
+      "sha256": "56bfd186ffef811f4287e3ad719edcb515bdd5e65cb404ad572c2c5caa494b7f",
+      "kind": "AKALYNTH_ARCHIVE_MOVE_REFERENCE_AUDIT_V1",
+      "role": "No-mutation scan of planned archive source paths across Codex and game repo references before approval.",
+      "status": "reference_audit_clear_no_mutation",
+      "may_execute": false
+    },
+    {
+      "id": "archive_exact_approval_packet",
+      "report": "studio/verify/archive-exact-approval-packet.json",
+      "sha256": "87e26d41ab1cf576105f8cb9ca9c8200c7462063d84a625ca02d11e418724058",
+      "kind": "AKALYNTH_ARCHIVE_EXACT_APPROVAL_PACKET_V1",
+      "role": "No-mutation per-plan approval packet that bundles exact phrase and all prerequisite evidence hashes.",
+      "status": "approval_packet_ready_blocked_pending_exact_phrase",
+      "may_execute": false
+    },
+    {
+      "id": "archive_post_approval_verification_audit",
+      "report": "studio/verify/archive-post-approval-verification-audit.json",
+      "sha256": "84c8fda300aaf122b985b07be75335e82c4be9fbd9b627eeb505fdd47aabe7c0",
+      "kind": "AKALYNTH_ARCHIVE_POST_APPROVAL_VERIFICATION_AUDIT_V1",
+      "role": "No-mutation post-approval verification contract for source absence, archive presence, hashes, receipts, rollback, and no runtime/deploy coupling.",
+      "status": "post_approval_verification_contract_ready_no_mutation",
+      "may_execute": false
+    },
+    {
+      "id": "archive_loop_completion_audit",
+      "report": "studio/verify/archive-loop-completion-audit.json",
+      "sha256": "db629d9577f84247fc5bae294de5e5495f8bcf1debc3583b6e81279fe59279c2",
+      "kind": "AKALYNTH_ARCHIVE_LOOP_COMPLETION_AUDIT_V1",
+      "role": "Requirement-by-requirement completion audit for the mapped archive loop and remaining approval gate.",
+      "status": "mapping_complete_execution_blocked_pending_exact_approval",
+      "may_execute": false
+    },
+    {
+      "id": "archive_loop_gap_closure_map",
+      "report": "studio/verify/archive-loop-gap-closure-map.json",
+      "sha256": "cd490037f061bf4c9fd40aba2c2bb35348ed87868abb1f5f07651ca11ffa59dc",
+      "kind": "AKALYNTH_ARCHIVE_LOOP_GAP_CLOSURE_MAP_V1",
+      "role": "Ranked no-mutation closure map for the remaining asset archive-loop review decisions.",
+      "status": "gap_closure_needs_review",
+      "may_execute": false
+    },
+    {
+      "id": "archive_loop_operator_decision_board",
+      "report": "studio/verify/archive-loop-operator-decision-board.json",
+      "sha256": "c45f1420eb89492977f546c59c756e68aa5fcae8db55cb8717932f9f73b7f822",
+      "kind": "AKALYNTH_ARCHIVE_LOOP_OPERATOR_DECISION_BOARD_V1",
+      "role": "Operator-facing no-mutation decision board for every remaining archive-loop gap.",
+      "status": "operator_decision_board_incomplete",
+      "may_execute": false
+    },
+    {
+      "id": "archive_review_candidates",
+      "report": "studio/verify/archive-review-candidates.json",
+      "sha256": "7584597fcc215a784cbaeaea7cfce8eb8dc13aeb4fffb8d9e72e7047b91add99",
+      "kind": "AKALYNTH_ASSET_ARCHIVE_REVIEW_CANDIDATES_V1",
+      "role": "Duplicate-backed source folders eligible for archive review only.",
+      "status": "review_only",
+      "may_execute": false
+    },
+    {
+      "id": "archive_move_plans",
+      "report": "studio/verify/archive-move-plans.json",
+      "sha256": "415057fd8ff1740639b7437ddd96649c581de35f21d5b272543de1237a5d8f99",
+      "kind": "AKALYNTH_ASSET_ARCHIVE_MOVE_PLANS_V1",
+      "role": "Dry-run archive move plans for duplicate-backed mirror candidates.",
+      "status": "dry_run_only",
+      "may_execute": false
+    },
+    {
+      "id": "dry_run_receipt_set",
+      "report": "studio/verify/archive-move-dry-run-receipts.json",
+      "sha256": "e498bfad44d0128cbfad8629545d890b9f7c59719dd80e9d9a3b6145425f8b22",
+      "kind": "AKALYNTH_ASSET_ARCHIVE_DRY_RUN_RECEIPT_SET_V1",
+      "role": "All-plan dry-run receipt set; checks source existence and hashes.",
+      "status": "dry_run_only_no_source_mutation",
+      "may_execute": false
+    },
+    {
+      "id": "execution_preflight",
+      "report": "studio/verify/archive-move-execution-preflight.json",
+      "sha256": "bde886ec4812e565653a819c119d272606a4103426438f42fea7bdc473649fc3",
+      "kind": "AKALYNTH_ASSET_ARCHIVE_EXECUTION_PREFLIGHT_V1",
+      "role": "No-mutation execution preflight, blocked without exact approval.",
+      "status": "blocked_pending_explicit_plan_approval",
+      "may_execute": false
+    },
+    {
+      "id": "execution_receipt_templates",
+      "report": "studio/verify/archive-move-execution-receipt-templates.json",
+      "sha256": "910e820d694005f727967f418c80aebb2182847aa6ae3243b835e58852d4dcad",
+      "kind": "AKALYNTH_ASSET_ARCHIVE_EXECUTION_RECEIPT_TEMPLATE_SET_V1",
+      "role": "Template-only execution receipt set; no receipts written to live path.",
+      "status": "template_only_no_source_mutation",
+      "may_execute": false
+    },
+    {
+      "id": "approval_runbook",
+      "report": "studio/verify/archive-move-approval-runbook.json",
+      "sha256": "39d7b116a25f705264da4cada6c97ce88d4e5d76f952f096beab1aa8a9022775",
+      "kind": "AKALYNTH_ASSET_ARCHIVE_APPROVAL_RUNBOOK_V1",
+      "role": "Exact-plan approval runbook and ticket index.",
+      "status": "blocked_pending_explicit_plan_approval",
+      "may_execute": false
+    },
+    {
+      "id": "archive_loop_review_queue",
+      "report": "studio/verify/archive-loop-review-queue.json",
+      "sha256": "d1490e341eb592b243b66df336ab73ef63d16c7ca64ec8aefa24608f81dc6fdb",
+      "kind": "AKALYNTH_ARCHIVE_LOOP_REVIEW_QUEUE_V1",
+      "role": "Consolidated no-mutation queue for remaining archive-loop review gaps.",
+      "status": "review_queue_open_no_mutation",
+      "may_execute": false
+    }
+  ],
+  "gates": {
+    "current_blocker": "explicit_plan_approval_missing",
+    "allowed_without_approval": [
+      "rerun mapper",
+      "review reports",
+      "compare hashes",
+      "inspect candidates",
+      "work the no-mutation review queue",
+      "promote separate source/metadata lanes"
+    ],
+    "prohibited_without_approval": [
+      "move source files",
+      "delete source files",
+      "create _archive destination under assets-src",
+      "write execution receipt",
+      "sync Android/runtime/debug-client outputs",
+      "deploy beta or production"
+    ],
+    "first_recommended_plan": null,
+    "required_approval_phrase": null
+  },
+  "next_review_lanes": [
+    {
+      "lane": "archive_loop_review_queue",
+      "status": "review_queue_open_no_mutation",
+      "evidence": "studio/verify/archive-loop-review-queue.json"
+    },
+    {
+      "lane": "archive_loop_gap_closure_map",
+      "status": "gap_closure_needs_review",
+      "evidence": "studio/verify/archive-loop-gap-closure-map.json"
+    },
+    {
+      "lane": "archive_loop_operator_decision_board",
+      "status": "operator_decision_board_incomplete",
+      "evidence": "studio/verify/archive-loop-operator-decision-board.json"
+    },
+    {
+      "lane": "zip_snapshot_reconciliation",
+      "status": "zip_snapshot_reconciliation_has_gaps",
+      "evidence": "studio/verify/zip-snapshot-reconciliation.json"
+    },
+    {
+      "lane": "codex_image_coverage_audit",
+      "status": "codex_image_coverage_mapped_no_mutation",
+      "evidence": "studio/verify/codex-image-coverage-audit.json"
+    },
+    {
+      "lane": "exact_plan_approval",
+      "status": "blocked_pending_human_approval",
+      "evidence": "studio/verify/archive-move-approval-runbook.json"
+    },
+    {
+      "lane": "archive_move_impact_preview",
+      "status": "impact_preview_no_mutation_blocked_pending_approval",
+      "evidence": "studio/verify/archive-move-impact-preview.json"
+    },
+    {
+      "lane": "archive_plan_retention_audit",
+      "status": "retention_audit_ready_blocked_pending_exact_approval",
+      "evidence": "studio/verify/archive-plan-retention-audit.json"
+    },
+    {
+      "lane": "archive_move_execution_simulation",
+      "status": "execution_simulation_ready_blocked_pending_exact_approval",
+      "evidence": "studio/verify/archive-move-execution-simulation.json"
+    },
+    {
+      "lane": "archive_move_reference_audit",
+      "status": "reference_audit_clear_no_mutation",
+      "evidence": "studio/verify/archive-move-reference-audit.json"
+    },
+    {
+      "lane": "archive_exact_approval_packet",
+      "status": "approval_packet_ready_blocked_pending_exact_phrase",
+      "evidence": "studio/verify/archive-exact-approval-packet.json"
+    },
+    {
+      "lane": "archive_post_approval_verification_audit",
+      "status": "post_approval_verification_contract_ready_no_mutation",
+      "evidence": "studio/verify/archive-post-approval-verification-audit.json"
+    },
+    {
+      "lane": "archive_loop_completion_audit",
+      "status": "mapping_complete_execution_blocked_pending_exact_approval",
+      "evidence": "studio/verify/archive-loop-completion-audit.json"
+    },
+    {
+      "lane": "source_authority_gap_audit",
+      "status": "source_authority_gap_needs_review",
+      "evidence": "studio/verify/assets-src-authority-gap-audit.json"
+    },
+    {
+      "lane": "source_target_delta_audit",
+      "status": "source_target_delta_review_required",
+      "evidence": "studio/verify/assets-source-target-delta-audit.json"
+    },
+    {
+      "lane": "source_only_disposition_audit",
+      "status": "source_only_disposition_mapped_no_mutation",
+      "evidence": "studio/verify/assets-src-source-only-disposition-audit.json"
+    },
+    {
+      "lane": "non_source_disposition_audit",
+      "status": "non_source_disposition_needs_review",
+      "evidence": "studio/verify/assets-non-source-disposition-audit.json"
+    },
+    {
+      "lane": "studio_drift_promotion_review",
+      "status": "open",
+      "evidence": "studio/verify/assets-non-source-drift.json"
+    },
+    {
+      "lane": "derived_dist_rebuild_or_prune",
+      "status": "open",
+      "evidence": "studio/verify/assets-non-source-drift.json"
+    },
+    {
+      "lane": "legacy_prop_promotion_or_retain",
+      "status": "clear",
+      "evidence": "studio/verify/archive-review-candidates.json"
+    }
+  ],
+  "index_sha256": "27c2f019c9b0fa7362a2f6edd98afec393c77d923ca5aa626f414c6c37da9bff"
+}

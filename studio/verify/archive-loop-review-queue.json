@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ARCHIVE_LOOP_REVIEW_QUEUE_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "review_queue_open_no_mutation",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "intent": "Consolidate the remaining no-mutation review gaps after the archive-loop map: exact approval tickets, non-source drift, generated-output custody, legacy promotion/retain decisions, and source-only family review.",
+  "source_rule": "data/assets-src/sprites remains source authority. Queue items are review work, not archive or deletion permission.",
+  "totals": {
+    "queue_item_count": 7,
+    "open_item_count": 6,
+    "exact_plan_approval_item_count": 0,
+    "non_source_drift_item_count": 7,
+    "archive_review_decision_item_count": 0,
+    "source_only_review_family_count": 0,
+    "source_only_unique_content_hashes": 0,
+    "source_only_review_family_mentions": 0,
+    "represented_file_count": 118,
+    "executable_item_count": 0
+  },
+  "checks": {
+    "approval_tickets_represented": true,
+    "non_source_drift_roots_represented": true,
+    "blocked_archive_candidates_represented": true,
+    "source_only_families_represented": true,
+    "all_items_block_execution": true,
+    "source_tree_mutated_by_queue": false
+  },
+  "lane_summaries": [
+    {
+      "lane": "studio_to_source_or_registry_review",
+      "item_count": 1,
+      "file_count": 55,
+      "source_only_family_mentions": 0
+    },
+    {
+      "lane": "unknown_non_source_review",
+      "item_count": 3,
+      "file_count": 37,
+      "source_only_family_mentions": 0
+    },
+    {
+      "lane": "freeze_reference_snapshot",
+      "item_count": 1,
+      "file_count": 15,
+      "source_only_family_mentions": 0
+    },
+    {
+      "lane": "poster_reference_review",
+      "item_count": 1,
+      "file_count": 7,
+      "source_only_family_mentions": 0
+    },
+    {
+      "lane": "rebuild_or_prune_dist_output",
+      "item_count": 1,
+      "file_count": 4,
+      "source_only_family_mentions": 0
+    }
+  ],
+  "status_summaries": [
+    {
+      "status": "open_review",
+      "item_count": 6,
+      "file_count": 103,
+      "source_only_family_mentions": 0
+    },
+    {
+      "status": "evidence_freeze",
+      "item_count": 1,
+      "file_count": 15,
+      "source_only_family_mentions": 0
+    }
+  ],
+  "queue_items": [
+    {
+      "may_execute": false,
+      "source_tree_mutated_by_item": false,
+      "id": "non_source_drift_codex_studio",
+      "lane": "studio_to_source_or_registry_review",
+      "item_type": "non_source_drift_root",
+      "priority_rank": 25,
+      "status": "open_review",
+      "blocker": "studio_to_source_or_registry_review_missing",
+      "title": "Decide whether this Studio image should be promoted into data/assets-src/sprites, registered as Studio-only reference, or removed from the working surface.",
+      "subject": "codex_studio",
+      "file_count": 55,
+      "unique_content_hashes": 53,
+      "source_only_family_mentions": 0,
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      },
+      "samples": [
+        "apps/debug-client/src/assets/builder/game-loop-poster-v1.png",
+        "apps/debug-client/src/assets/builder/rookguard-gate.thumb.webp",
+        "art/ARTIFACTS.png",
+        "art/dungones.png",
+        "art/FACTIONS.png",
+        "art/Heros.png",
+        "art/HighCity.png",
+        "art/Memory.png",
+        "art/The_Void.png",
+        "art/Witness.png",
+        "art/world.png",
+        "characters/base_human_male_01.png"
+      ],
+      "required_operator_action": "Decide whether this Studio image should be promoted into data/assets-src/sprites, registered as Studio-only reference, or removed from the working surface.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    },
+    {
+      "may_execute": false,
+      "source_tree_mutated_by_item": false,
+      "id": "non_source_drift_debug_client_dist_atlas",
+      "lane": "rebuild_or_prune_dist_output",
+      "item_type": "non_source_drift_root",
+      "priority_rank": 35,
+      "status": "open_review",
+      "blocker": "rebuild_or_prune_dist_output_missing",
+      "title": "Reproduce from the build lane or prune as distribution output; do not use it as source authority.",
+      "subject": "debug_client_dist_atlas",
+      "file_count": 4,
+      "unique_content_hashes": 4,
+      "source_only_family_mentions": 0,
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      },
+      "samples": [
+        "atlas/chronicle.png",
+        "atlas/items.png",
+        "atlas/ui.png",
+        "atlas/world.png"
+      ],
+      "required_operator_action": "Reproduce from the build lane or prune as distribution output; do not use it as source authority.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    },
+    {
+      "may_execute": false,
+      "source_tree_mutated_by_item": false,
+      "id": "non_source_drift_android_assets",
+      "lane": "unknown_non_source_review",
+      "item_type": "non_source_drift_root",
+      "priority_rank": 45,
+      "status": "open_review",
+      "blocker": "unknown_non_source_review_missing",
+      "title": "Review manually before custody, archive, or cleanup claims.",
+      "subject": "android_assets",
+      "file_count": 29,
+      "unique_content_hashes": 26,
+      "source_only_family_mentions": 0,
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      },
+      "samples": [
+        "atlas/chronicle.png",
+        "atlas/items.png",
+        "atlas/ui.png",
+        "atlas/world.png",
+        "outfits/guard_city_01/masks/front/boots.png",
+        "outfits/guard_city_01/masks/front/cape.png",
+        "outfits/guard_city_01/masks/front/eye_color.png",
+        "outfits/guard_city_01/masks/front/hair.png",
+        "outfits/guard_city_01/masks/front/leather.png",
+        "outfits/guard_city_01/masks/front/magic_color.png",
+        "outfits/guard_city_01/masks/front/metal.png",
+        "outfits/guard_city_01/masks/front/primary_cloth.png"
+      ],
+      "required_operator_action": "Review manually before custody, archive, or cleanup claims.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    },
+    {
+      "may_execute": false,
+      "source_tree_mutated_by_item": false,
+      "id": "non_source_drift_incoming_drop_studio",
+      "lane": "freeze_reference_snapshot",
+      "item_type": "non_source_drift_root",
+      "priority_rank": 45,
+      "status": "evidence_freeze",
+      "blocker": "none_reference_snapshot",
+      "title": "Keep as original drop evidence. Promote a specific file only through a source-registration lane.",
+      "subject": "incoming_drop_studio",
+      "file_count": 15,
+      "unique_content_hashes": 15,
+      "source_only_family_mentions": 0,
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      },
+      "samples": [
+        "apps/debug-client/src/assets/builder/game-loop-poster-v1.png",
+        "apps/debug-client/src/assets/builder/rookguard-gate.thumb.webp",
+        "art/ARTIFACTS.png",
+        "art/dungones.png",
+        "art/FACTIONS.png",
+        "art/Heros.png",
+        "art/HighCity.png",
+        "art/Memory.png",
+        "art/The_Void.png",
+        "art/Witness.png",
+        "art/world.png",
+        "data/assets-built/atlas/chronicle.png"
+      ],
+      "required_operator_action": "Keep as original drop evidence. Promote a specific file only through a source-registration lane.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    },
+    {
+      "may_execute": false,
+      "source_tree_mutated_by_item": false,
+      "id": "non_source_drift_codex_posters",
+      "lane": "poster_reference_review",
+      "item_type": "non_source_drift_root",
+      "priority_rank": 45,
+      "status": "open_review",
+      "blocker": "poster_reference_review_missing",
+      "title": "Keep as poster/reference output unless a human selects a concrete image for source promotion.",
+      "subject": "codex_posters",
+      "file_count": 7,
+      "unique_content_hashes": 7,
+      "source_only_family_mentions": 0,
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      },
+      "samples": [
+        "akalynth-equipment-codex-poster-v1.png",
+        "akalynth-game-loop-bible-poster-v1.png",
+        "akalynth-origins-codex-poster-v1.png",
+        "akalynth-professions-codex-poster-v1.png",
+        "akalynth-raid-bosses-codex-poster-v1.png",
+        "akalynth-systems-bible-poster-v1.png",
+        "akalynth-world-map-v2-poster.png"
+      ],
+      "required_operator_action": "Keep as poster/reference output unless a human selects a concrete image for source promotion.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    },
+    {
+      "may_execute": false,
+      "source_tree_mutated_by_item": false,
+      "id": "non_source_drift_debug_client_public_atlas",
+      "lane": "unknown_non_source_review",
+      "item_type": "non_source_drift_root",
+      "priority_rank": 45,
+      "status": "open_review",
+      "blocker": "unknown_non_source_review_missing",
+      "title": "Review manually before custody, archive, or cleanup claims.",
+      "subject": "debug_client_public_atlas",
+      "file_count": 4,
+      "unique_content_hashes": 4,
+      "source_only_family_mentions": 0,
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      },
+      "samples": [
+        "atlas/chronicle.png",
+        "atlas/items.png",
+        "atlas/ui.png",
+        "atlas/world.png"
+      ],
+      "required_operator_action": "Review manually before custody, archive, or cleanup claims.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    },
+    {
+      "may_execute": false,
+      "source_tree_mutated_by_item": false,
+      "id": "non_source_drift_game_built_assets",
+      "lane": "unknown_non_source_review",
+      "item_type": "non_source_drift_root",
+      "priority_rank": 45,
+      "status": "open_review",
+      "blocker": "unknown_non_source_review_missing",
+      "title": "Review manually before custody, archive, or cleanup claims.",
+      "subject": "game_built_assets",
+      "file_count": 4,
+      "unique_content_hashes": 4,
+      "source_only_family_mentions": 0,
+      "evidence": {
+        "non_source_drift_report": "studio/verify/assets-non-source-drift.json",
+        "non_source_drift_report_sha256": "036b4ec97ec1c7ce2b0181639d20fdd6455d0ced0ded037127e6c79c57a344f6"
+      },
+      "samples": [
+        "atlas/chronicle.png",
+        "atlas/items.png",
+        "atlas/ui.png",
+        "atlas/world.png"
+      ],
+      "required_operator_action": "Review manually before custody, archive, or cleanup claims.",
+      "next_verification": "Do not modify assets-src from drift evidence; run the named review lane first."
+    }
+  ],
+  "required_next_gate": [
+    "Work queue items as review decisions only; do not move assets from this queue.",
+    "For archive execution, use an exact approval ticket and rerun the mapper immediately before receipt writing.",
+    "For source-only families, decide active source, retained reference, or promotion lane before archive assumptions.",
+    "For drift roots, prove source promotion, reference retention, or build reproduction separately."
+  ],
+  "report_sha256": "d1490e341eb592b243b66df336ab73ef63d16c7ca64ec8aefa24608f81dc6fdb"
+}

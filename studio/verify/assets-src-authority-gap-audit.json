@@ -1,0 +1,428 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ASSETS_SRC_AUTHORITY_GAP_AUDIT_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "source_authority_gap_needs_review",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "intent": "Explain why data/assets-src/sprites is larger than the runtime and Studio targets, and classify the remaining source-only or duplicate-review backlog before archive execution.",
+  "source_rule": "A larger assets-src tree is expected for source authority. This audit can classify backlog and duplicate review lanes, but it cannot move, delete, archive, sync, or deploy assets.",
+  "totals": {
+    "source_image_files": 143,
+    "source_unique_content_hashes": 133,
+    "source_duplicate_files_inside_source": 10,
+    "source_duplicate_groups_inside_source": 10,
+    "source_family_count": 23,
+    "largest_non_source_root_id": "android_assets",
+    "largest_non_source_root_files": 249,
+    "source_vs_largest_non_source_file_delta": -106,
+    "source_unique_content_with_filesystem_egress": 133,
+    "source_records_with_filesystem_egress": 143,
+    "source_unique_content_only_in_source": 0,
+    "source_records_only_in_source": 0,
+    "source_only_backlog_unique_content_hashes": 0,
+    "source_only_backlog_records": 0,
+    "source_only_promote_or_retain_unique_content_hashes": 0,
+    "egress_mapped_with_archive_plan_gate_unique_content_hashes": 0,
+    "egress_mapped_no_archive_plan_unique_content_hashes": 133,
+    "archive_plan_covered_unique_content_hashes": 0,
+    "review_queue_covered_unique_content_hashes": 0,
+    "review_queue_open_item_count": 6,
+    "executable_content_items": 0
+  },
+  "checks": {
+    "source_is_largest_filesystem_root": false,
+    "source_file_counts_match_manifest": true,
+    "source_unique_counts_match_family_map": true,
+    "source_only_counts_match_status_summaries": true,
+    "source_egress_counts_match_index": true,
+    "source_only_gap_has_review_queue_coverage": true,
+    "all_content_items_block_execution": true,
+    "source_tree_mutated_by_gap_audit": false
+  },
+  "status_summaries": [
+    {
+      "status": "egress_mapped_no_archive_plan",
+      "unique_content_hashes": 133,
+      "source_record_count": 143,
+      "filesystem_target_record_count": 918
+    }
+  ],
+  "bucket_rows": [
+    {
+      "bucket": "active_source_lane",
+      "gap_lane": "active_source_runtime_or_metadata_lane",
+      "family_count": 11,
+      "file_count": 131,
+      "unique_content_hashes": 131,
+      "source_only_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 131,
+      "same_source_duplicate_unique_hashes": 20,
+      "action": "Keep source authority intact while review lanes decide promotion, retention, or rebuild."
+    },
+    {
+      "bucket": "character_system_source",
+      "gap_lane": "source_backlog_promotion_review",
+      "family_count": 12,
+      "file_count": 12,
+      "unique_content_hashes": 12,
+      "source_only_unique_hashes": 0,
+      "outside_duplicate_unique_hashes": 12,
+      "same_source_duplicate_unique_hashes": 0,
+      "action": "Keep source authority intact while review lanes decide promotion, retention, or rebuild."
+    }
+  ],
+  "top_source_gap_families": [
+    {
+      "family_prefix": "world",
+      "bucket": "active_source_lane",
+      "gap_lane": "active_source_runtime_or_metadata_lane",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 64,
+      "source_record_count": 64,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 508,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 64,
+      "same_source_duplicate_unique_hashes": 10,
+      "zip_matched_records": 64,
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "samples": [
+        "world/castle/prison_bars.png",
+        "world/castle/stone_column.png",
+        "world/castle/throne.png",
+        "world/castle/weapon_rack.png",
+        "world/city_objects/banner_blue.png",
+        "world/city_objects/banner_red.png"
+      ]
+    },
+    {
+      "family_prefix": "top_level/item",
+      "bucket": "active_source_lane",
+      "gap_lane": "active_source_runtime_or_metadata_lane",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 20,
+      "source_record_count": 20,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 120,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 20,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 20,
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "samples": [
+        "item__ashglass_shard.png",
+        "item__charred_shipment_plate.png",
+        "item__city_rat_goo.png",
+        "item__healing_herb.png",
+        "item__keystone_token.png",
+        "item__ley_mote.png"
+      ]
+    },
+    {
+      "family_prefix": "ui",
+      "bucket": "active_source_lane",
+      "gap_lane": "active_source_runtime_or_metadata_lane",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 13,
+      "source_record_count": 13,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 91,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 13,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 13,
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "samples": [
+        "ui/ui_action_ring_danger.png",
+        "ui/ui_action_ring_pressed.png",
+        "ui/ui_action_ring.png",
+        "ui/ui_bar_track.png",
+        "ui/ui_button_frame.png",
+        "ui/ui_button_pressed_frame.png"
+      ]
+    },
+    {
+      "family_prefix": "top_level/effect",
+      "bucket": "active_source_lane",
+      "gap_lane": "active_source_runtime_or_metadata_lane",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 9,
+      "source_record_count": 9,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 54,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 9,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 9,
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "samples": [
+        "effect__chronicle_combat.png",
+        "effect__chronicle_create.png",
+        "effect__chronicle_death.png",
+        "effect__chronicle_drop.png",
+        "effect__chronicle_pickup.png",
+        "effect__chronicle_tutorial.png"
+      ]
+    },
+    {
+      "family_prefix": "top_level/swamp",
+      "bucket": "active_source_lane",
+      "gap_lane": "active_source_runtime_or_metadata_lane",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 8,
+      "source_record_count": 8,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 104,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 8,
+      "same_source_duplicate_unique_hashes": 8,
+      "zip_matched_records": 8,
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "samples": [
+        "swamp__bog_slime.png",
+        "swamp__bog_water.png",
+        "swamp__dead_tree.png",
+        "swamp__frog.png",
+        "swamp__log.png",
+        "swamp__mud.png"
+      ]
+    },
+    {
+      "family_prefix": "top_level/tile",
+      "bucket": "active_source_lane",
+      "gap_lane": "active_source_runtime_or_metadata_lane",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 7,
+      "source_record_count": 7,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 42,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 7,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 7,
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "samples": [
+        "tile__gate_to_azura.png",
+        "tile__grass.png",
+        "tile__stone_ground.png",
+        "tile__tutorial_chat.png",
+        "tile__tutorial_move.png",
+        "tile__tutorial_tem.png"
+      ]
+    },
+    {
+      "family_prefix": "creatures",
+      "bucket": "active_source_lane",
+      "gap_lane": "active_source_runtime_or_metadata_lane",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 5,
+      "source_record_count": 5,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 25,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 5,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 5,
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "samples": [
+        "creatures/cat_01.png",
+        "creatures/diseased_rat_01.png",
+        "creatures/dog_01.png",
+        "creatures/rat_large_01.png",
+        "creatures/rat_small_01.png"
+      ]
+    },
+    {
+      "family_prefix": "top_level/creature",
+      "bucket": "active_source_lane",
+      "gap_lane": "active_source_runtime_or_metadata_lane",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 2,
+      "source_record_count": 2,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 12,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 2,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 2,
+      "action": "Treat as active source-lane material; map mechanics and promotion metadata before runtime use.",
+      "samples": [
+        "creature__rookguard_training_slime.png",
+        "creatures__skeleton.png"
+      ]
+    },
+    {
+      "family_prefix": "characters/base_human_male_01.png",
+      "bucket": "character_system_source",
+      "gap_lane": "source_backlog_promotion_review",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 1,
+      "source_record_count": 1,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 5,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "samples": [
+        "characters/base_human_male_01.png"
+      ]
+    },
+    {
+      "family_prefix": "characters/blacksmith_01.png",
+      "bucket": "character_system_source",
+      "gap_lane": "source_backlog_promotion_review",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 1,
+      "source_record_count": 1,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 5,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "samples": [
+        "characters/blacksmith_01.png"
+      ]
+    },
+    {
+      "family_prefix": "characters/castle_guard_red_01.png",
+      "bucket": "character_system_source",
+      "gap_lane": "source_backlog_promotion_review",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 1,
+      "source_record_count": 1,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 5,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "samples": [
+        "characters/castle_guard_red_01.png"
+      ]
+    },
+    {
+      "family_prefix": "characters/guard_city_01.png",
+      "bucket": "character_system_source",
+      "gap_lane": "source_backlog_promotion_review",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 1,
+      "source_record_count": 1,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 5,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "samples": [
+        "characters/guard_city_01.png"
+      ]
+    },
+    {
+      "family_prefix": "characters/mage_apprentice_01.png",
+      "bucket": "character_system_source",
+      "gap_lane": "source_backlog_promotion_review",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 1,
+      "source_record_count": 1,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 5,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "samples": [
+        "characters/mage_apprentice_01.png"
+      ]
+    },
+    {
+      "family_prefix": "characters/merchant_cloth_01.png",
+      "bucket": "character_system_source",
+      "gap_lane": "source_backlog_promotion_review",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 1,
+      "source_record_count": 1,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 5,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "samples": [
+        "characters/merchant_cloth_01.png"
+      ]
+    },
+    {
+      "family_prefix": "characters/merchant_food_01.png",
+      "bucket": "character_system_source",
+      "gap_lane": "source_backlog_promotion_review",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 1,
+      "source_record_count": 1,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 5,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "samples": [
+        "characters/merchant_food_01.png"
+      ]
+    },
+    {
+      "family_prefix": "characters/noble_male_01.png",
+      "bucket": "character_system_source",
+      "gap_lane": "source_backlog_promotion_review",
+      "gap_status": "egress_mapped",
+      "unique_content_hashes": 1,
+      "source_record_count": 1,
+      "source_only_unique_content_hashes": 0,
+      "filesystem_target_record_count": 5,
+      "archive_plan_covered_unique_content_hashes": 0,
+      "outside_duplicate_unique_hashes": 1,
+      "same_source_duplicate_unique_hashes": 0,
+      "zip_matched_records": 1,
+      "action": "Keep as source-system material; promote selected native sprites, variants, masks, and sheets through metadata lanes.",
+      "samples": [
+        "characters/noble_male_01.png"
+      ]
+    }
+  ],
+  "next_review_lanes": [
+    {
+      "lane": "source_backlog_promotion_review",
+      "status": "clear",
+      "unique_content_hashes": 0,
+      "evidence": "studio/verify/assets-src-leave-manifest.json"
+    },
+    {
+      "lane": "legacy_prop_promote_or_retain_first",
+      "status": "clear",
+      "unique_content_hashes": 0,
+      "evidence": "studio/verify/archive-review-candidates.json"
+    },
+    {
+      "lane": "duplicate_archive_review_gate",
+      "status": "clear",
+      "unique_content_hashes": 0,
+      "evidence": "studio/verify/archive-move-plans.json"
+    },
+    {
+      "lane": "egress_mapped_no_archive_plan_review",
+      "status": "open",
+      "unique_content_hashes": 133,
+      "evidence": "studio/verify/assets-src-leave-manifest.json"
+    }
+  ],
+  "report_sha256": "0db53c6cb106d22e8aff383842e0f6dd6c260b013d4b7c23eb48f947a5741e08"
+}

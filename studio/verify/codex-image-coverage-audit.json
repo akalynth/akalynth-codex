@@ -1,0 +1,1854 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_CODEX_IMAGE_COVERAGE_AUDIT_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "codex_image_coverage_mapped_no_mutation",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "intent": "Account for every image file inside the akalynth-codex repo so full-Codex evidence screenshots are not mistaken for asset custody roots.",
+  "source_rule": "Codex evidence screenshots are evidence-only; this audit does not approve source moves, archive creation, runtime sync, deletion, or deploy.",
+  "totals": {
+    "codex_image_file_count": 193,
+    "codex_unique_content_hashes": 180,
+    "scanned_codex_root_count": 2,
+    "covered_by_archive_loop_root_count": 188,
+    "evidence_only_outside_root_count": 5,
+    "unclassified_codex_image_count": 0,
+    "exact_source_hash_match_count": 126,
+    "root_summary_count": 3,
+    "executable_coverage_record_count": 0
+  },
+  "checks": {
+    "covered_plus_evidence_plus_unclassified_matches_total": true,
+    "all_non_scanned_codex_images_classified_as_evidence": true,
+    "codex_studio_count_matches_archive_map": true,
+    "codex_posters_count_matches_archive_map": true,
+    "evidence_images_not_archive_candidates": true,
+    "all_coverage_records_block_execution": true,
+    "source_tree_mutated_by_codex_coverage_audit": false
+  },
+  "root_summaries": [
+    {
+      "id": "codex_studio",
+      "custody": "working_source",
+      "status": "covered_by_archive_loop_root",
+      "image_files": 181,
+      "unique_content_hashes": 169,
+      "source_hash_match_count": 126,
+      "evidence_only_count": 0,
+      "unclassified_count": 0,
+      "may_execute": false
+    },
+    {
+      "id": "codex_posters",
+      "custody": "reference_output",
+      "status": "covered_by_archive_loop_root",
+      "image_files": 7,
+      "unique_content_hashes": 7,
+      "source_hash_match_count": 0,
+      "evidence_only_count": 0,
+      "unclassified_count": 0,
+      "may_execute": false
+    },
+    {
+      "id": "codex_evidence",
+      "custody": "verification_evidence",
+      "status": "evidence_only_outside_archive_roots",
+      "image_files": 5,
+      "unique_content_hashes": 5,
+      "source_hash_match_count": 0,
+      "evidence_only_count": 5,
+      "unclassified_count": 0,
+      "may_execute": false
+    }
+  ],
+  "evidence_only_records": [
+    {
+      "relpath": "evidence/studio-verify/archive-loop-index-gaps-tab.png",
+      "size": 4050841,
+      "sha256": "7dc029aea94ad1a76c9a07f415fd8e094d87b105022e34a03da1fc72e5564f2b",
+      "coverage_root_id": "codex_evidence",
+      "action": "Keep as verification evidence; do not treat as source, runtime, or archive candidate.",
+      "may_execute": false
+    },
+    {
+      "relpath": "evidence/studio-verify/archive-loop-review-queue-gaps-tab.png",
+      "size": 4512259,
+      "sha256": "11c13a533760883d6880ab154ea4edd755986a87fb89647092d647ac869ff30a",
+      "coverage_root_id": "codex_evidence",
+      "action": "Keep as verification evidence; do not treat as source, runtime, or archive candidate.",
+      "may_execute": false
+    },
+    {
+      "relpath": "evidence/studio-verify/archive-runbook-gaps-tab.png",
+      "size": 3792536,
+      "sha256": "ba67d27b36fff5c17b50febb773dcc6504831f99bb39e9c792b7752f9377b636",
+      "coverage_root_id": "codex_evidence",
+      "action": "Keep as verification evidence; do not treat as source, runtime, or archive candidate.",
+      "may_execute": false
+    },
+    {
+      "relpath": "evidence/studio-verify/assets-src-leave-manifest-gaps-tab.png",
+      "size": 4857833,
+      "sha256": "c4b5f2baa9ec20139ae65ed6efc8801f9bf66dcaf93f7ad8de8b33c30f15f473",
+      "coverage_root_id": "codex_evidence",
+      "action": "Keep as verification evidence; do not treat as source, runtime, or archive candidate.",
+      "may_execute": false
+    },
+    {
+      "relpath": "evidence/studio-verify/non-source-drift-gaps-tab.png",
+      "size": 4018591,
+      "sha256": "d50f1f351b434c354f5301555601c0a0ef6acd9662f1e4068e2e79ea70d4eca9",
+      "coverage_root_id": "codex_evidence",
+      "action": "Keep as verification evidence; do not treat as source, runtime, or archive candidate.",
+      "may_execute": false
+    }
+  ],
+  "unclassified_records": [],
+  "coverage_records": [
+    {
+      "relpath": "assets/out/akalynth-equipment-codex-poster-v1.png",
+      "size": 494331,
+      "sha256": "0a22005c43a6cf167f6eb7f2d45347271464e3f013f277f530e0068ea781b354",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_posters",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "assets/out/akalynth-game-loop-bible-poster-v1.png",
+      "size": 470842,
+      "sha256": "2b480a5b53b773f42585b05a4a2bf4bc8b11e629d1fdb1b583ac2a62ea5bea89",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_posters",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "assets/out/akalynth-origins-codex-poster-v1.png",
+      "size": 539573,
+      "sha256": "2fd920659c5eaa95e0b516960ddc9199a279410eb8ce64e4f401dea242fae110",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_posters",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "assets/out/akalynth-professions-codex-poster-v1.png",
+      "size": 500554,
+      "sha256": "e6484af8f5f2ad0aa1a8a4e787787e640a3d529fe82f7fcfd529c1284cb14c5e",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_posters",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "assets/out/akalynth-raid-bosses-codex-poster-v1.png",
+      "size": 555397,
+      "sha256": "ffd0e40384cabe8d4ac3dbb4fc1990540902bfbba60fce64f1e312ec9524a033",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_posters",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "assets/out/akalynth-systems-bible-poster-v1.png",
+      "size": 466922,
+      "sha256": "1b74208a02218c87da3359b3c438fd8a2c1cec9c4b8dd55aa71bc7e4cc0b4e26",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_posters",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "assets/out/akalynth-world-map-v2-poster.png",
+      "size": 495302,
+      "sha256": "e25edca199a955f08631ca74bbc4c6f6f20efafcaf1179d230a21d8ac5640050",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_posters",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "evidence/studio-verify/archive-loop-index-gaps-tab.png",
+      "size": 4050841,
+      "sha256": "7dc029aea94ad1a76c9a07f415fd8e094d87b105022e34a03da1fc72e5564f2b",
+      "status": "evidence_only_outside_archive_roots",
+      "coverage_root_id": "codex_evidence",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "evidence/studio-verify/archive-loop-review-queue-gaps-tab.png",
+      "size": 4512259,
+      "sha256": "11c13a533760883d6880ab154ea4edd755986a87fb89647092d647ac869ff30a",
+      "status": "evidence_only_outside_archive_roots",
+      "coverage_root_id": "codex_evidence",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "evidence/studio-verify/archive-runbook-gaps-tab.png",
+      "size": 3792536,
+      "sha256": "ba67d27b36fff5c17b50febb773dcc6504831f99bb39e9c792b7752f9377b636",
+      "status": "evidence_only_outside_archive_roots",
+      "coverage_root_id": "codex_evidence",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "evidence/studio-verify/assets-src-leave-manifest-gaps-tab.png",
+      "size": 4857833,
+      "sha256": "c4b5f2baa9ec20139ae65ed6efc8801f9bf66dcaf93f7ad8de8b33c30f15f473",
+      "status": "evidence_only_outside_archive_roots",
+      "coverage_root_id": "codex_evidence",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "evidence/studio-verify/non-source-drift-gaps-tab.png",
+      "size": 4018591,
+      "sha256": "d50f1f351b434c354f5301555601c0a0ef6acd9662f1e4068e2e79ea70d4eca9",
+      "status": "evidence_only_outside_archive_roots",
+      "coverage_root_id": "codex_evidence",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/apps/debug-client/src/assets/builder/game-loop-poster-v1.png",
+      "size": 470842,
+      "sha256": "2b480a5b53b773f42585b05a4a2bf4bc8b11e629d1fdb1b583ac2a62ea5bea89",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/apps/debug-client/src/assets/builder/rookguard-gate.thumb.webp",
+      "size": 47020,
+      "sha256": "284f0ae10f9d9eebbaff8c803cbb002234eb59107d927fbf2d47e50e7c516847",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/art/ARTIFACTS.png",
+      "size": 3272637,
+      "sha256": "be47d899f3e6e1fe63629e80faf8cf9c6b9f0fad2f603692541b926b8290392b",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/art/dungones.png",
+      "size": 3156706,
+      "sha256": "1d016e7c595bbd42bc75da31ed02618dd7e0380f4cb8b75a60745e4115f95edc",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/art/FACTIONS.png",
+      "size": 3063458,
+      "sha256": "fadcf33136f5a423531c288e646260283e6b8c1898ebbaa82c6e3798b37e4fbd",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/art/Heros.png",
+      "size": 2872414,
+      "sha256": "e4317f6085b5c00cd11e4cb67cae9b0cb67a4cc960c87e41f4533527d32c5e5d",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/art/HighCity.png",
+      "size": 3146092,
+      "sha256": "3f6b0a7ac267d0e99a945e55cd764dc7b491b9ae75d0a18a4a53b42a717459e7",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/art/Memory.png",
+      "size": 3271495,
+      "sha256": "ca45af930cec940f0a0b5eab339fe7232709e14e92120ed35e35546c5efb8ee9",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/art/The_Void.png",
+      "size": 3332076,
+      "sha256": "17a67146af73e0bbd3490f7684d57eecff0d6d9e132da2cc1310f54e37e6feed",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/art/Witness.png",
+      "size": 3235278,
+      "sha256": "c7e9dd4dca25a3544fb4362cf2db8d68321d7ba0446ffee19cb4f0ed22d55dd7",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/art/world.png",
+      "size": 3009377,
+      "sha256": "3930f9c2fa0bec1b2e9e535f198f0bb140c73d4b43e93ad2895405e5247f182a",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/castle/prison_bars.png",
+      "size": 450,
+      "sha256": "047625c0292b00f013d7ddad837172d8707b24877d963e0ae4d85b9b1595ed19",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/castle/stone_column.png",
+      "size": 680,
+      "sha256": "d97566d9b756a51d7b3ab9ed5a991bfeaa4c1a17699d9d4d747d5d7580f1fbeb",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/castle/throne.png",
+      "size": 638,
+      "sha256": "424ed7c3dad6728656676632ef66bdd902cfd2a28dea7d4ac61471a317bdc250",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/castle/weapon_rack.png",
+      "size": 655,
+      "sha256": "7a8093d50c9bf65df452726f26eb59af2f0f66a153f4deb17aae73cb9a227c16",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/characters/base_human_male_01.png",
+      "size": 756,
+      "sha256": "e66fed3f66b06c8a2179b91d178b24025f6e4b7082a38904dac91b955a9019d3",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/characters/blacksmith_01.png",
+      "size": 794,
+      "sha256": "08ede74aa0f871d6d8cb17f0aaa2427687f65e9f5c3a2c7c77ea753fbb1cebe5",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/characters/castle_guard_red_01.png",
+      "size": 1083,
+      "sha256": "72bc93be1b61851db66844d6305c9b0223270fb48c552d62276bd1ccab57892e",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/characters/guard_city_01.png",
+      "size": 1341,
+      "sha256": "04668149e14facb89520691ad249aa59b58ddce7575cd3e4357ee3101cbacc2b",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/characters/mage_apprentice_01.png",
+      "size": 1126,
+      "sha256": "28b080fb9a635e2282b8c0dc92ab2d0717cd88cc29fad6ad8f7b21792ed262c3",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/characters/merchant_cloth_01.png",
+      "size": 727,
+      "sha256": "2999c3f80dc50225cf995480e157be3373dccefc853dfcd520bb07d28c4ae38d",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/characters/merchant_food_01.png",
+      "size": 753,
+      "sha256": "acfc5f51f9e249efb4857aed7bc536fa60c0b8e423ee0ac2b7730cfa00c5014a",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/characters/noble_male_01.png",
+      "size": 847,
+      "sha256": "1a53f059b87bcde476ccd7094d5edc7b66a58cc0d34fea33973568df3b494dbe",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/characters/priest_01.png",
+      "size": 841,
+      "sha256": "f4169f1da461165f2a25e8eaf29c9cc7788b5dd9c04c74a7e7e44da7ba442b40",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/characters/rat_hunter_01.png",
+      "size": 856,
+      "sha256": "77e4997f3c1ba11f255f6ea23acf0f32f20662d49db2a9b3622260495436a0d4",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/characters/sewer_worker_01.png",
+      "size": 908,
+      "sha256": "2cf44bd89f8c7e44e37aa80bef53242bf3d03b2bced30409c9d9637f06792ae2",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/characters/skeleton_warrior_01.png",
+      "size": 789,
+      "sha256": "b03aaed090690b305324ca63102f630f2acf0d701cd64bf6c39f197dc0bf21a5",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/city_objects/banner_blue.png",
+      "size": 667,
+      "sha256": "8689cf7227c50a51b8e8cf22bc51ce6834471443796c88acc5ecb733aaed1d0c",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/city_objects/banner_red.png",
+      "size": 661,
+      "sha256": "820e4e545c43db191e1fcf0d4dbee7a5c1af3801a01b07d53fd99a841ddf2710",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/city_objects/bench.png",
+      "size": 451,
+      "sha256": "4fc100d347ea32ab757904cfc03870dd63aeec6df19dcf496f247b47fae011da",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/city_objects/fountain.png",
+      "size": 2188,
+      "sha256": "27ca001807d75f32464b3b6ce32fd60c58ba5037972b6968360f6c65378b91de",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/city_objects/notice_board.png",
+      "size": 917,
+      "sha256": "1a23496b42ee9f4c2e51a6b99238ad96e51b50ae7b14afdee52e4b6295a720a1",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/city_objects/rookguard_amber_lantern.png",
+      "size": 255,
+      "sha256": "635424ff962748931ec86ef355682f37df3f039a904d5d7057a59d97f85bdcbe",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/city_objects/rookguard_bait_crate.png",
+      "size": 255,
+      "sha256": "740dcf3848b9edfd07df170d7aa654bfe7143621fc6c4043d910324f43dc813a",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/city_objects/rookguard_canal_reeds.png",
+      "size": 293,
+      "sha256": "466a834bc739586852f41ae536d8b0432feca28f5a9eb5790e224a07976da88c",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/city_objects/rookguard_fishing_post.png",
+      "size": 273,
+      "sha256": "6365bf857d87482cd87a0a4bcc05885462df61c79de8f91ba5455f2bc2a876b8",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/city_objects/rookguard_supply_sack.png",
+      "size": 252,
+      "sha256": "0faf5f3c1ff64aa8d68c3b6a74561a0d5299d15d84a61d18d2d4b2ad5b43c35f",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/city_objects/rookguard_waymarker.png",
+      "size": 277,
+      "sha256": "695f88681772b27583a743379f78357a24006a1792aa550d70a9038ed363d120",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/creature__rookguard_training_slime.png",
+      "size": 260,
+      "sha256": "30f17644c04ea8ea6fbeefa95c84f8dd76af3f25c7d2848eac94340e7b8eb586",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/creatures__skeleton.png",
+      "size": 1338,
+      "sha256": "77c41d7c5acccea1b9370c91e4643298e0c8b75cac170228ccaaf7ab5f877f75",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/creatures/cat_01.png",
+      "size": 523,
+      "sha256": "84d46f951fd5955347fd162c0ee1f8cb296c9a9b263b0f9b6ec06168b793f06c",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/creatures/diseased_rat_01.png",
+      "size": 534,
+      "sha256": "0e9c17be09a27fbf5cd22e12159a5cffd1e49b1ea16eb2c5ad614a12d2b93593",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/creatures/dog_01.png",
+      "size": 554,
+      "sha256": "54be50568a9149a34d478344a4c978d5a2cffb3afa8265f41c19e4138d8ac902",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/creatures/rat_large_01.png",
+      "size": 465,
+      "sha256": "1a0dc06e4a9b2c997df3ce0528d53a037624abb28b614aa19d905f013f219300",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/creatures/rat_small_01.png",
+      "size": 474,
+      "sha256": "e7979e2cbfe4042a50322ba0d7f03ff18a3297628f694f558963a589c0ff0042",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/assets-built/atlas/chronicle.png",
+      "size": 522,
+      "sha256": "a86fd7beb7f3a015d55de612c202570cd51a916b7008e31bd81b63bf43f9f1de",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/assets-built/atlas/items.png",
+      "size": 787,
+      "sha256": "a28116854d2bff108bffd547d709d633b595c8fbb6116eb3f27250b043082cd5",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/assets-built/atlas/ui.png",
+      "size": 34408,
+      "sha256": "d98c9a2860ac86d3fae32ca480923d8f8c256c678acd7a151bce24adcd8d7b76",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/assets-built/atlas/world.png",
+      "size": 57443,
+      "sha256": "1d26eb399caeb0a81a5e4d87453739f52a795bbae330969009add50688503c2d",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/masks/front/boots.png",
+      "size": 248,
+      "sha256": "dbf99f3839881b8daff45e34ec9221130512db8ef2702c749a08837a65a710c9",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/masks/front/cape.png",
+      "size": 305,
+      "sha256": "b6652ecea2863f5e94ecd79a1158a927f1bc8ad2d549632218a184e0913f237b",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/masks/front/eye_color.png",
+      "size": 229,
+      "sha256": "520aac854521d3c8f5b386fccf111ff240671cc7d5914bb555c52d69d9c36864",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/masks/front/hair.png",
+      "size": 297,
+      "sha256": "3ad78fd067587da9e287f5923a26411d4ec6c57b75015100986d823df0d3ca9b",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/masks/front/leather.png",
+      "size": 263,
+      "sha256": "7739158db1b1f174883918b4d2cf7c891cdecdb472dfb4829e8b8fdbbdff411f",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/masks/front/magic_color.png",
+      "size": 226,
+      "sha256": "20c8526547cae7925ca68109b87252b90f9709c6bab4194a0855961b2c998911",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/masks/front/metal.png",
+      "size": 360,
+      "sha256": "f540983e4e83487a7d8b33f62d1c34aceaa87240b68165e7b3a9b79051c9a9d7",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/masks/front/primary_cloth.png",
+      "size": 307,
+      "sha256": "096e90d57f2d610cec81389852ce46077a88426ee2fe2ba2fef94042b4fe2d90",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/masks/front/secondary_cloth.png",
+      "size": 258,
+      "sha256": "df4b64d3f4b6ac2c692060d1aa91585c2c2f0cbd032d2eb2039d93086b976485",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/masks/front/skin.png",
+      "size": 308,
+      "sha256": "05db0af26327e35aec37c5dd03ebbf3707715a0a2110a5292bd4aef159babf17",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/masks/front/trim.png",
+      "size": 400,
+      "sha256": "acbbe1387a468e723df6a07a482732863dae93ce1e5a73fd1aabf1335c955431",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/native_64/guard_city_01_back.png",
+      "size": 991,
+      "sha256": "f2f1ab667211dcbad4604eac5386550f3147c021790e023b701a108b87aa699f",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/native_64/guard_city_01_front.png",
+      "size": 1287,
+      "sha256": "c621c799e7824a033803c1cdbc132ce9c428834171ddb831af22bd6d8af012a7",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/variants/native_64/guard_city_01_back_arcane_guard.png",
+      "size": 994,
+      "sha256": "a9baacc02a086a42f5613b0250ff3fd72797960dba8a977e270a9a9832933f93",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/variants/native_64/guard_city_01_back_forest_guard.png",
+      "size": 997,
+      "sha256": "28adc99f8b226ed1efc90b588e5093eeb4267b1d25d4759df2925136735f450c",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/variants/native_64/guard_city_01_back_red_guard.png",
+      "size": 1003,
+      "sha256": "0bdb9da5ddbd48a95d8a271418f9c1d68923bd7a053d8d1f97676092654f505c",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/variants/native_64/guard_city_01_back_royal_blue.png",
+      "size": 991,
+      "sha256": "f2f1ab667211dcbad4604eac5386550f3147c021790e023b701a108b87aa699f",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/variants/native_64/guard_city_01_back_silver_guard.png",
+      "size": 988,
+      "sha256": "664390ee52f17454d13df1d3a7cc09bf516ccad74c3215edc1dfdfae707f89b7",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/variants/native_64/guard_city_01_front_arcane_guard.png",
+      "size": 1279,
+      "sha256": "acf461d810153d02f050bce466a9989d88c3b7220ffe8c1fc2ad621a3e95fcda",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/variants/native_64/guard_city_01_front_forest_guard.png",
+      "size": 1277,
+      "sha256": "76a42ac9e87dc766d8664382974d39173e1abab856050dbc0c378d84a1a0cf5e",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/variants/native_64/guard_city_01_front_red_guard.png",
+      "size": 1274,
+      "sha256": "fbd5a1426f9aad083ba44dac4e69aec0efaed062db221f9b5cfa5467323bc08f",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/variants/native_64/guard_city_01_front_royal_blue.png",
+      "size": 1287,
+      "sha256": "c621c799e7824a033803c1cdbc132ce9c428834171ddb831af22bd6d8af012a7",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/data/outfits/sprites/guard_city_01/variants/native_64/guard_city_01_front_silver_guard.png",
+      "size": 1287,
+      "sha256": "e4bd1ff5aa60977fc8d427db43c8eadbef876cc087f0802d2d9585275dc3bbb2",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": false,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/doors/door_wood_closed_east.png",
+      "size": 599,
+      "sha256": "b30d25d10631466afe1b0b1254cfa55ffc2a1571095554ec856ecceb86aa4399",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/doors/door_wood_closed_south.png",
+      "size": 825,
+      "sha256": "d81f6ecac5ab5c20fc185ed2b51e35a4f25b4b2209c4bfd37ef258efd512b899",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/doors/door_wood_open_east.png",
+      "size": 670,
+      "sha256": "3a8d1eae78270c295a57d72ee61018d3d969de27de9f46c237104310386de4dd",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/doors/door_wood_open_south.png",
+      "size": 787,
+      "sha256": "785309e1c153607b652c2a341a9a7aeecaed76677d1936474fb999e0ac3f1c98",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/effect__chronicle_combat.png",
+      "size": 135,
+      "sha256": "14d95557e73a3467026a2d16a0c43b117181839c2ef41f44fc05c078e36e8420",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/effect__chronicle_create.png",
+      "size": 122,
+      "sha256": "c9e75cd43cc32b233acfbb320a4bbe387393cd91691fe36cecdb7a3c8af7f60d",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/effect__chronicle_death.png",
+      "size": 127,
+      "sha256": "86fc9a951cd7fd265f339c4d543408da409fbf20cc5274499b4584f4055167f8",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/effect__chronicle_drop.png",
+      "size": 122,
+      "sha256": "7dfbf4760a494f971584b88ac9e9213b13153309d98f1c12f2b998a0d1402908",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/effect__chronicle_pickup.png",
+      "size": 121,
+      "sha256": "d675abe8e413a642105a09e824e6373b192e2b90efb29e3b1c461c29392c883a",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/effect__chronicle_tutorial.png",
+      "size": 123,
+      "sha256": "4356a4f3a6d647fad38828c81ddc8b41f5c510ea5d803f2c202ddbf6d92b19bc",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/effect__chronicle_unknown.png",
+      "size": 115,
+      "sha256": "834919eb94838420ff6e465c489e4f5e2c84a0804e4b5ad1cdcd76e4fdcbf185",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/effect__chronicle_world.png",
+      "size": 119,
+      "sha256": "4c37ffe6e47475ab19214dabe4368cd47b1ded3987516caa5c5435dea0d34f5c",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/effect__chronicle_zone.png",
+      "size": 126,
+      "sha256": "89e962299ac6316e4984381a1c6824c37680474322351aebc49ad95d3d4ff708",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ground__grass.png",
+      "size": 2259,
+      "sha256": "41e49e3f873fe1215976440846b9ec668ee6d8e2a46f2a2ee83db395a1a5b6dd",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/high_city/high_city_clay_roof_overlay.png",
+      "size": 142,
+      "sha256": "5c51a764fc6243739d4a69a5a86984e5c47c34dec54f99f2c2232129544bda17",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/high_city/high_city_cobble_var_02.png",
+      "size": 132,
+      "sha256": "33c13000618e055416cc2284d7e579eed0d408438f31b914b6f370ab754356e1",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/high_city/high_city_cobble_var_03.png",
+      "size": 147,
+      "sha256": "4373ea2fea6d5a5159e4c8378445f2e61eeda2941bb88af3e42bb1a07146032f",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/high_city/high_city_crystal_fountain.png",
+      "size": 210,
+      "sha256": "bb34e6bb10acc61fe3b47ab41a86594e75e830020eb77a49f0e2948c659988e3",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/high_city/high_city_grass_edge.png",
+      "size": 135,
+      "sha256": "0d5a07ef5989cd589a4ff5221c763411bbfb4e85c31ef9b8aac782112b297ef4",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/high_city/high_city_half_timber_wall_n.png",
+      "size": 139,
+      "sha256": "8c06970e0fd8ef3831787ef283939a0f65b191865e274f15841a8d602a60e18e",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/high_city/high_city_lantern_post.png",
+      "size": 215,
+      "sha256": "165a079e4803ac0cc388624eb5320f304919d912464f353f8bfc5fdc006142fb",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/high_city/high_city_merchant_crate.png",
+      "size": 165,
+      "sha256": "379e49597ea34f0b3fd1ab308cb1c197ce8909c9f8b9cc6167db55546a73b916",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/high_city/high_city_plot_stake.png",
+      "size": 170,
+      "sha256": "1f7bf1b0e85d8e93b9916deadfd262269bca6088ac0082a2e520dc4180f6d825",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/high_city/high_city_sigil_banner_blue.png",
+      "size": 237,
+      "sha256": "dae87566e2200db77261401e1618fc5a6177e30b64d621b55196f26bf832d4e6",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/high_city/high_city_sigil_banner_red.png",
+      "size": 232,
+      "sha256": "c297252d1e0559f834c50a2b6c39c055fed8aed8b9a37a3f87f0322e2282a409",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/high_city/high_city_temple_brazier.png",
+      "size": 219,
+      "sha256": "9d747485a1f0ac99c1a9d37dea6ec435dcb320e29dc8bbdd13ad90c759db2719",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/high_city/high_city_witness_lantern.png",
+      "size": 190,
+      "sha256": "833c377b946a05b3c232a459742baddd745c63a9cdbb7e744d99d6af48aa57fb",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/interior/bed_single.png",
+      "size": 487,
+      "sha256": "1d25e9097b6890353191fa0d11de08b21ffa9de696350c1ca0b92d239972670f",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/interior/bookshelf.png",
+      "size": 697,
+      "sha256": "8418e7db719c3fa6329323ef62085d0b1a5d836800e9f27e791381299e294c3d",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/interior/chair_wood.png",
+      "size": 385,
+      "sha256": "b9772db73afa6ee9a8be4152224969d763bd7b1eec4c874f409e24a404f842f0",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/interior/chest_small.png",
+      "size": 532,
+      "sha256": "37b411fb7190715416216c1cff36cd84f78fe400f2ec7d19aaff827399e7c3a0",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/interior/fireplace.png",
+      "size": 954,
+      "sha256": "5c3233e510bd9307be4150ee9480a8aa9dce242863800e830f31923576049b19",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/interior/table_small.png",
+      "size": 518,
+      "sha256": "fc76e16f59006bcbf0e283e8d6fde60fc5c4b812ecc10cf72389429ff2035768",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__ashglass_shard.png",
+      "size": 104,
+      "sha256": "92f10404febd16378d15a12d31cd8423cdd25cac2c3d4c3fb9ea9b41a69a5e3e",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__charred_shipment_plate.png",
+      "size": 102,
+      "sha256": "581ba7ad70ca9d2deafe620ec2cc63b3cf25336cdab3892afa1076f5871929d4",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__city_rat_goo.png",
+      "size": 104,
+      "sha256": "7ae194406a683d8675dc62a02d4ffe201cd1237463b47bae5510d853a384593a",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__healing_herb.png",
+      "size": 104,
+      "sha256": "ddc6d3dae3f73484435cf9c756c8b4c7ed4d5bbd14f8336de2ab95b4db703902",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__keystone_token.png",
+      "size": 105,
+      "sha256": "f7ee6782379589e9070de34ea998b9bfbf771bf548113db91b472a54663d19d7",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__ley_mote.png",
+      "size": 104,
+      "sha256": "5bb9e135e6faea7072414e4c844427bdc2dd6b9be59953d8c1299768d352a778",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__mark_token.png",
+      "size": 102,
+      "sha256": "63e44c4b16c409b29511f6229b625f2b2d6de91e0f541eadd044915dbbdf957a",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__pilgrim_mark.png",
+      "size": 104,
+      "sha256": "e44268cdde677e810abf18bfdb322d2e91144e5ad10232713eb9c8aaff24c606",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__ration.png",
+      "size": 104,
+      "sha256": "4607f34c404b09b06a07d8754dfdf30244ab87de5d98d3d2caefd8668a436774",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__refined_ley_mote.png",
+      "size": 104,
+      "sha256": "4165e39bd7bf45a7840b7de44afd01e5c01745328b9033a9f7f15bc3410ba3d5",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__refined_soulsteel_component.png",
+      "size": 104,
+      "sha256": "be9eed7df179959e0cce40c68a3c7084beae35cb41ae7a3fe33a0e9e94d500d9",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__rookguard_patience_charm.png",
+      "size": 104,
+      "sha256": "9bd6941f2fdbcb357f86106103a7d154baf3d8773d71c39d22630e4cb43ec98a",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__rookguard_threadbare_cloak.png",
+      "size": 104,
+      "sha256": "e554191a72a65024382a26ddaa027cfbe8d336462a2a14644ac041986ae04681",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__rookguard_training_blade.png",
+      "size": 104,
+      "sha256": "0dfdf84a3818dabf44376674fe8f7e00d58233772ad79970c06597136aa0d124",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__slime.png",
+      "size": 104,
+      "sha256": "94716840902b767f6889ebe6cf0692eedd21f57dc8ea218116346e77e0ece315",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__soulsteel_frame.png",
+      "size": 105,
+      "sha256": "65e8de7f10df5292ba462d9ecff320ab83386993f6911bbbadcad7ee43ed47e0",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__stabilized_soulsteel_component.png",
+      "size": 104,
+      "sha256": "1d362c551406c691dcc6aab397588179f7baa865cc2968fe5ab80dffcb3e947a",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__tending_token.png",
+      "size": 104,
+      "sha256": "38baca890774b9a41c44ac3867766043be8bb2467cb6965ae75b3bc31426d232",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__torch.png",
+      "size": 102,
+      "sha256": "c2fc87cf10ed7a93bf77067a0dacee93125373763d7ac897e5441a1fb95f2c4f",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/item__training_slime_goo.png",
+      "size": 102,
+      "sha256": "5d07c6d89cef403d061827610ad2f74f357fdd29c63f7d684557e4e26585e863",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/market/market_cloth_stall.png",
+      "size": 1045,
+      "sha256": "c64c779386a46e1a945912c812fcd344df29541dbcd465c9b03a19afd124abe5",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/market/market_food_stall.png",
+      "size": 1847,
+      "sha256": "c419dad47e5233be4318365091fb326873fac3657748dfe0def4810f9c136435",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/props__tree.png",
+      "size": 1086,
+      "sha256": "bcdec8107b5bd7be490c8bf831d0889a82ac0ce94fe4713169ee2d24d6e058cf",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/props/prop_tree.png",
+      "size": 1086,
+      "sha256": "bcdec8107b5bd7be490c8bf831d0889a82ac0ce94fe4713169ee2d24d6e058cf",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/roofs/market_awning_overlay.png",
+      "size": 1370,
+      "sha256": "372feda41b86f0b3715e65974dce23a67d5c809009efcce92ba065499183b0eb",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/roofs/roof_castle_overlay.png",
+      "size": 17070,
+      "sha256": "b2e188725e6ccc872221c3f608b65ff87bb7403b98bcec287cf844acf73b4738",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/roofs/roof_red_large_overlay.png",
+      "size": 12503,
+      "sha256": "be7afe1b6d631b4322ad43f0c472c1495dbeb4487e52d0fdefcf432815c43641",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/roofs/roof_red_small_overlay.png",
+      "size": 4473,
+      "sha256": "e2a5ec3e5d48c9c539f4f7ce4eec6dc3c94b7b784cc5827ba684a8057d47bb23",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/sewer/sewer_grate.png",
+      "size": 1179,
+      "sha256": "541cd67ea05bf4a5d55cafe3904afa4eb9e5b548bee40b9c2da777a43467cf87",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/sewer/sewer_pipe.png",
+      "size": 711,
+      "sha256": "d79bf6177173ac23ad7cede8264c290c8445e5b51fff7bb5e1fd0c96639a0583",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/sewer/slime_pool.png",
+      "size": 704,
+      "sha256": "0ef7315d4a537cd1a5bc7c1bea5e213013212c0c2402fcdc8e0cba83ce0c019f",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/structures__stone_wall.png",
+      "size": 1499,
+      "sha256": "f05d188f61b3f90972a5a94b3a1f7fb402b31c00dd8fed8a03172f3f319b81ad",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp__bog_slime.png",
+      "size": 1481,
+      "sha256": "868052b9bfe12fc0870c21d1fb85f3755d99c29299194bbf7f2581ad84c73ab1",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp__bog_water.png",
+      "size": 83,
+      "sha256": "b0775cba09eadf2fde241b35daa28cdcd03af6d23e99e0decd32b42f13f6d220",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp__dead_tree.png",
+      "size": 2533,
+      "sha256": "6051f7ebad68421f1e74469afe32a630b4142c40937e093c21ff1a5abfdde56c",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp__frog.png",
+      "size": 1557,
+      "sha256": "c867ef71e424a8afbf322741a6c3983a571a727db35e894c57aa0384e288d266",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp__log.png",
+      "size": 1467,
+      "sha256": "662e3c0dc166d54eca67772c5ac02266ed36c06d3c3dd930b7a4e38babbd85da",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp__mud.png",
+      "size": 1398,
+      "sha256": "3440b409df3dd0854f834e8afe2b6d7cfc46e17b19c454829dcf40c86658cfbd",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp__mushroom.png",
+      "size": 1815,
+      "sha256": "5e5b765afd4e10564813923ca53e47d2221def2eb4db27dae68a1efc92150578",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp__reeds.png",
+      "size": 3009,
+      "sha256": "97d93d40301c55ea180e5ecce6b86e01681644a1744fadd45488b6dd954e011d",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp/swamp_bog_slime.png",
+      "size": 1481,
+      "sha256": "868052b9bfe12fc0870c21d1fb85f3755d99c29299194bbf7f2581ad84c73ab1",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp/swamp_bog_water.png",
+      "size": 83,
+      "sha256": "b0775cba09eadf2fde241b35daa28cdcd03af6d23e99e0decd32b42f13f6d220",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp/swamp_dead_tree.png",
+      "size": 2533,
+      "sha256": "6051f7ebad68421f1e74469afe32a630b4142c40937e093c21ff1a5abfdde56c",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp/swamp_frog.png",
+      "size": 1557,
+      "sha256": "c867ef71e424a8afbf322741a6c3983a571a727db35e894c57aa0384e288d266",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp/swamp_log.png",
+      "size": 1467,
+      "sha256": "662e3c0dc166d54eca67772c5ac02266ed36c06d3c3dd930b7a4e38babbd85da",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp/swamp_mud.png",
+      "size": 1398,
+      "sha256": "3440b409df3dd0854f834e8afe2b6d7cfc46e17b19c454829dcf40c86658cfbd",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp/swamp_mushroom.png",
+      "size": 1815,
+      "sha256": "5e5b765afd4e10564813923ca53e47d2221def2eb4db27dae68a1efc92150578",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/swamp/swamp_reeds.png",
+      "size": 3009,
+      "sha256": "97d93d40301c55ea180e5ecce6b86e01681644a1744fadd45488b6dd954e011d",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/terrain/floor_cobble_01.png",
+      "size": 1082,
+      "sha256": "68fff6bc35f4ac501c5855a760fc4b2d6df8ee892e22b5ab4b0b362804a53099",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/terrain/floor_stone_01.png",
+      "size": 783,
+      "sha256": "3c6c02b3e6697366046bca1db1ad0b3914ec4e19842715dd1025204de3b85bc5",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/terrain/floor_wood_01.png",
+      "size": 773,
+      "sha256": "50f99a1b5a545148c1a46188c2403a831b18068163071b69d4304187905888e0",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/terrain/grass_01.png",
+      "size": 2259,
+      "sha256": "41e49e3f873fe1215976440846b9ec668ee6d8e2a46f2a2ee83db395a1a5b6dd",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/tile__gate_to_azura.png",
+      "size": 316,
+      "sha256": "ff3d456e9e3bb904a2fb1b4fb9f5828f3923636952bb9abc92fe14deb13030f2",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/tile__grass.png",
+      "size": 1386,
+      "sha256": "d88480e31c7ef520d08548ff373dca02840272883294a8b27332ec9033d95e85",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/tile__stone_ground.png",
+      "size": 1651,
+      "sha256": "ff1880cf72d3f2c2bfea95cec5388fcbdfee9da9c63dd14c078964a666315690",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/tile__tutorial_chat.png",
+      "size": 234,
+      "sha256": "400a53f754bd6a6d0451d8843c19e525b17c9e63e2a6bbb2fae5d6ee3ae325d5",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/tile__tutorial_move.png",
+      "size": 283,
+      "sha256": "bd412bc9bb46b37c4a8c72cd9345c17e9577c47f604671ff07d83c51da341264",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/tile__tutorial_tem.png",
+      "size": 300,
+      "sha256": "d5658434c6cf288b92a821ae1ce64c3e04887f235be2fcf10037633da68cb644",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/tile__water.png",
+      "size": 1215,
+      "sha256": "1d9dea892b046d042931686d4419671c95a21e4bc3d6f6922b6a4126895e4acb",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ui_action_ring_danger.png",
+      "size": 2454,
+      "sha256": "6979c7b64b89649053514ace69350553840cb4b91d49e5054886ffc02dd12c0e",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ui_action_ring_pressed.png",
+      "size": 1960,
+      "sha256": "4541a70d69513b1b0cc6211d97095ff42e7e80b026ee68e89365e149cb87eef0",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ui_action_ring.png",
+      "size": 1998,
+      "sha256": "5494e0d4bd3c7f72a7db4fd61622918dbb2c4e33e7048d27bb0f4f4c69e2e018",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ui_bar_track.png",
+      "size": 279,
+      "sha256": "5edc78efb266d325ab34295c8e6f73d09651c5f82c74ca33d36bfb491a876652",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ui_button_frame.png",
+      "size": 1861,
+      "sha256": "a65a32b3eb06909ea1a26f949c96cff6df791c76b02f4542e6b6ac7b82befcb1",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ui_button_pressed_frame.png",
+      "size": 1735,
+      "sha256": "8c15a9e49731bb6372939bbb4d07b69d9815398ae15a625c9b4560325b58d061",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ui_dock_frame.png",
+      "size": 2921,
+      "sha256": "e158c0390d6f962eb07389fcbd4188f1399e8758cf769e6cfa677fe3d04c3859",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ui_dpad_button_pressed.png",
+      "size": 2383,
+      "sha256": "e75662705a93a33ca9e9e35b2b86845fc52c8c3c3f6bada6aee8c8b68932dd75",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ui_dpad_button.png",
+      "size": 2225,
+      "sha256": "044798e77168fd70eda7cd3496f4925536515064c730ca66c58f32389b66474f",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ui_dpad_frame.png",
+      "size": 9124,
+      "sha256": "d1fd7dddfbfd11220d81a4694580590bf049c40b7280dde6a1eb7e2031e7235d",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ui_hp_fill.png",
+      "size": 244,
+      "sha256": "226e370f6bbb251a61dea872ffa787094f478e2e37a72d943011a12d1549c742",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ui_mp_fill.png",
+      "size": 205,
+      "sha256": "d39391230ab5df18f1925ee80d3839e198b23bde81dfcf00d1b8d051aad1c526",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/ui_panel_frame.png",
+      "size": 3463,
+      "sha256": "2c40638d27d13b00da6ebd73cc3725d4f912b058f85df14525ee163c48761613",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/walls/wall_stone_corner_ne.png",
+      "size": 1044,
+      "sha256": "726539c46419b7242a64df25a33564622eea1c53599c5f52bafb18348ac2e4bb",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/walls/wall_stone_corner_nw.png",
+      "size": 1118,
+      "sha256": "6763f194e12e4957bd8c59fe10b24541db02e5a39e35d3290e078eb0d9288fe6",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/walls/wall_stone_north.png",
+      "size": 813,
+      "sha256": "d30b7aaaf2280cc20c4db9f8284836a050439398bbd793d1ea86e51f3a5aca2a",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    },
+    {
+      "relpath": "studio/walls/wall_stone_south.png",
+      "size": 640,
+      "sha256": "38a1a46cb41267f20a4543655be006522bb11f6df4ab18cbbbc8ccab699a514e",
+      "status": "covered_by_archive_loop_root",
+      "coverage_root_id": "codex_studio",
+      "exact_source_hash_match": true,
+      "may_execute": false
+    }
+  ],
+  "required_next_gate": [
+    "If unclassified_codex_image_count becomes nonzero, classify that root before archive approval.",
+    "Keep evidence screenshots outside asset archive move plans.",
+    "Use the main archive-loop roots for source, Studio, poster, runtime, and packaged asset custody."
+  ],
+  "report_sha256": "ecd066a0110428ab7f77df1883ac01ab151ea8363555c42b69312171a446472b"
+}

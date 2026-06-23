@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "source_root": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites",
+  "intent": "Identify duplicate-backed source folders that can enter an archive-review plan without moving or deleting assets.",
+  "totals": {
+    "candidate_count": 0,
+    "ready_for_archive_review": 0,
+    "ready_for_custody_rehome_review": 0,
+    "blocked_promote_or_retain_first": 0,
+    "candidate_file_count": 0,
+    "duplicate_covered_file_count": 0
+  },
+  "statuses": [],
+  "candidates": [],
+  "required_next_gate": [
+    "Human selects a candidate family for an archive move plan.",
+    "Verifier reruns this report and confirms full_duplicate_coverage and full_zip_coverage still hold.",
+    "Receipt names source path, archive destination, report hash, file count, and rollback path.",
+    "Move operation happens in a separate explicit lane; this report never deletes files."
+  ],
+  "report_sha256": "7584597fcc215a784cbaeaea7cfce8eb8dc13aeb4fffb8d9e72e7047b91add99"
+}

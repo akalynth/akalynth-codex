@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_SOURCE_ONLY_DISPOSITION_AUDIT_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "source_only_disposition_mapped_no_mutation",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "approval_scope": "review_only_until_exact_plan_or_source_promotion_lane",
+  "intent": "Classify the source-only assets-src family backlog into active-source, retain/promote, custody, or archive-gate dispositions before any archive move.",
+  "source_rule": "Source-only disposition is review evidence only. It does not approve archive moves, deletion, runtime sync, receipt writes, or deploys.",
+  "totals": {
+    "source_only_unique_content_hashes": 0,
+    "source_only_family_count": 0,
+    "source_only_family_mentions": 0,
+    "source_only_source_record_mentions": 0,
+    "archive_gate_duplicate_mirror_family_count": 0,
+    "active_character_source_family_count": 0,
+    "promote_or_retain_family_count": 0,
+    "custody_rehome_family_count": 0,
+    "rows_with_archive_plan_count": 0,
+    "rows_with_queue_item_count": 0,
+    "related_family_overlap_count": 0,
+    "executable_disposition_count": 0
+  },
+  "checks": {
+    "all_source_only_families_classified": true,
+    "source_only_unique_matches_authority_gap": true,
+    "source_only_family_mentions_match_review_queue": true,
+    "archive_gate_rows_have_plans": true,
+    "all_dispositions_have_queue_or_archive_gate": true,
+    "all_disposition_rows_block_execution": true,
+    "source_tree_mutated_by_source_only_disposition_audit": false
+  },
+  "disposition_counts": {},
+  "disposition_rows": [],
+  "required_next_gate": [
+    "Use active-source rows as keep/promote metadata work, not archive work.",
+    "Use archive-gate mirror rows only after exact plan approval and fresh preflight.",
+    "Resolve legacy and custody rows in separate promotion/retain/rehome lanes.",
+    "Rerun the mapper after any disposition decision and verify this report still has zero executable rows."
+  ],
+  "report_sha256": "6ef6dea8f497346f7e9a689596b04ed6698681e065f5b56035e4971df29c270a"
+}

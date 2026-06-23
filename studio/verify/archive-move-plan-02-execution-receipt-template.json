@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ASSET_ARCHIVE_MOVE_EXECUTION_RECEIPT_TEMPLATE_V1",
+  "generated_at": "2026-06-23T13:45:59.837Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "template_only_no_source_mutation",
+  "may_execute": false,
+  "approved": false,
+  "executed": false,
+  "plan_id": "archive_move_plan_02",
+  "required_explicit_approval_phrase": "approve archive execution archive_move_plan_02",
+  "intended_execution_receipt_path": "/home/sovereign/akalynth-ops/receipts/2026-06-23/asset-archive-loop-character-system-loose-contact-sheets.json",
+  "intended_execution_receipt_relpath": "receipts/2026-06-23/asset-archive-loop-character-system-loose-contact-sheets.json",
+  "source_family_prefix": "emblem/imported/trash_character_system_loose_contact_sheets",
+  "source_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/emblem/imported/trash_character_system_loose_contact_sheets",
+  "proposed_archive_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/_archive/2026-06-23/imported-mirrors/character-system-loose-contact-sheets",
+  "proposed_archive_relpath": "_archive/2026-06-23/imported-mirrors/character-system-loose-contact-sheets",
+  "rollback_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/emblem/imported/trash_character_system_loose_contact_sheets",
+  "rollback_relpath": "emblem/imported/trash_character_system_loose_contact_sheets",
+  "counts": {
+    "planned_file_count": 1,
+    "planned_bytes": 58095,
+    "unique_content_hashes": 1,
+    "duplicate_coverage_unique_hashes": 1
+  },
+  "evidence": {
+    "archive_review_report": "studio/verify/archive-review-candidates.json",
+    "archive_review_report_sha256": "2925f1c47c5ff84342493203b3981c7f6a3d70f8454171a5221b77898da31bcd",
+    "asset_archive_report": "studio/verify/asset-archive-map.json",
+    "asset_archive_report_sha256": "e2f79bba9d6c81068dda1c7e9fb2718dbcc6724fe9ca676dde5f761f62c78fc5",
+    "source_family_report": "studio/verify/assets-src-family-map.json",
+    "source_family_report_sha256": "61e0a80acb42e0737d5fcef7ee225aeeb7a4e795c323f0a4471ace21656a380e",
+    "archive_move_plans_report": "studio/verify/archive-move-plans.json",
+    "archive_move_plans_report_sha256": "22775bbcf307b449d8e9cc5af515dbe7e0ecbdf09a491283a7882ff428894646",
+    "dry_run_receipt_report": "studio/verify/archive-move-plan-02-dry-run-receipt.json",
+    "dry_run_receipt_sha256": "1d9c8de2ee4b543f98c6ca729de3abcc733451cb1cc656757d74564d7042dc1c",
+    "dry_run_receipt_set_report": "studio/verify/archive-move-dry-run-receipts.json",
+    "dry_run_receipt_set_sha256": "5b36b0c66c777b5ff598bfc823e0ced34f44372fff9b85bf6a9a974fa63e6b98",
+    "execution_preflight_report": "studio/verify/archive-move-execution-preflight.json",
+    "execution_preflight_sha256": "2a0ddbabbf78216cff51cf02ee47d3c977df2b23858617b0fd2439c1b904769d"
+  },
+  "preflight": {
+    "status": "blocked_pending_explicit_approval",
+    "ready_after_explicit_approval": true,
+    "may_execute": false,
+    "blocking_reasons": [
+      "explicit_plan_approval_missing"
+    ]
+  },
+  "checks_to_record_before_move": [
+    "Exact plan id was approved immediately before execution.",
+    "Mapper was rerun and all evidence hashes still match this template.",
+    "This execution receipt was written before moving files.",
+    "Source path exists and archive destination is absent."
+  ],
+  "checks_to_record_after_move": [
+    "Source path is absent.",
+    "Archive path exists.",
+    "Archive file count matches planned_file_count.",
+    "Archive file hashes match file_manifest_sha256 and each file_manifest entry.",
+    "No non-selected source, runtime, Android, debug-client, or /opt path was modified."
+  ],
+  "rollback_verification": {
+    "rollback_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/emblem/imported/trash_character_system_loose_contact_sheets",
+    "verify_after_rollback": [
+      "Rollback path exists.",
+      "Archive path is absent.",
+      "Rollback file count matches planned_file_count.",
+      "Rollback file hashes match file_manifest_sha256 and each file_manifest entry.",
+      "Mapper rerun returns the selected plan to blocked_pending_explicit_approval."
+    ]
+  },
+  "prohibited_actions": [
+    "No deletion.",
+    "No runtime sync.",
+    "No /opt mutation.",
+    "No Android/package rebuild in the same lane.",
+    "No production or beta deploy action."
+  ],
+  "file_manifest_sha256": "915a172cfbffeebad51a9bebaf4561744a66fc33eea1a35c5a9c335446b1d175",
+  "file_manifest": [
+    {
+      "source_relpath": "emblem/imported/trash_character_system_loose_contact_sheets/walk_animation_v1_contact_sheet_4x.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/character-system-loose-contact-sheets/walk_animation_v1_contact_sheet_4x.png",
+      "sha256": "c5f43cb3f6dee81cfddd2a91a14387ca6f9bf790b840e0fe5e341cde5a264f93",
+      "size": 58095
+    }
+  ],
+  "execution_result_placeholder": {
+    "approved_by": null,
+    "approved_at": null,
+    "executed_by": null,
+    "executed_at": null,
+    "post_move_verification": null,
+    "rollback_performed": false
+  },
+  "template_sha256": "e121f219d96a4af55bfa7758c8bc5b6aa61e0c9c6f1fc01f2ff1cdb990af2043"
+}

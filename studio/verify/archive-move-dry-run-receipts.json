@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ASSET_ARCHIVE_DRY_RUN_RECEIPT_SET_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "dry_run_only_no_source_mutation",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "archive_move_plans_report": "studio/verify/archive-move-plans.json",
+  "archive_move_plans_report_sha256": "415057fd8ff1740639b7437ddd96649c581de35f21d5b272543de1237a5d8f99",
+  "totals": {
+    "receipt_count": 0,
+    "planned_file_count": 0,
+    "checked_file_count": 0,
+    "planned_bytes": 0,
+    "missing_file_count": 0,
+    "mismatched_file_count": 0,
+    "executable_receipt_count": 0
+  },
+  "checks": {
+    "plan_count_matches_receipt_count": true,
+    "planned_file_count_matches_receipts": true,
+    "checked_file_count_matches_planned_files": true,
+    "all_planned_source_files_exist": true,
+    "all_checked_hashes_match_plans": true,
+    "all_receipts_block_execution": true,
+    "requires_explicit_approval": true,
+    "source_tree_mutated_by_these_receipts": false
+  },
+  "receipts": [],
+  "receipt_sha256": "e498bfad44d0128cbfad8629545d890b9f7c59719dd80e9d9a3b6145425f8b22"
+}

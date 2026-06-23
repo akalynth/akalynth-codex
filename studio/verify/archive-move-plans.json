@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "intent": "Dry-run archive move plans for duplicate-backed mirror candidates. This report does not move, delete, or archive files.",
+  "source_root": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites",
+  "archive_root_relpath": "_archive/2026-06-23/imported-mirrors",
+  "status": "dry_run_only",
+  "requires_explicit_approval": true,
+  "totals": {
+    "plan_count": 0,
+    "planned_file_count": 0,
+    "planned_bytes": 0,
+    "recommended_first_plan": null
+  },
+  "plans": [],
+  "next_gate": [
+    "Pick one plan id, preferably archive_move_plan_01.",
+    "Rerun the mapper and compare hashes.",
+    "Create a receipt before any file move.",
+    "Perform archive move in a separate explicit lane with rollback verification."
+  ],
+  "report_sha256": "415057fd8ff1740639b7437ddd96649c581de35f21d5b272543de1237a5d8f99"
+}

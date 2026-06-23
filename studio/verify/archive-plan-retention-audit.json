@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ARCHIVE_PLAN_RETENTION_AUDIT_V1",
+  "generated_at": "2026-06-23T13:47:29.536Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "retention_audit_ready_blocked_pending_exact_approval",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "approval_scope": "exact_plan_id_only",
+  "blocker": "explicit_plan_approval_missing",
+  "intent": "Prove every dry-run archive-plan content hash remains in active source and the frozen zip snapshot before any exact-plan approval can execute.",
+  "source_rule": "Retention proof is no-mutation evidence only. It does not approve archive moves, deletion, runtime sync, receipt writes, or deploys.",
+  "totals": {
+    "plan_count": 0,
+    "planned_file_count": 0,
+    "planned_unique_content_hashes": 0,
+    "manifest_content_found_count": 0,
+    "missing_manifest_content_count": 0,
+    "retained_active_source_hash_count": 0,
+    "missing_retained_active_source_hash_count": 0,
+    "zip_backed_hash_count": 0,
+    "missing_zip_match_count": 0,
+    "source_paths_present_count": 0,
+    "archive_destinations_absent_count": 0,
+    "executable_retention_row_count": 0
+  },
+  "checks": {
+    "plan_count_matches_archive_move_plans": true,
+    "planned_file_count_matches_archive_move_plans": true,
+    "planned_unique_hashes_match_impact_preview": true,
+    "all_planned_files_have_manifest_content": true,
+    "all_planned_hashes_retain_active_source_after_all_plans": true,
+    "all_planned_hashes_have_zip_snapshot_match": true,
+    "all_plan_source_paths_exist_now": true,
+    "all_archive_destinations_absent_now": true,
+    "all_retention_rows_block_execution": true,
+    "source_tree_mutated_by_retention_audit": false
+  },
+  "evidence": {
+    "archive_move_plans_report": "studio/verify/archive-move-plans.json",
+    "archive_move_plans_report_sha256": "415057fd8ff1740639b7437ddd96649c581de35f21d5b272543de1237a5d8f99",
+    "archive_move_impact_preview_report": "studio/verify/archive-move-impact-preview.json",
+    "archive_move_impact_preview_sha256": "ae6c3c349a8c68007edbb9931196ab0f3c4a36a0d0693b52cea6f8d00c5ff8d2",
+    "source_content_leave_manifest_report": "studio/verify/assets-src-leave-manifest.json",
+    "source_content_leave_manifest_sha256": "e812cea1ace96d9da5dbbec60b13fd05ef5e66c3557d7b4e4c93888e23c35313"
+  },
+  "plan_summaries": [],
+  "retention_rows": [],
+  "required_next_gate": [
+    "Keep this report no-mutation; it proves retention only.",
+    "Use an exact plan approval phrase before any archive destination is created.",
+    "After approval, rerun this audit and verify moved hashes still retain active source or are intentionally archived with receipt evidence.",
+    "Rollback must restore source-family paths and preserve this retention proof after mapper rerun."
+  ],
+  "report_sha256": "35165996a582b8b7e6fc6f3fa80b873f1e00a104e424c91996370c7fa2e2fe07"
+}

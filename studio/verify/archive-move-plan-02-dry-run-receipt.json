@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "kind": "AKALYNTH_ASSET_ARCHIVE_DRY_RUN_RECEIPT_V1",
+  "generated_at": "2026-06-23T13:45:59.837Z",
+  "generated_by": "akalynth-codex/tools/map-asset-archive-loop.mjs",
+  "status": "dry_run_only_no_source_mutation",
+  "may_execute": false,
+  "requires_explicit_approval": true,
+  "plan_id": "archive_move_plan_02",
+  "plan_status": "dry_run_only_requires_explicit_approval",
+  "source_family_prefix": "emblem/imported/trash_character_system_loose_contact_sheets",
+  "source_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/emblem/imported/trash_character_system_loose_contact_sheets",
+  "proposed_archive_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/_archive/2026-06-23/imported-mirrors/character-system-loose-contact-sheets",
+  "proposed_archive_relpath": "_archive/2026-06-23/imported-mirrors/character-system-loose-contact-sheets",
+  "rollback_path": "/home/sovereign/akalynth-ops/repos/akalynth/data/assets-src/sprites/emblem/imported/trash_character_system_loose_contact_sheets",
+  "rollback_relpath": "emblem/imported/trash_character_system_loose_contact_sheets",
+  "planned_execution_receipt_path": "receipts/2026-06-23/asset-archive-loop-character-system-loose-contact-sheets.json",
+  "counts": {
+    "planned_file_count": 1,
+    "checked_file_count": 1,
+    "planned_bytes": 58095,
+    "unique_content_hashes": 1,
+    "duplicate_coverage_unique_hashes": 1,
+    "missing_file_count": 0,
+    "mismatched_file_count": 0
+  },
+  "checks": {
+    "has_recommended_plan": true,
+    "source_path_exists": true,
+    "proposed_archive_path_exists": false,
+    "planned_file_count_matches_checked_files": true,
+    "all_planned_source_files_exist": true,
+    "all_checked_hashes_match_plan": true,
+    "duplicate_coverage_matches_unique_content": true,
+    "execution_blocked_without_explicit_approval": true,
+    "source_tree_mutated_by_this_receipt": false
+  },
+  "evidence": {
+    "archive_review_report": "studio/verify/archive-review-candidates.json",
+    "archive_review_report_sha256": "2925f1c47c5ff84342493203b3981c7f6a3d70f8454171a5221b77898da31bcd",
+    "asset_archive_report": "studio/verify/asset-archive-map.json",
+    "asset_archive_report_sha256": "e2f79bba9d6c81068dda1c7e9fb2718dbcc6724fe9ca676dde5f761f62c78fc5",
+    "source_family_report": "studio/verify/assets-src-family-map.json",
+    "source_family_report_sha256": "61e0a80acb42e0737d5fcef7ee225aeeb7a4e795c323f0a4471ace21656a380e",
+    "archive_move_plans_report": "studio/verify/archive-move-plans.json",
+    "archive_move_plans_report_sha256": "22775bbcf307b449d8e9cc5af515dbe7e0ecbdf09a491283a7882ff428894646"
+  },
+  "required_preflight_before_execution": [
+    "Explicit human approval for this exact plan id.",
+    "Fresh rerun of node tools/map-asset-archive-loop.mjs.",
+    "Candidate still has full duplicate coverage and full zip coverage.",
+    "No source/runtime/key/config paths outside repos/akalynth/data/assets-src/sprites are touched.",
+    "Receipt written before move with report hashes, source path, destination path, file count, and rollback path."
+  ],
+  "prohibited_actions": [
+    "No deletion.",
+    "No runtime sync.",
+    "No /opt mutation.",
+    "No Android/package rebuild in the same lane.",
+    "No production or beta deploy action."
+  ],
+  "missing_file_samples": [],
+  "mismatched_file_samples": [],
+  "file_checks": [
+    {
+      "source_relpath": "emblem/imported/trash_character_system_loose_contact_sheets/walk_animation_v1_contact_sheet_4x.png",
+      "archive_relpath": "_archive/2026-06-23/imported-mirrors/character-system-loose-contact-sheets/walk_animation_v1_contact_sheet_4x.png",
+      "expected_sha256": "c5f43cb3f6dee81cfddd2a91a14387ca6f9bf790b840e0fe5e341cde5a264f93",
+      "actual_sha256": "c5f43cb3f6dee81cfddd2a91a14387ca6f9bf790b840e0fe5e341cde5a264f93",
+      "expected_size": 58095,
+      "actual_size": 58095,
+      "exists": true,
+      "size_matches": true,
+      "sha256_matches": true
+    }
+  ],
+  "receipt_sha256": "1d9c8de2ee4b543f98c6ca729de3abcc733451cb1cc656757d74564d7042dc1c"
+}
